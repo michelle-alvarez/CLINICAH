@@ -1,0 +1,14 @@
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicos\bin\Debug\Medicos.exe.config
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicos\bin\Debug\Medicos.exe
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicos\bin\Debug\Medicos.pdb
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicos\obj\Debug\Medicos.frmMedicos.resources
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicos\obj\Debug\Medicos.frmReporteMedicos.resources
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicos\obj\Debug\Medicos.Properties.Resources.resources
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicos\obj\Debug\Medicos.csproj.GenerateResource.Cache
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicos\obj\Debug\Medicos.exe
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicos\obj\Debug\Medicos.pdb
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicos\bin\Debug\Npgsql.dll
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicos\bin\Debug\System.Threading.Tasks.Extensions.dll
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicos\bin\Debug\Npgsql.xml
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicos\bin\Debug\System.Threading.Tasks.Extensions.xml
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicos\obj\Debug\Medicos.csprojResolveAssemblyReference.cache

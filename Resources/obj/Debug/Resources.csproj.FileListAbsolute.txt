@@ -1,0 +1,4 @@
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Resources\bin\Debug\Resources.dll
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Resources\bin\Debug\Resources.pdb
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Resources\obj\Debug\Resources.dll
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Resources\obj\Debug\Resources.pdb

@@ -1,0 +1,13 @@
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Consulta\bin\Debug\Consulta.exe.config
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Consulta\bin\Debug\Consulta.exe
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Consulta\bin\Debug\Consulta.pdb
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Consulta\bin\Debug\Npgsql.dll
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Consulta\bin\Debug\System.Threading.Tasks.Extensions.dll
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Consulta\bin\Debug\Npgsql.xml
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Consulta\bin\Debug\System.Threading.Tasks.Extensions.xml
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Consulta\obj\Debug\Consulta.csprojResolveAssemblyReference.cache
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Consulta\obj\Debug\Consulta.frmConsulta.resources
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Consulta\obj\Debug\Consulta.Properties.Resources.resources
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Consulta\obj\Debug\Consulta.csproj.GenerateResource.Cache
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Consulta\obj\Debug\Consulta.exe
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Consulta\obj\Debug\Consulta.pdb

@@ -1,0 +1,12 @@
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicamentos y Suministros\bin\Debug\Medicamentos y Suministros.exe.config
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicamentos y Suministros\bin\Debug\Medicamentos y Suministros.exe
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicamentos y Suministros\bin\Debug\Medicamentos y Suministros.pdb
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicamentos y Suministros\bin\Debug\Npgsql.dll
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicamentos y Suministros\bin\Debug\System.Threading.Tasks.Extensions.dll
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicamentos y Suministros\bin\Debug\Npgsql.xml
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicamentos y Suministros\bin\Debug\System.Threading.Tasks.Extensions.xml
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos_y_Suministros.frmMedicamentosSuministros.resources
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos_y_Suministros.Properties.Resources.resources
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.csproj.GenerateResource.Cache
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.exe
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.pdb

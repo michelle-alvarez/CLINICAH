@@ -1,0 +1,13 @@
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Procedimientos\bin\Debug\Procedimientos.exe.config
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Procedimientos\bin\Debug\Procedimientos.exe
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Procedimientos\bin\Debug\Procedimientos.pdb
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Procedimientos\bin\Debug\Npgsql.dll
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Procedimientos\bin\Debug\System.Threading.Tasks.Extensions.dll
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Procedimientos\bin\Debug\Npgsql.xml
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Procedimientos\bin\Debug\System.Threading.Tasks.Extensions.xml
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Procedimientos\obj\Debug\Procedimientos.csprojResolveAssemblyReference.cache
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Procedimientos\obj\Debug\Procedimientos.frmProcedimientos.resources
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Procedimientos\obj\Debug\Procedimientos.Properties.Resources.resources
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Procedimientos\obj\Debug\Procedimientos.csproj.GenerateResource.Cache
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Procedimientos\obj\Debug\Procedimientos.exe
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Procedimientos\obj\Debug\Procedimientos.pdb

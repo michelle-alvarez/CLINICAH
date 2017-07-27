@@ -1,0 +1,33 @@
+c:\users\michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\obj\Debug\CLINICAH.Properties.Resources.resources
+c:\users\michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\obj\Debug\CLINICAH.csproj.GenerateResource.Cache
+c:\users\michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\CLINICAH.exe.config
+c:\users\michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\CLINICAH.exe
+c:\users\michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\CLINICAH.pdb
+c:\users\michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\obj\Debug\CLINICAH.mdiPrincipal.resources
+c:\users\michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\obj\Debug\CLINICAH.exe
+c:\users\michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\obj\Debug\CLINICAH.pdb
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\obj\Debug\CLINICAH.csprojResolveAssemblyReference.cache
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Medicos.exe
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Npgsql.dll
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Pacientes.exe
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\System.Threading.Tasks.Extensions.dll
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Medicos.pdb
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Medicos.exe.config
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Pacientes.pdb
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Pacientes.exe.config
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Npgsql.xml
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\System.Threading.Tasks.Extensions.xml
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Consulta.exe
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Login.exe
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Medicamentos y Suministros.exe
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Procedimientos.exe
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Resources.dll
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Consulta.pdb
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Consulta.exe.config
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Login.pdb
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Login.exe.config
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Medicamentos y Suministros.pdb
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Medicamentos y Suministros.exe.config
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Procedimientos.pdb
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Procedimientos.exe.config
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\CLINICAH\bin\Debug\Resources.pdb

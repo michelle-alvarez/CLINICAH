@@ -1,0 +1,13 @@
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Pacientes\obj\Debug\Pacientes.csprojResolveAssemblyReference.cache
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Pacientes\obj\Debug\Pacientes.FrmPacientes.resources
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Pacientes\obj\Debug\Pacientes.Properties.Resources.resources
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Pacientes\obj\Debug\Pacientes.csproj.GenerateResource.Cache
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Pacientes\bin\Debug\Pacientes.exe.config
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Pacientes\bin\Debug\Pacientes.exe
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Pacientes\bin\Debug\Pacientes.pdb
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Pacientes\bin\Debug\Npgsql.dll
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Pacientes\bin\Debug\System.Threading.Tasks.Extensions.dll
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Pacientes\bin\Debug\Npgsql.xml
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Pacientes\bin\Debug\System.Threading.Tasks.Extensions.xml
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Pacientes\obj\Debug\Pacientes.exe
+c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Pacientes\obj\Debug\Pacientes.pdb
