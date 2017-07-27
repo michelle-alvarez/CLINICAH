@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdiPrincipal));
             this.mst = new System.Windows.Forms.MenuStrip();
             this.parametrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clínicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -118,7 +117,7 @@
             // 
             // MenuProcedimientos
             // 
-            this.MenuProcedimientos.Image = global::CLINICAH.Properties.Resources.medicina;
+            this.MenuProcedimientos.Image = global::CLINICAH.Properties.Resources.inyeccion;
             this.MenuProcedimientos.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.MenuProcedimientos.Name = "MenuProcedimientos";
             this.MenuProcedimientos.Size = new System.Drawing.Size(142, 52);
@@ -127,7 +126,7 @@
             // 
             // MenuSuministros
             // 
-            this.MenuSuministros.Image = ((System.Drawing.Image)(resources.GetObject("MenuSuministros.Image")));
+            this.MenuSuministros.Image = global::CLINICAH.Properties.Resources.medicina;
             this.MenuSuministros.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.MenuSuministros.Name = "MenuSuministros";
             this.MenuSuministros.Size = new System.Drawing.Size(212, 52);

@@ -106,6 +106,7 @@
     <None Include="Resources\userman.png" />
     <None Include="Resources\doctor.ico" />
     <None Include="Resources\medicina.ico" />
+    <None Include="Resources\inyeccion.ico" />
     <Content Include="Resources\users-1.png" />
     <Content Include="Resources\users.png" />
   </ItemGroup>
