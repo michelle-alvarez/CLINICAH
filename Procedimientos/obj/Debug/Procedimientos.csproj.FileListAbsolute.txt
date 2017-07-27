@@ -11,3 +11,12 @@ c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Procedimientos\
 c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Procedimientos\obj\Debug\Procedimientos.csproj.GenerateResource.Cache
 c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Procedimientos\obj\Debug\Procedimientos.exe
 c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Procedimientos\obj\Debug\Procedimientos.pdb
+C:\Users\Michelle\Source\Repos\CLINICAH\Procedimientos\bin\Debug\Procedimientos.exe.config
+C:\Users\Michelle\Source\Repos\CLINICAH\Procedimientos\bin\Debug\Procedimientos.exe
+C:\Users\Michelle\Source\Repos\CLINICAH\Procedimientos\bin\Debug\Procedimientos.pdb
+C:\Users\Michelle\Source\Repos\CLINICAH\Procedimientos\obj\Debug\Procedimientos.csprojResolveAssemblyReference.cache
+C:\Users\Michelle\Source\Repos\CLINICAH\Procedimientos\obj\Debug\Procedimientos.frmProcedimientos.resources
+C:\Users\Michelle\Source\Repos\CLINICAH\Procedimientos\obj\Debug\Procedimientos.Properties.Resources.resources
+C:\Users\Michelle\Source\Repos\CLINICAH\Procedimientos\obj\Debug\Procedimientos.csproj.GenerateResource.Cache
+C:\Users\Michelle\Source\Repos\CLINICAH\Procedimientos\obj\Debug\Procedimientos.exe
+C:\Users\Michelle\Source\Repos\CLINICAH\Procedimientos\obj\Debug\Procedimientos.pdb

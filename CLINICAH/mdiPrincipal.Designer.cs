@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdiPrincipal));
             this.mst = new System.Windows.Forms.MenuStrip();
             this.parametrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clínicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -140,6 +141,8 @@
             this.ClientSize = new System.Drawing.Size(866, 400);
             this.Controls.Add(this.tlsr);
             this.Controls.Add(this.mst);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mst;
             this.Name = "mdiPrincipal";

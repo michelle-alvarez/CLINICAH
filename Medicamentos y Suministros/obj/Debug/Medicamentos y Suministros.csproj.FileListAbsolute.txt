@@ -10,3 +10,12 @@ c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicamentos y 
 c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.csproj.GenerateResource.Cache
 c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.exe
 c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.pdb
+C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\bin\Debug\Medicamentos y Suministros.exe.config
+C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\bin\Debug\Medicamentos y Suministros.exe
+C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\bin\Debug\Medicamentos y Suministros.pdb
+C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.csprojResolveAssemblyReference.cache
+C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos_y_Suministros.frmMedicamentosSuministros.resources
+C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos_y_Suministros.Properties.Resources.resources
+C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.csproj.GenerateResource.Cache
+C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.exe
+C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.pdb
