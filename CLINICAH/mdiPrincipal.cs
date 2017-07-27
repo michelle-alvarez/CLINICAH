@@ -21,7 +21,11 @@ namespace CLINICAH
         {
             InitializeComponent();
         }
-
+        private void MenuConsulta_Click(object sender, EventArgs e)
+        {
+            frmConsulta.MdiParent = this;
+            frmConsulta.Show();
+        }
         private void pacientes_Click(object sender, EventArgs e)
         {
             frmPacientes.MdiParent = this;
@@ -44,12 +48,6 @@ namespace CLINICAH
         {
             frmSuministros.MdiParent = this;
             frmSuministros.Show();
-        }
-
-        private void MenuConsulta_Click(object sender, EventArgs e)
-        {
-            frmConsulta.MdiParent = this;
-            frmConsulta.Show();
         }
     }
 }
