@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Login</RootNamespace>
     <AssemblyName>Login</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,13 +32,14 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Logo - copia.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Npgsql, Version=3.2.5.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Npgsql.3.2.5\lib\net451\Npgsql.dll</HintPath>
+      <HintPath>..\packages\Npgsql.3.2.5\lib\net45\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -98,6 +100,32 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo - copia.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Consulta\Consulta.csproj">
+      <Project>{fba463d1-76d9-4729-9a26-1290ceaab021}</Project>
+      <Name>Consulta</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Medicamentos y Suministros\Medicamentos y Suministros.csproj">
+      <Project>{2a3b9f33-ddd9-49ff-b66c-9d626fb60ce6}</Project>
+      <Name>Medicamentos y Suministros</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Medicos\Medicos.csproj">
+      <Project>{f3c0173c-8a78-4732-8ddd-3d9f3acfef3a}</Project>
+      <Name>Medicos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pacientes\Pacientes.csproj">
+      <Project>{663195b8-5fe9-43b8-a681-e66641ae1def}</Project>
+      <Name>Pacientes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Procedimientos\Procedimientos.csproj">
+      <Project>{fd604e2e-53a4-406d-928d-b7c4b858696c}</Project>
+      <Name>Procedimientos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Resources\Resources.csproj">
+      <Project>{9e02d8b6-5ba3-443b-83b6-dd46594f06c8}</Project>
+      <Name>Resources</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
