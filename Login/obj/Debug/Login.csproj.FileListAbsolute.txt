@@ -10,3 +10,16 @@ c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Login\bin\Debug
 c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Login\bin\Debug\System.Threading.Tasks.Extensions.xml
 c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Login\obj\Debug\Login.exe
 c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Login\obj\Debug\Login.pdb
+C:\Users\Michelle\Source\Repos\CLINICAH\Login\bin\Debug\Login.exe.config
+C:\Users\Michelle\Source\Repos\CLINICAH\Login\bin\Debug\Login.exe
+C:\Users\Michelle\Source\Repos\CLINICAH\Login\bin\Debug\Login.pdb
+C:\Users\Michelle\Source\Repos\CLINICAH\Login\bin\Debug\Npgsql.dll
+C:\Users\Michelle\Source\Repos\CLINICAH\Login\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Michelle\Source\Repos\CLINICAH\Login\bin\Debug\Npgsql.xml
+C:\Users\Michelle\Source\Repos\CLINICAH\Login\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Michelle\Source\Repos\CLINICAH\Login\obj\Debug\Login.csprojResolveAssemblyReference.cache
+C:\Users\Michelle\Source\Repos\CLINICAH\Login\obj\Debug\Login.frmLogin.resources
+C:\Users\Michelle\Source\Repos\CLINICAH\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\Michelle\Source\Repos\CLINICAH\Login\obj\Debug\Login.csproj.GenerateResource.Cache
+C:\Users\Michelle\Source\Repos\CLINICAH\Login\obj\Debug\Login.exe
+C:\Users\Michelle\Source\Repos\CLINICAH\Login\obj\Debug\Login.pdb

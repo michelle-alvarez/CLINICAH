@@ -146,6 +146,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.mdiPrincipal_Load);
             this.mst.ResumeLayout(false);
             this.mst.PerformLayout();
             this.tlsr.ResumeLayout(false);

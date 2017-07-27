@@ -12,6 +12,7 @@ namespace CLINICAH
 {
     public partial class mdiPrincipal : Form
     {
+        Login.frmLogin frmlogin = new Login.frmLogin();
         Pacientes.FrmPacientes frmPacientes = new Pacientes.FrmPacientes();
         Medicos.frmMedicos frmMedico = new Medicos.frmMedicos();
         Procedimientos.frmProcedimientos frmProcedimientos = new Procedimientos.frmProcedimientos();
@@ -48,6 +49,13 @@ namespace CLINICAH
         {
             frmSuministros.MdiParent = this;
             frmSuministros.Show();
+        }
+
+        private void mdiPrincipal_Load(object sender, EventArgs e)
+        {
+            tlsr.Enabled = false;
+            frmlogin.MdiParent = this;
+            frmlogin.Show();
         }
     }
 }

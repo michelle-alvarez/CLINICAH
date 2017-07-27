@@ -2,3 +2,8 @@ c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Resources\bin\D
 c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Resources\bin\Debug\Resources.pdb
 c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Resources\obj\Debug\Resources.dll
 c:\Users\Michelle\documents\visual studio 2017\Projects\CLINICAH\Resources\obj\Debug\Resources.pdb
+C:\Users\Michelle\Source\Repos\CLINICAH\Resources\bin\Debug\Resources.dll
+C:\Users\Michelle\Source\Repos\CLINICAH\Resources\bin\Debug\Resources.pdb
+C:\Users\Michelle\Source\Repos\CLINICAH\Resources\obj\Debug\Resources.csprojResolveAssemblyReference.cache
+C:\Users\Michelle\Source\Repos\CLINICAH\Resources\obj\Debug\Resources.dll
+C:\Users\Michelle\Source\Repos\CLINICAH\Resources\obj\Debug\Resources.pdb

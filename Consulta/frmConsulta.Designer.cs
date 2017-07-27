@@ -29,36 +29,35 @@
         private void InitializeComponent()
         {
             this.lbxAlergias = new System.Windows.Forms.ListBox();
-            this.TextBox5 = new System.Windows.Forms.TextBox();
-            this.TextBox10 = new System.Windows.Forms.TextBox();
-            this.Label12 = new System.Windows.Forms.Label();
-            this.TextBox9 = new System.Windows.Forms.TextBox();
-            this.Label11 = new System.Windows.Forms.Label();
-            this.TextBox6 = new System.Windows.Forms.TextBox();
-            this.Label10 = new System.Windows.Forms.Label();
-            this.TextBox4 = new System.Windows.Forms.TextBox();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Button1 = new System.Windows.Forms.Button();
-            this.Button5 = new System.Windows.Forms.Button();
-            this.Button4 = new System.Windows.Forms.Button();
-            this.Button3 = new System.Windows.Forms.Button();
-            this.Button2 = new System.Windows.Forms.Button();
+            this.btnCampus = new System.Windows.Forms.Button();
             this.TextBox7 = new System.Windows.Forms.TextBox();
-            this.ListBox1 = new System.Windows.Forms.ListBox();
+            this.btnNoRegistrado = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.txtFechaNac = new System.Windows.Forms.TextBox();
+            this.txtPeso = new System.Windows.Forms.TextBox();
+            this.Label12 = new System.Windows.Forms.Label();
+            this.txtAltura = new System.Windows.Forms.TextBox();
+            this.Label11 = new System.Windows.Forms.Label();
+            this.txtFenotipo = new System.Windows.Forms.TextBox();
+            this.Label10 = new System.Windows.Forms.Label();
+            this.txtCarrera = new System.Windows.Forms.TextBox();
+            this.pcbFoto = new System.Windows.Forms.PictureBox();
+            this.btnCitas = new System.Windows.Forms.Button();
+            this.btnNuevaCons = new System.Windows.Forms.Button();
+            this.btnReceta = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.Label7 = new System.Windows.Forms.Label();
             this.Historial = new System.Windows.Forms.Label();
-            this.grdDetalle = new System.Windows.Forms.DataGridView();
+            this.txtEdad = new System.Windows.Forms.DataGridView();
             this.Label6 = new System.Windows.Forms.Label();
             this.TextBox3 = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
             this.Label4 = new System.Windows.Forms.Label();
-            this.Buscar = new System.Windows.Forms.Button();
-            this.TextBox2 = new System.Windows.Forms.TextBox();
+            this.txtCuenta = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.TextBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdDetalle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEdad)).BeginInit();
             this.SuspendLayout();
             // 
             // lbxAlergias
@@ -66,316 +65,306 @@
             this.lbxAlergias.FormattingEnabled = true;
             this.lbxAlergias.ItemHeight = 16;
             this.lbxAlergias.Location = new System.Drawing.Point(644, 539);
-            this.lbxAlergias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbxAlergias.Margin = new System.Windows.Forms.Padding(4);
             this.lbxAlergias.Name = "lbxAlergias";
             this.lbxAlergias.Size = new System.Drawing.Size(220, 116);
             this.lbxAlergias.TabIndex = 72;
             // 
-            // TextBox5
+            // btnCampus
             // 
-            this.TextBox5.Location = new System.Drawing.Point(356, 427);
-            this.TextBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TextBox5.Name = "TextBox5";
-            this.TextBox5.Size = new System.Drawing.Size(128, 22);
-            this.TextBox5.TabIndex = 71;
-            // 
-            // TextBox10
-            // 
-            this.TextBox10.Location = new System.Drawing.Point(644, 485);
-            this.TextBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TextBox10.Name = "TextBox10";
-            this.TextBox10.Size = new System.Drawing.Size(128, 22);
-            this.TextBox10.TabIndex = 70;
-            // 
-            // Label12
-            // 
-            this.Label12.AutoSize = true;
-            this.Label12.Location = new System.Drawing.Point(593, 487);
-            this.Label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label12.Name = "Label12";
-            this.Label12.Size = new System.Drawing.Size(43, 16);
-            this.Label12.TabIndex = 69;
-            this.Label12.Text = "Peso:";
-            // 
-            // TextBox9
-            // 
-            this.TextBox9.Location = new System.Drawing.Point(356, 486);
-            this.TextBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TextBox9.Name = "TextBox9";
-            this.TextBox9.Size = new System.Drawing.Size(128, 22);
-            this.TextBox9.TabIndex = 68;
-            // 
-            // Label11
-            // 
-            this.Label11.AutoSize = true;
-            this.Label11.Location = new System.Drawing.Point(304, 489);
-            this.Label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(45, 16);
-            this.Label11.TabIndex = 67;
-            this.Label11.Text = "Altura:";
-            // 
-            // TextBox6
-            // 
-            this.TextBox6.Location = new System.Drawing.Point(644, 456);
-            this.TextBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TextBox6.Name = "TextBox6";
-            this.TextBox6.Size = new System.Drawing.Size(128, 22);
-            this.TextBox6.TabIndex = 66;
-            // 
-            // Label10
-            // 
-            this.Label10.AutoSize = true;
-            this.Label10.Location = new System.Drawing.Point(529, 458);
-            this.Label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(105, 16);
-            this.Label10.TabIndex = 65;
-            this.Label10.Text = "Tipo de Sangre:";
-            // 
-            // TextBox4
-            // 
-            this.TextBox4.Location = new System.Drawing.Point(644, 427);
-            this.TextBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TextBox4.Name = "TextBox4";
-            this.TextBox4.Size = new System.Drawing.Size(242, 22);
-            this.TextBox4.TabIndex = 64;
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PictureBox1.Location = new System.Drawing.Point(12, 11);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(126, 154);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox1.TabIndex = 63;
-            this.PictureBox1.TabStop = false;
-            // 
-            // Button1
-            // 
-            this.Button1.Location = new System.Drawing.Point(12, 271);
-            this.Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(80, 74);
-            this.Button1.TabIndex = 62;
-            this.Button1.Text = "Patologias";
-            this.Button1.UseVisualStyleBackColor = true;
-            // 
-            // Button5
-            // 
-            this.Button5.Location = new System.Drawing.Point(12, 516);
-            this.Button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Button5.Name = "Button5";
-            this.Button5.Size = new System.Drawing.Size(80, 74);
-            this.Button5.TabIndex = 61;
-            this.Button5.Text = "Campus";
-            this.Button5.UseVisualStyleBackColor = true;
-            // 
-            // Button4
-            // 
-            this.Button4.Location = new System.Drawing.Point(12, 190);
-            this.Button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Button4.Name = "Button4";
-            this.Button4.Size = new System.Drawing.Size(80, 74);
-            this.Button4.TabIndex = 60;
-            this.Button4.Text = "Medicamento";
-            this.Button4.UseVisualStyleBackColor = true;
-            // 
-            // Button3
-            // 
-            this.Button3.Location = new System.Drawing.Point(12, 434);
-            this.Button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Button3.Name = "Button3";
-            this.Button3.Size = new System.Drawing.Size(80, 74);
-            this.Button3.TabIndex = 59;
-            this.Button3.Text = "Clinicas";
-            this.Button3.UseVisualStyleBackColor = true;
-            // 
-            // Button2
-            // 
-            this.Button2.Location = new System.Drawing.Point(12, 353);
-            this.Button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Button2.Name = "Button2";
-            this.Button2.Size = new System.Drawing.Size(80, 74);
-            this.Button2.TabIndex = 58;
-            this.Button2.Text = "Medicos";
-            this.Button2.UseVisualStyleBackColor = true;
+            this.btnCampus.Location = new System.Drawing.Point(12, 516);
+            this.btnCampus.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCampus.Name = "btnCampus";
+            this.btnCampus.Size = new System.Drawing.Size(80, 74);
+            this.btnCampus.TabIndex = 61;
+            this.btnCampus.Text = "Campus";
+            this.btnCampus.UseVisualStyleBackColor = true;
             // 
             // TextBox7
             // 
             this.TextBox7.Location = new System.Drawing.Point(149, 539);
-            this.TextBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextBox7.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox7.Multiline = true;
             this.TextBox7.Name = "TextBox7";
             this.TextBox7.Size = new System.Drawing.Size(488, 116);
             this.TextBox7.TabIndex = 57;
             // 
-            // ListBox1
+            // btnNoRegistrado
             // 
-            this.ListBox1.FormattingEnabled = true;
-            this.ListBox1.ItemHeight = 16;
-            this.ListBox1.Location = new System.Drawing.Point(892, 427);
-            this.ListBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ListBox1.Name = "ListBox1";
-            this.ListBox1.Size = new System.Drawing.Size(220, 228);
-            this.ListBox1.TabIndex = 56;
+            this.btnNoRegistrado.Location = new System.Drawing.Point(493, 13);
+            this.btnNoRegistrado.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNoRegistrado.Name = "btnNoRegistrado";
+            this.btnNoRegistrado.Size = new System.Drawing.Size(146, 51);
+            this.btnNoRegistrado.TabIndex = 98;
+            this.btnNoRegistrado.Text = "Paciente No Registrado";
+            this.btnNoRegistrado.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(645, 531);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(220, 116);
+            this.listBox1.TabIndex = 97;
+            // 
+            // txtFechaNac
+            // 
+            this.txtFechaNac.Location = new System.Drawing.Point(354, 435);
+            this.txtFechaNac.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFechaNac.Name = "txtFechaNac";
+            this.txtFechaNac.Size = new System.Drawing.Size(128, 22);
+            this.txtFechaNac.TabIndex = 96;
+            // 
+            // txtPeso
+            // 
+            this.txtPeso.Location = new System.Drawing.Point(645, 493);
+            this.txtPeso.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.Size = new System.Drawing.Size(128, 22);
+            this.txtPeso.TabIndex = 95;
+            // 
+            // Label12
+            // 
+            this.Label12.AutoSize = true;
+            this.Label12.Location = new System.Drawing.Point(596, 495);
+            this.Label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label12.Name = "Label12";
+            this.Label12.Size = new System.Drawing.Size(43, 16);
+            this.Label12.TabIndex = 94;
+            this.Label12.Text = "Peso:";
+            // 
+            // txtAltura
+            // 
+            this.txtAltura.Location = new System.Drawing.Point(354, 494);
+            this.txtAltura.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAltura.Name = "txtAltura";
+            this.txtAltura.Size = new System.Drawing.Size(128, 22);
+            this.txtAltura.TabIndex = 93;
+            // 
+            // Label11
+            // 
+            this.Label11.AutoSize = true;
+            this.Label11.Location = new System.Drawing.Point(302, 497);
+            this.Label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label11.Name = "Label11";
+            this.Label11.Size = new System.Drawing.Size(45, 16);
+            this.Label11.TabIndex = 92;
+            this.Label11.Text = "Altura:";
+            // 
+            // txtFenotipo
+            // 
+            this.txtFenotipo.Location = new System.Drawing.Point(645, 464);
+            this.txtFenotipo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFenotipo.Name = "txtFenotipo";
+            this.txtFenotipo.Size = new System.Drawing.Size(128, 22);
+            this.txtFenotipo.TabIndex = 91;
+            // 
+            // Label10
+            // 
+            this.Label10.AutoSize = true;
+            this.Label10.Location = new System.Drawing.Point(532, 466);
+            this.Label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label10.Name = "Label10";
+            this.Label10.Size = new System.Drawing.Size(105, 16);
+            this.Label10.TabIndex = 90;
+            this.Label10.Text = "Tipo de Sangre:";
+            // 
+            // txtCarrera
+            // 
+            this.txtCarrera.Location = new System.Drawing.Point(645, 435);
+            this.txtCarrera.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCarrera.Name = "txtCarrera";
+            this.txtCarrera.Size = new System.Drawing.Size(242, 22);
+            this.txtCarrera.TabIndex = 89;
+            // 
+            // pcbFoto
+            // 
+            this.pcbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcbFoto.Location = new System.Drawing.Point(13, 13);
+            this.pcbFoto.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbFoto.Name = "pcbFoto";
+            this.pcbFoto.Size = new System.Drawing.Size(126, 154);
+            this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbFoto.TabIndex = 88;
+            this.pcbFoto.TabStop = false;
+            // 
+            // btnCitas
+            // 
+            this.btnCitas.Location = new System.Drawing.Point(13, 273);
+            this.btnCitas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCitas.Name = "btnCitas";
+            this.btnCitas.Size = new System.Drawing.Size(80, 74);
+            this.btnCitas.TabIndex = 87;
+            this.btnCitas.Text = "Citas";
+            this.btnCitas.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevaCons
+            // 
+            this.btnNuevaCons.Location = new System.Drawing.Point(13, 192);
+            this.btnNuevaCons.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNuevaCons.Name = "btnNuevaCons";
+            this.btnNuevaCons.Size = new System.Drawing.Size(80, 74);
+            this.btnNuevaCons.TabIndex = 86;
+            this.btnNuevaCons.Text = "Nueva Consulta";
+            this.btnNuevaCons.UseVisualStyleBackColor = true;
+            // 
+            // btnReceta
+            // 
+            this.btnReceta.Location = new System.Drawing.Point(13, 355);
+            this.btnReceta.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReceta.Name = "btnReceta";
+            this.btnReceta.Size = new System.Drawing.Size(80, 74);
+            this.btnReceta.TabIndex = 85;
+            this.btnReceta.Text = "Generar Receta";
+            this.btnReceta.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(150, 531);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(488, 116);
+            this.textBox1.TabIndex = 84;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 16;
+            this.listBox2.Location = new System.Drawing.Point(893, 435);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(197, 212);
+            this.listBox2.TabIndex = 83;
             // 
             // Label7
             // 
             this.Label7.AutoSize = true;
-            this.Label7.Location = new System.Drawing.Point(889, 407);
+            this.Label7.Location = new System.Drawing.Point(890, 415);
             this.Label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(144, 16);
-            this.Label7.TabIndex = 55;
+            this.Label7.TabIndex = 82;
             this.Label7.Text = "Patologias Conocidas:";
             // 
             // Historial
             // 
             this.Historial.AutoSize = true;
-            this.Historial.Location = new System.Drawing.Point(151, 74);
+            this.Historial.Location = new System.Drawing.Point(152, 76);
             this.Historial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Historial.Name = "Historial";
             this.Historial.Size = new System.Drawing.Size(108, 16);
-            this.Historial.TabIndex = 54;
+            this.Historial.TabIndex = 81;
             this.Historial.Text = "Historial medico:";
             // 
-            // grdDetalle
+            // txtEdad
             // 
-            this.grdDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdDetalle.Location = new System.Drawing.Point(149, 94);
-            this.grdDetalle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grdDetalle.Name = "grdDetalle";
-            this.grdDetalle.Size = new System.Drawing.Size(963, 289);
-            this.grdDetalle.TabIndex = 53;
+            this.txtEdad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.txtEdad.Location = new System.Drawing.Point(150, 96);
+            this.txtEdad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(1110, 289);
+            this.txtEdad.TabIndex = 80;
             // 
             // Label6
             // 
             this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(578, 430);
+            this.Label6.Location = new System.Drawing.Point(581, 438);
             this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label6.Name = "Label6";
             this.Label6.Size = new System.Drawing.Size(56, 16);
-            this.Label6.TabIndex = 52;
+            this.Label6.TabIndex = 79;
             this.Label6.Text = "Carrera:";
             // 
             // TextBox3
             // 
-            this.TextBox3.Location = new System.Drawing.Point(356, 458);
-            this.TextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextBox3.Location = new System.Drawing.Point(354, 466);
+            this.TextBox3.Margin = new System.Windows.Forms.Padding(4);
             this.TextBox3.Name = "TextBox3";
             this.TextBox3.Size = new System.Drawing.Size(128, 22);
-            this.TextBox3.TabIndex = 51;
+            this.TextBox3.TabIndex = 78;
             // 
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(304, 460);
+            this.Label3.Location = new System.Drawing.Point(302, 468);
             this.Label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(44, 16);
-            this.Label3.TabIndex = 50;
+            this.Label3.TabIndex = 77;
             this.Label3.Text = "Edad:";
             // 
             // Label4
             // 
             this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(208, 430);
+            this.Label4.Location = new System.Drawing.Point(206, 438);
             this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(139, 16);
-            this.Label4.TabIndex = 49;
+            this.Label4.TabIndex = 76;
             this.Label4.Text = "Fecha de Nacimiento:";
             // 
-            // Buscar
+            // txtCuenta
             // 
-            this.Buscar.Location = new System.Drawing.Point(477, 11);
-            this.Buscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Buscar.Name = "Buscar";
-            this.Buscar.Size = new System.Drawing.Size(64, 50);
-            this.Buscar.TabIndex = 48;
-            this.Buscar.Text = "Buscar";
-            this.Buscar.UseVisualStyleBackColor = true;
-            // 
-            // TextBox2
-            // 
-            this.TextBox2.Location = new System.Drawing.Point(214, 40);
-            this.TextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TextBox2.Name = "TextBox2";
-            this.TextBox2.Size = new System.Drawing.Size(256, 22);
-            this.TextBox2.TabIndex = 47;
+            this.txtCuenta.Location = new System.Drawing.Point(215, 27);
+            this.txtCuenta.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCuenta.Name = "txtCuenta";
+            this.txtCuenta.Size = new System.Drawing.Size(256, 22);
+            this.txtCuenta.TabIndex = 75;
             // 
             // Label2
             // 
             this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(151, 42);
+            this.Label2.Location = new System.Drawing.Point(154, 30);
             this.Label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(55, 16);
-            this.Label2.TabIndex = 46;
-            this.Label2.Text = "Codigo:";
-            // 
-            // Label1
-            // 
-            this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(146, 14);
-            this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(60, 16);
-            this.Label1.TabIndex = 45;
-            this.Label1.Text = "Nombre:";
-            // 
-            // TextBox1
-            // 
-            this.TextBox1.Location = new System.Drawing.Point(214, 11);
-            this.TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(256, 22);
-            this.TextBox1.TabIndex = 44;
+            this.Label2.Size = new System.Drawing.Size(53, 16);
+            this.Label2.TabIndex = 74;
+            this.Label2.Text = "Cuenta:";
             // 
             // frmConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1120, 590);
-            this.Controls.Add(this.lbxAlergias);
-            this.Controls.Add(this.TextBox5);
-            this.Controls.Add(this.TextBox10);
+            this.Controls.Add(this.btnNoRegistrado);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.txtFechaNac);
+            this.Controls.Add(this.txtPeso);
             this.Controls.Add(this.Label12);
-            this.Controls.Add(this.TextBox9);
+            this.Controls.Add(this.txtAltura);
             this.Controls.Add(this.Label11);
-            this.Controls.Add(this.TextBox6);
+            this.Controls.Add(this.txtFenotipo);
             this.Controls.Add(this.Label10);
-            this.Controls.Add(this.TextBox4);
-            this.Controls.Add(this.PictureBox1);
-            this.Controls.Add(this.Button1);
-            this.Controls.Add(this.Button5);
-            this.Controls.Add(this.Button4);
-            this.Controls.Add(this.Button3);
-            this.Controls.Add(this.Button2);
-            this.Controls.Add(this.TextBox7);
-            this.Controls.Add(this.ListBox1);
+            this.Controls.Add(this.txtCarrera);
+            this.Controls.Add(this.pcbFoto);
+            this.Controls.Add(this.btnCitas);
+            this.Controls.Add(this.btnNuevaCons);
+            this.Controls.Add(this.btnReceta);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.Label7);
             this.Controls.Add(this.Historial);
-            this.Controls.Add(this.grdDetalle);
+            this.Controls.Add(this.txtEdad);
             this.Controls.Add(this.Label6);
             this.Controls.Add(this.TextBox3);
             this.Controls.Add(this.Label3);
             this.Controls.Add(this.Label4);
-            this.Controls.Add(this.Buscar);
-            this.Controls.Add(this.TextBox2);
+            this.Controls.Add(this.txtCuenta);
             this.Controls.Add(this.Label2);
-            this.Controls.Add(this.Label1);
-            this.Controls.Add(this.TextBox1);
+            this.Controls.Add(this.lbxAlergias);
+            this.Controls.Add(this.btnCampus);
+            this.Controls.Add(this.TextBox7);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Pacientes";
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdDetalle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEdad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -384,34 +373,33 @@
         #endregion
 
         internal System.Windows.Forms.ListBox lbxAlergias;
-        internal System.Windows.Forms.TextBox TextBox5;
-        internal System.Windows.Forms.TextBox TextBox10;
-        internal System.Windows.Forms.Label Label12;
-        internal System.Windows.Forms.TextBox TextBox9;
-        internal System.Windows.Forms.Label Label11;
-        internal System.Windows.Forms.TextBox TextBox6;
-        internal System.Windows.Forms.Label Label10;
-        internal System.Windows.Forms.TextBox TextBox4;
-        internal System.Windows.Forms.PictureBox PictureBox1;
-        internal System.Windows.Forms.Button Button1;
-        internal System.Windows.Forms.Button Button5;
-        internal System.Windows.Forms.Button Button4;
-        internal System.Windows.Forms.Button Button3;
-        internal System.Windows.Forms.Button Button2;
+        internal System.Windows.Forms.Button btnCampus;
         internal System.Windows.Forms.TextBox TextBox7;
-        internal System.Windows.Forms.ListBox ListBox1;
+        internal System.Windows.Forms.Button btnNoRegistrado;
+        internal System.Windows.Forms.ListBox listBox1;
+        internal System.Windows.Forms.TextBox txtFechaNac;
+        internal System.Windows.Forms.TextBox txtPeso;
+        internal System.Windows.Forms.Label Label12;
+        internal System.Windows.Forms.TextBox txtAltura;
+        internal System.Windows.Forms.Label Label11;
+        internal System.Windows.Forms.TextBox txtFenotipo;
+        internal System.Windows.Forms.Label Label10;
+        internal System.Windows.Forms.TextBox txtCarrera;
+        internal System.Windows.Forms.PictureBox pcbFoto;
+        internal System.Windows.Forms.Button btnCitas;
+        internal System.Windows.Forms.Button btnNuevaCons;
+        internal System.Windows.Forms.Button btnReceta;
+        internal System.Windows.Forms.TextBox textBox1;
+        internal System.Windows.Forms.ListBox listBox2;
         internal System.Windows.Forms.Label Label7;
         internal System.Windows.Forms.Label Historial;
-        internal System.Windows.Forms.DataGridView grdDetalle;
+        internal System.Windows.Forms.DataGridView txtEdad;
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.TextBox TextBox3;
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.Label Label4;
-        internal System.Windows.Forms.Button Buscar;
-        internal System.Windows.Forms.TextBox TextBox2;
+        internal System.Windows.Forms.TextBox txtCuenta;
         internal System.Windows.Forms.Label Label2;
-        internal System.Windows.Forms.Label Label1;
-        internal System.Windows.Forms.TextBox TextBox1;
     }
 }
 

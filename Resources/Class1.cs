@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Resources
 {
-    public class Class1
+    public static class Global
     {
+        static bool desbloquear = true;
     }
 }

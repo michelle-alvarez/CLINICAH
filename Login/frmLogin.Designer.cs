@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.lb_Register = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txt_IDusuario = new System.Windows.Forms.TextBox();
+            this.txtIDmedico = new System.Windows.Forms.TextBox();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,17 +58,17 @@
             this.txtPassword.TabIndex = 7;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
-            // txt_IDusuario
+            // txtIDmedico
             // 
-            this.txt_IDusuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_IDusuario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_IDusuario.Location = new System.Drawing.Point(148, 51);
-            this.txt_IDusuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_IDusuario.Multiline = true;
-            this.txt_IDusuario.Name = "txt_IDusuario";
-            this.txt_IDusuario.Size = new System.Drawing.Size(483, 27);
-            this.txt_IDusuario.TabIndex = 6;
-            this.txt_IDusuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            this.txtIDmedico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIDmedico.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDmedico.Location = new System.Drawing.Point(148, 51);
+            this.txtIDmedico.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtIDmedico.Multiline = true;
+            this.txtIDmedico.Name = "txtIDmedico";
+            this.txtIDmedico.Size = new System.Drawing.Size(483, 27);
+            this.txtIDmedico.TabIndex = 6;
+            this.txtIDmedico.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // btn_Cancelar
             // 
@@ -151,12 +151,14 @@
             this.Controls.Add(this.btn_Aceptar);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txt_IDusuario);
+            this.Controls.Add(this.txtIDmedico);
             this.Controls.Add(this.lb_Register);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acceso Clinica";
@@ -173,7 +175,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lb_Register;
         internal System.Windows.Forms.TextBox txtPassword;
-        internal System.Windows.Forms.TextBox txt_IDusuario;
+        internal System.Windows.Forms.TextBox txtIDmedico;
         internal System.Windows.Forms.Button btn_Aceptar;
         internal System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Label label1;
