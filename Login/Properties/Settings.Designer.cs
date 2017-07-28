@@ -22,5 +22,15 @@ namespace Login.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("User Id=postgres;Host=10.4.5.32;Database=clinicas")]
+        public string clinicasCnx {
+            get {
+                return ((string)(this["clinicasCnx"]));
+            }
+        }
     }
 }

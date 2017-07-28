@@ -26,3 +26,6 @@ C:\Users\Michelle\Source\Repos\CLINICAH\Medicos\bin\Debug\System.Threading.Tasks
 C:\Users\Michelle\Source\Repos\CLINICAH\Medicos\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Michelle\Source\Repos\CLINICAH\Medicos\bin\Debug\Npgsql.dll
 C:\Users\Michelle\Source\Repos\CLINICAH\Medicos\bin\Debug\Npgsql.xml
+C:\Users\Michelle\Source\Repos\CLINICAH\Medicos\bin\Debug\Devart.Data.dll
+C:\Users\Michelle\Source\Repos\CLINICAH\Medicos\bin\Debug\Devart.Data.PostgreSql.dll
+C:\Users\Michelle\Source\Repos\CLINICAH\Medicos\bin\Debug\Devart.Data.PostgreSql.xml

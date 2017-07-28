@@ -28,8 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedicos));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.trimestreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombrecompletoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idmedicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.generoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.fechanacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadocivilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.especialidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.celularDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aniocarreraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.campusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.turnoinicialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.turnofinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSmedicos = new Medicos.DSmedicos();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.txtidentidad = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
@@ -45,8 +63,8 @@
             this.cmbgenero = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbcarrera = new System.Windows.Forms.ComboBox();
-            this.cmbyear = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.labelyear = new System.Windows.Forms.Label();
+            this.cmbyear = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dtpnacimiento = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
@@ -55,7 +73,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtconfirmacion = new System.Windows.Forms.TextBox();
             this.btnagregar = new System.Windows.Forms.Button();
-            this.bnteditar = new System.Windows.Forms.Button();
+            this.btneditar = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbCampus = new System.Windows.Forms.ComboBox();
@@ -64,17 +82,139 @@
             this.label14 = new System.Windows.Forms.Label();
             this.cmbtrimestre = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbturno = new System.Windows.Forms.ComboBox();
+            this.medicosTableAdapter = new Medicos.DSmedicosTableAdapters.medicosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSmedicos)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 46);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.trimestreDataGridViewTextBoxColumn,
+            this.nombrecompletoDataGridViewTextBoxColumn,
+            this.idmedicoDataGridViewTextBoxColumn,
+            this.generoDataGridViewCheckBoxColumn,
+            this.fechanacDataGridViewTextBoxColumn,
+            this.estadocivilDataGridViewTextBoxColumn,
+            this.especialidadDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.direccionDataGridViewTextBoxColumn,
+            this.celularDataGridViewTextBoxColumn,
+            this.aniocarreraDataGridViewTextBoxColumn,
+            this.campusDataGridViewTextBoxColumn,
+            this.passDataGridViewTextBoxColumn,
+            this.turnoinicialDataGridViewTextBoxColumn,
+            this.turnofinalDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.medicosBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 50);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(824, 168);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // trimestreDataGridViewTextBoxColumn
+            // 
+            this.trimestreDataGridViewTextBoxColumn.DataPropertyName = "trimestre";
+            this.trimestreDataGridViewTextBoxColumn.HeaderText = "trimestre";
+            this.trimestreDataGridViewTextBoxColumn.Name = "trimestreDataGridViewTextBoxColumn";
+            // 
+            // nombrecompletoDataGridViewTextBoxColumn
+            // 
+            this.nombrecompletoDataGridViewTextBoxColumn.DataPropertyName = "nombrecompleto";
+            this.nombrecompletoDataGridViewTextBoxColumn.HeaderText = "nombrecompleto";
+            this.nombrecompletoDataGridViewTextBoxColumn.Name = "nombrecompletoDataGridViewTextBoxColumn";
+            // 
+            // idmedicoDataGridViewTextBoxColumn
+            // 
+            this.idmedicoDataGridViewTextBoxColumn.DataPropertyName = "idmedico";
+            this.idmedicoDataGridViewTextBoxColumn.HeaderText = "idmedico";
+            this.idmedicoDataGridViewTextBoxColumn.Name = "idmedicoDataGridViewTextBoxColumn";
+            // 
+            // generoDataGridViewCheckBoxColumn
+            // 
+            this.generoDataGridViewCheckBoxColumn.DataPropertyName = "genero";
+            this.generoDataGridViewCheckBoxColumn.HeaderText = "genero";
+            this.generoDataGridViewCheckBoxColumn.Name = "generoDataGridViewCheckBoxColumn";
+            // 
+            // fechanacDataGridViewTextBoxColumn
+            // 
+            this.fechanacDataGridViewTextBoxColumn.DataPropertyName = "fechanac";
+            this.fechanacDataGridViewTextBoxColumn.HeaderText = "fechanac";
+            this.fechanacDataGridViewTextBoxColumn.Name = "fechanacDataGridViewTextBoxColumn";
+            // 
+            // estadocivilDataGridViewTextBoxColumn
+            // 
+            this.estadocivilDataGridViewTextBoxColumn.DataPropertyName = "estadocivil";
+            this.estadocivilDataGridViewTextBoxColumn.HeaderText = "estadocivil";
+            this.estadocivilDataGridViewTextBoxColumn.Name = "estadocivilDataGridViewTextBoxColumn";
+            // 
+            // especialidadDataGridViewTextBoxColumn
+            // 
+            this.especialidadDataGridViewTextBoxColumn.DataPropertyName = "especialidad";
+            this.especialidadDataGridViewTextBoxColumn.HeaderText = "especialidad";
+            this.especialidadDataGridViewTextBoxColumn.Name = "especialidadDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // direccionDataGridViewTextBoxColumn
+            // 
+            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
+            this.direccionDataGridViewTextBoxColumn.HeaderText = "direccion";
+            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            // 
+            // celularDataGridViewTextBoxColumn
+            // 
+            this.celularDataGridViewTextBoxColumn.DataPropertyName = "celular";
+            this.celularDataGridViewTextBoxColumn.HeaderText = "celular";
+            this.celularDataGridViewTextBoxColumn.Name = "celularDataGridViewTextBoxColumn";
+            // 
+            // aniocarreraDataGridViewTextBoxColumn
+            // 
+            this.aniocarreraDataGridViewTextBoxColumn.DataPropertyName = "aniocarrera";
+            this.aniocarreraDataGridViewTextBoxColumn.HeaderText = "aniocarrera";
+            this.aniocarreraDataGridViewTextBoxColumn.Name = "aniocarreraDataGridViewTextBoxColumn";
+            // 
+            // campusDataGridViewTextBoxColumn
+            // 
+            this.campusDataGridViewTextBoxColumn.DataPropertyName = "campus";
+            this.campusDataGridViewTextBoxColumn.HeaderText = "campus";
+            this.campusDataGridViewTextBoxColumn.Name = "campusDataGridViewTextBoxColumn";
+            // 
+            // passDataGridViewTextBoxColumn
+            // 
+            this.passDataGridViewTextBoxColumn.DataPropertyName = "pass";
+            this.passDataGridViewTextBoxColumn.HeaderText = "pass";
+            this.passDataGridViewTextBoxColumn.Name = "passDataGridViewTextBoxColumn";
+            // 
+            // turnoinicialDataGridViewTextBoxColumn
+            // 
+            this.turnoinicialDataGridViewTextBoxColumn.DataPropertyName = "turnoinicial";
+            this.turnoinicialDataGridViewTextBoxColumn.HeaderText = "turnoinicial";
+            this.turnoinicialDataGridViewTextBoxColumn.Name = "turnoinicialDataGridViewTextBoxColumn";
+            // 
+            // turnofinalDataGridViewTextBoxColumn
+            // 
+            this.turnofinalDataGridViewTextBoxColumn.DataPropertyName = "turnofinal";
+            this.turnofinalDataGridViewTextBoxColumn.HeaderText = "turnofinal";
+            this.turnofinalDataGridViewTextBoxColumn.Name = "turnofinalDataGridViewTextBoxColumn";
+            // 
+            // medicosBindingSource
+            // 
+            this.medicosBindingSource.DataMember = "medicos";
+            this.medicosBindingSource.DataSource = this.dSmedicos;
+            // 
+            // dSmedicos
+            // 
+            this.dSmedicos.DataSetName = "DSmedicos";
+            this.dSmedicos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtbuscar
             // 
@@ -198,22 +338,22 @@
             this.cmbcarrera.Size = new System.Drawing.Size(140, 21);
             this.cmbcarrera.TabIndex = 16;
             // 
+            // labelyear
+            // 
+            this.labelyear.AutoSize = true;
+            this.labelyear.Location = new System.Drawing.Point(504, 286);
+            this.labelyear.Name = "labelyear";
+            this.labelyear.Size = new System.Drawing.Size(81, 13);
+            this.labelyear.TabIndex = 17;
+            this.labelyear.Text = "Año de Carrera:";
+            // 
             // cmbyear
             // 
-            this.cmbyear.AutoSize = true;
-            this.cmbyear.Location = new System.Drawing.Point(504, 286);
+            this.cmbyear.FormattingEnabled = true;
+            this.cmbyear.Location = new System.Drawing.Point(588, 281);
             this.cmbyear.Name = "cmbyear";
-            this.cmbyear.Size = new System.Drawing.Size(81, 13);
-            this.cmbyear.TabIndex = 17;
-            this.cmbyear.Text = "Año de Carrera:";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(588, 281);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(103, 21);
-            this.comboBox3.TabIndex = 18;
+            this.cmbyear.Size = new System.Drawing.Size(103, 21);
+            this.cmbyear.TabIndex = 18;
             // 
             // label9
             // 
@@ -281,15 +421,16 @@
             this.btnagregar.TabIndex = 26;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.UseVisualStyleBackColor = true;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
-            // bnteditar
+            // btneditar
             // 
-            this.bnteditar.Location = new System.Drawing.Point(93, 448);
-            this.bnteditar.Name = "bnteditar";
-            this.bnteditar.Size = new System.Drawing.Size(75, 49);
-            this.bnteditar.TabIndex = 27;
-            this.bnteditar.Text = "Editar";
-            this.bnteditar.UseVisualStyleBackColor = true;
+            this.btneditar.Location = new System.Drawing.Point(93, 448);
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Size = new System.Drawing.Size(75, 49);
+            this.btneditar.TabIndex = 27;
+            this.btneditar.Text = "Editar";
+            this.btneditar.UseVisualStyleBackColor = true;
             // 
             // btnsalir
             // 
@@ -299,6 +440,7 @@
             this.btnsalir.TabIndex = 28;
             this.btnsalir.Text = "Salir";
             this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // label8
             // 
@@ -360,20 +502,24 @@
             this.label15.TabIndex = 35;
             this.label15.Text = "Turno";
             // 
-            // comboBox1
+            // cmbturno
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(791, 224);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(103, 21);
-            this.comboBox1.TabIndex = 36;
+            this.cmbturno.FormattingEnabled = true;
+            this.cmbturno.Location = new System.Drawing.Point(791, 224);
+            this.cmbturno.Name = "cmbturno";
+            this.cmbturno.Size = new System.Drawing.Size(103, 21);
+            this.cmbturno.TabIndex = 36;
+            // 
+            // medicosTableAdapter
+            // 
+            this.medicosTableAdapter.ClearBeforeFill = true;
             // 
             // frmMedicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 509);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbturno);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.cmbtrimestre);
             this.Controls.Add(this.label14);
@@ -382,7 +528,7 @@
             this.Controls.Add(this.cmbCampus);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnsalir);
-            this.Controls.Add(this.bnteditar);
+            this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnagregar);
             this.Controls.Add(this.txtconfirmacion);
             this.Controls.Add(this.label12);
@@ -391,8 +537,8 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dtpnacimiento);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.cmbyear);
+            this.Controls.Add(this.labelyear);
             this.Controls.Add(this.cmbcarrera);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cmbgenero);
@@ -415,6 +561,8 @@
             this.Text = "Médicos";
             this.Load += new System.EventHandler(this.frmMedicos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSmedicos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,8 +586,8 @@
         private System.Windows.Forms.ComboBox cmbgenero;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbcarrera;
-        private System.Windows.Forms.Label cmbyear;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label labelyear;
+        private System.Windows.Forms.ComboBox cmbyear;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtpnacimiento;
         private System.Windows.Forms.Label label10;
@@ -448,7 +596,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtconfirmacion;
         private System.Windows.Forms.Button btnagregar;
-        private System.Windows.Forms.Button bnteditar;
+        private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.Button btnsalir;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbCampus;
@@ -457,7 +605,25 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cmbtrimestre;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbturno;
+        private DSmedicos dSmedicos;
+        private System.Windows.Forms.BindingSource medicosBindingSource;
+        private DSmedicosTableAdapters.medicosTableAdapter medicosTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn trimestreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombrecompletoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idmedicoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn generoDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechanacDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadocivilDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn especialidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn celularDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aniocarreraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn campusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn turnoinicialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn turnofinalDataGridViewTextBoxColumn;
     }
 }
 
