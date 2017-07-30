@@ -16,7 +16,7 @@ namespace Medicamentos_y_Suministros
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMedicamentosSuministros());
+            Application.Run(new frmMedicamentos());
         }
     }
 }

@@ -81,8 +81,6 @@
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.cmbtrimestre = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.cmbturno = new System.Windows.Forms.ComboBox();
             this.medicosTableAdapter = new Medicos.DSmedicosTableAdapters.medicosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).BeginInit();
@@ -471,6 +469,9 @@
             // cmbEstado
             // 
             this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Soltero(a)",
+            "Casado(a)"});
             this.cmbEstado.Location = new System.Drawing.Point(536, 308);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(140, 21);
@@ -493,23 +494,6 @@
             this.cmbtrimestre.Size = new System.Drawing.Size(140, 21);
             this.cmbtrimestre.TabIndex = 34;
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(740, 227);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(35, 13);
-            this.label15.TabIndex = 35;
-            this.label15.Text = "Turno";
-            // 
-            // cmbturno
-            // 
-            this.cmbturno.FormattingEnabled = true;
-            this.cmbturno.Location = new System.Drawing.Point(791, 224);
-            this.cmbturno.Name = "cmbturno";
-            this.cmbturno.Size = new System.Drawing.Size(103, 21);
-            this.cmbturno.TabIndex = 36;
-            // 
             // medicosTableAdapter
             // 
             this.medicosTableAdapter.ClearBeforeFill = true;
@@ -519,8 +503,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 509);
-            this.Controls.Add(this.cmbturno);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.cmbtrimestre);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.cmbEstado);
@@ -604,8 +586,6 @@
         private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cmbtrimestre;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox cmbturno;
         private DSmedicos dSmedicos;
         private System.Windows.Forms.BindingSource medicosBindingSource;
         private DSmedicosTableAdapters.medicosTableAdapter medicosTableAdapter;
