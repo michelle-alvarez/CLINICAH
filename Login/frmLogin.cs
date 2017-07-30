@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Npgsql;
+using Devart.Data.PostgreSql;
 
 
 namespace Login
@@ -32,14 +32,9 @@ namespace Login
                 return hashedInputStringBuilder.ToString();
             }
         }
-        private const string dbserver = "localhost";
-        private const string dbport = "5432";
-        private const string db = "unicah";
-        private const string dbuser = "postgres";
-        private const string dbpass = "unicah";
-        bool continuar = false;
-        private const string cnxclinica = "Server=" + dbserver + ";Port=" + dbport + ";Database=" + db +
-                ";User Id=" + dbuser + "; Password=" + dbpass + ";";
+        
+        private string cnxclinica = Login.Properties.Settings.Default.clinicasCnx;
+
 
         private void Login_Load(object sender, EventArgs e)
         {
@@ -84,7 +79,6 @@ namespace Login
             string password = txtPassword.Text;
             string idmedi = txtIDmedico.Text;
             string strerror = " ";
-            bool block = false;
             password = SHA512(password);
             if (txtIDmedico.Text != "" && txtPassword.Text != "")
             {
@@ -94,11 +88,11 @@ namespace Login
                 {
                     //se define la conexion como una nueva conexcion de postgres y le asignamos el valor de la variable string que tiene los datos de
                     //conexion
-                    NpgsqlConnection conexion = new NpgsqlConnection(cnxclinica);
+                    PgSqlConnection conexion = new PgSqlConnection(cnxclinica);
                     //definimos la variable de comando donde le asignamos el string que contiene el select y la conexion
-                    NpgsqlCommand comando = new NpgsqlCommand(strSQL, conexion);
+                    PgSqlCommand comando = new PgSqlCommand(strSQL, conexion);
                     //comando.Parameters.AddWithValue("@idusuario", usuario);
-                    NpgsqlDataReader reader;
+                    PgSqlDataReader reader;
                     conexion.Open();
                     reader = comando.ExecuteReader();
                     if (reader.HasRows)
@@ -114,11 +108,12 @@ namespace Login
                             categoria(idmedi);
                             this.Close();
                             Resources.Propiedades.flag = true;
+                            Resources.Propiedades.nombre_ingreso = reader.GetString(1);
 
                         }
                         else
                         {
-                            continuar = false;
+                            
                             strerror = "Password Incorrecto";
                         }
                     }
@@ -158,15 +153,16 @@ namespace Login
             string strSQL = "SELECT tipomedico FROM administracion.tipomedico WHERE idmedico = '" + ID + "'";
             try
             {
-                NpgsqlConnection conexion = new NpgsqlConnection(cnxclinica);
-                NpgsqlCommand comando = new NpgsqlCommand(strSQL, conexion);
-                NpgsqlDataReader reader;
+                PgSqlConnection conexion = new PgSqlConnection(cnxclinica);
+                PgSqlCommand comando = new PgSqlCommand(strSQL, conexion);
+                PgSqlDataReader reader;
                 conexion.Open();
                 reader = comando.ExecuteReader();
                 if (reader.HasRows)
                 {
                     reader.Read();
                     Resources.Propiedades.categoria = reader.GetInt32(0);
+                   
                 }
                 conexion.Close();
             }

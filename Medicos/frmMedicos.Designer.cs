@@ -47,7 +47,7 @@
             this.turnoinicialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.turnofinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dSmedicos = new Medicos.DSmedicos();
+            
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.txtidentidad = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
@@ -81,10 +81,10 @@
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.cmbtrimestre = new System.Windows.Forms.ComboBox();
-            this.medicosTableAdapter = new Medicos.DSmedicosTableAdapters.medicosTableAdapter();
+         
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSmedicos)).BeginInit();
+         
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -207,12 +207,10 @@
             // medicosBindingSource
             // 
             this.medicosBindingSource.DataMember = "medicos";
-            this.medicosBindingSource.DataSource = this.dSmedicos;
+            
             // 
             // dSmedicos
             // 
-            this.dSmedicos.DataSetName = "DSmedicos";
-            this.dSmedicos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtbuscar
             // 
@@ -496,7 +494,7 @@
             // 
             // medicosTableAdapter
             // 
-            this.medicosTableAdapter.ClearBeforeFill = true;
+         
             // 
             // frmMedicos
             // 
@@ -544,7 +542,7 @@
             this.Load += new System.EventHandler(this.frmMedicos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSmedicos)).EndInit();
+          
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -586,9 +584,9 @@
         private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cmbtrimestre;
-        private DSmedicos dSmedicos;
+       
         private System.Windows.Forms.BindingSource medicosBindingSource;
-        private DSmedicosTableAdapters.medicosTableAdapter medicosTableAdapter;
+       
         private System.Windows.Forms.DataGridViewTextBoxColumn trimestreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrecompletoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idmedicoDataGridViewTextBoxColumn;

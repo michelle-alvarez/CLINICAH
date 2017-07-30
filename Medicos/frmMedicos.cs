@@ -20,7 +20,7 @@ namespace Medicos
         private void frmMedicos_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'dSmedicos.medicos' Puede moverla o quitarla según sea necesario.
-            this.medicosTableAdapter.Fill(this.dSmedicos.medicos);
+           
             activo(false);
         }
 

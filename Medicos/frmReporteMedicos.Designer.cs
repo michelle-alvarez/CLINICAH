@@ -42,13 +42,9 @@
             this.cmbcampus = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbcarrera = new System.Windows.Forms.ComboBox();
-            this.dSmedicos = new Medicos.DSmedicos();
+           
             this.medicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.medicosTableAdapter = new Medicos.DSmedicosTableAdapters.medicosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.datagridResultados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSmedicos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).BeginInit();
-            this.SuspendLayout();
+            
             // 
             // datagridResultados
             // 
@@ -162,17 +158,15 @@
             // 
             // dSmedicos
             // 
-            this.dSmedicos.DataSetName = "DSmedicos";
-            this.dSmedicos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+           
             // 
             // medicosBindingSource
             // 
-            this.medicosBindingSource.DataMember = "medicos";
-            this.medicosBindingSource.DataSource = this.dSmedicos;
+
             // 
             // medicosTableAdapter
             // 
-            this.medicosTableAdapter.ClearBeforeFill = true;
+            
             // 
             // frmReporteMedicos
             // 
@@ -197,7 +191,7 @@
             this.Text = "frmReporte";
             this.Load += new System.EventHandler(this.frmReporteMedicos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.datagridResultados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSmedicos)).EndInit();
+           
             ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -218,8 +212,8 @@
         private System.Windows.Forms.ComboBox cmbcampus;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbcarrera;
-        private DSmedicos dSmedicos;
+       
         private System.Windows.Forms.BindingSource medicosBindingSource;
-        private DSmedicosTableAdapters.medicosTableAdapter medicosTableAdapter;
+  
     }
 }

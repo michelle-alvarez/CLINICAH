@@ -24,3 +24,16 @@ C:\Users\Michelle\Source\Repos\CLINICAH\Consulta\bin\Debug\System.Threading.Task
 C:\Users\Michelle\Source\Repos\CLINICAH\Consulta\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Michelle\Source\Repos\CLINICAH\Consulta\bin\Debug\Npgsql.dll
 C:\Users\Michelle\Source\Repos\CLINICAH\Consulta\bin\Debug\Npgsql.xml
+C:\Users\Benjamin\Source\Repos\CLINICAH\Consulta\bin\Debug\Consulta.exe.config
+C:\Users\Benjamin\Source\Repos\CLINICAH\Consulta\bin\Debug\Consulta.exe
+C:\Users\Benjamin\Source\Repos\CLINICAH\Consulta\bin\Debug\Consulta.pdb
+C:\Users\Benjamin\Source\Repos\CLINICAH\Consulta\bin\Debug\Npgsql.dll
+C:\Users\Benjamin\Source\Repos\CLINICAH\Consulta\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Benjamin\Source\Repos\CLINICAH\Consulta\bin\Debug\Npgsql.xml
+C:\Users\Benjamin\Source\Repos\CLINICAH\Consulta\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Benjamin\Source\Repos\CLINICAH\Consulta\obj\Debug\Consulta.csprojResolveAssemblyReference.cache
+C:\Users\Benjamin\Source\Repos\CLINICAH\Consulta\obj\Debug\Consulta.frmConsulta.resources
+C:\Users\Benjamin\Source\Repos\CLINICAH\Consulta\obj\Debug\Consulta.Properties.Resources.resources
+C:\Users\Benjamin\Source\Repos\CLINICAH\Consulta\obj\Debug\Consulta.csproj.GenerateResource.Cache
+C:\Users\Benjamin\Source\Repos\CLINICAH\Consulta\obj\Debug\Consulta.exe
+C:\Users\Benjamin\Source\Repos\CLINICAH\Consulta\obj\Debug\Consulta.pdb
