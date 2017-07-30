@@ -38,6 +38,10 @@
             this.MenuMedicos = new System.Windows.Forms.ToolStripButton();
             this.MenuProcedimientos = new System.Windows.Forms.ToolStripButton();
             this.MenuSuministros = new System.Windows.Forms.ToolStripButton();
+            this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pacientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.medicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.medicamentosYSuministrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mst.SuspendLayout();
             this.tlsr.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +51,8 @@
             this.mst.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.parametrosToolStripMenuItem,
             this.clínicaToolStripMenuItem,
-            this.pacientesToolStripMenuItem});
+            this.pacientesToolStripMenuItem,
+            this.mantenimientoToolStripMenuItem});
             this.mst.Location = new System.Drawing.Point(0, 0);
             this.mst.Name = "mst";
             this.mst.Size = new System.Drawing.Size(866, 24);
@@ -133,6 +138,34 @@
             this.MenuSuministros.Text = "Medicamentos y Suministros";
             this.MenuSuministros.Click += new System.EventHandler(this.MenuSuministros_Click);
             // 
+            // mantenimientoToolStripMenuItem
+            // 
+            this.mantenimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pacientesToolStripMenuItem1,
+            this.medicosToolStripMenuItem,
+            this.medicamentosYSuministrosToolStripMenuItem});
+            this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
+            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.mantenimientoToolStripMenuItem.Text = "&Mantenimiento ";
+            // 
+            // pacientesToolStripMenuItem1
+            // 
+            this.pacientesToolStripMenuItem1.Name = "pacientesToolStripMenuItem1";
+            this.pacientesToolStripMenuItem1.Size = new System.Drawing.Size(227, 22);
+            this.pacientesToolStripMenuItem1.Text = "Pacientes";
+            // 
+            // medicosToolStripMenuItem
+            // 
+            this.medicosToolStripMenuItem.Name = "medicosToolStripMenuItem";
+            this.medicosToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.medicosToolStripMenuItem.Text = "Medicos";
+            // 
+            // medicamentosYSuministrosToolStripMenuItem
+            // 
+            this.medicamentosYSuministrosToolStripMenuItem.Name = "medicamentosYSuministrosToolStripMenuItem";
+            this.medicamentosYSuministrosToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.medicamentosYSuministrosToolStripMenuItem.Text = "Medicamentos y Suministros";
+            // 
             // mdiPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,5 +202,9 @@
         private System.Windows.Forms.ToolStripButton MenuConsulta;
         private System.Windows.Forms.ToolStripButton MenuSuministros;
         private System.Windows.Forms.ToolStripButton MenuProcedimientos;
+        private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pacientesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem medicosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem medicamentosYSuministrosToolStripMenuItem;
     }
 }

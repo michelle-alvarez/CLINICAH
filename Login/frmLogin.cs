@@ -69,6 +69,7 @@ namespace Login
             if (block == false)
             {
                 evaluar();
+                txtIDmedico.Focus();
             }
 
 
@@ -78,7 +79,7 @@ namespace Login
         {
             string password = txtPassword.Text;
             string idmedi = txtIDmedico.Text;
-            string strerror = " ";
+            string strerror = "";
             password = SHA512(password);
             if (txtIDmedico.Text != "" && txtPassword.Text != "")
             {
@@ -143,9 +144,7 @@ namespace Login
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            txtIDmedico.Text = " ";
-            txtPassword.Text = "";
-            txtIDmedico.Focus();
+           
         }
 
         private void categoria(string ID)
