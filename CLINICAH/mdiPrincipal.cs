@@ -53,9 +53,8 @@ namespace CLINICAH
 
         private void mdiPrincipal_Load(object sender, EventArgs e)
         {
-            
-            frmlogin.MdiParent = this;
-            frmlogin.Show();
+            while (!Resources.Propiedades.flag)
+                frmlogin.ShowDialog();
         }
     }
 }

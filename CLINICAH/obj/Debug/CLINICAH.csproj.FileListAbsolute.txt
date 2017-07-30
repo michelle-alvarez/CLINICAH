@@ -64,3 +64,6 @@ C:\Users\Michelle\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.Properties.R
 C:\Users\Michelle\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.csproj.GenerateResource.Cache
 C:\Users\Michelle\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.exe
 C:\Users\Michelle\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.pdb
+C:\Users\Benjamin\Source\Repos\CLINICAH\CLINICAH\bin\Debug\CLINICAH.exe.config
+C:\Users\Benjamin\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.exe
+C:\Users\Benjamin\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.pdb
