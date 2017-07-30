@@ -22,5 +22,16 @@ namespace Medicamentos_y_Suministros.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("User Id=postgres;Password=malteada28;Host=localhost;Database=clinica;Persist Secu" +
+            "rity Info=True")]
+        public string cnxClinica {
+            get {
+                return ((string)(this["cnxClinica"]));
+            }
+        }
     }
 }

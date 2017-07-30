@@ -16,7 +16,7 @@ namespace CLINICAH
         Pacientes.FrmPacientes frmPacientes = new Pacientes.FrmPacientes();
         Medicos.frmMedicos frmMedico = new Medicos.frmMedicos();
         Procedimientos.frmProcedimientos frmProcedimientos = new Procedimientos.frmProcedimientos();
-        Medicamentos_y_Suministros.frmMedicamentosSuministros frmSuministros = new Medicamentos_y_Suministros.frmMedicamentosSuministros();
+        Medicamentos_y_Suministros.frmMedicamentos frmSuministros = new Medicamentos_y_Suministros.frmMedicamentos();
         Consulta.frmConsulta frmConsulta = new Consulta.frmConsulta();
         public mdiPrincipal()
         {

@@ -40,7 +40,6 @@ namespace Medicos
             cmbgenero.Enabled = condicion;
             cmbtrimestre.Enabled = condicion;
             cmbyear.Enabled = condicion;
-            cmbturno.Enabled = condicion;
             dtpnacimiento.Enabled = condicion;
         }
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)

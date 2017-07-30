@@ -35,6 +35,8 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Devart.Data, Version=5.0.1704.0, Culture=neutral, PublicKeyToken=09af7300eec23701" />
+    <Reference Include="Devart.Data.PostgreSql, Version=7.9.912.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
     <Reference Include="Npgsql, Version=3.2.5.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>..\packages\Npgsql.3.2.5\lib\net45\Npgsql.dll</HintPath>
     </Reference>
@@ -43,6 +45,7 @@
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,16 +57,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmMedicamentosSuministros.cs">
+    <Compile Include="clinicaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>clinicaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSMantenimientoSuministro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSMantenimientoSuministro.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmSuministros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMedicamentosSuministros.Designer.cs">
-      <DependentUpon>frmMedicamentosSuministros.cs</DependentUpon>
+    <Compile Include="frmSuministros.Designer.cs">
+      <DependentUpon>frmSuministros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMedicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMedicamentos.Designer.cs">
+      <DependentUpon>frmMedicamentos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmMedicamentosSuministros.resx">
-      <DependentUpon>frmMedicamentosSuministros.cs</DependentUpon>
+    <EmbeddedResource Include="frmSuministros.resx">
+      <DependentUpon>frmSuministros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMedicamentos.resx">
+      <DependentUpon>frmMedicamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,6 +97,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="clinicaDataSet.xsc">
+      <DependentUpon>clinicaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="clinicaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>clinicaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="clinicaDataSet.xss">
+      <DependentUpon>clinicaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DSMantenimientoSuministro.xsc">
+      <DependentUpon>DSMantenimientoSuministro.xsd</DependentUpon>
+    </None>
+    <None Include="DSMantenimientoSuministro.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSMantenimientoSuministro.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSMantenimientoSuministro.xss">
+      <DependentUpon>DSMantenimientoSuministro.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -88,6 +132,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
