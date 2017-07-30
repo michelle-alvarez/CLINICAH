@@ -91,7 +91,7 @@
             // 
             // btnNoRegistrado
             // 
-            this.btnNoRegistrado.Location = new System.Drawing.Point(493, 13);
+            this.btnNoRegistrado.Location = new System.Drawing.Point(492, 13);
             this.btnNoRegistrado.Margin = new System.Windows.Forms.Padding(4);
             this.btnNoRegistrado.Name = "btnNoRegistrado";
             this.btnNoRegistrado.Size = new System.Drawing.Size(146, 51);
