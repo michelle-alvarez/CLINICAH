@@ -140,6 +140,7 @@
             this.ClientSize = new System.Drawing.Size(866, 400);
             this.Controls.Add(this.tlsr);
             this.Controls.Add(this.mst);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mst;
             this.Name = "mdiPrincipal";

@@ -8,6 +8,6 @@ namespace Resources
 {
     public static class Global
     {
-        static bool desbloquear = true;
+     
     }
 }

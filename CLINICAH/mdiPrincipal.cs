@@ -53,7 +53,7 @@ namespace CLINICAH
 
         private void mdiPrincipal_Load(object sender, EventArgs e)
         {
-            tlsr.Enabled = false;
+            
             frmlogin.MdiParent = this;
             frmlogin.Show();
         }

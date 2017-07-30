@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteMedicos));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.datagridResultados = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,16 +42,22 @@
             this.cmbcampus = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbcarrera = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dSmedicos = new Medicos.DSmedicos();
+            this.medicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.medicosTableAdapter = new Medicos.DSmedicosTableAdapters.medicosTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridResultados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSmedicos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // datagridResultados
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 82);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(908, 302);
-            this.dataGridView1.TabIndex = 0;
+            this.datagridResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagridResultados.Location = new System.Drawing.Point(12, 82);
+            this.datagridResultados.Name = "datagridResultados";
+            this.datagridResultados.Size = new System.Drawing.Size(908, 302);
+            this.datagridResultados.TabIndex = 0;
+            this.datagridResultados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridResultados_CellContentClick);
             // 
             // btnBuscar
             // 
@@ -74,7 +81,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(189, 49);
+            this.label2.Location = new System.Drawing.Point(241, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 3;
@@ -83,27 +90,31 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 49);
+            this.label3.Location = new System.Drawing.Point(12, 49);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.Size = new System.Drawing.Size(106, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Año";
+            this.label3.Text = "Fecha de nacimiento";
             // 
             // dtpyear
             // 
+            this.dtpyear.CustomFormat = "yyyymmdd";
             this.dtpyear.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpyear.Location = new System.Drawing.Point(62, 43);
+            this.dtpyear.Location = new System.Drawing.Point(124, 46);
             this.dtpyear.Name = "dtpyear";
             this.dtpyear.Size = new System.Drawing.Size(107, 20);
             this.dtpyear.TabIndex = 5;
+            this.dtpyear.Value = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpyear.ValueChanged += new System.EventHandler(this.dtpyear_ValueChanged);
             // 
             // cbmtrimestre
             // 
             this.cbmtrimestre.FormattingEnabled = true;
-            this.cbmtrimestre.Location = new System.Drawing.Point(245, 43);
+            this.cbmtrimestre.Location = new System.Drawing.Point(297, 45);
             this.cbmtrimestre.Name = "cbmtrimestre";
             this.cbmtrimestre.Size = new System.Drawing.Size(121, 21);
             this.cbmtrimestre.TabIndex = 6;
+            this.cbmtrimestre.SelectedIndexChanged += new System.EventHandler(this.cbmtrimestre_SelectedIndexChanged);
             // 
             // txtnombre
             // 
@@ -111,6 +122,7 @@
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(407, 20);
             this.txtnombre.TabIndex = 7;
+            this.txtnombre.TextChanged += new System.EventHandler(this.txtnombre_TextChanged);
             // 
             // label4
             // 
@@ -128,23 +140,39 @@
             this.cmbcampus.Name = "cmbcampus";
             this.cmbcampus.Size = new System.Drawing.Size(121, 21);
             this.cmbcampus.TabIndex = 9;
+            this.cmbcampus.SelectedIndexChanged += new System.EventHandler(this.cmbcampus_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(389, 49);
+            this.label5.Location = new System.Drawing.Point(432, 49);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.Size = new System.Drawing.Size(67, 13);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Carrera";
+            this.label5.Text = "Especialidad";
             // 
             // cmbcarrera
             // 
             this.cmbcarrera.FormattingEnabled = true;
-            this.cmbcarrera.Location = new System.Drawing.Point(436, 46);
+            this.cmbcarrera.Location = new System.Drawing.Point(501, 45);
             this.cmbcarrera.Name = "cmbcarrera";
             this.cmbcarrera.Size = new System.Drawing.Size(188, 21);
             this.cmbcarrera.TabIndex = 11;
+            this.cmbcarrera.SelectedIndexChanged += new System.EventHandler(this.cmbcarrera_SelectedIndexChanged);
+            // 
+            // dSmedicos
+            // 
+            this.dSmedicos.DataSetName = "DSmedicos";
+            this.dSmedicos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // medicosBindingSource
+            // 
+            this.medicosBindingSource.DataMember = "medicos";
+            this.medicosBindingSource.DataSource = this.dSmedicos;
+            // 
+            // medicosTableAdapter
+            // 
+            this.medicosTableAdapter.ClearBeforeFill = true;
             // 
             // frmReporteMedicos
             // 
@@ -162,12 +190,15 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.datagridResultados);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmReporteMedicos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReporte";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmReporteMedicos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.datagridResultados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSmedicos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,7 +206,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView datagridResultados;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -187,5 +218,8 @@
         private System.Windows.Forms.ComboBox cmbcampus;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbcarrera;
+        private DSmedicos dSmedicos;
+        private System.Windows.Forms.BindingSource medicosBindingSource;
+        private DSmedicosTableAdapters.medicosTableAdapter medicosTableAdapter;
     }
 }
