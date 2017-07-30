@@ -158,7 +158,6 @@ namespace Login
                 conexion.Open();
                 reader = comando.ExecuteReader();
                 if (reader.HasRows)
-
                 {
                     reader.Read();
                     Resources.Propiedades.categoria = reader.GetInt32(0);
