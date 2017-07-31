@@ -42,9 +42,11 @@
             this.cmbcampus = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbcarrera = new System.Windows.Forms.ComboBox();
-           
             this.medicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.datagridResultados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).BeginInit();
+            this.SuspendLayout();
             // 
             // datagridResultados
             // 
@@ -156,23 +158,22 @@
             this.cmbcarrera.TabIndex = 11;
             this.cmbcarrera.SelectedIndexChanged += new System.EventHandler(this.cmbcarrera_SelectedIndexChanged);
             // 
-            // dSmedicos
+            // btnLimpiar
             // 
-           
-            // 
-            // medicosBindingSource
-            // 
-
-            // 
-            // medicosTableAdapter
-            // 
-            
+            this.btnLimpiar.Location = new System.Drawing.Point(762, -1);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.TabIndex = 12;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // frmReporteMedicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 396);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.cmbcarrera);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cmbcampus);
@@ -191,7 +192,6 @@
             this.Text = "frmReporte";
             this.Load += new System.EventHandler(this.frmReporteMedicos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.datagridResultados)).EndInit();
-           
             ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -214,6 +214,6 @@
         private System.Windows.Forms.ComboBox cmbcarrera;
        
         private System.Windows.Forms.BindingSource medicosBindingSource;
-  
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
