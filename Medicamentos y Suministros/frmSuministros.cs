@@ -17,5 +17,10 @@ namespace Medicamentos_y_Suministros
             InitializeComponent();
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //tableAdapterManager.suministrosTableAdapter.InsertQuery(txtSuministro.Text, cantidad.Value, reorden.Value, dtpVencimiento.Value);
+        }
+
     }
 }

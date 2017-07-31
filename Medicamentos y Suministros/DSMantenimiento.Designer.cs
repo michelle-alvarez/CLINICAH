@@ -20,19 +20,17 @@ namespace Medicamentos_y_Suministros {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("clinicaDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DSMantenimiento")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class clinicaDataSet : global::System.Data.DataSet {
+    public partial class DSMantenimiento : global::System.Data.DataSet {
         
         private _medicamentosDataTable table_medicamentos;
-        
-        private suministrosDataTable tablesuministros;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public clinicaDataSet() {
+        public DSMantenimiento() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -43,7 +41,7 @@ namespace Medicamentos_y_Suministros {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected clinicaDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DSMantenimiento(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -58,9 +56,6 @@ namespace Medicamentos_y_Suministros {
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
                 if ((ds.Tables[" medicamentos"] != null)) {
                     base.Tables.Add(new _medicamentosDataTable(ds.Tables[" medicamentos"]));
-                }
-                if ((ds.Tables["suministros"] != null)) {
-                    base.Tables.Add(new suministrosDataTable(ds.Tables["suministros"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -87,16 +82,6 @@ namespace Medicamentos_y_Suministros {
         public _medicamentosDataTable _medicamentos {
             get {
                 return this.table_medicamentos;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public suministrosDataTable suministros {
-            get {
-                return this.tablesuministros;
             }
         }
         
@@ -142,7 +127,7 @@ namespace Medicamentos_y_Suministros {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            clinicaDataSet cln = ((clinicaDataSet)(base.Clone()));
+            DSMantenimiento cln = ((DSMantenimiento)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -169,9 +154,6 @@ namespace Medicamentos_y_Suministros {
                 ds.ReadXml(reader);
                 if ((ds.Tables[" medicamentos"] != null)) {
                     base.Tables.Add(new _medicamentosDataTable(ds.Tables[" medicamentos"]));
-                }
-                if ((ds.Tables["suministros"] != null)) {
-                    base.Tables.Add(new suministrosDataTable(ds.Tables["suministros"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -212,37 +194,23 @@ namespace Medicamentos_y_Suministros {
                     this.table_medicamentos.InitVars();
                 }
             }
-            this.tablesuministros = ((suministrosDataTable)(base.Tables["suministros"]));
-            if ((initTable == true)) {
-                if ((this.tablesuministros != null)) {
-                    this.tablesuministros.InitVars();
-                }
-            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "clinicaDataSet";
+            this.DataSetName = "DSMantenimiento";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/clinicaDataSet.xsd";
+            this.Namespace = "http://tempuri.org/DSMantenimiento.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.table_medicamentos = new _medicamentosDataTable();
             base.Tables.Add(this.table_medicamentos);
-            this.tablesuministros = new suministrosDataTable();
-            base.Tables.Add(this.tablesuministros);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerialize_medicamentos() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializesuministros() {
             return false;
         }
         
@@ -257,7 +225,7 @@ namespace Medicamentos_y_Suministros {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            clinicaDataSet ds = new clinicaDataSet();
+            DSMantenimiento ds = new DSMantenimiento();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -303,9 +271,6 @@ namespace Medicamentos_y_Suministros {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void _medicamentosRowChangeEventHandler(object sender, _medicamentosRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void suministrosRowChangeEventHandler(object sender, suministrosRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -434,7 +399,7 @@ namespace Medicamentos_y_Suministros {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _medicamentosRow Add_medicamentosRow(long idmedicamentos, string nombre, decimal cantidad, decimal reorden, System.DateTime fechaven) {
+            public _medicamentosRow Add_medicamentosRow(long idmedicamentos, string nombre, decimal cantidad, decimal reorden, string fechaven) {
                 _medicamentosRow row_medicamentosRow = ((_medicamentosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idmedicamentos,
@@ -489,12 +454,13 @@ namespace Medicamentos_y_Suministros {
                 base.Columns.Add(this.columncantidad);
                 this.columnreorden = new global::System.Data.DataColumn("reorden", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnreorden);
-                this.columnfechaven = new global::System.Data.DataColumn("fechaven", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columnfechaven = new global::System.Data.DataColumn("fechaven", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfechaven);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidmedicamentos}, true));
                 this.columnidmedicamentos.AllowDBNull = false;
                 this.columnidmedicamentos.Unique = true;
+                this.columnfechaven.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -562,7 +528,7 @@ namespace Medicamentos_y_Suministros {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                clinicaDataSet ds = new clinicaDataSet();
+                DSMantenimiento ds = new DSMantenimiento();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -581,320 +547,6 @@ namespace Medicamentos_y_Suministros {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "_medicamentosDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class suministrosDataTable : global::System.Data.TypedTableBase<suministrosRow> {
-            
-            private global::System.Data.DataColumn columnidsuministros;
-            
-            private global::System.Data.DataColumn columnnombre;
-            
-            private global::System.Data.DataColumn columncantidad;
-            
-            private global::System.Data.DataColumn columnreorden;
-            
-            private global::System.Data.DataColumn columnfechaven;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public suministrosDataTable() {
-                this.TableName = "suministros";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal suministrosDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected suministrosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn idsuministrosColumn {
-                get {
-                    return this.columnidsuministros;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nombreColumn {
-                get {
-                    return this.columnnombre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn cantidadColumn {
-                get {
-                    return this.columncantidad;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn reordenColumn {
-                get {
-                    return this.columnreorden;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn fechavenColumn {
-                get {
-                    return this.columnfechaven;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public suministrosRow this[int index] {
-                get {
-                    return ((suministrosRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event suministrosRowChangeEventHandler suministrosRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event suministrosRowChangeEventHandler suministrosRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event suministrosRowChangeEventHandler suministrosRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event suministrosRowChangeEventHandler suministrosRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddsuministrosRow(suministrosRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public suministrosRow AddsuministrosRow(long idsuministros, string nombre, decimal cantidad, decimal reorden, System.DateTime fechaven) {
-                suministrosRow rowsuministrosRow = ((suministrosRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        idsuministros,
-                        nombre,
-                        cantidad,
-                        reorden,
-                        fechaven};
-                rowsuministrosRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowsuministrosRow);
-                return rowsuministrosRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public suministrosRow FindByidsuministros(long idsuministros) {
-                return ((suministrosRow)(this.Rows.Find(new object[] {
-                            idsuministros})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                suministrosDataTable cln = ((suministrosDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new suministrosDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnidsuministros = base.Columns["idsuministros"];
-                this.columnnombre = base.Columns["nombre"];
-                this.columncantidad = base.Columns["cantidad"];
-                this.columnreorden = base.Columns["reorden"];
-                this.columnfechaven = base.Columns["fechaven"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnidsuministros = new global::System.Data.DataColumn("idsuministros", typeof(long), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidsuministros);
-                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre);
-                this.columncantidad = new global::System.Data.DataColumn("cantidad", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncantidad);
-                this.columnreorden = new global::System.Data.DataColumn("reorden", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnreorden);
-                this.columnfechaven = new global::System.Data.DataColumn("fechaven", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfechaven);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidsuministros}, true));
-                this.columnidsuministros.AllowDBNull = false;
-                this.columnidsuministros.Unique = true;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public suministrosRow NewsuministrosRow() {
-                return ((suministrosRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new suministrosRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(suministrosRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.suministrosRowChanged != null)) {
-                    this.suministrosRowChanged(this, new suministrosRowChangeEvent(((suministrosRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.suministrosRowChanging != null)) {
-                    this.suministrosRowChanging(this, new suministrosRowChangeEvent(((suministrosRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.suministrosRowDeleted != null)) {
-                    this.suministrosRowDeleted(this, new suministrosRowChangeEvent(((suministrosRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.suministrosRowDeleting != null)) {
-                    this.suministrosRowDeleting(this, new suministrosRowChangeEvent(((suministrosRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovesuministrosRow(suministrosRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                clinicaDataSet ds = new clinicaDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "suministrosDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1010,10 +662,10 @@ namespace Medicamentos_y_Suministros {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime fechaven {
+            public string fechaven {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.table_medicamentos.fechavenColumn]));
+                        return ((string)(this[this.table_medicamentos.fechavenColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'fechaven\' de la tabla \' medicamentos\' es DBNull.", e);
@@ -1074,144 +726,6 @@ namespace Medicamentos_y_Suministros {
         }
         
         /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class suministrosRow : global::System.Data.DataRow {
-            
-            private suministrosDataTable tablesuministros;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal suministrosRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tablesuministros = ((suministrosDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public long idsuministros {
-                get {
-                    return ((long)(this[this.tablesuministros.idsuministrosColumn]));
-                }
-                set {
-                    this[this.tablesuministros.idsuministrosColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nombre {
-                get {
-                    try {
-                        return ((string)(this[this.tablesuministros.nombreColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'suministros\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesuministros.nombreColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal cantidad {
-                get {
-                    try {
-                        return ((decimal)(this[this.tablesuministros.cantidadColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidad\' de la tabla \'suministros\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesuministros.cantidadColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal reorden {
-                get {
-                    try {
-                        return ((decimal)(this[this.tablesuministros.reordenColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'reorden\' de la tabla \'suministros\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesuministros.reordenColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime fechaven {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tablesuministros.fechavenColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fechaven\' de la tabla \'suministros\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablesuministros.fechavenColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsnombreNull() {
-                return this.IsNull(this.tablesuministros.nombreColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetnombreNull() {
-                this[this.tablesuministros.nombreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IscantidadNull() {
-                return this.IsNull(this.tablesuministros.cantidadColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetcantidadNull() {
-                this[this.tablesuministros.cantidadColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsreordenNull() {
-                return this.IsNull(this.tablesuministros.reordenColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetreordenNull() {
-                this[this.tablesuministros.reordenColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsfechavenNull() {
-                return this.IsNull(this.tablesuministros.fechavenColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetfechavenNull() {
-                this[this.tablesuministros.fechavenColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1244,43 +758,9 @@ namespace Medicamentos_y_Suministros {
                 }
             }
         }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class suministrosRowChangeEvent : global::System.EventArgs {
-            
-            private suministrosRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public suministrosRowChangeEvent(suministrosRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public suministrosRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
     }
 }
-namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
+namespace Medicamentos_y_Suministros.DSMantenimientoTableAdapters {
     
     
     /// <summary>
@@ -1483,8 +963,7 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::Devart.Data.PostgreSql.PgSqlParameter();
             param.ParameterName = "Original_fechaven";
-            param.DbType = global::System.Data.DbType.Date;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Date;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "fechaven";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -1524,8 +1003,7 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::Devart.Data.PostgreSql.PgSqlParameter();
             param.ParameterName = "fechaven";
-            param.DbType = global::System.Data.DbType.Date;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Date;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "fechaven";
             this._adapter.InsertCommand.Parameters.Add(param);
@@ -1562,8 +1040,7 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Devart.Data.PostgreSql.PgSqlParameter();
             param.ParameterName = "fechaven";
-            param.DbType = global::System.Data.DbType.Date;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Date;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "fechaven";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -1636,8 +1113,7 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::Devart.Data.PostgreSql.PgSqlParameter();
             param.ParameterName = "Original_fechaven";
-            param.DbType = global::System.Data.DbType.Date;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Date;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "fechaven";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -1654,19 +1130,56 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::Devart.Data.PostgreSql.PgSqlCommand[1];
+            this._commandCollection = new global::Devart.Data.PostgreSql.PgSqlCommand[2];
             this._commandCollection[0] = new global::Devart.Data.PostgreSql.PgSqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT idmedicamentos, nombre, cantidad, reorden, fechaven FROM administracion.\" " +
-                "medicamentos\"";
+            this._commandCollection[0].CommandText = "SELECT        idmedicamentos, nombre, cantidad, reorden, fechaven\r\nFROM          " +
+                "  administracion.\" medicamentos\"";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::Devart.Data.PostgreSql.PgSqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "INSERT INTO administracion.\" medicamentos\"\r\n                         (nombre, can" +
+                "tidad, reorden, fechaven)\r\nVALUES        (:nombre, :cantidad, :reorden, :fechave" +
+                "n)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            global::Devart.Data.PostgreSql.PgSqlParameter param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "nombre";
+            param.DbType = global::System.Data.DbType.Object;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Row;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "nombre";
+            this._commandCollection[1].Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "cantidad";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Numeric;
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            param.SourceColumn = "cantidad";
+            this._commandCollection[1].Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "reorden";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Numeric;
+            param.Size = 2147483647;
+            param.IsNullable = true;
+            param.SourceColumn = "reorden";
+            this._commandCollection[1].Parameters.Add(param);
+            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
+            param.ParameterName = "fechaven";
+            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
+            param.Size = 100;
+            param.IsNullable = true;
+            param.SourceColumn = "fechaven";
+            this._commandCollection[1].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(clinicaDataSet._medicamentosDataTable dataTable) {
+        public virtual int Fill(DSMantenimiento._medicamentosDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1679,9 +1192,9 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual clinicaDataSet._medicamentosDataTable GetData() {
+        public virtual DSMantenimiento._medicamentosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            clinicaDataSet._medicamentosDataTable dataTable = new clinicaDataSet._medicamentosDataTable();
+            DSMantenimiento._medicamentosDataTable dataTable = new DSMantenimiento._medicamentosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1689,14 +1202,14 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(clinicaDataSet._medicamentosDataTable dataTable) {
+        public virtual int Update(DSMantenimiento._medicamentosDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(clinicaDataSet dataSet) {
+        public virtual int Update(DSMantenimiento dataSet) {
             return this.Adapter.Update(dataSet, " medicamentos");
         }
         
@@ -1719,7 +1232,7 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(long Original_idmedicamentos, string Original_nombre, decimal Original_cantidad, decimal Original_reorden, System.DateTime Original_fechaven) {
+        public virtual int Delete(long Original_idmedicamentos, string Original_nombre, decimal Original_cantidad, decimal Original_reorden, string Original_fechaven) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((long)(Original_idmedicamentos));
             if ((Original_nombre == null)) {
                 throw new global::System.ArgumentNullException("Original_nombre");
@@ -1732,8 +1245,13 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
             this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(Original_cantidad));
             this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
             this.Adapter.DeleteCommand.Parameters[6].Value = ((decimal)(Original_reorden));
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_fechaven));
+            if ((Original_fechaven == null)) {
+                throw new global::System.ArgumentNullException("Original_fechaven");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_fechaven));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1754,7 +1272,7 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(long idmedicamentos, string nombre, decimal cantidad, decimal reorden, System.DateTime fechaven) {
+        public virtual int Insert(long idmedicamentos, string nombre, decimal cantidad, decimal reorden, string fechaven) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((long)(idmedicamentos));
             if ((nombre == null)) {
                 throw new global::System.ArgumentNullException("nombre");
@@ -1764,7 +1282,12 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
             }
             this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(cantidad));
             this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(reorden));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(fechaven));
+            if ((fechaven == null)) {
+                throw new global::System.ArgumentNullException("fechaven");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(fechaven));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1785,7 +1308,7 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(long idmedicamentos, string nombre, decimal cantidad, decimal reorden, System.DateTime fechaven, long Original_idmedicamentos, string Original_nombre, decimal Original_cantidad, decimal Original_reorden, System.DateTime Original_fechaven) {
+        public virtual int Update(long idmedicamentos, string nombre, decimal cantidad, decimal reorden, string fechaven, long Original_idmedicamentos, string Original_nombre, decimal Original_cantidad, decimal Original_reorden, string Original_fechaven) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((long)(idmedicamentos));
             if ((nombre == null)) {
                 throw new global::System.ArgumentNullException("nombre");
@@ -1795,7 +1318,12 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(cantidad));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(reorden));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(fechaven));
+            if ((fechaven == null)) {
+                throw new global::System.ArgumentNullException("fechaven");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(fechaven));
+            }
             this.Adapter.UpdateCommand.Parameters[5].Value = ((long)(Original_idmedicamentos));
             if ((Original_nombre == null)) {
                 throw new global::System.ArgumentNullException("Original_nombre");
@@ -1808,8 +1336,13 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
             this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(Original_cantidad));
             this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
             this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_reorden));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_fechaven));
+            if ((Original_fechaven == null)) {
+                throw new global::System.ArgumentNullException("Original_fechaven");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_fechaven));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1830,560 +1363,45 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string nombre, decimal cantidad, decimal reorden, System.DateTime fechaven, long Original_idmedicamentos, string Original_nombre, decimal Original_cantidad, decimal Original_reorden, System.DateTime Original_fechaven) {
+        public virtual int Update(string nombre, decimal cantidad, decimal reorden, string fechaven, long Original_idmedicamentos, string Original_nombre, decimal Original_cantidad, decimal Original_reorden, string Original_fechaven) {
             return this.Update(Original_idmedicamentos, nombre, cantidad, reorden, fechaven, Original_idmedicamentos, Original_nombre, Original_cantidad, Original_reorden, Original_fechaven);
         }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class suministrosTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::Devart.Data.PostgreSql.PgSqlDataAdapter _adapter;
-        
-        private global::Devart.Data.PostgreSql.PgSqlConnection _connection;
-        
-        private global::System.Data.Common.DbTransaction _transaction;
-        
-        private global::Devart.Data.PostgreSql.PgSqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public suministrosTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::Devart.Data.PostgreSql.PgSqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::Devart.Data.PostgreSql.PgSqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::Devart.Data.PostgreSql.PgSqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.Common.DbTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::Devart.Data.PostgreSql.PgSqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::Devart.Data.PostgreSql.PgSqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "suministros";
-            tableMapping.ColumnMappings.Add("idsuministros", "idsuministros");
-            tableMapping.ColumnMappings.Add("nombre", "nombre");
-            tableMapping.ColumnMappings.Add("cantidad", "cantidad");
-            tableMapping.ColumnMappings.Add("reorden", "reorden");
-            tableMapping.ColumnMappings.Add("fechaven", "fechaven");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::Devart.Data.PostgreSql.PgSqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""administracion"".""suministros"" WHERE ((""idsuministros"" = :Original_idsuministros) AND ((:IsNull_nombre = 1 AND ""nombre"" IS NULL) OR (""nombre"" = :Original_nombre)) AND ((:IsNull_cantidad = 1 AND ""cantidad"" IS NULL) OR (""cantidad"" = :Original_cantidad)) AND ((:IsNull_reorden = 1 AND ""reorden"" IS NULL) OR (""reorden"" = :Original_reorden)) AND ((:IsNull_fechaven = 1 AND ""fechaven"" IS NULL) OR (""fechaven"" = :Original_fechaven)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            global::Devart.Data.PostgreSql.PgSqlParameter param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "Original_idsuministros";
-            param.DbType = global::System.Data.DbType.Int64;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.BigInt;
-            param.IsNullable = true;
-            param.SourceColumn = "idsuministros";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "IsNull_nombre";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
-            param.IsNullable = true;
-            param.SourceColumn = "nombre";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "Original_nombre";
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "nombre";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "IsNull_cantidad";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
-            param.IsNullable = true;
-            param.SourceColumn = "cantidad";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "Original_cantidad";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Numeric;
-            param.IsNullable = true;
-            param.SourceColumn = "cantidad";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "IsNull_reorden";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
-            param.IsNullable = true;
-            param.SourceColumn = "reorden";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "Original_reorden";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Numeric;
-            param.IsNullable = true;
-            param.SourceColumn = "reorden";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "IsNull_fechaven";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
-            param.IsNullable = true;
-            param.SourceColumn = "fechaven";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "Original_fechaven";
-            param.DbType = global::System.Data.DbType.Date;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Date;
-            param.IsNullable = true;
-            param.SourceColumn = "fechaven";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            this._adapter.InsertCommand = new global::Devart.Data.PostgreSql.PgSqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO \"administracion\".\"suministros\" (\"idsuministros\", \"nombre\", \"cantidad\"" +
-                ", \"reorden\", \"fechaven\") VALUES (:idsuministros, :nombre, :cantidad, :reorden, :" +
-                "fechaven)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "idsuministros";
-            param.DbType = global::System.Data.DbType.Int64;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.BigInt;
-            param.IsNullable = true;
-            param.SourceColumn = "idsuministros";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "nombre";
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "nombre";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "cantidad";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Numeric;
-            param.IsNullable = true;
-            param.SourceColumn = "cantidad";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "reorden";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Numeric;
-            param.IsNullable = true;
-            param.SourceColumn = "reorden";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "fechaven";
-            param.DbType = global::System.Data.DbType.Date;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Date;
-            param.IsNullable = true;
-            param.SourceColumn = "fechaven";
-            this._adapter.InsertCommand.Parameters.Add(param);
-            this._adapter.UpdateCommand = new global::Devart.Data.PostgreSql.PgSqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""administracion"".""suministros"" SET ""idsuministros"" = :idsuministros, ""nombre"" = :nombre, ""cantidad"" = :cantidad, ""reorden"" = :reorden, ""fechaven"" = :fechaven WHERE ((""idsuministros"" = :Original_idsuministros) AND ((:IsNull_nombre = 1 AND ""nombre"" IS NULL) OR (""nombre"" = :Original_nombre)) AND ((:IsNull_cantidad = 1 AND ""cantidad"" IS NULL) OR (""cantidad"" = :Original_cantidad)) AND ((:IsNull_reorden = 1 AND ""reorden"" IS NULL) OR (""reorden"" = :Original_reorden)) AND ((:IsNull_fechaven = 1 AND ""fechaven"" IS NULL) OR (""fechaven"" = :Original_fechaven)))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "idsuministros";
-            param.DbType = global::System.Data.DbType.Int64;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.BigInt;
-            param.IsNullable = true;
-            param.SourceColumn = "idsuministros";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "nombre";
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "nombre";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "cantidad";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Numeric;
-            param.IsNullable = true;
-            param.SourceColumn = "cantidad";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "reorden";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Numeric;
-            param.IsNullable = true;
-            param.SourceColumn = "reorden";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "fechaven";
-            param.DbType = global::System.Data.DbType.Date;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Date;
-            param.IsNullable = true;
-            param.SourceColumn = "fechaven";
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "Original_idsuministros";
-            param.DbType = global::System.Data.DbType.Int64;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.BigInt;
-            param.IsNullable = true;
-            param.SourceColumn = "idsuministros";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "IsNull_nombre";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
-            param.IsNullable = true;
-            param.SourceColumn = "nombre";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "Original_nombre";
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.VarChar;
-            param.IsNullable = true;
-            param.SourceColumn = "nombre";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "IsNull_cantidad";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
-            param.IsNullable = true;
-            param.SourceColumn = "cantidad";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "Original_cantidad";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Numeric;
-            param.IsNullable = true;
-            param.SourceColumn = "cantidad";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "IsNull_reorden";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
-            param.IsNullable = true;
-            param.SourceColumn = "reorden";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "Original_reorden";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Numeric;
-            param.IsNullable = true;
-            param.SourceColumn = "reorden";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "IsNull_fechaven";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Int;
-            param.IsNullable = true;
-            param.SourceColumn = "fechaven";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::Devart.Data.PostgreSql.PgSqlParameter();
-            param.ParameterName = "Original_fechaven";
-            param.DbType = global::System.Data.DbType.Date;
-            param.PgSqlType = global::Devart.Data.PostgreSql.PgSqlType.Date;
-            param.IsNullable = true;
-            param.SourceColumn = "fechaven";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::Devart.Data.PostgreSql.PgSqlConnection();
-            this._connection.ConnectionString = global::Medicamentos_y_Suministros.Properties.Settings.Default.cnxClinica;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::Devart.Data.PostgreSql.PgSqlCommand[1];
-            this._commandCollection[0] = new global::Devart.Data.PostgreSql.PgSqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT idsuministros, nombre, cantidad, reorden, fechaven FROM administracion.sum" +
-                "inistros";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(clinicaDataSet.suministrosDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertQuery(object nombre, decimal cantidad, decimal reorden, string fechaven) {
+            global::Devart.Data.PostgreSql.PgSqlCommand command = this.CommandCollection[1];
+            if ((nombre == null)) {
+                throw new global::System.ArgumentNullException("nombre");
             }
-            int returnValue = this.Adapter.Fill(dataTable);
+            else {
+                command.Parameters[0].Value = ((object)(nombre));
+            }
+            command.Parameters[1].Value = ((decimal)(cantidad));
+            command.Parameters[2].Value = ((decimal)(reorden));
+            if ((fechaven == null)) {
+                throw new global::System.ArgumentNullException("fechaven");
+            }
+            else {
+                command.Parameters[3].Value = ((string)(fechaven));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
             return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual clinicaDataSet.suministrosDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            clinicaDataSet.suministrosDataTable dataTable = new clinicaDataSet.suministrosDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(clinicaDataSet.suministrosDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(clinicaDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "suministros");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(long Original_idsuministros, string Original_nombre, decimal Original_cantidad, decimal Original_reorden, System.DateTime Original_fechaven) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((long)(Original_idsuministros));
-            if ((Original_nombre == null)) {
-                throw new global::System.ArgumentNullException("Original_nombre");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_nombre));
-            }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(Original_cantidad));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((decimal)(Original_reorden));
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_fechaven));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(long idsuministros, string nombre, decimal cantidad, decimal reorden, System.DateTime fechaven) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((long)(idsuministros));
-            if ((nombre == null)) {
-                throw new global::System.ArgumentNullException("nombre");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(nombre));
-            }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(cantidad));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(reorden));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(fechaven));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(long idsuministros, string nombre, decimal cantidad, decimal reorden, System.DateTime fechaven, long Original_idsuministros, string Original_nombre, decimal Original_cantidad, decimal Original_reorden, System.DateTime Original_fechaven) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((long)(idsuministros));
-            if ((nombre == null)) {
-                throw new global::System.ArgumentNullException("nombre");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(nombre));
-            }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(cantidad));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(reorden));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(fechaven));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((long)(Original_idsuministros));
-            if ((Original_nombre == null)) {
-                throw new global::System.ArgumentNullException("Original_nombre");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_nombre));
-            }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(Original_cantidad));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_reorden));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_fechaven));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string nombre, decimal cantidad, decimal reorden, System.DateTime fechaven, long Original_idsuministros, string Original_nombre, decimal Original_cantidad, decimal Original_reorden, System.DateTime Original_fechaven) {
-            return this.Update(Original_idsuministros, nombre, cantidad, reorden, fechaven, Original_idsuministros, Original_nombre, Original_cantidad, Original_reorden, Original_fechaven);
         }
     }
     
@@ -2400,8 +1418,6 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
         private UpdateOrderOption _updateOrder;
         
         private _medicamentosTableAdapter @__medicamentosTableAdapter;
-        
-        private suministrosTableAdapter _suministrosTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -2434,20 +1450,6 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public suministrosTableAdapter suministrosTableAdapter {
-            get {
-                return this._suministrosTableAdapter;
-            }
-            set {
-                this._suministrosTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -2469,10 +1471,6 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
                             && (this.@__medicamentosTableAdapter.Connection != null))) {
                     return this.@__medicamentosTableAdapter.Connection;
                 }
-                if (((this._suministrosTableAdapter != null) 
-                            && (this._suministrosTableAdapter.Connection != null))) {
-                    return this._suministrosTableAdapter.Connection;
-                }
                 return null;
             }
             set {
@@ -2489,9 +1487,6 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
                 if ((this.@__medicamentosTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._suministrosTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 return count;
             }
         }
@@ -2501,7 +1496,7 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(clinicaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DSMantenimiento dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this.@__medicamentosTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet._medicamentos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -2509,15 +1504,6 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this.@__medicamentosTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._suministrosTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.suministros.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._suministrosTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -2529,21 +1515,13 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(clinicaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DSMantenimiento dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this.@__medicamentosTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet._medicamentos.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this.@__medicamentosTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._suministrosTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.suministros.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._suministrosTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -2555,16 +1533,8 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(clinicaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DSMantenimiento dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._suministrosTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.suministros.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._suministrosTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this.@__medicamentosTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet._medicamentos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -2605,7 +1575,7 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(clinicaDataSet dataSet) {
+        public virtual int UpdateAll(DSMantenimiento dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
@@ -2614,11 +1584,6 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
             }
             if (((this.@__medicamentosTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this.@__medicamentosTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
-                        "sma cadena de conexión.");
-            }
-            if (((this._suministrosTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._suministrosTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
                         "sma cadena de conexión.");
             }
@@ -2661,15 +1626,6 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
                     if (this.@__medicamentosTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this.@__medicamentosTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this.@__medicamentosTableAdapter.Adapter);
-                    }
-                }
-                if ((this._suministrosTableAdapter != null)) {
-                    revertConnections.Add(this._suministrosTableAdapter, this._suministrosTableAdapter.Connection);
-                    this._suministrosTableAdapter.Connection = ((global::Devart.Data.PostgreSql.PgSqlConnection)(workConnection));
-                    this._suministrosTableAdapter.Transaction = ((global::System.Data.Common.DbTransaction)(workTransaction));
-                    if (this._suministrosTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._suministrosTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._suministrosTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -2733,10 +1689,6 @@ namespace Medicamentos_y_Suministros.clinicaDataSetTableAdapters {
                 if ((this.@__medicamentosTableAdapter != null)) {
                     this.@__medicamentosTableAdapter.Connection = ((global::Devart.Data.PostgreSql.PgSqlConnection)(revertConnections[this.@__medicamentosTableAdapter]));
                     this.@__medicamentosTableAdapter.Transaction = null;
-                }
-                if ((this._suministrosTableAdapter != null)) {
-                    this._suministrosTableAdapter.Connection = ((global::Devart.Data.PostgreSql.PgSqlConnection)(revertConnections[this._suministrosTableAdapter]));
-                    this._suministrosTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

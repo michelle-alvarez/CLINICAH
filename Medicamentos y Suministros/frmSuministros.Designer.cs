@@ -28,69 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.txtSuministro = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.cantidad = new System.Windows.Forms.NumericUpDown();
+            this.dtpVencimiento = new System.Windows.Forms.DateTimePicker();
+            this.reorden = new System.Windows.Forms.NumericUpDown();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // txtSuministro
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Donación ",
-            "Compra ",
-            "Otro..."});
-            this.comboBox1.Location = new System.Drawing.Point(129, 92);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(274, 21);
-            this.comboBox1.TabIndex = 12;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(129, 66);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(274, 20);
-            this.dateTimePicker1.TabIndex = 8;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(129, 15);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(274, 20);
-            this.textBox4.TabIndex = 2;
+            this.txtSuministro.Location = new System.Drawing.Point(129, 15);
+            this.txtSuministro.Name = "txtSuministro";
+            this.txtSuministro.Size = new System.Drawing.Size(274, 20);
+            this.txtSuministro.TabIndex = 2;
             // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(12, 122);
+            this.button5.Location = new System.Drawing.Point(291, 118);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(107, 33);
             this.button5.TabIndex = 10;
             this.button5.Text = "Añadir";
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Red;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(296, 122);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(107, 33);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "Quitar";
-            this.button6.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label1
             // 
@@ -115,45 +83,59 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 13);
+            this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 15;
-            this.label3.Text = "Fecha Ingreso";
+            this.label3.Text = "Cantidad Reorden";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 95);
+            this.label4.Location = new System.Drawing.Point(12, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 13);
             this.label4.TabIndex = 16;
             this.label4.Text = "Fecha Vencimiento";
             // 
-            // numericUpDown1
+            // cantidad
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(129, 41);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(274, 20);
-            this.numericUpDown1.TabIndex = 17;
+            this.cantidad.Location = new System.Drawing.Point(129, 41);
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Size = new System.Drawing.Size(274, 20);
+            this.cantidad.TabIndex = 17;
             // 
-            // frmMedicamentosSuministros
+            // dtpVencimiento
+            // 
+            this.dtpVencimiento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpVencimiento.Location = new System.Drawing.Point(129, 92);
+            this.dtpVencimiento.Name = "dtpVencimiento";
+            this.dtpVencimiento.Size = new System.Drawing.Size(274, 20);
+            this.dtpVencimiento.TabIndex = 18;
+            // 
+            // reorden
+            // 
+            this.reorden.Location = new System.Drawing.Point(129, 67);
+            this.reorden.Name = "reorden";
+            this.reorden.Size = new System.Drawing.Size(274, 20);
+            this.reorden.TabIndex = 19;
+            // 
+            // frmSuministros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(415, 166);
-            this.Controls.Add(this.numericUpDown1);
+            this.ClientSize = new System.Drawing.Size(410, 164);
+            this.Controls.Add(this.reorden);
+            this.Controls.Add(this.dtpVencimiento);
+            this.Controls.Add(this.cantidad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.textBox4);
-            this.Name = "frmMedicamentosSuministros";
+            this.Controls.Add(this.txtSuministro);
+            this.Name = "frmSuministros";
             this.Text = "Medicamentos";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,15 +143,15 @@
 
         #endregion
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtSuministro;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown cantidad;
+        private System.Windows.Forms.BindingSource suministrosBindingSource;
+        private System.Windows.Forms.DateTimePicker dtpVencimiento;
+        private System.Windows.Forms.NumericUpDown reorden;
     }
 }
 

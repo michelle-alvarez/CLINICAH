@@ -57,15 +57,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clinicaDataSet.Designer.cs">
+    <Compile Include="DSMantenimiento.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>clinicaDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DSMantenimientoSuministro.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DSMantenimientoSuministro.xsd</DependentUpon>
+      <DependentUpon>DSMantenimiento.xsd</DependentUpon>
     </Compile>
     <Compile Include="frmSuministros.cs">
       <SubType>Form</SubType>
@@ -97,27 +92,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="clinicaDataSet.xsc">
-      <DependentUpon>clinicaDataSet.xsd</DependentUpon>
+    <None Include="DSMantenimiento.xsc">
+      <DependentUpon>DSMantenimiento.xsd</DependentUpon>
     </None>
-    <None Include="clinicaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>clinicaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="clinicaDataSet.xss">
-      <DependentUpon>clinicaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DSMantenimientoSuministro.xsc">
-      <DependentUpon>DSMantenimientoSuministro.xsd</DependentUpon>
-    </None>
-    <None Include="DSMantenimientoSuministro.xsd">
+    <None Include="DSMantenimiento.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DSMantenimientoSuministro.Designer.cs</LastGenOutput>
+      <LastGenOutput>DSMantenimiento.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DSMantenimientoSuministro.xss">
-      <DependentUpon>DSMantenimientoSuministro.xsd</DependentUpon>
+    <None Include="DSMantenimiento.xss">
+      <DependentUpon>DSMantenimiento.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

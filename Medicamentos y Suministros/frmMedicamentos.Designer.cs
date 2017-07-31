@@ -28,69 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.txtmedicamento = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.cantidad = new System.Windows.Forms.NumericUpDown();
+            this.reorden = new System.Windows.Forms.NumericUpDown();
+            this.dtpvencimiento = new System.Windows.Forms.DateTimePicker();
+            this.dSMantenimiento = new Medicamentos_y_Suministros.DSMantenimiento();
+            this._medicamentosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this._medicamentosTableAdapter = new Medicamentos_y_Suministros.DSMantenimientoTableAdapters._medicamentosTableAdapter();
+            this.tableAdapterManager = new Medicamentos_y_Suministros.DSMantenimientoTableAdapters.TableAdapterManager();
+            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reorden)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSMantenimiento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._medicamentosBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // txtmedicamento
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Donación ",
-            "Compra ",
-            "Otro..."});
-            this.comboBox1.Location = new System.Drawing.Point(129, 92);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(274, 21);
-            this.comboBox1.TabIndex = 12;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(129, 66);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(274, 20);
-            this.dateTimePicker1.TabIndex = 8;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(129, 15);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(274, 20);
-            this.textBox4.TabIndex = 2;
+            this.txtmedicamento.Location = new System.Drawing.Point(129, 15);
+            this.txtmedicamento.Name = "txtmedicamento";
+            this.txtmedicamento.Size = new System.Drawing.Size(274, 20);
+            this.txtmedicamento.TabIndex = 0;
             // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(12, 122);
+            this.button5.Location = new System.Drawing.Point(296, 118);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(107, 33);
-            this.button5.TabIndex = 10;
+            this.button5.TabIndex = 4;
             this.button5.Text = "Añadir";
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Red;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(296, 122);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(107, 33);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "Quitar";
-            this.button6.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label1
             // 
@@ -128,32 +104,79 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Fecha Vencimiento";
             // 
-            // numericUpDown1
+            // cantidad
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(129, 41);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(274, 20);
-            this.numericUpDown1.TabIndex = 17;
+            this.cantidad.Location = new System.Drawing.Point(129, 41);
+            this.cantidad.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.cantidad.Name = "cantidad";
+            this.cantidad.Size = new System.Drawing.Size(274, 20);
+            this.cantidad.TabIndex = 1;
             // 
-            // frmMedicamentosSuministros
+            // reorden
+            // 
+            this.reorden.Location = new System.Drawing.Point(129, 67);
+            this.reorden.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.reorden.Name = "reorden";
+            this.reorden.Size = new System.Drawing.Size(274, 20);
+            this.reorden.TabIndex = 2;
+            // 
+            // dtpvencimiento
+            // 
+            this.dtpvencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpvencimiento.Location = new System.Drawing.Point(129, 92);
+            this.dtpvencimiento.Name = "dtpvencimiento";
+            this.dtpvencimiento.Size = new System.Drawing.Size(274, 20);
+            this.dtpvencimiento.TabIndex = 3;
+            // 
+            // dSMantenimiento
+            // 
+            this.dSMantenimiento.DataSetName = "DSMantenimiento";
+            this.dSMantenimiento.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // _medicamentosBindingSource1
+            // 
+            this._medicamentosBindingSource1.DataMember = " medicamentos";
+            this._medicamentosBindingSource1.DataSource = this.dSMantenimiento;
+            // 
+            // _medicamentosTableAdapter
+            // 
+            this._medicamentosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager._medicamentosTableAdapter = this._medicamentosTableAdapter;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = Medicamentos_y_Suministros.DSMantenimientoTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // frmMedicamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(415, 166);
-            this.Controls.Add(this.numericUpDown1);
+            this.ClientSize = new System.Drawing.Size(417, 163);
+            this.Controls.Add(this.dtpvencimiento);
+            this.Controls.Add(this.reorden);
+            this.Controls.Add(this.cantidad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.textBox4);
-            this.Name = "frmMedicamentosSuministros";
+            this.Controls.Add(this.txtmedicamento);
+            this.Name = "frmMedicamentos";
             this.Text = "Medicamentos";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reorden)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSMantenimiento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._medicamentosBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,15 +184,32 @@
 
         #endregion
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtmedicamento;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown cantidad;
+        private System.Windows.Forms.NumericUpDown reorden;
+        private System.Windows.Forms.DateTimePicker dtpvencimiento;
+        private System.Windows.Forms.BindingSource _medicamentosBindingSource;
+        private System.Windows.Forms.BindingNavigator _medicamentosBindingSource1BindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton _medicamentosBindingSource1BindingNavigatorSaveItem;
+        private DSMantenimiento dSMantenimiento;
+        private System.Windows.Forms.BindingSource _medicamentosBindingSource1;
+        private DSMantenimientoTableAdapters._medicamentosTableAdapter _medicamentosTableAdapter;
+        private DSMantenimientoTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
 
