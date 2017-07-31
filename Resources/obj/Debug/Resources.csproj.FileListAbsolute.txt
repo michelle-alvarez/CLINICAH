@@ -7,3 +7,8 @@ C:\Users\Michelle\Source\Repos\CLINICAH\Resources\bin\Debug\Resources.pdb
 C:\Users\Michelle\Source\Repos\CLINICAH\Resources\obj\Debug\Resources.csprojResolveAssemblyReference.cache
 C:\Users\Michelle\Source\Repos\CLINICAH\Resources\obj\Debug\Resources.dll
 C:\Users\Michelle\Source\Repos\CLINICAH\Resources\obj\Debug\Resources.pdb
+C:\Users\Benjamin\Source\Repos\CLINICAH\Resources\bin\Debug\Resources.dll
+C:\Users\Benjamin\Source\Repos\CLINICAH\Resources\bin\Debug\Resources.pdb
+C:\Users\Benjamin\Source\Repos\CLINICAH\Resources\obj\Debug\Resources.csprojResolveAssemblyReference.cache
+C:\Users\Benjamin\Source\Repos\CLINICAH\Resources\obj\Debug\Resources.dll
+C:\Users\Benjamin\Source\Repos\CLINICAH\Resources\obj\Debug\Resources.pdb

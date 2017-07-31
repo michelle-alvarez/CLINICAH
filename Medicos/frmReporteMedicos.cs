@@ -27,17 +27,70 @@ namespace Medicos
         string especialidad = "";
         string strSQL = "";
         NpgsqlConnection conexion;
+        NpgsqlDataReader readForFill;
+        ComboBox cboBox;
         bool debeRecortar = false;
 
         private void frmReporteMedicos_Load(object sender, EventArgs e)
         {
 
             //NpgsqlConnection conexion = new NpgsqlConnection("User Id=postgres;Password=unicah;Host=10.4.5.32;Database=clinicas;Initial Schema=administracion");
-            conexion = new NpgsqlConnection("User Id=postgres;Password=acmilan18;Host=localhost;Database=CLINICAH");
+
+            try
+            {
+                conexion = new NpgsqlConnection("User Id=postgres;Password=acmilan18;Host=localhost;Database=CLINICAH");
+            }
+            catch
+            {
+                conexion = new NpgsqlConnection(Medicos.Properties.Settings.Default.clinicasConnectionString);
+            }
+
+
             conexion.Open();
             strSQL = "SELECT nombrecompleto AS [Nombre Completo], campus AS Campus, fechanac AS [Fecha de nacimiento], trimestre as Trimestre, especialidad AS Especialidad FROM administracion.medicos";
             //definimos la variable de comando donde le asignamos el string que contiene el select y la conexion
-            
+            string strSQLfillEspecialidad = "Select especialidad FROM administracion.medicos";
+            string strSQLfillCampus = "Select campus FROM administracion.medicos";
+            string strSQLfilTrimestre = "Select trimestre FROM administracion.medicos";
+
+            //Creamos comandos para llenar los combo boxes con datos validos existentes en la base de datos.
+            NpgsqlCommand fillCboEspecialidad = new NpgsqlCommand(strSQLfillEspecialidad, conexion);
+            NpgsqlCommand fillCboCampus = new NpgsqlCommand(strSQLfillCampus, conexion);
+            NpgsqlCommand fillCboTri = new NpgsqlCommand(strSQLfilTrimestre, conexion);
+
+            conexion.Close();
+
+
+            //Bucle para llenar cada combo box.
+            for (int i = 1; i <= 3; i++)
+            {
+                switch (i)
+                {
+                    case 1:
+                        conexion.Open();
+                        cboBox = cmbcarrera;
+                        readForFill = fillCboEspecialidad.ExecuteReader();
+                        break;
+                    case 2:
+                        conexion.Open();
+                        cboBox = cmbcampus;
+                        readForFill = fillCboCampus.ExecuteReader();
+                        break;
+                    case 3:
+                        conexion.Open();
+                        cboBox = cbmtrimestre;
+                        readForFill = fillCboTri.ExecuteReader();
+                        break;
+                }
+
+                while (readForFill.Read())
+                {
+                    cboBox.Items.Add(readForFill[0].ToString());
+                }
+
+                conexion.Close();
+            }
+
             //comando.Parameters.AddWithValue("@idusuario", usuario);
         }
 
@@ -146,6 +199,15 @@ namespace Medicos
         private void datagridResultados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtnombre.Text = "";
+            cmbcampus.Text = "";
+            dtpyear.Text = "31/12/9998";
+            cbmtrimestre.Text = "";
+            cmbcarrera.Text = "";
         }
     }
 }

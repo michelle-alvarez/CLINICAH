@@ -53,9 +53,31 @@ namespace CLINICAH
 
         private void mdiPrincipal_Load(object sender, EventArgs e)
         {
-            
-            frmlogin.MdiParent = this;
-            frmlogin.Show();
+            while (!Resources.Propiedades.flag)
+                frmlogin.ShowDialog();
+
+            int  cat = Resources.Propiedades.categoria;
+            switch (cat)
+            {
+                case '1':
+                    mst.Enabled = false;
+                    MenuMedicos.Enabled = false;
+                    MenuProcedimientos.Enabled  = false;
+                    MenuSuministros.Enabled = false; 
+                    break;
+                case '2':
+                    
+                    break;
+                case '3':
+                    
+                    break;
+                case '4':
+                    
+                    break;
+
+            }
+
+
         }
     }
 }

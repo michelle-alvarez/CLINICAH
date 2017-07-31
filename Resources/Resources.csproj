@@ -65,5 +65,8 @@
     <Content Include="Iconos\users.png" />
     <Content Include="Iconos\userwoman.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Backup_BDD" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
