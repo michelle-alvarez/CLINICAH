@@ -97,3 +97,30 @@ C:\Users\Benjamin\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.csproj.Gener
 D:\Cientifica II\CLINICAH\bin\Debug\CLINICAH.exe.config
 D:\Cientifica II\CLINICAH\obj\Debug\CLINICAH.exe
 D:\Cientifica II\CLINICAH\obj\Debug\CLINICAH.pdb
+D:\Cientifica II\CLINICAH\bin\Debug\CLINICAH.exe
+D:\Cientifica II\CLINICAH\bin\Debug\CLINICAH.pdb
+D:\Cientifica II\CLINICAH\bin\Debug\Consulta.exe
+D:\Cientifica II\CLINICAH\bin\Debug\Login.exe
+D:\Cientifica II\CLINICAH\bin\Debug\Medicamentos y Suministros.exe
+D:\Cientifica II\CLINICAH\bin\Debug\Medicos.exe
+D:\Cientifica II\CLINICAH\bin\Debug\Npgsql.dll
+D:\Cientifica II\CLINICAH\bin\Debug\Pacientes.exe
+D:\Cientifica II\CLINICAH\bin\Debug\Procedimientos.exe
+D:\Cientifica II\CLINICAH\bin\Debug\Resources.dll
+D:\Cientifica II\CLINICAH\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Cientifica II\CLINICAH\bin\Debug\Devart.Data.PostgreSql.dll
+D:\Cientifica II\CLINICAH\bin\Debug\Devart.Data.dll
+D:\Cientifica II\CLINICAH\bin\Debug\Consulta.pdb
+D:\Cientifica II\CLINICAH\bin\Debug\Login.pdb
+D:\Cientifica II\CLINICAH\bin\Debug\Medicamentos y Suministros.pdb
+D:\Cientifica II\CLINICAH\bin\Debug\Medicos.pdb
+D:\Cientifica II\CLINICAH\bin\Debug\Pacientes.pdb
+D:\Cientifica II\CLINICAH\bin\Debug\Procedimientos.pdb
+D:\Cientifica II\CLINICAH\bin\Debug\Resources.pdb
+D:\Cientifica II\CLINICAH\bin\Debug\Npgsql.xml
+D:\Cientifica II\CLINICAH\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Cientifica II\CLINICAH\bin\Debug\Devart.Data.PostgreSql.xml
+D:\Cientifica II\CLINICAH\obj\Debug\CLINICAH.csprojResolveAssemblyReference.cache
+D:\Cientifica II\CLINICAH\obj\Debug\CLINICAH.mdiPrincipal.resources
+D:\Cientifica II\CLINICAH\obj\Debug\CLINICAH.Properties.Resources.resources
+D:\Cientifica II\CLINICAH\obj\Debug\CLINICAH.csproj.GenerateResource.Cache
