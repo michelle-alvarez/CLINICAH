@@ -37,3 +37,9 @@ C:\Users\Benjamin\Source\Repos\CLINICAH\Consulta\obj\Debug\Consulta.Properties.R
 C:\Users\Benjamin\Source\Repos\CLINICAH\Consulta\obj\Debug\Consulta.csproj.GenerateResource.Cache
 C:\Users\Benjamin\Source\Repos\CLINICAH\Consulta\obj\Debug\Consulta.exe
 C:\Users\Benjamin\Source\Repos\CLINICAH\Consulta\obj\Debug\Consulta.pdb
+C:\Users\Michelle\Source\Repos\CLINICAH2\Consulta\obj\Debug\Consulta.csprojResolveAssemblyReference.cache
+C:\Users\Michelle\Source\Repos\CLINICAH2\Consulta\obj\Debug\Consulta.frmConsulta.resources
+C:\Users\Michelle\Source\Repos\CLINICAH2\Consulta\obj\Debug\Consulta.Properties.Resources.resources
+C:\Users\Michelle\Source\Repos\CLINICAH2\Consulta\obj\Debug\Consulta.csproj.GenerateResource.Cache
+C:\Users\Michelle\Source\Repos\CLINICAH2\Consulta\obj\Debug\Consulta.exe
+C:\Users\Michelle\Source\Repos\CLINICAH2\Consulta\obj\Debug\Consulta.pdb

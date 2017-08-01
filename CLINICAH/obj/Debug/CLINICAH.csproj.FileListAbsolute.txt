@@ -94,3 +94,39 @@ C:\Users\Benjamin\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.csprojResolv
 C:\Users\Benjamin\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.mdiPrincipal.resources
 C:\Users\Benjamin\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.Properties.Resources.resources
 C:\Users\Benjamin\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.csproj.GenerateResource.Cache
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\CLINICAH.exe.config
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\CLINICAH.exe
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\CLINICAH.pdb
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Consulta.exe
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Login.exe
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Medicamentos y Suministros.exe
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Medicos.exe
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Npgsql.dll
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Pacientes.exe
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Procedimientos.exe
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Resources.dll
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Devart.Data.PostgreSql.dll
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Devart.Data.dll
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Consulta.pdb
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Consulta.exe.config
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Login.pdb
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Login.exe.config
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Medicamentos y Suministros.pdb
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Medicamentos y Suministros.exe.config
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Medicos.pdb
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Medicos.exe.config
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Pacientes.pdb
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Pacientes.exe.config
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Procedimientos.pdb
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Procedimientos.exe.config
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Resources.pdb
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Npgsql.xml
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Devart.Data.PostgreSql.xml
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\obj\Debug\CLINICAH.csprojResolveAssemblyReference.cache
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\obj\Debug\CLINICAH.mdiPrincipal.resources
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\obj\Debug\CLINICAH.Properties.Resources.resources
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\obj\Debug\CLINICAH.csproj.GenerateResource.Cache
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\obj\Debug\CLINICAH.exe
+C:\Users\Michelle\Source\Repos\CLINICAH2\CLINICAH\obj\Debug\CLINICAH.pdb

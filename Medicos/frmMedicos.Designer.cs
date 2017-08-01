@@ -30,24 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedicos));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.trimestreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombrecompletoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idmedicoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.generoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.fechanacDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadocivilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.especialidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celularDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aniocarreraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.campusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.turnoinicialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.turnofinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DGMedicos = new System.Windows.Forms.DataGridView();
+            this.idmedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.campus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aniocarrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadocivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trimestre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechanac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.txtidentidad = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
@@ -81,136 +78,125 @@
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.cmbtrimestre = new System.Windows.Forms.ComboBox();
-         
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Eliminar = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.DGMedicos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).BeginInit();
-         
+            this.Eliminar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // DGMedicos
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.trimestreDataGridViewTextBoxColumn,
-            this.nombrecompletoDataGridViewTextBoxColumn,
-            this.idmedicoDataGridViewTextBoxColumn,
-            this.generoDataGridViewCheckBoxColumn,
-            this.fechanacDataGridViewTextBoxColumn,
-            this.estadocivilDataGridViewTextBoxColumn,
-            this.especialidadDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.direccionDataGridViewTextBoxColumn,
-            this.celularDataGridViewTextBoxColumn,
-            this.aniocarreraDataGridViewTextBoxColumn,
-            this.campusDataGridViewTextBoxColumn,
-            this.passDataGridViewTextBoxColumn,
-            this.turnoinicialDataGridViewTextBoxColumn,
-            this.turnofinalDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.medicosBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 50);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(824, 168);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            this.DGMedicos.AllowUserToAddRows = false;
+            this.DGMedicos.AllowUserToDeleteRows = false;
+            this.DGMedicos.AllowUserToOrderColumns = true;
+            this.DGMedicos.AutoGenerateColumns = false;
+            this.DGMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGMedicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idmedico,
+            this.usuario,
+            this.genero,
+            this.campus,
+            this.especialidad,
+            this.celular,
+            this.aniocarrera,
+            this.estadocivil,
+            this.trimestre,
+            this.fechanac,
+            this.email,
+            this.direccion,
+            this.pass});
+            this.DGMedicos.DataSource = this.medicosBindingSource;
+            this.DGMedicos.Location = new System.Drawing.Point(12, 50);
+            this.DGMedicos.Name = "DGMedicos";
+            this.DGMedicos.ReadOnly = true;
+            this.DGMedicos.Size = new System.Drawing.Size(824, 168);
+            this.DGMedicos.TabIndex = 0;
+            this.DGMedicos.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
-            // trimestreDataGridViewTextBoxColumn
+            // idmedico
             // 
-            this.trimestreDataGridViewTextBoxColumn.DataPropertyName = "trimestre";
-            this.trimestreDataGridViewTextBoxColumn.HeaderText = "trimestre";
-            this.trimestreDataGridViewTextBoxColumn.Name = "trimestreDataGridViewTextBoxColumn";
+            this.idmedico.HeaderText = "Usuario";
+            this.idmedico.Name = "idmedico";
+            this.idmedico.ReadOnly = true;
             // 
-            // nombrecompletoDataGridViewTextBoxColumn
+            // usuario
             // 
-            this.nombrecompletoDataGridViewTextBoxColumn.DataPropertyName = "nombrecompleto";
-            this.nombrecompletoDataGridViewTextBoxColumn.HeaderText = "nombrecompleto";
-            this.nombrecompletoDataGridViewTextBoxColumn.Name = "nombrecompletoDataGridViewTextBoxColumn";
+            this.usuario.HeaderText = "Nombre Médico";
+            this.usuario.Name = "usuario";
+            this.usuario.ReadOnly = true;
             // 
-            // idmedicoDataGridViewTextBoxColumn
+            // genero
             // 
-            this.idmedicoDataGridViewTextBoxColumn.DataPropertyName = "idmedico";
-            this.idmedicoDataGridViewTextBoxColumn.HeaderText = "idmedico";
-            this.idmedicoDataGridViewTextBoxColumn.Name = "idmedicoDataGridViewTextBoxColumn";
+            this.genero.HeaderText = "Genero";
+            this.genero.Name = "genero";
+            this.genero.ReadOnly = true;
             // 
-            // generoDataGridViewCheckBoxColumn
+            // campus
             // 
-            this.generoDataGridViewCheckBoxColumn.DataPropertyName = "genero";
-            this.generoDataGridViewCheckBoxColumn.HeaderText = "genero";
-            this.generoDataGridViewCheckBoxColumn.Name = "generoDataGridViewCheckBoxColumn";
+            this.campus.HeaderText = "Campus";
+            this.campus.Name = "campus";
+            this.campus.ReadOnly = true;
             // 
-            // fechanacDataGridViewTextBoxColumn
+            // especialidad
             // 
-            this.fechanacDataGridViewTextBoxColumn.DataPropertyName = "fechanac";
-            this.fechanacDataGridViewTextBoxColumn.HeaderText = "fechanac";
-            this.fechanacDataGridViewTextBoxColumn.Name = "fechanacDataGridViewTextBoxColumn";
+            this.especialidad.HeaderText = "Especialidad";
+            this.especialidad.Name = "especialidad";
+            this.especialidad.ReadOnly = true;
             // 
-            // estadocivilDataGridViewTextBoxColumn
+            // celular
             // 
-            this.estadocivilDataGridViewTextBoxColumn.DataPropertyName = "estadocivil";
-            this.estadocivilDataGridViewTextBoxColumn.HeaderText = "estadocivil";
-            this.estadocivilDataGridViewTextBoxColumn.Name = "estadocivilDataGridViewTextBoxColumn";
+            this.celular.HeaderText = "Celular";
+            this.celular.Name = "celular";
+            this.celular.ReadOnly = true;
             // 
-            // especialidadDataGridViewTextBoxColumn
+            // aniocarrera
             // 
-            this.especialidadDataGridViewTextBoxColumn.DataPropertyName = "especialidad";
-            this.especialidadDataGridViewTextBoxColumn.HeaderText = "especialidad";
-            this.especialidadDataGridViewTextBoxColumn.Name = "especialidadDataGridViewTextBoxColumn";
+            this.aniocarrera.HeaderText = "Año Carrera";
+            this.aniocarrera.Name = "aniocarrera";
+            this.aniocarrera.ReadOnly = true;
             // 
-            // emailDataGridViewTextBoxColumn
+            // estadocivil
             // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.estadocivil.HeaderText = "Estado Civil";
+            this.estadocivil.Name = "estadocivil";
+            this.estadocivil.ReadOnly = true;
             // 
-            // direccionDataGridViewTextBoxColumn
+            // trimestre
             // 
-            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "direccion";
-            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            this.trimestre.HeaderText = "Trimestre";
+            this.trimestre.Name = "trimestre";
+            this.trimestre.ReadOnly = true;
             // 
-            // celularDataGridViewTextBoxColumn
+            // fechanac
             // 
-            this.celularDataGridViewTextBoxColumn.DataPropertyName = "celular";
-            this.celularDataGridViewTextBoxColumn.HeaderText = "celular";
-            this.celularDataGridViewTextBoxColumn.Name = "celularDataGridViewTextBoxColumn";
+            this.fechanac.HeaderText = "Fecha Nacimiento";
+            this.fechanac.Name = "fechanac";
+            this.fechanac.ReadOnly = true;
             // 
-            // aniocarreraDataGridViewTextBoxColumn
+            // email
             // 
-            this.aniocarreraDataGridViewTextBoxColumn.DataPropertyName = "aniocarrera";
-            this.aniocarreraDataGridViewTextBoxColumn.HeaderText = "aniocarrera";
-            this.aniocarreraDataGridViewTextBoxColumn.Name = "aniocarreraDataGridViewTextBoxColumn";
+            this.email.HeaderText = "E-mail";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
             // 
-            // campusDataGridViewTextBoxColumn
+            // direccion
             // 
-            this.campusDataGridViewTextBoxColumn.DataPropertyName = "campus";
-            this.campusDataGridViewTextBoxColumn.HeaderText = "campus";
-            this.campusDataGridViewTextBoxColumn.Name = "campusDataGridViewTextBoxColumn";
+            this.direccion.HeaderText = "Dirección";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            this.direccion.Visible = false;
             // 
-            // passDataGridViewTextBoxColumn
+            // pass
             // 
-            this.passDataGridViewTextBoxColumn.DataPropertyName = "pass";
-            this.passDataGridViewTextBoxColumn.HeaderText = "pass";
-            this.passDataGridViewTextBoxColumn.Name = "passDataGridViewTextBoxColumn";
-            // 
-            // turnoinicialDataGridViewTextBoxColumn
-            // 
-            this.turnoinicialDataGridViewTextBoxColumn.DataPropertyName = "turnoinicial";
-            this.turnoinicialDataGridViewTextBoxColumn.HeaderText = "turnoinicial";
-            this.turnoinicialDataGridViewTextBoxColumn.Name = "turnoinicialDataGridViewTextBoxColumn";
-            // 
-            // turnofinalDataGridViewTextBoxColumn
-            // 
-            this.turnofinalDataGridViewTextBoxColumn.DataPropertyName = "turnofinal";
-            this.turnofinalDataGridViewTextBoxColumn.HeaderText = "turnofinal";
-            this.turnofinalDataGridViewTextBoxColumn.Name = "turnofinalDataGridViewTextBoxColumn";
+            this.pass.HeaderText = "Password";
+            this.pass.Name = "pass";
+            this.pass.ReadOnly = true;
+            this.pass.Visible = false;
             // 
             // medicosBindingSource
             // 
             this.medicosBindingSource.DataMember = "medicos";
-            
-            // 
-            // dSmedicos
-            // 
             // 
             // txtbuscar
             // 
@@ -218,6 +204,7 @@
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(757, 20);
             this.txtbuscar.TabIndex = 1;
+            this.txtbuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbuscar_KeyPress);
             // 
             // txtidentidad
             // 
@@ -427,6 +414,7 @@
             this.btneditar.TabIndex = 27;
             this.btneditar.Text = "Editar";
             this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btnsalir
             // 
@@ -492,9 +480,19 @@
             this.cmbtrimestre.Size = new System.Drawing.Size(140, 21);
             this.cmbtrimestre.TabIndex = 34;
             // 
-            // medicosTableAdapter
+            // Eliminar
             // 
-         
+            this.Eliminar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.eliminarToolStripMenuItem});
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Size = new System.Drawing.Size(118, 26);
+            // 
+            // eliminarToolStripMenuItem
+            // 
+            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.eliminarToolStripMenuItem.Text = "Eliminar";
+            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // frmMedicos
             // 
@@ -534,15 +532,15 @@
             this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.txtidentidad);
             this.Controls.Add(this.txtbuscar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGMedicos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMedicos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Médicos";
             this.Load += new System.EventHandler(this.frmMedicos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGMedicos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).EndInit();
-          
+            this.Eliminar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -550,7 +548,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGMedicos;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.TextBox txtidentidad;
         private System.Windows.Forms.TextBox txtnombre;
@@ -602,6 +600,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn passDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn turnoinicialDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn turnofinalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idmedico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn campus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn especialidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn celular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aniocarrera;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadocivil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn trimestre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechanac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pass;
+        private System.Windows.Forms.ContextMenuStrip Eliminar;
+        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
     }
 }
 
