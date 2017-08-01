@@ -68,36 +68,29 @@ C:\Users\Benjamin\Source\Repos\CLINICAH\Login\obj\Debug\Login.Properties.Resourc
 C:\Users\Benjamin\Source\Repos\CLINICAH\Login\obj\Debug\Login.csproj.GenerateResource.Cache
 C:\Users\Benjamin\Source\Repos\CLINICAH\Login\obj\Debug\Login.exe
 C:\Users\Benjamin\Source\Repos\CLINICAH\Login\obj\Debug\Login.pdb
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Login.exe.config
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Login.exe
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Login.pdb
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Consulta.exe
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Devart.Data.dll
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Devart.Data.PostgreSql.dll
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Medicamentos y Suministros.exe
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Medicos.exe
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Npgsql.dll
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Pacientes.exe
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Procedimientos.exe
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Resources.dll
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Consulta.pdb
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Consulta.exe.config
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Medicamentos y Suministros.pdb
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Medicamentos y Suministros.exe.config
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Medicos.pdb
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Medicos.exe.config
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Pacientes.pdb
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Pacientes.exe.config
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Procedimientos.pdb
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Procedimientos.exe.config
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Resources.pdb
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Devart.Data.PostgreSql.xml
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\Npgsql.xml
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\obj\Debug\Login.csprojResolveAssemblyReference.cache
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\obj\Debug\Login.frmLogin.resources
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\obj\Debug\Login.Properties.Resources.resources
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\obj\Debug\Login.csproj.GenerateResource.Cache
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\obj\Debug\Login.exe
-C:\Users\Michelle\Source\Repos\CLINICAH2\Login\obj\Debug\Login.pdb
+D:\Cientifica II\Login\bin\Debug\Login.exe.config
+D:\Cientifica II\Login\bin\Debug\Login.exe
+D:\Cientifica II\Login\bin\Debug\Login.pdb
+D:\Cientifica II\Login\bin\Debug\Consulta.exe
+D:\Cientifica II\Login\bin\Debug\Medicamentos y Suministros.exe
+D:\Cientifica II\Login\bin\Debug\Medicos.exe
+D:\Cientifica II\Login\bin\Debug\Npgsql.dll
+D:\Cientifica II\Login\bin\Debug\Pacientes.exe
+D:\Cientifica II\Login\bin\Debug\Procedimientos.exe
+D:\Cientifica II\Login\bin\Debug\Resources.dll
+D:\Cientifica II\Login\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Cientifica II\Login\bin\Debug\Consulta.pdb
+D:\Cientifica II\Login\bin\Debug\Medicamentos y Suministros.pdb
+D:\Cientifica II\Login\bin\Debug\Medicos.pdb
+D:\Cientifica II\Login\bin\Debug\Pacientes.pdb
+D:\Cientifica II\Login\bin\Debug\Procedimientos.pdb
+D:\Cientifica II\Login\bin\Debug\Resources.pdb
+D:\Cientifica II\Login\bin\Debug\Devart.Data.PostgreSql.xml
+D:\Cientifica II\Login\bin\Debug\Npgsql.xml
+D:\Cientifica II\Login\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Cientifica II\Login\obj\Debug\Login.csprojResolveAssemblyReference.cache
+D:\Cientifica II\Login\obj\Debug\Login.frmLogin.resources
+D:\Cientifica II\Login\obj\Debug\Login.Properties.Resources.resources
+D:\Cientifica II\Login\obj\Debug\Login.csproj.GenerateResource.Cache
+D:\Cientifica II\Login\obj\Debug\Login.exe
+D:\Cientifica II\Login\obj\Debug\Login.pdb

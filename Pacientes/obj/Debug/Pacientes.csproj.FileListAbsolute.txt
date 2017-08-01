@@ -37,16 +37,16 @@ C:\Users\Benjamin\Source\Repos\CLINICAH\Pacientes\obj\Debug\Pacientes.Properties
 C:\Users\Benjamin\Source\Repos\CLINICAH\Pacientes\obj\Debug\Pacientes.csproj.GenerateResource.Cache
 C:\Users\Benjamin\Source\Repos\CLINICAH\Pacientes\obj\Debug\Pacientes.exe
 C:\Users\Benjamin\Source\Repos\CLINICAH\Pacientes\obj\Debug\Pacientes.pdb
-C:\Users\Michelle\Source\Repos\CLINICAH2\Pacientes\bin\Debug\Pacientes.exe.config
-C:\Users\Michelle\Source\Repos\CLINICAH2\Pacientes\bin\Debug\Pacientes.exe
-C:\Users\Michelle\Source\Repos\CLINICAH2\Pacientes\bin\Debug\Pacientes.pdb
-C:\Users\Michelle\Source\Repos\CLINICAH2\Pacientes\bin\Debug\Npgsql.dll
-C:\Users\Michelle\Source\Repos\CLINICAH2\Pacientes\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\Michelle\Source\Repos\CLINICAH2\Pacientes\bin\Debug\Npgsql.xml
-C:\Users\Michelle\Source\Repos\CLINICAH2\Pacientes\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Michelle\Source\Repos\CLINICAH2\Pacientes\obj\Debug\Pacientes.csprojResolveAssemblyReference.cache
-C:\Users\Michelle\Source\Repos\CLINICAH2\Pacientes\obj\Debug\Pacientes.FrmPacientes.resources
-C:\Users\Michelle\Source\Repos\CLINICAH2\Pacientes\obj\Debug\Pacientes.Properties.Resources.resources
-C:\Users\Michelle\Source\Repos\CLINICAH2\Pacientes\obj\Debug\Pacientes.csproj.GenerateResource.Cache
-C:\Users\Michelle\Source\Repos\CLINICAH2\Pacientes\obj\Debug\Pacientes.exe
-C:\Users\Michelle\Source\Repos\CLINICAH2\Pacientes\obj\Debug\Pacientes.pdb
+D:\Cientifica II\Pacientes\bin\Debug\Pacientes.exe.config
+D:\Cientifica II\Pacientes\bin\Debug\Pacientes.exe
+D:\Cientifica II\Pacientes\bin\Debug\Pacientes.pdb
+D:\Cientifica II\Pacientes\bin\Debug\Npgsql.dll
+D:\Cientifica II\Pacientes\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Cientifica II\Pacientes\bin\Debug\Npgsql.xml
+D:\Cientifica II\Pacientes\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Cientifica II\Pacientes\obj\Debug\Pacientes.csprojResolveAssemblyReference.cache
+D:\Cientifica II\Pacientes\obj\Debug\Pacientes.FrmPacientes.resources
+D:\Cientifica II\Pacientes\obj\Debug\Pacientes.Properties.Resources.resources
+D:\Cientifica II\Pacientes\obj\Debug\Pacientes.csproj.GenerateResource.Cache
+D:\Cientifica II\Pacientes\obj\Debug\Pacientes.exe
+D:\Cientifica II\Pacientes\obj\Debug\Pacientes.pdb

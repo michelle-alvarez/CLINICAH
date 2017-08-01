@@ -37,16 +37,16 @@ C:\Users\Benjamin\Source\Repos\CLINICAH\Procedimientos\obj\Debug\Procedimientos.
 C:\Users\Benjamin\Source\Repos\CLINICAH\Procedimientos\obj\Debug\Procedimientos.csproj.GenerateResource.Cache
 C:\Users\Benjamin\Source\Repos\CLINICAH\Procedimientos\obj\Debug\Procedimientos.exe
 C:\Users\Benjamin\Source\Repos\CLINICAH\Procedimientos\obj\Debug\Procedimientos.pdb
-C:\Users\Michelle\Source\Repos\CLINICAH2\Procedimientos\bin\Debug\Procedimientos.exe.config
-C:\Users\Michelle\Source\Repos\CLINICAH2\Procedimientos\bin\Debug\Procedimientos.exe
-C:\Users\Michelle\Source\Repos\CLINICAH2\Procedimientos\bin\Debug\Procedimientos.pdb
-C:\Users\Michelle\Source\Repos\CLINICAH2\Procedimientos\bin\Debug\Npgsql.dll
-C:\Users\Michelle\Source\Repos\CLINICAH2\Procedimientos\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\Michelle\Source\Repos\CLINICAH2\Procedimientos\bin\Debug\Npgsql.xml
-C:\Users\Michelle\Source\Repos\CLINICAH2\Procedimientos\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Michelle\Source\Repos\CLINICAH2\Procedimientos\obj\Debug\Procedimientos.csprojResolveAssemblyReference.cache
-C:\Users\Michelle\Source\Repos\CLINICAH2\Procedimientos\obj\Debug\Procedimientos.frmProcedimientos.resources
-C:\Users\Michelle\Source\Repos\CLINICAH2\Procedimientos\obj\Debug\Procedimientos.Properties.Resources.resources
-C:\Users\Michelle\Source\Repos\CLINICAH2\Procedimientos\obj\Debug\Procedimientos.csproj.GenerateResource.Cache
-C:\Users\Michelle\Source\Repos\CLINICAH2\Procedimientos\obj\Debug\Procedimientos.exe
-C:\Users\Michelle\Source\Repos\CLINICAH2\Procedimientos\obj\Debug\Procedimientos.pdb
+D:\Cientifica II\Procedimientos\bin\Debug\Procedimientos.exe.config
+D:\Cientifica II\Procedimientos\bin\Debug\Procedimientos.exe
+D:\Cientifica II\Procedimientos\bin\Debug\Procedimientos.pdb
+D:\Cientifica II\Procedimientos\bin\Debug\Npgsql.dll
+D:\Cientifica II\Procedimientos\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Cientifica II\Procedimientos\bin\Debug\Npgsql.xml
+D:\Cientifica II\Procedimientos\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Cientifica II\Procedimientos\obj\Debug\Procedimientos.csprojResolveAssemblyReference.cache
+D:\Cientifica II\Procedimientos\obj\Debug\Procedimientos.frmProcedimientos.resources
+D:\Cientifica II\Procedimientos\obj\Debug\Procedimientos.Properties.Resources.resources
+D:\Cientifica II\Procedimientos\obj\Debug\Procedimientos.csproj.GenerateResource.Cache
+D:\Cientifica II\Procedimientos\obj\Debug\Procedimientos.exe
+D:\Cientifica II\Procedimientos\obj\Debug\Procedimientos.pdb

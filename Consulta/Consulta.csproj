@@ -60,11 +60,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataSetConsulta.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetConsulta.xsd</DependentUpon>
-    </Compile>
     <Compile Include="frmConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,17 +81,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="DataSetConsulta.xsc">
-      <DependentUpon>DataSetConsulta.xsd</DependentUpon>
-    </None>
-    <None Include="DataSetConsulta.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetConsulta.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSetConsulta.xss">
-      <DependentUpon>DataSetConsulta.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
