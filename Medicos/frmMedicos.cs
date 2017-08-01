@@ -279,11 +279,8 @@ namespace Medicos
                             {
                                 MessageBox.Show(ex.Message);
                             }
-
-
                         }
                     }
-
                 }
             }
         }
