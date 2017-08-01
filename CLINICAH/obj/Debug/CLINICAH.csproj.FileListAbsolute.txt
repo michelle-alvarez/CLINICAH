@@ -124,3 +124,6 @@ D:\Cientifica II\CLINICAH\obj\Debug\CLINICAH.csprojResolveAssemblyReference.cach
 D:\Cientifica II\CLINICAH\obj\Debug\CLINICAH.mdiPrincipal.resources
 D:\Cientifica II\CLINICAH\obj\Debug\CLINICAH.Properties.Resources.resources
 D:\Cientifica II\CLINICAH\obj\Debug\CLINICAH.csproj.GenerateResource.Cache
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\CLINICAH.exe.config
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\CLINICAH\obj\Debug\CLINICAH.exe
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\CLINICAH\obj\Debug\CLINICAH.pdb
