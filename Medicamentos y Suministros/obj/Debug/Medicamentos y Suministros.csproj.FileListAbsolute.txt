@@ -40,3 +40,18 @@ C:\Users\Benjamin\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Med
 C:\Users\Benjamin\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.csproj.GenerateResource.Cache
 C:\Users\Benjamin\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.exe
 C:\Users\Benjamin\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.pdb
+D:\Cientifica II\Medicamentos y Suministros\bin\Debug\Medicamentos y Suministros.exe.config
+D:\Cientifica II\Medicamentos y Suministros\bin\Debug\Medicamentos y Suministros.exe
+D:\Cientifica II\Medicamentos y Suministros\bin\Debug\Medicamentos y Suministros.pdb
+D:\Cientifica II\Medicamentos y Suministros\bin\Debug\Npgsql.dll
+D:\Cientifica II\Medicamentos y Suministros\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Cientifica II\Medicamentos y Suministros\bin\Debug\Devart.Data.PostgreSql.xml
+D:\Cientifica II\Medicamentos y Suministros\bin\Debug\Npgsql.xml
+D:\Cientifica II\Medicamentos y Suministros\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Cientifica II\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.csprojResolveAssemblyReference.cache
+D:\Cientifica II\Medicamentos y Suministros\obj\Debug\Medicamentos_y_Suministros.frmSuministros.resources
+D:\Cientifica II\Medicamentos y Suministros\obj\Debug\Medicamentos_y_Suministros.frmMedicamentos.resources
+D:\Cientifica II\Medicamentos y Suministros\obj\Debug\Medicamentos_y_Suministros.Properties.Resources.resources
+D:\Cientifica II\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.csproj.GenerateResource.Cache
+D:\Cientifica II\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.exe
+D:\Cientifica II\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.pdb

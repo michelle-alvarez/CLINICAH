@@ -89,7 +89,7 @@ namespace Medicos
         }
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            DataGridViewRow row = this.DGMedicos.Rows[DGMedicos.CurrentCell.RowIndex];
+            DataGridViewRow row = DGMedicos.Rows[DGMedicos.CurrentCell.RowIndex];
             
             txtidentidad.Text = row.Cells[2].Value.ToString();
             txtnombre.Text = row.Cells[1].Value.ToString();
@@ -103,12 +103,11 @@ namespace Medicos
             cmbtrimestre.Text = row.Cells[0].Value.ToString();
             cmbyear.Text = row.Cells[10].Value.ToString();
             dtpnacimiento.Text = row.Cells[4].Value.ToString();
-
         }
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnagregar_Click(object sender, EventArgs e)
@@ -134,7 +133,6 @@ namespace Medicos
             dtpnacimiento.Value = DateTime.Now;
             statusForm = 1;
             txtidentidad.Focus();
-
         }
 
         private void txtbuscar_KeyPress(object sender, KeyPressEventArgs e)
@@ -173,7 +171,6 @@ namespace Medicos
                     MessageBox.Show(ex.Message);
                 }
             }
-
         }
 
         private void btneditar_Click(object sender, EventArgs e)
@@ -273,7 +270,6 @@ namespace Medicos
                             }
                             try
                             {
-
                             }
                             catch(Exception ex)
                             {

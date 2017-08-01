@@ -38,14 +38,6 @@
             this.cantidad = new System.Windows.Forms.NumericUpDown();
             this.reorden = new System.Windows.Forms.NumericUpDown();
             this.dtpvencimiento = new System.Windows.Forms.DateTimePicker();
-            this.dSMantenimiento = new Medicamentos_y_Suministros.DSMantenimiento();
-            this._medicamentosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this._medicamentosTableAdapter = new Medicamentos_y_Suministros.DSMantenimientoTableAdapters._medicamentosTableAdapter();
-            this.tableAdapterManager = new Medicamentos_y_Suministros.DSMantenimientoTableAdapters.TableAdapterManager();
-            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reorden)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSMantenimiento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._medicamentosBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtmedicamento
@@ -138,23 +130,10 @@
             // 
             // dSMantenimiento
             // 
-            this.dSMantenimiento.DataSetName = "DSMantenimiento";
-            this.dSMantenimiento.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // _medicamentosBindingSource1
             // 
-            this._medicamentosBindingSource1.DataMember = " medicamentos";
-            this._medicamentosBindingSource1.DataSource = this.dSMantenimiento;
-            // 
-            // _medicamentosTableAdapter
-            // 
-            this._medicamentosTableAdapter.ClearBeforeFill = true;
-            // 
             // tableAdapterManager
-            // 
-            this.tableAdapterManager._medicamentosTableAdapter = this._medicamentosTableAdapter;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.UpdateOrder = Medicamentos_y_Suministros.DSMantenimientoTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // frmMedicamentos
             // 
@@ -173,10 +152,6 @@
             this.Controls.Add(this.txtmedicamento);
             this.Name = "frmMedicamentos";
             this.Text = "Medicamentos";
-            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.reorden)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSMantenimiento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._medicamentosBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,10 +181,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton _medicamentosBindingSource1BindingNavigatorSaveItem;
-        private DSMantenimiento dSMantenimiento;
         private System.Windows.Forms.BindingSource _medicamentosBindingSource1;
-        private DSMantenimientoTableAdapters._medicamentosTableAdapter _medicamentosTableAdapter;
-        private DSMantenimientoTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
 
