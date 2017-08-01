@@ -78,3 +78,18 @@ D:\Cientifica II\Medicos\obj\Debug\Medicos.Properties.Resources.resources
 D:\Cientifica II\Medicos\obj\Debug\Medicos.csproj.GenerateResource.Cache
 D:\Cientifica II\Medicos\obj\Debug\Medicos.exe
 D:\Cientifica II\Medicos\obj\Debug\Medicos.pdb
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\bin\Debug\Medicos.exe.config
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\obj\Debug\Medicos.exe
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\obj\Debug\Medicos.pdb
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\bin\Debug\Medicos.exe
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\bin\Debug\Medicos.pdb
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\bin\Debug\Npgsql.dll
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\bin\Debug\Devart.Data.PostgreSql.xml
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\bin\Debug\Npgsql.xml
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\obj\Debug\Medicos.csprojResolveAssemblyReference.cache
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\obj\Debug\Medicos.frmMedicos.resources
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\obj\Debug\Medicos.frmReporteMedicos.resources
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\obj\Debug\Medicos.Properties.Resources.resources
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\obj\Debug\Medicos.csproj.GenerateResource.Cache

@@ -31,19 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedicos));
             this.DGMedicos = new System.Windows.Forms.DataGridView();
-            this.idmedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.campus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aniocarrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadocivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trimestre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechanac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.txtidentidad = new System.Windows.Forms.TextBox();
@@ -80,6 +67,19 @@
             this.cmbtrimestre = new System.Windows.Forms.ComboBox();
             this.Eliminar = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.idmedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombrecompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.campus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aniocarrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadocivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trimestre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechanac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGMedicos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).BeginInit();
             this.Eliminar.SuspendLayout();
@@ -94,7 +94,7 @@
             this.DGMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGMedicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idmedico,
-            this.usuario,
+            this.nombrecompleto,
             this.genero,
             this.campus,
             this.especialidad,
@@ -112,87 +112,7 @@
             this.DGMedicos.ReadOnly = true;
             this.DGMedicos.Size = new System.Drawing.Size(881, 180);
             this.DGMedicos.TabIndex = 0;
-            this.DGMedicos.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // idmedico
-            // 
-            this.idmedico.HeaderText = "Usuario";
-            this.idmedico.Name = "idmedico";
-            this.idmedico.ReadOnly = true;
-            // 
-            // usuario
-            // 
-            this.usuario.HeaderText = "Nombre Médico";
-            this.usuario.Name = "usuario";
-            this.usuario.ReadOnly = true;
-            // 
-            // genero
-            // 
-            this.genero.HeaderText = "Genero";
-            this.genero.Name = "genero";
-            this.genero.ReadOnly = true;
-            // 
-            // campus
-            // 
-            this.campus.HeaderText = "Campus";
-            this.campus.Name = "campus";
-            this.campus.ReadOnly = true;
-            // 
-            // especialidad
-            // 
-            this.especialidad.HeaderText = "Especialidad";
-            this.especialidad.Name = "especialidad";
-            this.especialidad.ReadOnly = true;
-            // 
-            // celular
-            // 
-            this.celular.HeaderText = "Celular";
-            this.celular.Name = "celular";
-            this.celular.ReadOnly = true;
-            // 
-            // aniocarrera
-            // 
-            this.aniocarrera.HeaderText = "Año Carrera";
-            this.aniocarrera.Name = "aniocarrera";
-            this.aniocarrera.ReadOnly = true;
-            // 
-            // estadocivil
-            // 
-            this.estadocivil.HeaderText = "Estado Civil";
-            this.estadocivil.Name = "estadocivil";
-            this.estadocivil.ReadOnly = true;
-            // 
-            // trimestre
-            // 
-            this.trimestre.HeaderText = "Trimestre";
-            this.trimestre.Name = "trimestre";
-            this.trimestre.ReadOnly = true;
-            // 
-            // fechanac
-            // 
-            this.fechanac.HeaderText = "Fecha Nacimiento";
-            this.fechanac.Name = "fechanac";
-            this.fechanac.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "E-mail";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // direccion
-            // 
-            this.direccion.HeaderText = "Dirección";
-            this.direccion.Name = "direccion";
-            this.direccion.ReadOnly = true;
-            this.direccion.Visible = false;
-            // 
-            // pass
-            // 
-            this.pass.HeaderText = "Password";
-            this.pass.Name = "pass";
-            this.pass.ReadOnly = true;
-            this.pass.Visible = false;
+            //this.DGMedicos.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // medicosBindingSource
             // 
@@ -316,6 +236,9 @@
             // cmbcarrera
             // 
             this.cmbcarrera.FormattingEnabled = true;
+            this.cmbcarrera.Items.AddRange(new object[] {
+            "General",
+            "Cirujano"});
             this.cmbcarrera.Location = new System.Drawing.Point(358, 248);
             this.cmbcarrera.Name = "cmbcarrera";
             this.cmbcarrera.Size = new System.Drawing.Size(140, 21);
@@ -333,6 +256,14 @@
             // cmbyear
             // 
             this.cmbyear.FormattingEnabled = true;
+            this.cmbyear.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
             this.cmbyear.Location = new System.Drawing.Point(588, 248);
             this.cmbyear.Name = "cmbyear";
             this.cmbyear.Size = new System.Drawing.Size(104, 21);
@@ -438,6 +369,9 @@
             // cmbCampus
             // 
             this.cmbCampus.FormattingEnabled = true;
+            this.cmbCampus.Items.AddRange(new object[] {
+            "San Pedro San Pablo",
+            "Sagrado Corazon"});
             this.cmbCampus.Location = new System.Drawing.Point(125, 277);
             this.cmbCampus.Name = "cmbCampus";
             this.cmbCampus.Size = new System.Drawing.Size(140, 21);
@@ -475,6 +409,10 @@
             // cmbtrimestre
             // 
             this.cmbtrimestre.FormattingEnabled = true;
+            this.cmbtrimestre.Items.AddRange(new object[] {
+            "Primero",
+            "Segundo",
+            "Tercero"});
             this.cmbtrimestre.Location = new System.Drawing.Point(754, 248);
             this.cmbtrimestre.Name = "cmbtrimestre";
             this.cmbtrimestre.Size = new System.Drawing.Size(140, 21);
@@ -493,6 +431,86 @@
             this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
+            // 
+            // idmedico
+            // 
+            this.idmedico.HeaderText = "Usuario";
+            this.idmedico.Name = "idmedico";
+            this.idmedico.ReadOnly = true;
+            // 
+            // nombrecompleto
+            // 
+            this.nombrecompleto.HeaderText = "Nombre Médico";
+            this.nombrecompleto.Name = "nombrecompleto";
+            this.nombrecompleto.ReadOnly = true;
+            // 
+            // genero
+            // 
+            this.genero.HeaderText = "Genero";
+            this.genero.Name = "genero";
+            this.genero.ReadOnly = true;
+            // 
+            // campus
+            // 
+            this.campus.HeaderText = "Campus";
+            this.campus.Name = "campus";
+            this.campus.ReadOnly = true;
+            // 
+            // especialidad
+            // 
+            this.especialidad.HeaderText = "Especialidad";
+            this.especialidad.Name = "especialidad";
+            this.especialidad.ReadOnly = true;
+            // 
+            // celular
+            // 
+            this.celular.HeaderText = "Celular";
+            this.celular.Name = "celular";
+            this.celular.ReadOnly = true;
+            // 
+            // aniocarrera
+            // 
+            this.aniocarrera.HeaderText = "Año Carrera";
+            this.aniocarrera.Name = "aniocarrera";
+            this.aniocarrera.ReadOnly = true;
+            // 
+            // estadocivil
+            // 
+            this.estadocivil.HeaderText = "Estado Civil";
+            this.estadocivil.Name = "estadocivil";
+            this.estadocivil.ReadOnly = true;
+            // 
+            // trimestre
+            // 
+            this.trimestre.HeaderText = "Trimestre";
+            this.trimestre.Name = "trimestre";
+            this.trimestre.ReadOnly = true;
+            // 
+            // fechanac
+            // 
+            this.fechanac.HeaderText = "Fecha Nacimiento";
+            this.fechanac.Name = "fechanac";
+            this.fechanac.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "E-mail";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // direccion
+            // 
+            this.direccion.HeaderText = "Dirección";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            this.direccion.Visible = false;
+            // 
+            // pass
+            // 
+            this.pass.HeaderText = "Password";
+            this.pass.Name = "pass";
+            this.pass.ReadOnly = true;
+            this.pass.Visible = false;
             // 
             // frmMedicos
             // 
@@ -600,8 +618,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn passDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn turnoinicialDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn turnofinalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ContextMenuStrip Eliminar;
+        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn idmedico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombrecompleto;
         private System.Windows.Forms.DataGridViewTextBoxColumn genero;
         private System.Windows.Forms.DataGridViewTextBoxColumn campus;
         private System.Windows.Forms.DataGridViewTextBoxColumn especialidad;
@@ -613,8 +633,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn pass;
-        private System.Windows.Forms.ContextMenuStrip Eliminar;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
     }
 }
 

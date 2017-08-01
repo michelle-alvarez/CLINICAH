@@ -13,10 +13,10 @@ namespace Medicos
 {
     public partial class frmMedicos : Form
     {
-        string cnx = "";
+        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=Salmos665;";
         DataSet ds;
         public int statusForm = 0; //0 = Consultando; 1=Agregando; 2=Editando
-        string sqlUsuarios = "SELECT *, CASE genero WHEN 1 THEN 'Masculino' WHEN 0 THEN 'Femenino' END as generotext  FROM seg.usuarios WHERE idusuario LIKE @filtro OR usuario LIKE @filtro ORDER BY idusuario";
+        string sqlUsuarios = "SELECT * FROM administracion.medicos WHERE idmedico LIKE @filtro OR nombrecompleto LIKE @filtro ORDER BY idmedico";
         NpgsqlDataAdapter damedicos;
 
         public frmMedicos()
@@ -33,7 +33,7 @@ namespace Medicos
             //Asignamos las columnas del Grid
             DGMedicos.AutoGenerateColumns = false;
             DGMedicos.Columns[0].DataPropertyName = "idmedico";
-            DGMedicos.Columns[1].DataPropertyName = "usuario";
+            DGMedicos.Columns[1].DataPropertyName = "nombrecompleto";
             DGMedicos.Columns[2].DataPropertyName = "genero";
             DGMedicos.Columns[3].DataPropertyName = "campus";
             DGMedicos.Columns[4].DataPropertyName = "especialidad";
@@ -41,10 +41,10 @@ namespace Medicos
             DGMedicos.Columns[6].DataPropertyName = "aniocarrera";
             DGMedicos.Columns[7].DataPropertyName = "estadocivil";
             DGMedicos.Columns[8].DataPropertyName = "trimestre";
-            DGMedicos.Columns[10].DataPropertyName = "fechanac";
-            DGMedicos.Columns[11].DataPropertyName = "email";
-            DGMedicos.Columns[12].DataPropertyName = "direccion";
-            DGMedicos.Columns[13].DataPropertyName = "pass";
+            DGMedicos.Columns[9].DataPropertyName = "fechanac";
+            DGMedicos.Columns[10].DataPropertyName = "email";
+            DGMedicos.Columns[11].DataPropertyName = "direccion";
+            DGMedicos.Columns[12].DataPropertyName = "pass";
 
             //Asignamos los parametros de busqueda en vacio para que cargue todos los usuarios
             damedicos.SelectCommand.Parameters.AddWithValue("@filtro", "%%");
@@ -53,9 +53,9 @@ namespace Medicos
 
             //Asignar la fuente de datos al DataGrid con la table adapter creada anteriormente
             DGMedicos.DataSource = ds.Tables["usuarios"];
-            txtidentidad.DataBindings.Add("text", ds.Tables["usuarios"], "idusuario");
-            txtnombre.DataBindings.Add("text", ds.Tables["usuarios"], "usuario");
-            cmbgenero.DataBindings.Add("checked", ds.Tables["usuarios"], "genero");
+            txtidentidad.DataBindings.Add("text", ds.Tables["usuarios"], "idmedico");
+            txtnombre.DataBindings.Add("text", ds.Tables["usuarios"], "nombrecompleto");
+            cmbgenero.DataBindings.Add("text", ds.Tables["usuarios"], "genero");
             cmbCampus.DataBindings.Add("text", ds.Tables["usuarios"], "campus");
             cmbcarrera.DataBindings.Add("text", ds.Tables["usuarios"], "especialidad");
             txtcelular.DataBindings.Add("text", ds.Tables["usuarios"], "celular");
@@ -66,7 +66,7 @@ namespace Medicos
             txtemail.DataBindings.Add("text", ds.Tables["usuarios"], "email");
             txtdireccion.DataBindings.Add("text", ds.Tables["usuarios"], "direccion");
 
-            activo(false);
+            activo(false); 
         }
 
         private void activo(bool condicion)
@@ -87,23 +87,23 @@ namespace Medicos
             cmbyear.Enabled = condicion;
             dtpnacimiento.Enabled = condicion;
         }
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
-        {
-            DataGridViewRow row = DGMedicos.Rows[DGMedicos.CurrentCell.RowIndex];
+        //private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        //{
+        //    DataGridViewRow row = DGMedicos.Rows[DGMedicos.CurrentCell.RowIndex];
             
-            txtidentidad.Text = row.Cells[2].Value.ToString();
-            txtnombre.Text = row.Cells[1].Value.ToString();
-            txtemail.Text = row.Cells[7].Value.ToString();
-            txtdireccion.Text = row.Cells[8].Value.ToString();
-            txtcelular.Text = row.Cells[9].Value.ToString();
-            cmbCampus.Text = row.Cells[4].Value.ToString();
-            cmbcarrera.Text = row.Cells[6].Value.ToString();
-            cmbEstado.Text = row.Cells[5].Value.ToString();
-            cmbgenero.Text = (Convert.ToBoolean(row.Cells[3].Value)) ? "Masculino" : "Femenino" ;
-            cmbtrimestre.Text = row.Cells[0].Value.ToString();
-            cmbyear.Text = row.Cells[10].Value.ToString();
-            dtpnacimiento.Text = row.Cells[4].Value.ToString();
-        }
+        //    txtidentidad.Text = row.Cells[0].Value.ToString();
+        //    txtnombre.Text = row.Cells[1].Value.ToString();
+        //    cmbgenero.Text = (Convert.ToBoolean(row.Cells[2].Value)) ? "Masculino" : "Femenino";
+        //    cmbCampus.Text = row.Cells[3].Value.ToString();
+        //    cmbcarrera.Text = row.Cells[4].Value.ToString();
+        //    txtcelular.Text = row.Cells[5].Value.ToString();
+        //    cmbyear.Text = row.Cells[6].Value.ToString();
+        //    cmbEstado.Text = row.Cells[7].Value.ToString();
+        //    cmbtrimestre.Text = row.Cells[8].Value.ToString();
+        //    dtpnacimiento.Text = row.Cells[9].Value.ToString();
+        //    txtemail.Text = row.Cells[10].Value.ToString();
+        //    txtdireccion.Text = row.Cells[11].Value.ToString();
+        //}
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
@@ -133,6 +133,7 @@ namespace Medicos
             dtpnacimiento.Value = DateTime.Now;
             statusForm = 1;
             txtidentidad.Focus();
+            activo(true);
         }
 
         private void txtbuscar_KeyPress(object sender, KeyPressEventArgs e)
@@ -151,14 +152,14 @@ namespace Medicos
         {
             if (DGMedicos.RowCount > 0)
             {
-                dynamic strSQL = "DELETE FROM seg.usuarios WHERE idusuario = @idusuario";
-                dynamic idusuario = DGMedicos.Rows[DGMedicos.CurrentRow.Index].Cells[0].Value;
+                dynamic strSQL = "DELETE FROM administracion.medicos WHERE idmedico = @idmedico";
+                dynamic idmedico = DGMedicos.Rows[DGMedicos.CurrentRow.Index].Cells[0].Value;
                 try
                 {
                     using (NpgsqlConnection conexion = new NpgsqlConnection(cnx))
                     {
                         NpgsqlCommand comando = new NpgsqlCommand(strSQL, conexion);
-                        comando.Parameters.AddWithValue("@idusuario", idusuario);
+                        comando.Parameters.AddWithValue("@idmedico", idmedico);
                         conexion.Open();
                         comando.ExecuteNonQuery();
                         //Ejecucion de un Query de accion
@@ -176,8 +177,6 @@ namespace Medicos
         private void btneditar_Click(object sender, EventArgs e)
         {
             string strSQL = ""; ;
-            txtpassword.Clear();
-            txtconfirmacion.Clear();
             if (statusForm == 0)
             {
                 activo(true);
@@ -192,37 +191,23 @@ namespace Medicos
             {
                 if (statusForm == 1)
                 {
-                    if (!string.IsNullOrEmpty(txtpassword.Text) & txtpassword.Text == txtconfirmacion.Text)
+                    if ((txtpassword.Text != "") && (txtpassword.Text == txtconfirmacion.Text))
                     {
-                        strSQL = "INSERT INTO seg.usuarios(idusuario, usuario, llave, passw, estado, genero, fechanac, email, celular, direccion, tiposangre) VALUES(@idusuario, @usuario, @llave, @passw, @estado, @genero, @fechanac, @email, @celular, @direccion, @tiposangre); ";
+                        strSQL = "INSERT INTO administracion.medicos(idmedico, nombrecompleto, genero, campus, especialidad, celular, aniocarrera, estadocivil, trimestre, fechanac, email, direccion, pass) VALUES(@idmedico, @nombrecompleto, @genero, @campus, @especialidad, @celular, @aniocarrera, @estadocivil, @trimestre, @fechanac, @email, @direccion, @pass); ";
                         try
                         {
                             using (NpgsqlConnection conexion = new NpgsqlConnection(cnx))
                             {
                                 NpgsqlCommand comando = new NpgsqlCommand(strSQL, conexion);
-                                DGMedicos.AutoGenerateColumns = false;
-                                DGMedicos.Columns[0].DataPropertyName = "idmedico";
-                                DGMedicos.Columns[1].DataPropertyName = "usuario";
-                                DGMedicos.Columns[2].DataPropertyName = "genero";
-                                DGMedicos.Columns[3].DataPropertyName = "campus";
-                                DGMedicos.Columns[4].DataPropertyName = "especialidad";
-                                DGMedicos.Columns[5].DataPropertyName = "celular";
-                                DGMedicos.Columns[6].DataPropertyName = "aniocarrera";
-                                DGMedicos.Columns[7].DataPropertyName = "estadocivil";
-                                DGMedicos.Columns[8].DataPropertyName = "trimestre";
-                                DGMedicos.Columns[10].DataPropertyName = "fechanac";
-                                DGMedicos.Columns[11].DataPropertyName = "email";
-                                DGMedicos.Columns[12].DataPropertyName = "direccion";
-                                DGMedicos.Columns[13].DataPropertyName = "pass";
                                 comando.Parameters.AddWithValue("@idmedico", txtidentidad.Text);
-                                comando.Parameters.AddWithValue("@usuario", txtnombre.Text);
+                                comando.Parameters.AddWithValue("@nombrecompleto", txtnombre.Text);
                                 comando.Parameters.AddWithValue("@genero", cmbgenero.Text);
                                 comando.Parameters.AddWithValue("@campus", cmbCampus.Text);
                                 comando.Parameters.AddWithValue("@especialidad", cmbcarrera.Text);
-                                comando.Parameters.AddWithValue("@celular", txtcelular.Text);
-                                comando.Parameters.AddWithValue("@aniocarrera", cmbyear.Text);
+                                comando.Parameters.AddWithValue("@celular", Convert.ToDecimal(txtcelular.Text));
+                                comando.Parameters.AddWithValue("@aniocarrera", Convert.ToDecimal(cmbyear.Text));
                                 comando.Parameters.AddWithValue("@estadocivil", cmbEstado.Text);
-                                comando.Parameters.AddWithValue("@trimestre", cmbtrimestre.Text);
+                                comando.Parameters.AddWithValue("@trimestre", Convert.ToDecimal(cmbtrimestre.Text));
                                 comando.Parameters.AddWithValue("@fechanac", dtpnacimiento.Value);
                                 comando.Parameters.AddWithValue("@email", txtemail.Text);
                                 comando.Parameters.AddWithValue("@direccion", txtdireccion.Text);
@@ -262,20 +247,56 @@ namespace Medicos
                         {
                             if (txtpassword.Text == "")
                             {
-                                strSQL = "UPDATE seg.usuarios SET usuario = @usuario, estado = @estado, genero = @genero, fechanac = @fechanac, email = @email, celular = @celular, direccion = @direccion, tiposangre = @tiposangre WHERE idusuario = @idusuario";
+                                strSQL = "UPDATE administracion.medicos SET nombrecompleto = @nombrecompleto, genero = @genero, campus = @campus, especialidad = @especialidad, celular = @celular, aniocarrera = @aniocarrera, estadocivil = @estadocivil, trimestre = @trimestre, fechanac = @fechanac, email = @email, direccion = @direccion   WHERE idmedico = @idmedico";
                             }
                             else
                             {
-                                strSQL = "UPDATE seg.usuarios SET usuario = @usuario, llave = @llave, passw = @passw, estado = @estado, genero = @genero, fechanac = @fechanac, email = @email, celular = @celular, direccion = @direccion, tiposangre = @tiposangre WHERE idusuario = @idusuario";
+                                strSQL = "UPDATE administracion.medicos SET nombrecompleto = @nombrecompleto, genero = @genero, campus = @campus, especialidad = @especialidad, celular = @celular, aniocarrera = @aniocarrera, estadocivil = @estadocivil, trimestre = @trimestre, fechanac = @fechanac, email = @email, direccion = @direccion, pass = @pass   WHERE idmedico = @idmedico";
                             }
                             try
                             {
+                                using (NpgsqlConnection conexion = new NpgsqlConnection(cnx))
+                                {
+                                    NpgsqlCommand comando = new NpgsqlCommand(strSQL, conexion);
+                                    comando.Parameters.AddWithValue("@idmedico", txtidentidad.Text);
+                                    comando.Parameters.AddWithValue("@nombrecompleto", txtnombre.Text);
+                                    comando.Parameters.AddWithValue("@genero", cmbgenero.Text);
+                                    comando.Parameters.AddWithValue("@campus", cmbCampus.Text);
+                                    comando.Parameters.AddWithValue("@especialidad", cmbcarrera.Text);
+                                    comando.Parameters.AddWithValue("@celular", Convert.ToDecimal(txtcelular.Text));
+                                    comando.Parameters.AddWithValue("@aniocarrera", Convert.ToDecimal(cmbyear.Text));
+                                    comando.Parameters.AddWithValue("@estadocivil", cmbEstado.Text);
+                                    comando.Parameters.AddWithValue("@trimestre", Convert.ToDecimal(cmbtrimestre.Text));
+                                    comando.Parameters.AddWithValue("@fechanac", dtpnacimiento.Value);
+                                    comando.Parameters.AddWithValue("@email", txtemail.Text);
+                                    comando.Parameters.AddWithValue("@direccion", txtdireccion.Text);
+                                    comando.Parameters.AddWithValue("@pass", txtpassword.Text);
+                                    conexion.Open();
+                                    comando.ExecuteNonQuery();
+                                    activo(false);
+                                    dynamic filtro = "%" + txtbuscar.Text + "%";
+                                    damedicos.SelectCommand.Parameters.Clear();
+                                    damedicos.SelectCommand.Parameters.AddWithValue("@filtro", filtro);
+                                    ds.Tables["usuarios"].Clear();
+                                    damedicos.Fill(ds, "usuarios");
+                                    btnagregar.Enabled = true;
+                                    txtidentidad.ReadOnly = true;
+                                    btneditar.Text = "Editar";
+                                    DGMedicos.ReadOnly = false;
+                                    DGMedicos.Enabled = true;
+                                    statusForm = 0;
+                                    conexion.Close();
+                                }
                             }
-                            catch(Exception ex)
+                            catch (Exception ex)
                             {
                                 MessageBox.Show(ex.Message);
                             }
                         }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Contraseñas no coinciden");
                     }
                 }
             }
