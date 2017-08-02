@@ -189,7 +189,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmReporteMedicos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmReporte";
+            this.Text = "Reporte Médicos";
             this.Load += new System.EventHandler(this.frmReporteMedicos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.datagridResultados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).EndInit();

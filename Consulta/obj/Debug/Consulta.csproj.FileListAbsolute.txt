@@ -50,3 +50,16 @@ D:\Cientifica II\Consulta\obj\Debug\Consulta.Properties.Resources.resources
 D:\Cientifica II\Consulta\obj\Debug\Consulta.csproj.GenerateResource.Cache
 D:\Cientifica II\Consulta\obj\Debug\Consulta.exe
 D:\Cientifica II\Consulta\obj\Debug\Consulta.pdb
+C:\Users\Personal\Source\Repos\CLINICAH2\Consulta\bin\Debug\Consulta.exe.config
+C:\Users\Personal\Source\Repos\CLINICAH2\Consulta\bin\Debug\Consulta.exe
+C:\Users\Personal\Source\Repos\CLINICAH2\Consulta\bin\Debug\Consulta.pdb
+C:\Users\Personal\Source\Repos\CLINICAH2\Consulta\bin\Debug\Npgsql.dll
+C:\Users\Personal\Source\Repos\CLINICAH2\Consulta\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Personal\Source\Repos\CLINICAH2\Consulta\bin\Debug\Npgsql.xml
+C:\Users\Personal\Source\Repos\CLINICAH2\Consulta\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Personal\Source\Repos\CLINICAH2\Consulta\obj\Debug\Consulta.csprojResolveAssemblyReference.cache
+C:\Users\Personal\Source\Repos\CLINICAH2\Consulta\obj\Debug\Consulta.frmConsulta.resources
+C:\Users\Personal\Source\Repos\CLINICAH2\Consulta\obj\Debug\Consulta.Properties.Resources.resources
+C:\Users\Personal\Source\Repos\CLINICAH2\Consulta\obj\Debug\Consulta.csproj.GenerateResource.Cache
+C:\Users\Personal\Source\Repos\CLINICAH2\Consulta\obj\Debug\Consulta.exe
+C:\Users\Personal\Source\Repos\CLINICAH2\Consulta\obj\Debug\Consulta.pdb

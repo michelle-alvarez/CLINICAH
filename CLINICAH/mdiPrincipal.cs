@@ -125,5 +125,12 @@ namespace CLINICAH
             reporte.MdiParent = this;
             reporte.Show();
         }
+
+        private void medicosToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Medicos.frmPrivilegios privilegios = new Medicos.frmPrivilegios();
+            privilegios.MdiParent = this;
+            privilegios.Show();
+        }
     }
 }

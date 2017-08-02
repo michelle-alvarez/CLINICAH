@@ -107,6 +107,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo.ico" />
+    <None Include="Resources\if_200_CircledMinus_183317.ico" />
+    <None Include="Resources\if_ic_add_circle_48px_352005.ico" />
+    <None Include="Resources\exit.ico" />
+    <None Include="Resources\edit2.ico" />
+    <None Include="Resources\cancelar.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

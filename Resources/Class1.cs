@@ -8,7 +8,7 @@ namespace Resources
 {
     public static class Propiedades
     {
-        public static bool flag { get; set; } = false;
+        public static bool flag { get; set; }
         public static int categoria { get; set; }
         public static string nombre_ingreso { get; set; }
     }

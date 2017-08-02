@@ -17,3 +17,7 @@ D:\Cientifica II\Resources\bin\Debug\Resources.pdb
 D:\Cientifica II\Resources\obj\Debug\Resources.csprojResolveAssemblyReference.cache
 D:\Cientifica II\Resources\obj\Debug\Resources.dll
 D:\Cientifica II\Resources\obj\Debug\Resources.pdb
+C:\Users\Personal\Source\Repos\CLINICAH2\Resources\bin\Debug\Resources.dll
+C:\Users\Personal\Source\Repos\CLINICAH2\Resources\bin\Debug\Resources.pdb
+C:\Users\Personal\Source\Repos\CLINICAH2\Resources\obj\Debug\Resources.dll
+C:\Users\Personal\Source\Repos\CLINICAH2\Resources\obj\Debug\Resources.pdb

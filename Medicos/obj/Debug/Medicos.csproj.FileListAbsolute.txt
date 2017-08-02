@@ -93,3 +93,17 @@ C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\obj\Debug\Medicos.frmMe
 C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\obj\Debug\Medicos.frmReporteMedicos.resources
 C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\obj\Debug\Medicos.Properties.Resources.resources
 C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Medicos\obj\Debug\Medicos.csproj.GenerateResource.Cache
+C:\Users\Personal\Source\Repos\CLINICAH2\Medicos\bin\Debug\Medicos.exe.config
+C:\Users\Personal\Source\Repos\CLINICAH2\Medicos\bin\Debug\Medicos.exe
+C:\Users\Personal\Source\Repos\CLINICAH2\Medicos\bin\Debug\Medicos.pdb
+C:\Users\Personal\Source\Repos\CLINICAH2\Medicos\bin\Debug\Npgsql.dll
+C:\Users\Personal\Source\Repos\CLINICAH2\Medicos\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Personal\Source\Repos\CLINICAH2\Medicos\bin\Debug\Npgsql.xml
+C:\Users\Personal\Source\Repos\CLINICAH2\Medicos\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Personal\Source\Repos\CLINICAH2\Medicos\obj\Debug\Medicos.frmMedicos.resources
+C:\Users\Personal\Source\Repos\CLINICAH2\Medicos\obj\Debug\Medicos.frmPrivilegios.resources
+C:\Users\Personal\Source\Repos\CLINICAH2\Medicos\obj\Debug\Medicos.frmReporteMedicos.resources
+C:\Users\Personal\Source\Repos\CLINICAH2\Medicos\obj\Debug\Medicos.Properties.Resources.resources
+C:\Users\Personal\Source\Repos\CLINICAH2\Medicos\obj\Debug\Medicos.csproj.GenerateResource.Cache
+C:\Users\Personal\Source\Repos\CLINICAH2\Medicos\obj\Debug\Medicos.exe
+C:\Users\Personal\Source\Repos\CLINICAH2\Medicos\obj\Debug\Medicos.pdb

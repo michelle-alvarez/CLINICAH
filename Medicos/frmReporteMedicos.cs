@@ -38,7 +38,7 @@ namespace Medicos
 
             try
             {
-                conexion = new NpgsqlConnection("User Id=postgres;Password=malteada28;Host=localhost;Database=clinicas");
+                conexion = new NpgsqlConnection("User Id=postgres;Password=marathon1;Host=localhost;Database=clinicas");
             }
             catch
             {

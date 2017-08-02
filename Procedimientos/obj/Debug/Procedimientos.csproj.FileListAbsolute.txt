@@ -50,3 +50,16 @@ D:\Cientifica II\Procedimientos\obj\Debug\Procedimientos.Properties.Resources.re
 D:\Cientifica II\Procedimientos\obj\Debug\Procedimientos.csproj.GenerateResource.Cache
 D:\Cientifica II\Procedimientos\obj\Debug\Procedimientos.exe
 D:\Cientifica II\Procedimientos\obj\Debug\Procedimientos.pdb
+C:\Users\Personal\Source\Repos\CLINICAH2\Procedimientos\bin\Debug\Procedimientos.exe.config
+C:\Users\Personal\Source\Repos\CLINICAH2\Procedimientos\bin\Debug\Procedimientos.exe
+C:\Users\Personal\Source\Repos\CLINICAH2\Procedimientos\bin\Debug\Procedimientos.pdb
+C:\Users\Personal\Source\Repos\CLINICAH2\Procedimientos\bin\Debug\Npgsql.dll
+C:\Users\Personal\Source\Repos\CLINICAH2\Procedimientos\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Personal\Source\Repos\CLINICAH2\Procedimientos\bin\Debug\Npgsql.xml
+C:\Users\Personal\Source\Repos\CLINICAH2\Procedimientos\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Personal\Source\Repos\CLINICAH2\Procedimientos\obj\Debug\Procedimientos.csprojResolveAssemblyReference.cache
+C:\Users\Personal\Source\Repos\CLINICAH2\Procedimientos\obj\Debug\Procedimientos.frmProcedimientos.resources
+C:\Users\Personal\Source\Repos\CLINICAH2\Procedimientos\obj\Debug\Procedimientos.Properties.Resources.resources
+C:\Users\Personal\Source\Repos\CLINICAH2\Procedimientos\obj\Debug\Procedimientos.csproj.GenerateResource.Cache
+C:\Users\Personal\Source\Repos\CLINICAH2\Procedimientos\obj\Debug\Procedimientos.exe
+C:\Users\Personal\Source\Repos\CLINICAH2\Procedimientos\obj\Debug\Procedimientos.pdb

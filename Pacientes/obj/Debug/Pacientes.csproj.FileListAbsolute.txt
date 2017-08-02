@@ -50,3 +50,15 @@ D:\Cientifica II\Pacientes\obj\Debug\Pacientes.Properties.Resources.resources
 D:\Cientifica II\Pacientes\obj\Debug\Pacientes.csproj.GenerateResource.Cache
 D:\Cientifica II\Pacientes\obj\Debug\Pacientes.exe
 D:\Cientifica II\Pacientes\obj\Debug\Pacientes.pdb
+C:\Users\Personal\Source\Repos\CLINICAH2\Pacientes\bin\Debug\Pacientes.exe.config
+C:\Users\Personal\Source\Repos\CLINICAH2\Pacientes\bin\Debug\Pacientes.exe
+C:\Users\Personal\Source\Repos\CLINICAH2\Pacientes\bin\Debug\Pacientes.pdb
+C:\Users\Personal\Source\Repos\CLINICAH2\Pacientes\bin\Debug\Npgsql.dll
+C:\Users\Personal\Source\Repos\CLINICAH2\Pacientes\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Personal\Source\Repos\CLINICAH2\Pacientes\bin\Debug\Npgsql.xml
+C:\Users\Personal\Source\Repos\CLINICAH2\Pacientes\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Personal\Source\Repos\CLINICAH2\Pacientes\obj\Debug\Pacientes.FrmPacientes.resources
+C:\Users\Personal\Source\Repos\CLINICAH2\Pacientes\obj\Debug\Pacientes.Properties.Resources.resources
+C:\Users\Personal\Source\Repos\CLINICAH2\Pacientes\obj\Debug\Pacientes.csproj.GenerateResource.Cache
+C:\Users\Personal\Source\Repos\CLINICAH2\Pacientes\obj\Debug\Pacientes.exe
+C:\Users\Personal\Source\Repos\CLINICAH2\Pacientes\obj\Debug\Pacientes.pdb

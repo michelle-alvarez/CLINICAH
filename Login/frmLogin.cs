@@ -41,9 +41,9 @@ namespace Login
 
         private const string dbserver = "localhost";
         private const string dbport = "5432";
-        private const string db = "clinicas";
+        private const string db = "clinica";
         private const string dbuser = "postgres";
-        private const string dbpass = "malteada28";
+        private const string dbpass = "marathon1";
 
         private const string cnxclinica = "Server=" + dbserver + ";Port=" + dbport + ";Database=" + db +
                 ";User Id=" + dbuser + "; Password=" + dbpass + ";";

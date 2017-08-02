@@ -13,7 +13,7 @@ namespace Medicos
 {
     public partial class frmMedicos : Form
     {
-        string cnx = "Server=localhost; Port= 5432; Database=clinicas; User Id=postgres; Password=malteada28;";
+        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=marathon1;";
         DataSet ds;
         public int statusForm = 0; //0 = Consultando; 1=Agregando; 2=Editando
         string sqlUsuarios = "SELECT * FROM administracion.medicos WHERE idmedico LIKE @filtro OR nombrecompleto LIKE @filtro ORDER BY idmedico";
@@ -134,7 +134,7 @@ namespace Medicos
 
         private void btneditar_Click(object sender, EventArgs e)
         {
-            string strSQL = ""; ;
+            string strSQL = "";
             if (statusForm == 0)
             {
                 activo(true);
