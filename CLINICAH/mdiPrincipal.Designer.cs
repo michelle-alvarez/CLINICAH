@@ -39,6 +39,8 @@
             this.suministrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.medicosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.privilegiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.medicosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsr = new System.Windows.Forms.ToolStrip();
             this.MenuConsulta = new System.Windows.Forms.ToolStripButton();
             this.MenuPacientes = new System.Windows.Forms.ToolStripButton();
@@ -46,8 +48,6 @@
             this.MenuProcedimientos = new System.Windows.Forms.ToolStripButton();
             this.lb_nom = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.privilegiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.medicosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.mst.SuspendLayout();
             this.tlsr.SuspendLayout();
             this.SuspendLayout();
@@ -139,6 +139,21 @@
             this.medicosToolStripMenuItem1.Text = "Medicos";
             this.medicosToolStripMenuItem1.Click += new System.EventHandler(this.medicosToolStripMenuItem1_Click);
             // 
+            // privilegiosToolStripMenuItem
+            // 
+            this.privilegiosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.medicosToolStripMenuItem2});
+            this.privilegiosToolStripMenuItem.Name = "privilegiosToolStripMenuItem";
+            this.privilegiosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.privilegiosToolStripMenuItem.Text = "Privilegios";
+            // 
+            // medicosToolStripMenuItem2
+            // 
+            this.medicosToolStripMenuItem2.Name = "medicosToolStripMenuItem2";
+            this.medicosToolStripMenuItem2.Size = new System.Drawing.Size(119, 22);
+            this.medicosToolStripMenuItem2.Text = "Medicos";
+            this.medicosToolStripMenuItem2.Click += new System.EventHandler(this.medicosToolStripMenuItem2_Click);
+            // 
             // tlsr
             // 
             this.tlsr.ImageScalingSize = new System.Drawing.Size(48, 48);
@@ -209,21 +224,6 @@
             this.label1.Size = new System.Drawing.Size(79, 19);
             this.label1.TabIndex = 6;
             this.label1.Text = "Conectado:";
-            // 
-            // privilegiosToolStripMenuItem
-            // 
-            this.privilegiosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.medicosToolStripMenuItem2});
-            this.privilegiosToolStripMenuItem.Name = "privilegiosToolStripMenuItem";
-            this.privilegiosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.privilegiosToolStripMenuItem.Text = "Privilegios";
-            // 
-            // medicosToolStripMenuItem2
-            // 
-            this.medicosToolStripMenuItem2.Name = "medicosToolStripMenuItem2";
-            this.medicosToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
-            this.medicosToolStripMenuItem2.Text = "Medicos";
-            this.medicosToolStripMenuItem2.Click += new System.EventHandler(this.medicosToolStripMenuItem2_Click);
             // 
             // mdiPrincipal
             // 

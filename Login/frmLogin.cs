@@ -12,17 +12,13 @@ using Npgsql;
 
 namespace Login
 {
-
-
     public partial class frmLogin : Form
     {
-
-        public frmLogin()
+        string cnxclinica;
+        public frmLogin(string cnx)
         {
-
             InitializeComponent();
-
-
+            this.cnxclinica = cnx;
         }
         //0501197303294
 
@@ -38,15 +34,6 @@ namespace Login
                 return hashedInputStringBuilder.ToString();
             }
         }
-
-        private const string dbserver = "localhost";
-        private const string dbport = "5432";
-        private const string db = "clinica";
-        private const string dbuser = "postgres";
-        private const string dbpass = "marathon1";
-
-        private const string cnxclinica = "Server=" + dbserver + ";Port=" + dbport + ";Database=" + db +
-                ";User Id=" + dbuser + "; Password=" + dbpass + ";";
 
         private void Login_Load(object sender, EventArgs e)
         {

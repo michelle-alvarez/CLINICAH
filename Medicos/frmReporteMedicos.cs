@@ -13,9 +13,11 @@ namespace Medicos
 {
     public partial class frmReporteMedicos : Form
     {
-        public frmReporteMedicos()
+        string cnx;
+        public frmReporteMedicos(string cnx)
         {
             InitializeComponent();
+            this.cnx = cnx;
         }
 
 
@@ -38,7 +40,7 @@ namespace Medicos
 
             try
             {
-                conexion = new NpgsqlConnection("User Id=postgres;Password=marathon1;Host=localhost;Database=clinicas");
+                conexion = new NpgsqlConnection(cnx);
             }
             catch
             {

@@ -8,20 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
+using Resources;
 
 namespace Medicos
 {
     public partial class frmMedicos : Form
     {
-        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=marathon1;";
+        string cnx;
         DataSet ds;
         public int statusForm = 0; //0 = Consultando; 1=Agregando; 2=Editando
         string sqlUsuarios = "SELECT * FROM administracion.medicos WHERE idmedico LIKE @filtro OR nombrecompleto LIKE @filtro ORDER BY idmedico";
         NpgsqlDataAdapter damedicos;
 
-        public frmMedicos()
+        public frmMedicos(string cnx)
         {
             InitializeComponent();
+            this.cnx = cnx;
             damedicos = new NpgsqlDataAdapter(sqlUsuarios, cnx);
         }
 

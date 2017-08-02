@@ -13,7 +13,7 @@ namespace Medicos
 {
     public partial class frmPrivilegios : Form
     {
-        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=marathon1;";
+        string cnx;
         DataSet ds;
         public int statusForm = 0; //0 = Consultando; 1=Agregando; 2=Editando
         string sqlPrivilegios = "Select * FROM administracion.tipomedico";
@@ -21,9 +21,10 @@ namespace Medicos
         NpgsqlDataAdapter daprivilegios;
         NpgsqlDataAdapter daId;
 
-        public frmPrivilegios()
+        public frmPrivilegios(string cnx)
         {
             InitializeComponent();
+            this.cnx = cnx;
             daprivilegios = new NpgsqlDataAdapter(sqlPrivilegios, cnx);
             daId = new NpgsqlDataAdapter(strSQLfillId, cnx);
         }
