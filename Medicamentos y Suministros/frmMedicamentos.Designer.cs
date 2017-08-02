@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.txtmedicamento = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,6 +37,8 @@
             this.cantidad = new System.Windows.Forms.NumericUpDown();
             this.reorden = new System.Windows.Forms.NumericUpDown();
             this.dtpvencimiento = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reorden)).BeginInit();
             this.SuspendLayout();
             // 
             // txtmedicamento
@@ -81,7 +82,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 72);
+            this.label3.Location = new System.Drawing.Point(35, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 13);
             this.label3.TabIndex = 15;
@@ -90,7 +91,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 95);
+            this.label4.Location = new System.Drawing.Point(12, 99);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 13);
             this.label4.TabIndex = 16;
@@ -128,13 +129,6 @@
             this.dtpvencimiento.Size = new System.Drawing.Size(274, 20);
             this.dtpvencimiento.TabIndex = 3;
             // 
-            // dSMantenimiento
-            // 
-            // 
-            // _medicamentosBindingSource1
-            // 
-            // tableAdapterManager
-            // 
             // frmMedicamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,6 +146,8 @@
             this.Controls.Add(this.txtmedicamento);
             this.Name = "frmMedicamentos";
             this.Text = "Medicamentos";
+            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reorden)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

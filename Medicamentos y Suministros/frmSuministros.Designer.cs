@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.txtSuministro = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,6 +37,8 @@
             this.cantidad = new System.Windows.Forms.NumericUpDown();
             this.dtpVencimiento = new System.Windows.Forms.DateTimePicker();
             this.reorden = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reorden)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSuministro
@@ -65,18 +66,18 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 13);
+            this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Nombre Medicamento";
+            this.label1.Text = "Nombre Suministro";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 13);
+            this.label2.Size = new System.Drawing.Size(100, 13);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Cantidad Medicamento";
+            this.label2.Text = "Cantidad Suministro";
             // 
             // label3
             // 
@@ -135,7 +136,9 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.txtSuministro);
             this.Name = "frmSuministros";
-            this.Text = "Medicamentos";
+            this.Text = "Suministros";
+            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reorden)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
