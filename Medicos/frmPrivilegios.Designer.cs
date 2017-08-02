@@ -113,7 +113,7 @@
             // 
             // button1
             // 
-            this.button1.Image = global::Medicos.Properties.Resources.cancelar;
+            this.button1.Image = global::Medicos.Properties.Resources.if_meanicons_24_197210;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.Location = new System.Drawing.Point(59, 295);
             this.button1.Name = "button1";
@@ -152,7 +152,7 @@
             // 
             // btneditar
             // 
-            this.btneditar.Image = global::Medicos.Properties.Resources.edit2;
+            this.btneditar.Image = global::Medicos.Properties.Resources.if_Compose_2190985;
             this.btneditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btneditar.Location = new System.Drawing.Point(105, 240);
             this.btneditar.Name = "btneditar";

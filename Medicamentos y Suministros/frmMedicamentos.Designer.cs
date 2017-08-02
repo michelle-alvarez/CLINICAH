@@ -244,7 +244,7 @@
             // 
             // button1
             // 
-            this.button1.Image = global::Medicamentos_y_Suministros.Properties.Resources.cancelar;
+            this.button1.Image = global::Medicamentos_y_Suministros.Properties.Resources.if_meanicons_24_197210;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.Location = new System.Drawing.Point(496, 292);
             this.button1.Name = "button1";
@@ -283,7 +283,7 @@
             // 
             // btneditar
             // 
-            this.btneditar.Image = global::Medicamentos_y_Suministros.Properties.Resources.edit2;
+            this.btneditar.Image = global::Medicamentos_y_Suministros.Properties.Resources.if_Compose_2190985;
             this.btneditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btneditar.Location = new System.Drawing.Point(88, 292);
             this.btneditar.Name = "btneditar";
@@ -296,7 +296,7 @@
             // 
             // btnagregar
             // 
-            this.btnagregar.Image = global::Medicamentos_y_Suministros.Properties.Resources.if_ic_add_circle_48px_352005;
+            this.btnagregar.Image = global::Medicamentos_y_Suministros.Properties.Resources.if_199_CircledPlus_183316;
             this.btnagregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnagregar.Location = new System.Drawing.Point(7, 292);
             this.btnagregar.Name = "btnagregar";

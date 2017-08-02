@@ -48,19 +48,36 @@
     <Compile Include="VarGlobal.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Iconos\adduser3.ico" />
+    <Content Include="Iconos\cancelar.ico" />
+    <Content Include="Iconos\candado.ico" />
     <Content Include="Iconos\candado.png" />
     <Content Include="Iconos\cheque.png" />
     <Content Include="Iconos\consultas.png" />
     <Content Include="Iconos\doctor.ico" />
     <Content Include="Iconos\edit.png" />
+    <Content Include="Iconos\edit2.ico" />
+    <Content Include="Iconos\exit.ico" />
     <Content Include="Iconos\file-2.png" />
     <Content Include="Iconos\filter.png" />
     <Content Include="Iconos\heart.png" />
     <Content Include="Iconos\home.png" />
     <Content Include="Iconos\id-card.png" />
+    <Content Include="Iconos\if_199_CircledPlus_183316.ico" />
+    <Content Include="Iconos\if_200_CircledMinus_183317.ico" />
+    <Content Include="Iconos\if_Cancel_1063907.png" />
+    <Content Include="Iconos\if_Compose_2190985.ico" />
+    <Content Include="Iconos\if_meanicons_24_197210.ico" />
+    <Content Include="Iconos\inyeccion.ico" />
+    <Content Include="Iconos\Logo - copia.ico" />
+    <Content Include="Iconos\Logo.ico" />
     <Content Include="Iconos\lupa.png" />
+    <Content Include="Iconos\medicina.ico" />
     <Content Include="Iconos\trash.png" />
+    <Content Include="Iconos\user-4.png" />
     <Content Include="Iconos\useradd.png" />
+    <Content Include="Iconos\useradd2.ico" />
+    <Content Include="Iconos\userdelete.ico" />
     <Content Include="Iconos\userdelete.png" />
     <Content Include="Iconos\userman.png" />
     <Content Include="Iconos\users.png" />

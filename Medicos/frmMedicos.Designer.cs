@@ -28,10 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedicos));
             this.DGMedicos = new System.Windows.Forms.DataGridView();
-            this.medicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idmedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombrecompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.campus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aniocarrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadocivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trimestre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechanac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.txtidentidad = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
@@ -62,29 +73,17 @@
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.cmbtrimestre = new System.Windows.Forms.ComboBox();
-            this.Eliminar = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Eliminar = new System.Windows.Forms.ContextMenuStrip();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
-            this.idmedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombrecompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.campus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aniocarrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadocivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trimestre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechanac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medicosBindingSource = new System.Windows.Forms.BindingSource();
             ((System.ComponentModel.ISupportInitialize)(this.DGMedicos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).BeginInit();
             this.Eliminar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DGMedicos
@@ -116,9 +115,85 @@
             this.DGMedicos.Size = new System.Drawing.Size(881, 180);
             this.DGMedicos.TabIndex = 0;
             // 
-            // medicosBindingSource
+            // idmedico
             // 
-            this.medicosBindingSource.DataMember = "medicos";
+            this.idmedico.HeaderText = "Usuario";
+            this.idmedico.Name = "idmedico";
+            this.idmedico.ReadOnly = true;
+            // 
+            // nombrecompleto
+            // 
+            this.nombrecompleto.HeaderText = "Nombre Médico";
+            this.nombrecompleto.Name = "nombrecompleto";
+            this.nombrecompleto.ReadOnly = true;
+            // 
+            // genero
+            // 
+            this.genero.HeaderText = "Genero";
+            this.genero.Name = "genero";
+            this.genero.ReadOnly = true;
+            // 
+            // campus
+            // 
+            this.campus.HeaderText = "Campus";
+            this.campus.Name = "campus";
+            this.campus.ReadOnly = true;
+            // 
+            // especialidad
+            // 
+            this.especialidad.HeaderText = "Especialidad";
+            this.especialidad.Name = "especialidad";
+            this.especialidad.ReadOnly = true;
+            // 
+            // celular
+            // 
+            this.celular.HeaderText = "Celular";
+            this.celular.Name = "celular";
+            this.celular.ReadOnly = true;
+            // 
+            // aniocarrera
+            // 
+            this.aniocarrera.HeaderText = "Año Carrera";
+            this.aniocarrera.Name = "aniocarrera";
+            this.aniocarrera.ReadOnly = true;
+            // 
+            // estadocivil
+            // 
+            this.estadocivil.HeaderText = "Estado Civil";
+            this.estadocivil.Name = "estadocivil";
+            this.estadocivil.ReadOnly = true;
+            // 
+            // trimestre
+            // 
+            this.trimestre.HeaderText = "Trimestre";
+            this.trimestre.Name = "trimestre";
+            this.trimestre.ReadOnly = true;
+            // 
+            // fechanac
+            // 
+            this.fechanac.HeaderText = "Fecha Nacimiento";
+            this.fechanac.Name = "fechanac";
+            this.fechanac.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "E-mail";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // direccion
+            // 
+            this.direccion.HeaderText = "Dirección";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            this.direccion.Visible = false;
+            // 
+            // pass
+            // 
+            this.pass.HeaderText = "Password";
+            this.pass.Name = "pass";
+            this.pass.ReadOnly = true;
+            this.pass.Visible = false;
             // 
             // txtbuscar
             // 
@@ -410,7 +485,7 @@
             // 
             // button1
             // 
-            this.button1.Image = global::Medicos.Properties.Resources.cancelar;
+            this.button1.Image = global::Medicos.Properties.Resources.if_meanicons_24_197210;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.Location = new System.Drawing.Point(737, 415);
             this.button1.Name = "button1";
@@ -449,7 +524,7 @@
             // 
             // btneditar
             // 
-            this.btneditar.Image = global::Medicos.Properties.Resources.edit2;
+            this.btneditar.Image = global::Medicos.Properties.Resources.if_meanicons_24_197210;
             this.btneditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btneditar.Location = new System.Drawing.Point(93, 415);
             this.btneditar.Name = "btneditar";
@@ -473,85 +548,9 @@
             this.btnagregar.UseVisualStyleBackColor = true;
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
-            // idmedico
+            // medicosBindingSource
             // 
-            this.idmedico.HeaderText = "Usuario";
-            this.idmedico.Name = "idmedico";
-            this.idmedico.ReadOnly = true;
-            // 
-            // nombrecompleto
-            // 
-            this.nombrecompleto.HeaderText = "Nombre Médico";
-            this.nombrecompleto.Name = "nombrecompleto";
-            this.nombrecompleto.ReadOnly = true;
-            // 
-            // genero
-            // 
-            this.genero.HeaderText = "Genero";
-            this.genero.Name = "genero";
-            this.genero.ReadOnly = true;
-            // 
-            // campus
-            // 
-            this.campus.HeaderText = "Campus";
-            this.campus.Name = "campus";
-            this.campus.ReadOnly = true;
-            // 
-            // especialidad
-            // 
-            this.especialidad.HeaderText = "Especialidad";
-            this.especialidad.Name = "especialidad";
-            this.especialidad.ReadOnly = true;
-            // 
-            // celular
-            // 
-            this.celular.HeaderText = "Celular";
-            this.celular.Name = "celular";
-            this.celular.ReadOnly = true;
-            // 
-            // aniocarrera
-            // 
-            this.aniocarrera.HeaderText = "Año Carrera";
-            this.aniocarrera.Name = "aniocarrera";
-            this.aniocarrera.ReadOnly = true;
-            // 
-            // estadocivil
-            // 
-            this.estadocivil.HeaderText = "Estado Civil";
-            this.estadocivil.Name = "estadocivil";
-            this.estadocivil.ReadOnly = true;
-            // 
-            // trimestre
-            // 
-            this.trimestre.HeaderText = "Trimestre";
-            this.trimestre.Name = "trimestre";
-            this.trimestre.ReadOnly = true;
-            // 
-            // fechanac
-            // 
-            this.fechanac.HeaderText = "Fecha Nacimiento";
-            this.fechanac.Name = "fechanac";
-            this.fechanac.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "E-mail";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // direccion
-            // 
-            this.direccion.HeaderText = "Dirección";
-            this.direccion.Name = "direccion";
-            this.direccion.ReadOnly = true;
-            this.direccion.Visible = false;
-            // 
-            // pass
-            // 
-            this.pass.HeaderText = "Password";
-            this.pass.Name = "pass";
-            this.pass.ReadOnly = true;
-            this.pass.Visible = false;
+            this.medicosBindingSource.DataMember = "medicos";
             // 
             // frmMedicos
             // 
@@ -600,8 +599,8 @@
             this.Text = "Médicos";
             this.Load += new System.EventHandler(this.frmMedicos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGMedicos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).EndInit();
             this.Eliminar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -218,5 +218,11 @@
       <Name>Resources</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_Compose_2190985.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\if_meanicons_24_197210.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

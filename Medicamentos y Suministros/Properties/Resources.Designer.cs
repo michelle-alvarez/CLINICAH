@@ -93,6 +93,16 @@ namespace Medicamentos_y_Suministros.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap if_199_CircledPlus_183316 {
+            get {
+                object obj = ResourceManager.GetObject("if_199_CircledPlus_183316", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap if_200_CircledMinus_183317 {
             get {
                 object obj = ResourceManager.GetObject("if_200_CircledMinus_183317", resourceCulture);
@@ -103,9 +113,19 @@ namespace Medicamentos_y_Suministros.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap if_ic_add_circle_48px_352005 {
+        internal static System.Drawing.Bitmap if_Compose_2190985 {
             get {
-                object obj = ResourceManager.GetObject("if_ic_add_circle_48px_352005", resourceCulture);
+                object obj = ResourceManager.GetObject("if_Compose_2190985", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_meanicons_24_197210 {
+            get {
+                object obj = ResourceManager.GetObject("if_meanicons_24_197210", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

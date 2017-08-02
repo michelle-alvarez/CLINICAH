@@ -84,18 +84,17 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -107,11 +106,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo.ico" />
+    <None Include="Resources\if_Compose_2190985.ico" />
+    <None Include="Resources\if_meanicons_24_197210.ico" />
     <None Include="Resources\if_200_CircledMinus_183317.ico" />
-    <None Include="Resources\if_ic_add_circle_48px_352005.ico" />
+    <None Include="Resources\if_199_CircledPlus_183316.ico" />
     <None Include="Resources\exit.ico" />
     <None Include="Resources\edit2.ico" />
     <None Include="Resources\cancelar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Medicos\Medicos.csproj">
+      <Project>{f3c0173c-8a78-4732-8ddd-3d9f3acfef3a}</Project>
+      <Name>Medicos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Resources\Resources.csproj">
+      <Project>{9e02d8b6-5ba3-443b-83b6-dd46594f06c8}</Project>
+      <Name>Resources</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
