@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Consulta
 {
-    public partial class frmConsulta : Form
+    public partial class frmHistorial : Form
     {
-        public frmConsulta()
+        public frmHistorial()
         {
             InitializeComponent();
         }
-
-        private void frmConsulta_Load(object sender, EventArgs e)
-        {
-
-         }
     }
 }
