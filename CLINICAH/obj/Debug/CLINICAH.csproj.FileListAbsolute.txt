@@ -178,3 +178,6 @@ C:\Users\marley.hernandez\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Procedimient
 C:\Users\marley.hernandez\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Resources.pdb
 C:\Users\marley.hernandez\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\Npgsql.xml
 C:\Users\marley.hernandez\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Michelle\Source\Repos2\CLINICAH\bin\Debug\CLINICAH.exe.config
+C:\Users\Michelle\Source\Repos2\CLINICAH\obj\Debug\CLINICAH.exe
+C:\Users\Michelle\Source\Repos2\CLINICAH\obj\Debug\CLINICAH.pdb

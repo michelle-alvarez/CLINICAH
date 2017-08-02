@@ -32,7 +32,6 @@
             this.lbxAlergias = new System.Windows.Forms.ListBox();
             this.btnCampus = new System.Windows.Forms.Button();
             this.TextBox7 = new System.Windows.Forms.TextBox();
-            this.btnNoRegistrado = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.txtFechaNac = new System.Windows.Forms.TextBox();
             this.txtPeso = new System.Windows.Forms.TextBox();
@@ -42,14 +41,9 @@
             this.txtFenotipo = new System.Windows.Forms.TextBox();
             this.Label10 = new System.Windows.Forms.Label();
             this.txtCarrera = new System.Windows.Forms.TextBox();
-            this.pcbFoto = new System.Windows.Forms.PictureBox();
-            this.btnCitas = new System.Windows.Forms.Button();
-            this.btnNuevaCons = new System.Windows.Forms.Button();
-            this.btnReceta = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.Label7 = new System.Windows.Forms.Label();
-            this.Historial = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
             this.TextBox3 = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
@@ -69,10 +63,8 @@
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.dataTable1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.dataTable1DataGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
+            this.btnNoRegistrado = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1DataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // lbxAlergias
@@ -103,16 +95,6 @@
             this.TextBox7.Name = "TextBox7";
             this.TextBox7.Size = new System.Drawing.Size(488, 116);
             this.TextBox7.TabIndex = 57;
-            // 
-            // btnNoRegistrado
-            // 
-            this.btnNoRegistrado.Location = new System.Drawing.Point(492, 13);
-            this.btnNoRegistrado.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNoRegistrado.Name = "btnNoRegistrado";
-            this.btnNoRegistrado.Size = new System.Drawing.Size(146, 51);
-            this.btnNoRegistrado.TabIndex = 98;
-            this.btnNoRegistrado.Text = "Paciente No Registrado";
-            this.btnNoRegistrado.UseVisualStyleBackColor = true;
             // 
             // listBox1
             // 
@@ -194,47 +176,6 @@
             this.txtCarrera.Size = new System.Drawing.Size(242, 22);
             this.txtCarrera.TabIndex = 89;
             // 
-            // pcbFoto
-            // 
-            this.pcbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pcbFoto.Location = new System.Drawing.Point(13, 13);
-            this.pcbFoto.Margin = new System.Windows.Forms.Padding(4);
-            this.pcbFoto.Name = "pcbFoto";
-            this.pcbFoto.Size = new System.Drawing.Size(126, 154);
-            this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbFoto.TabIndex = 88;
-            this.pcbFoto.TabStop = false;
-            // 
-            // btnCitas
-            // 
-            this.btnCitas.Location = new System.Drawing.Point(13, 273);
-            this.btnCitas.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCitas.Name = "btnCitas";
-            this.btnCitas.Size = new System.Drawing.Size(80, 74);
-            this.btnCitas.TabIndex = 87;
-            this.btnCitas.Text = "Citas";
-            this.btnCitas.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevaCons
-            // 
-            this.btnNuevaCons.Location = new System.Drawing.Point(13, 192);
-            this.btnNuevaCons.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNuevaCons.Name = "btnNuevaCons";
-            this.btnNuevaCons.Size = new System.Drawing.Size(80, 74);
-            this.btnNuevaCons.TabIndex = 86;
-            this.btnNuevaCons.Text = "Nueva Consulta";
-            this.btnNuevaCons.UseVisualStyleBackColor = true;
-            // 
-            // btnReceta
-            // 
-            this.btnReceta.Location = new System.Drawing.Point(13, 355);
-            this.btnReceta.Margin = new System.Windows.Forms.Padding(4);
-            this.btnReceta.Name = "btnReceta";
-            this.btnReceta.Size = new System.Drawing.Size(80, 74);
-            this.btnReceta.TabIndex = 85;
-            this.btnReceta.Text = "Generar Receta";
-            this.btnReceta.UseVisualStyleBackColor = true;
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(150, 531);
@@ -263,16 +204,6 @@
             this.Label7.Size = new System.Drawing.Size(144, 16);
             this.Label7.TabIndex = 82;
             this.Label7.Text = "Patologias Conocidas:";
-            // 
-            // Historial
-            // 
-            this.Historial.AutoSize = true;
-            this.Historial.Location = new System.Drawing.Point(152, 76);
-            this.Historial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Historial.Name = "Historial";
-            this.Historial.Size = new System.Drawing.Size(108, 16);
-            this.Historial.TabIndex = 81;
-            this.Historial.Text = "Historial medico:";
             // 
             // Label6
             // 
@@ -390,22 +321,21 @@
             this.dataTable1BindingNavigatorSaveItem.Name = "dataTable1BindingNavigatorSaveItem";
             this.dataTable1BindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
             // 
-            // dataTable1DataGridView
+            // btnNoRegistrado
             // 
-            this.dataTable1DataGridView.AutoGenerateColumns = false;
-            this.dataTable1DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataTable1DataGridView.DataSource = this.dataTable1BindingSource;
-            this.dataTable1DataGridView.Location = new System.Drawing.Point(157, 95);
-            this.dataTable1DataGridView.Name = "dataTable1DataGridView";
-            this.dataTable1DataGridView.Size = new System.Drawing.Size(951, 220);
-            this.dataTable1DataGridView.TabIndex = 99;
+            this.btnNoRegistrado.Location = new System.Drawing.Point(492, 13);
+            this.btnNoRegistrado.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNoRegistrado.Name = "btnNoRegistrado";
+            this.btnNoRegistrado.Size = new System.Drawing.Size(146, 51);
+            this.btnNoRegistrado.TabIndex = 98;
+            this.btnNoRegistrado.Text = "Paciente No Registrado";
+            this.btnNoRegistrado.UseVisualStyleBackColor = true;
             // 
             // frmConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1120, 675);
-            this.Controls.Add(this.dataTable1DataGridView);
             this.Controls.Add(this.btnNoRegistrado);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.txtFechaNac);
@@ -416,14 +346,9 @@
             this.Controls.Add(this.txtFenotipo);
             this.Controls.Add(this.Label10);
             this.Controls.Add(this.txtCarrera);
-            this.Controls.Add(this.pcbFoto);
-            this.Controls.Add(this.btnCitas);
-            this.Controls.Add(this.btnNuevaCons);
-            this.Controls.Add(this.btnReceta);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.Label7);
-            this.Controls.Add(this.Historial);
             this.Controls.Add(this.Label6);
             this.Controls.Add(this.TextBox3);
             this.Controls.Add(this.Label3);
@@ -440,9 +365,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Pacientes";
             this.Load += new System.EventHandler(this.frmConsulta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1DataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,7 +376,6 @@
         internal System.Windows.Forms.ListBox lbxAlergias;
         internal System.Windows.Forms.Button btnCampus;
         internal System.Windows.Forms.TextBox TextBox7;
-        internal System.Windows.Forms.Button btnNoRegistrado;
         internal System.Windows.Forms.ListBox listBox1;
         internal System.Windows.Forms.TextBox txtFechaNac;
         internal System.Windows.Forms.TextBox txtPeso;
@@ -463,14 +385,9 @@
         internal System.Windows.Forms.TextBox txtFenotipo;
         internal System.Windows.Forms.Label Label10;
         internal System.Windows.Forms.TextBox txtCarrera;
-        internal System.Windows.Forms.PictureBox pcbFoto;
-        internal System.Windows.Forms.Button btnCitas;
-        internal System.Windows.Forms.Button btnNuevaCons;
-        internal System.Windows.Forms.Button btnReceta;
         internal System.Windows.Forms.TextBox textBox1;
         internal System.Windows.Forms.ListBox listBox2;
         internal System.Windows.Forms.Label Label7;
-        internal System.Windows.Forms.Label Historial;
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.TextBox TextBox3;
         internal System.Windows.Forms.Label Label3;
@@ -490,7 +407,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton dataTable1BindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView dataTable1DataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -502,6 +418,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        internal System.Windows.Forms.Button btnNoRegistrado;
     }
 }
 
