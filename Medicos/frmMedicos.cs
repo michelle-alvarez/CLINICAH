@@ -13,7 +13,7 @@ namespace Medicos
 {
     public partial class frmMedicos : Form
     {
-        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=Salmos665;";
+        string cnx = "Server=localhost; Port= 5432; Database=clinicas; User Id=postgres; Password=malteada28;";
         DataSet ds;
         public int statusForm = 0; //0 = Consultando; 1=Agregando; 2=Editando
         string sqlUsuarios = "SELECT * FROM administracion.medicos WHERE idmedico LIKE @filtro OR nombrecompleto LIKE @filtro ORDER BY idmedico";
@@ -87,23 +87,6 @@ namespace Medicos
             cmbyear.Enabled = condicion;
             dtpnacimiento.Enabled = condicion;
         }
-        //private void dataGridView1_SelectionChanged(object sender, EventArgs e)
-        //{
-        //    DataGridViewRow row = DGMedicos.Rows[DGMedicos.CurrentCell.RowIndex];
-            
-        //    txtidentidad.Text = row.Cells[0].Value.ToString();
-        //    txtnombre.Text = row.Cells[1].Value.ToString();
-        //    cmbgenero.Text = (Convert.ToBoolean(row.Cells[2].Value)) ? "Masculino" : "Femenino";
-        //    cmbCampus.Text = row.Cells[3].Value.ToString();
-        //    cmbcarrera.Text = row.Cells[4].Value.ToString();
-        //    txtcelular.Text = row.Cells[5].Value.ToString();
-        //    cmbyear.Text = row.Cells[6].Value.ToString();
-        //    cmbEstado.Text = row.Cells[7].Value.ToString();
-        //    cmbtrimestre.Text = row.Cells[8].Value.ToString();
-        //    dtpnacimiento.Text = row.Cells[9].Value.ToString();
-        //    txtemail.Text = row.Cells[10].Value.ToString();
-        //    txtdireccion.Text = row.Cells[11].Value.ToString();
-        //}
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
@@ -116,6 +99,7 @@ namespace Medicos
             DGMedicos.Enabled = false;
             btneditar.Text = "Guardar";
             btnagregar.Enabled = false;
+            btnDelete.Enabled = false;
             txtcelular.Clear();
             txtconfirmacion.Clear();
             txtdireccion.Clear();
@@ -148,32 +132,6 @@ namespace Medicos
             }
         }
 
-        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (DGMedicos.RowCount > 0)
-            {
-                dynamic strSQL = "DELETE FROM administracion.medicos WHERE idmedico = @idmedico";
-                dynamic idmedico = DGMedicos.Rows[DGMedicos.CurrentRow.Index].Cells[0].Value;
-                try
-                {
-                    using (NpgsqlConnection conexion = new NpgsqlConnection(cnx))
-                    {
-                        NpgsqlCommand comando = new NpgsqlCommand(strSQL, conexion);
-                        comando.Parameters.AddWithValue("@idmedico", idmedico);
-                        conexion.Open();
-                        comando.ExecuteNonQuery();
-                        //Ejecucion de un Query de accion
-                        DGMedicos.Rows.Remove(DGMedicos.CurrentRow);
-                        conexion.Close();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-        }
-
         private void btneditar_Click(object sender, EventArgs e)
         {
             string strSQL = ""; ;
@@ -183,6 +141,7 @@ namespace Medicos
                 DGMedicos.ReadOnly = true;
                 DGMedicos.Enabled = false;
                 btnagregar.Enabled = false;
+                btnDelete.Enabled = false;
                 btneditar.Text = "Guardar";
                 statusForm = 2;
                 txtnombre.Focus();
@@ -221,6 +180,7 @@ namespace Medicos
                                 ds.Tables["usuarios"].Clear();
                                 damedicos.Fill(ds, "usuarios");
                                 btnagregar.Enabled = true;
+                                btnDelete.Enabled = true;
                                 txtidentidad.ReadOnly = true;
                                 btneditar.Text = "Editar";
                                 DGMedicos.ReadOnly = false;
@@ -280,6 +240,7 @@ namespace Medicos
                                     ds.Tables["usuarios"].Clear();
                                     damedicos.Fill(ds, "usuarios");
                                     btnagregar.Enabled = true;
+                                    btnDelete.Enabled = true;
                                     txtidentidad.ReadOnly = true;
                                     btneditar.Text = "Editar";
                                     DGMedicos.ReadOnly = false;
@@ -300,6 +261,41 @@ namespace Medicos
                     }
                 }
             }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (DGMedicos.RowCount > 0)
+            {
+                dynamic strSQL = "DELETE FROM administracion.medicos WHERE idmedico = @idmedico";
+                dynamic idmedico = DGMedicos.Rows[DGMedicos.CurrentRow.Index].Cells[0].Value;
+                try
+                {
+                    using (NpgsqlConnection conexion = new NpgsqlConnection(cnx))
+                    {
+                        NpgsqlCommand comando = new NpgsqlCommand(strSQL, conexion);
+                        comando.Parameters.AddWithValue("@idmedico", idmedico);
+                        conexion.Open();
+                        comando.ExecuteNonQuery();
+                        //Ejecucion de un Query de accion
+                        DGMedicos.Rows.Remove(DGMedicos.CurrentRow);
+                        conexion.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            activo(false);
+            btnagregar.Enabled = true;
+            btneditar.Text = "Editar";
+            btnDelete.Enabled = true;
+            statusForm = 0;
         }
     }
 }

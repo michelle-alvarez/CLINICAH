@@ -96,8 +96,8 @@
             // 
             // dtpyear
             // 
-            this.dtpyear.CustomFormat = "yyyymmdd";
-            this.dtpyear.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpyear.CustomFormat = "dd/MM/yyyy";
+            this.dtpyear.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpyear.Location = new System.Drawing.Point(124, 46);
             this.dtpyear.Name = "dtpyear";
             this.dtpyear.Size = new System.Drawing.Size(107, 20);

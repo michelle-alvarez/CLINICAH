@@ -38,7 +38,7 @@ namespace Medicos
 
             try
             {
-                conexion = new NpgsqlConnection("User Id=postgres;Password=acmilan18;Host=localhost;Database=CLINICAH");
+                conexion = new NpgsqlConnection("User Id=postgres;Password=malteada28;Host=localhost;Database=clinicas");
             }
             catch
             {
@@ -49,9 +49,9 @@ namespace Medicos
             conexion.Open();
             strSQL = "SELECT nombrecompleto AS [Nombre Completo], campus AS Campus, fechanac AS [Fecha de nacimiento], trimestre as Trimestre, especialidad AS Especialidad FROM administracion.medicos";
             //definimos la variable de comando donde le asignamos el string que contiene el select y la conexion
-            string strSQLfillEspecialidad = "Select especialidad FROM administracion.medicos";
-            string strSQLfillCampus = "Select campus FROM administracion.medicos";
-            string strSQLfilTrimestre = "Select trimestre FROM administracion.medicos";
+            string strSQLfillEspecialidad = "Select DISTINCT especialidad FROM administracion.medicos";
+            string strSQLfillCampus = "Select DISTINCT campus FROM administracion.medicos";
+            string strSQLfilTrimestre = "Select DISTINCT trimestre FROM administracion.medicos";
 
             //Creamos comandos para llenar los combo boxes con datos validos existentes en la base de datos.
             NpgsqlCommand fillCboEspecialidad = new NpgsqlCommand(strSQLfillEspecialidad, conexion);

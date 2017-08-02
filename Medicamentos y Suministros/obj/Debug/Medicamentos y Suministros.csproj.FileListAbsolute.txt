@@ -14,7 +14,6 @@ C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\bin\Debug\Med
 C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\bin\Debug\Medicamentos y Suministros.exe
 C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\bin\Debug\Medicamentos y Suministros.pdb
 C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.csprojResolveAssemblyReference.cache
-C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos_y_Suministros.frmMedicamentosSuministros.resources
 C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos_y_Suministros.Properties.Resources.resources
 C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.csproj.GenerateResource.Cache
 C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.exe
@@ -55,3 +54,8 @@ D:\Cientifica II\Medicamentos y Suministros\obj\Debug\Medicamentos_y_Suministros
 D:\Cientifica II\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.csproj.GenerateResource.Cache
 D:\Cientifica II\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.exe
 D:\Cientifica II\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.pdb
+C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos_y_Suministros.frmSuministros.resources
+C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos_y_Suministros.frmMedicamentos.resources
+C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\bin\Debug\Devart.Data.dll
+C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\bin\Debug\Devart.Data.PostgreSql.dll
+C:\Users\Michelle\Source\Repos\CLINICAH\Medicamentos y Suministros\bin\Debug\Devart.Data.PostgreSql.xml

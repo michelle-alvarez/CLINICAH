@@ -72,15 +72,15 @@
             // 
             // btn_Cancelar
             // 
+            this.btn_Cancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Cancelar.BackgroundImage")));
             this.btn_Cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancelar.Location = new System.Drawing.Point(552, 161);
+            this.btn_Cancelar.Location = new System.Drawing.Point(556, 161);
             this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(80, 73);
             this.btn_Cancelar.TabIndex = 12;
-            this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Cancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_Cancelar.UseVisualStyleBackColor = true;
@@ -89,38 +89,39 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(146, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 16);
+            this.label1.Size = new System.Drawing.Size(79, 19);
             this.label1.TabIndex = 15;
             this.label1.Text = "ID Usuario:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(146, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 16);
+            this.label2.Size = new System.Drawing.Size(81, 19);
             this.label2.TabIndex = 16;
             this.label2.Text = "Contraseña:";
             // 
             // btn_Aceptar
             // 
+            this.btn_Aceptar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Aceptar.BackgroundImage")));
             this.btn_Aceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Aceptar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_Aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Aceptar.Image = global::Login.Properties.Resources.cheque;
             this.btn_Aceptar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Aceptar.Location = new System.Drawing.Point(469, 161);
+            this.btn_Aceptar.Location = new System.Drawing.Point(467, 161);
             this.btn_Aceptar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Aceptar.Name = "btn_Aceptar";
-            this.btn_Aceptar.Size = new System.Drawing.Size(80, 73);
+            this.btn_Aceptar.Size = new System.Drawing.Size(83, 73);
             this.btn_Aceptar.TabIndex = 13;
-            this.btn_Aceptar.Text = "Aceptar";
+            this.btn_Aceptar.Text = "   ";
             this.btn_Aceptar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_Aceptar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_Aceptar.UseVisualStyleBackColor = true;
@@ -159,6 +160,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acceso Clinica";

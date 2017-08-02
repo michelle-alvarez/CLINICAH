@@ -31,7 +31,19 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedicos));
             this.DGMedicos = new System.Windows.Forms.DataGridView();
-            this.medicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idmedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombrecompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.campus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aniocarrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadocivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trimestre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechanac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.txtidentidad = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
@@ -56,9 +68,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtconfirmacion = new System.Windows.Forms.TextBox();
-            this.btnagregar = new System.Windows.Forms.Button();
-            this.btneditar = new System.Windows.Forms.Button();
-            this.btnsalir = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbCampus = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -67,22 +76,15 @@
             this.cmbtrimestre = new System.Windows.Forms.ComboBox();
             this.Eliminar = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.idmedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombrecompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.campus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aniocarrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estadocivil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trimestre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechanac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnsalir = new System.Windows.Forms.Button();
+            this.btneditar = new System.Windows.Forms.Button();
+            this.btnagregar = new System.Windows.Forms.Button();
+            this.medicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DGMedicos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).BeginInit();
             this.Eliminar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DGMedicos
@@ -110,13 +112,89 @@
             this.DGMedicos.Location = new System.Drawing.Point(12, 38);
             this.DGMedicos.Name = "DGMedicos";
             this.DGMedicos.ReadOnly = true;
+            this.DGMedicos.RowHeadersWidth = 20;
             this.DGMedicos.Size = new System.Drawing.Size(881, 180);
             this.DGMedicos.TabIndex = 0;
-            //this.DGMedicos.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
-            // medicosBindingSource
+            // idmedico
             // 
-            this.medicosBindingSource.DataMember = "medicos";
+            this.idmedico.HeaderText = "Usuario";
+            this.idmedico.Name = "idmedico";
+            this.idmedico.ReadOnly = true;
+            // 
+            // nombrecompleto
+            // 
+            this.nombrecompleto.HeaderText = "Nombre Médico";
+            this.nombrecompleto.Name = "nombrecompleto";
+            this.nombrecompleto.ReadOnly = true;
+            // 
+            // genero
+            // 
+            this.genero.HeaderText = "Genero";
+            this.genero.Name = "genero";
+            this.genero.ReadOnly = true;
+            // 
+            // campus
+            // 
+            this.campus.HeaderText = "Campus";
+            this.campus.Name = "campus";
+            this.campus.ReadOnly = true;
+            // 
+            // especialidad
+            // 
+            this.especialidad.HeaderText = "Especialidad";
+            this.especialidad.Name = "especialidad";
+            this.especialidad.ReadOnly = true;
+            // 
+            // celular
+            // 
+            this.celular.HeaderText = "Celular";
+            this.celular.Name = "celular";
+            this.celular.ReadOnly = true;
+            // 
+            // aniocarrera
+            // 
+            this.aniocarrera.HeaderText = "Año Carrera";
+            this.aniocarrera.Name = "aniocarrera";
+            this.aniocarrera.ReadOnly = true;
+            // 
+            // estadocivil
+            // 
+            this.estadocivil.HeaderText = "Estado Civil";
+            this.estadocivil.Name = "estadocivil";
+            this.estadocivil.ReadOnly = true;
+            // 
+            // trimestre
+            // 
+            this.trimestre.HeaderText = "Trimestre";
+            this.trimestre.Name = "trimestre";
+            this.trimestre.ReadOnly = true;
+            // 
+            // fechanac
+            // 
+            this.fechanac.HeaderText = "Fecha Nacimiento";
+            this.fechanac.Name = "fechanac";
+            this.fechanac.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "E-mail";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // direccion
+            // 
+            this.direccion.HeaderText = "Dirección";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            this.direccion.Visible = false;
+            // 
+            // pass
+            // 
+            this.pass.HeaderText = "Password";
+            this.pass.Name = "pass";
+            this.pass.ReadOnly = true;
+            this.pass.Visible = false;
             // 
             // txtbuscar
             // 
@@ -159,6 +237,7 @@
             // 
             this.txtpassword.Location = new System.Drawing.Point(125, 385);
             this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '*';
             this.txtpassword.Size = new System.Drawing.Size(353, 20);
             this.txtpassword.TabIndex = 7;
             // 
@@ -219,6 +298,9 @@
             // cmbgenero
             // 
             this.cmbgenero.FormattingEnabled = true;
+            this.cmbgenero.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
             this.cmbgenero.Location = new System.Drawing.Point(125, 250);
             this.cmbgenero.Name = "cmbgenero";
             this.cmbgenero.Size = new System.Drawing.Size(140, 21);
@@ -324,38 +406,9 @@
             // 
             this.txtconfirmacion.Location = new System.Drawing.Point(540, 385);
             this.txtconfirmacion.Name = "txtconfirmacion";
+            this.txtconfirmacion.PasswordChar = '*';
             this.txtconfirmacion.Size = new System.Drawing.Size(353, 20);
             this.txtconfirmacion.TabIndex = 25;
-            // 
-            // btnagregar
-            // 
-            this.btnagregar.Location = new System.Drawing.Point(12, 415);
-            this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(75, 49);
-            this.btnagregar.TabIndex = 26;
-            this.btnagregar.Text = "Agregar";
-            this.btnagregar.UseVisualStyleBackColor = true;
-            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
-            // 
-            // btneditar
-            // 
-            this.btneditar.Location = new System.Drawing.Point(93, 415);
-            this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(75, 49);
-            this.btneditar.TabIndex = 27;
-            this.btneditar.Text = "Editar";
-            this.btneditar.UseVisualStyleBackColor = true;
-            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
-            // 
-            // btnsalir
-            // 
-            this.btnsalir.Location = new System.Drawing.Point(818, 415);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(75, 49);
-            this.btnsalir.TabIndex = 28;
-            this.btnsalir.Text = "Salir";
-            this.btnsalir.UseVisualStyleBackColor = true;
-            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
             // label8
             // 
@@ -430,93 +483,83 @@
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
             this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
-            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
-            // idmedico
+            // button1
             // 
-            this.idmedico.HeaderText = "Usuario";
-            this.idmedico.Name = "idmedico";
-            this.idmedico.ReadOnly = true;
+            this.button1.Image = global::Medicos.Properties.Resources.cancelar;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(737, 415);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 49);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "Cancelar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // nombrecompleto
+            // btnDelete
             // 
-            this.nombrecompleto.HeaderText = "Nombre Médico";
-            this.nombrecompleto.Name = "nombrecompleto";
-            this.nombrecompleto.ReadOnly = true;
+            this.btnDelete.Image = global::Medicos.Properties.Resources.userdelete1;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDelete.Location = new System.Drawing.Point(174, 415);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 49);
+            this.btnDelete.TabIndex = 35;
+            this.btnDelete.Text = "Eliminar";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // genero
+            // btnsalir
             // 
-            this.genero.HeaderText = "Genero";
-            this.genero.Name = "genero";
-            this.genero.ReadOnly = true;
+            this.btnsalir.Image = global::Medicos.Properties.Resources.exit;
+            this.btnsalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnsalir.Location = new System.Drawing.Point(818, 415);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(75, 49);
+            this.btnsalir.TabIndex = 28;
+            this.btnsalir.Text = "Salir";
+            this.btnsalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnsalir.UseVisualStyleBackColor = true;
+            this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
-            // campus
+            // btneditar
             // 
-            this.campus.HeaderText = "Campus";
-            this.campus.Name = "campus";
-            this.campus.ReadOnly = true;
+            this.btneditar.Image = global::Medicos.Properties.Resources.edit2;
+            this.btneditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btneditar.Location = new System.Drawing.Point(93, 415);
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Size = new System.Drawing.Size(75, 49);
+            this.btneditar.TabIndex = 27;
+            this.btneditar.Text = "Editar";
+            this.btneditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
-            // especialidad
+            // btnagregar
             // 
-            this.especialidad.HeaderText = "Especialidad";
-            this.especialidad.Name = "especialidad";
-            this.especialidad.ReadOnly = true;
+            this.btnagregar.Image = global::Medicos.Properties.Resources.adduser3;
+            this.btnagregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnagregar.Location = new System.Drawing.Point(12, 415);
+            this.btnagregar.Name = "btnagregar";
+            this.btnagregar.Size = new System.Drawing.Size(75, 49);
+            this.btnagregar.TabIndex = 26;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnagregar.UseVisualStyleBackColor = true;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
-            // celular
+            // medicosBindingSource
             // 
-            this.celular.HeaderText = "Celular";
-            this.celular.Name = "celular";
-            this.celular.ReadOnly = true;
-            // 
-            // aniocarrera
-            // 
-            this.aniocarrera.HeaderText = "Año Carrera";
-            this.aniocarrera.Name = "aniocarrera";
-            this.aniocarrera.ReadOnly = true;
-            // 
-            // estadocivil
-            // 
-            this.estadocivil.HeaderText = "Estado Civil";
-            this.estadocivil.Name = "estadocivil";
-            this.estadocivil.ReadOnly = true;
-            // 
-            // trimestre
-            // 
-            this.trimestre.HeaderText = "Trimestre";
-            this.trimestre.Name = "trimestre";
-            this.trimestre.ReadOnly = true;
-            // 
-            // fechanac
-            // 
-            this.fechanac.HeaderText = "Fecha Nacimiento";
-            this.fechanac.Name = "fechanac";
-            this.fechanac.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "E-mail";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // direccion
-            // 
-            this.direccion.HeaderText = "Dirección";
-            this.direccion.Name = "direccion";
-            this.direccion.ReadOnly = true;
-            this.direccion.Visible = false;
-            // 
-            // pass
-            // 
-            this.pass.HeaderText = "Password";
-            this.pass.Name = "pass";
-            this.pass.ReadOnly = true;
-            this.pass.Visible = false;
+            this.medicosBindingSource.DataMember = "medicos";
             // 
             // frmMedicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 470);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.cmbtrimestre);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.cmbEstado);
@@ -557,8 +600,8 @@
             this.Text = "Médicos";
             this.Load += new System.EventHandler(this.frmMedicos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGMedicos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).EndInit();
             this.Eliminar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -633,6 +676,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn pass;
+        public System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button button1;
     }
 }
 

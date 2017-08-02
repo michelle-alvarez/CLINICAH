@@ -7,16 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Devart.Data.PostgreSql;
+using Npgsql;
 
 
 namespace Login
 {
+
+
     public partial class frmLogin : Form
     {
+
         public frmLogin()
         {
+
             InitializeComponent();
+
+
         }
         //0501197303294
 
@@ -25,19 +31,27 @@ namespace Login
             var bytes = System.Text.Encoding.UTF8.GetBytes(input);
             using (var hash = System.Security.Cryptography.SHA512.Create())
             {
-                var hashedInputBytes = hash.ComputeHash(bytes); 
+                var hashedInputBytes = hash.ComputeHash(bytes);
                 var hashedInputStringBuilder = new System.Text.StringBuilder(128);
                 foreach (var b in hashedInputBytes)
                     hashedInputStringBuilder.Append(b.ToString("X2"));
                 return hashedInputStringBuilder.ToString();
             }
         }
-        
-        private string cnxclinica = Login.Properties.Settings.Default.clinicasCnx;
 
+        private const string dbserver = "localhost";
+        private const string dbport = "5432";
+        private const string db = "clinicas";
+        private const string dbuser = "postgres";
+        private const string dbpass = "malteada28";
+
+        private const string cnxclinica = "Server=" + dbserver + ";Port=" + dbport + ";Database=" + db +
+                ";User Id=" + dbuser + "; Password=" + dbpass + ";";
 
         private void Login_Load(object sender, EventArgs e)
         {
+            // frmLogin.ActiveForm.MaximizeBox = false;
+            //  frmLogin.ActiveForm.MinimizeBox = false;
             if (txtIDmedico.Text == "")
             {
                 btn_Aceptar.Enabled = false;
@@ -47,7 +61,6 @@ namespace Login
 
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
-
             Application.Exit();
         }
 
@@ -65,11 +78,9 @@ namespace Login
         {
             bool block = Resources.Propiedades.flag;
 
-            block = Resources.Propiedades.flag;
             if (block == false)
             {
                 evaluar();
-                txtIDmedico.Focus();
             }
 
 
@@ -83,17 +94,14 @@ namespace Login
             password = SHA512(password);
             if (txtIDmedico.Text != "" && txtPassword.Text != "")
             {
-                //el select nos mostrara la llave o contraseña de la tabla de usuarios donde la ID sea igual al ID del textbox               
                 string strSQL = "SELECT pass, nombrecompleto FROM administracion.medicos WHERE idmedico = '" + idmedi + "'";
                 try
                 {
-                    //se define la conexion como una nueva conexcion de postgres y le asignamos el valor de la variable string que tiene los datos de
-                    //conexion
-                    PgSqlConnection conexion = new PgSqlConnection(cnxclinica);
+                    NpgsqlConnection conexion = new NpgsqlConnection(cnxclinica);
                     //definimos la variable de comando donde le asignamos el string que contiene el select y la conexion
-                    PgSqlCommand comando = new PgSqlCommand(strSQL, conexion);
+                    NpgsqlCommand comando = new NpgsqlCommand(strSQL, conexion);
                     //comando.Parameters.AddWithValue("@idusuario", usuario);
-                    PgSqlDataReader reader;
+                    NpgsqlDataReader reader;
                     conexion.Open();
                     reader = comando.ExecuteReader();
                     if (reader.HasRows)
@@ -106,15 +114,14 @@ namespace Login
                         if (password == dbpassw)
                         {
                             MessageBox.Show("Bienvenido '" + nombre + "'");
+                            Resources.Propiedades.nombre_ingreso = nombre;
                             categoria(idmedi);
                             this.Close();
                             Resources.Propiedades.flag = true;
-                            Resources.Propiedades.nombre_ingreso = reader.GetString(1);
 
                         }
                         else
                         {
-                            
                             strerror = "Password Incorrecto";
                         }
                     }
@@ -144,7 +151,9 @@ namespace Login
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-           
+            txtIDmedico.Text = " ";
+            txtPassword.Text = "";
+            txtIDmedico.Focus();
         }
 
         private void categoria(string ID)
@@ -152,16 +161,15 @@ namespace Login
             string strSQL = "SELECT tipomedico FROM administracion.tipomedico WHERE idmedico = '" + ID + "'";
             try
             {
-                PgSqlConnection conexion = new PgSqlConnection(cnxclinica);
-                PgSqlCommand comando = new PgSqlCommand(strSQL, conexion);
-                PgSqlDataReader reader;
+                NpgsqlConnection conexion = new NpgsqlConnection(cnxclinica);
+                NpgsqlCommand comando = new NpgsqlCommand(strSQL, conexion);
+                NpgsqlDataReader reader;
                 conexion.Open();
                 reader = comando.ExecuteReader();
                 if (reader.HasRows)
                 {
                     reader.Read();
                     Resources.Propiedades.categoria = reader.GetInt32(0);
-                   
                 }
                 conexion.Close();
             }
