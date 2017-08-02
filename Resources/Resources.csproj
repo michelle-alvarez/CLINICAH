@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VarGlobal.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Iconos\adduser3.ico" />

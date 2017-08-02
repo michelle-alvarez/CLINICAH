@@ -21,3 +21,8 @@ C:\Users\Personal\Source\Repos\CLINICAH2\Resources\bin\Debug\Resources.dll
 C:\Users\Personal\Source\Repos\CLINICAH2\Resources\bin\Debug\Resources.pdb
 C:\Users\Personal\Source\Repos\CLINICAH2\Resources\obj\Debug\Resources.dll
 C:\Users\Personal\Source\Repos\CLINICAH2\Resources\obj\Debug\Resources.pdb
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Resources\bin\Debug\Resources.dll
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Resources\bin\Debug\Resources.pdb
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Resources\obj\Debug\Resources.csprojResolveAssemblyReference.cache
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Resources\obj\Debug\Resources.dll
+C:\Users\marley.hernandez\Source\Repos\CLINICAH2\Resources\obj\Debug\Resources.pdb

@@ -31,15 +31,7 @@
             this.cmbCampus = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDonado = new System.Windows.Forms.TextBox();
-            this.DGMedicamentos = new System.Windows.Forms.DataGridView();
-            this.idmedicamentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reordenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donadopor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.campus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaven = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DGSuministros = new System.Windows.Forms.DataGridView();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dtpvencimiento = new System.Windows.Forms.DateTimePicker();
@@ -54,7 +46,14 @@
             this.btndelete = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DGMedicamentos)).BeginInit();
+            this.idmedicamentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reordenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donadopor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.campus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaven = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.DGSuministros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbreorden)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,75 +81,25 @@
             this.txtDonado.Size = new System.Drawing.Size(520, 20);
             this.txtDonado.TabIndex = 42;
             // 
-            // DGMedicamentos
+            // DGSuministros
             // 
-            this.DGMedicamentos.AllowUserToAddRows = false;
-            this.DGMedicamentos.AllowUserToDeleteRows = false;
-            this.DGMedicamentos.AllowUserToOrderColumns = true;
-            this.DGMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGMedicamentos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGSuministros.AllowUserToAddRows = false;
+            this.DGSuministros.AllowUserToDeleteRows = false;
+            this.DGSuministros.AllowUserToOrderColumns = true;
+            this.DGSuministros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGSuministros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idmedicamentos,
             this.nombre,
             this.cantidades,
             this.reordenes,
             this.donadopor,
-            this.tipo,
             this.campus,
             this.fechaven});
-            this.DGMedicamentos.Location = new System.Drawing.Point(12, 31);
-            this.DGMedicamentos.Name = "DGMedicamentos";
-            this.DGMedicamentos.ReadOnly = true;
-            this.DGMedicamentos.Size = new System.Drawing.Size(637, 150);
-            this.DGMedicamentos.TabIndex = 39;
-            // 
-            // idmedicamentos
-            // 
-            this.idmedicamentos.HeaderText = "Id";
-            this.idmedicamentos.Name = "idmedicamentos";
-            this.idmedicamentos.ReadOnly = true;
-            this.idmedicamentos.Visible = false;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // cantidades
-            // 
-            this.cantidades.HeaderText = "Cantidad";
-            this.cantidades.Name = "cantidades";
-            this.cantidades.ReadOnly = true;
-            // 
-            // reordenes
-            // 
-            this.reordenes.HeaderText = "Cantidad Minima";
-            this.reordenes.Name = "reordenes";
-            this.reordenes.ReadOnly = true;
-            // 
-            // donadopor
-            // 
-            this.donadopor.HeaderText = "Donante";
-            this.donadopor.Name = "donadopor";
-            this.donadopor.ReadOnly = true;
-            // 
-            // tipo
-            // 
-            this.tipo.HeaderText = "Tipo de Medicamento";
-            this.tipo.Name = "tipo";
-            this.tipo.ReadOnly = true;
-            // 
-            // campus
-            // 
-            this.campus.HeaderText = "Campus";
-            this.campus.Name = "campus";
-            this.campus.ReadOnly = true;
-            // 
-            // fechaven
-            // 
-            this.fechaven.HeaderText = "Fecha Vencimiento ";
-            this.fechaven.Name = "fechaven";
-            this.fechaven.ReadOnly = true;
+            this.DGSuministros.Location = new System.Drawing.Point(12, 31);
+            this.DGSuministros.Name = "DGSuministros";
+            this.DGSuministros.ReadOnly = true;
+            this.DGSuministros.Size = new System.Drawing.Size(637, 150);
+            this.DGSuministros.TabIndex = 39;
             // 
             // txtbuscar
             // 
@@ -158,6 +107,7 @@
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(594, 20);
             this.txtbuscar.TabIndex = 38;
+            this.txtbuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbuscar_KeyPress);
             // 
             // label5
             // 
@@ -242,6 +192,7 @@
             this.btnexit.Text = "Salir";
             this.btnexit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnexit.UseVisualStyleBackColor = true;
+            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
             // btncancelar
             // 
@@ -254,6 +205,7 @@
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btndelete
             // 
@@ -266,6 +218,7 @@
             this.btndelete.Text = "Eliminar";
             this.btndelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btndelete.UseVisualStyleBackColor = true;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // btneditar
             // 
@@ -278,6 +231,7 @@
             this.btneditar.Text = "Editar";
             this.btneditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
             // 
             // btnagregar
             // 
@@ -290,6 +244,50 @@
             this.btnagregar.Text = "Agregar";
             this.btnagregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnagregar.UseVisualStyleBackColor = true;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
+            // 
+            // idmedicamentos
+            // 
+            this.idmedicamentos.HeaderText = "Id";
+            this.idmedicamentos.Name = "idmedicamentos";
+            this.idmedicamentos.ReadOnly = true;
+            this.idmedicamentos.Visible = false;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // cantidades
+            // 
+            this.cantidades.HeaderText = "Cantidad";
+            this.cantidades.Name = "cantidades";
+            this.cantidades.ReadOnly = true;
+            // 
+            // reordenes
+            // 
+            this.reordenes.HeaderText = "Cantidad Minima";
+            this.reordenes.Name = "reordenes";
+            this.reordenes.ReadOnly = true;
+            // 
+            // donadopor
+            // 
+            this.donadopor.HeaderText = "Donante";
+            this.donadopor.Name = "donadopor";
+            this.donadopor.ReadOnly = true;
+            // 
+            // campus
+            // 
+            this.campus.HeaderText = "Campus";
+            this.campus.Name = "campus";
+            this.campus.ReadOnly = true;
+            // 
+            // fechaven
+            // 
+            this.fechaven.HeaderText = "Fecha Vencimiento ";
+            this.fechaven.Name = "fechaven";
+            this.fechaven.ReadOnly = true;
             // 
             // frmSuministros
             // 
@@ -305,7 +303,7 @@
             this.Controls.Add(this.cmbCampus);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtDonado);
-            this.Controls.Add(this.DGMedicamentos);
+            this.Controls.Add(this.DGSuministros);
             this.Controls.Add(this.txtbuscar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dtpvencimiento);
@@ -317,7 +315,8 @@
             this.Controls.Add(this.txtmedicamento);
             this.Name = "frmSuministros";
             this.Text = "Suministros";
-            ((System.ComponentModel.ISupportInitialize)(this.DGMedicamentos)).EndInit();
+            this.Load += new System.EventHandler(this.frmSuministros_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DGSuministros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbreorden)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -329,15 +328,7 @@
         private System.Windows.Forms.ComboBox cmbCampus;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDonado;
-        private System.Windows.Forms.DataGridView DGMedicamentos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idmedicamentos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidades;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reordenes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn donadopor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn campus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaven;
+        private System.Windows.Forms.DataGridView DGSuministros;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dtpvencimiento;
@@ -352,6 +343,13 @@
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Button btnexit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idmedicamentos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidades;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reordenes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donadopor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn campus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaven;
     }
 }
 

@@ -14,11 +14,10 @@ namespace Login
 {
     public partial class frmLogin : Form
     {
-        string cnxclinica;
-        public frmLogin(string cnx)
+        string cnxclinica = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=Salmos665;";
+        public frmLogin()
         {
             InitializeComponent();
-            this.cnxclinica = cnx;
         }
         //0501197303294
 

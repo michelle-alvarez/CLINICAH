@@ -12,11 +12,11 @@ namespace CLINICAH
 {
     public partial class mdiPrincipal : Form
     {
-        Login.frmLogin frmlogin = new Login.frmLogin(GlobalVar.cnx);
+        Login.frmLogin frmlogin = new Login.frmLogin();
         Pacientes.FrmPacientes frmPacientes = new Pacientes.FrmPacientes();
-        Medicos.frmMedicos frmMedico = new Medicos.frmMedicos(GlobalVar.cnx);
+        Medicos.frmMedicos frmMedico = new Medicos.frmMedicos();
         Procedimientos.frmProcedimientos frmProcedimientos = new Procedimientos.frmProcedimientos();
-        Medicamentos_y_Suministros.frmMedicamentos frmSuministros = new Medicamentos_y_Suministros.frmMedicamentos(GlobalVar.cnx);
+        Medicamentos_y_Suministros.frmMedicamentos frmSuministros = new Medicamentos_y_Suministros.frmMedicamentos();
         Consulta.frmConsulta frmConsulta = new Consulta.frmConsulta();
         public mdiPrincipal()
         {
@@ -37,7 +37,7 @@ namespace CLINICAH
 
         private void medicos_Click(object sender, EventArgs e)
         {
-            Medicos.frmMedicos medicos = new Medicos.frmMedicos(GlobalVar.cnx);
+            Medicos.frmMedicos medicos = new Medicos.frmMedicos();
             medicos.MdiParent = this;
             medicos.Show();
         }
@@ -93,21 +93,21 @@ namespace CLINICAH
 
         private void suministrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Medicamentos_y_Suministros.frmSuministros suministros = new Medicamentos_y_Suministros.frmSuministros(GlobalVar.cnx);
+            Medicamentos_y_Suministros.frmSuministros suministros = new Medicamentos_y_Suministros.frmSuministros();
             suministros.MdiParent = this;
             suministros.Show();
         }
 
         private void medicamentosYSuministrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Medicamentos_y_Suministros.frmMedicamentos medicamentos = new Medicamentos_y_Suministros.frmMedicamentos(GlobalVar.cnx);
+            Medicamentos_y_Suministros.frmMedicamentos medicamentos = new Medicamentos_y_Suministros.frmMedicamentos();
             medicamentos.MdiParent = this;
             medicamentos.Show();
         }
 
         private void medicosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Medicos.frmMedicos medicos = new Medicos.frmMedicos(GlobalVar.cnx);
+            Medicos.frmMedicos medicos = new Medicos.frmMedicos();
             medicos.MdiParent = this;
             medicos.Show();
         }
@@ -121,14 +121,14 @@ namespace CLINICAH
 
         private void medicosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Medicos.frmReporteMedicos reporte = new Medicos.frmReporteMedicos(GlobalVar.cnx);
+            Medicos.frmReporteMedicos reporte = new Medicos.frmReporteMedicos();
             reporte.MdiParent = this;
             reporte.Show();
         }
 
         private void medicosToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            Medicos.frmPrivilegios privilegios = new Medicos.frmPrivilegios(GlobalVar.cnx);
+            Medicos.frmPrivilegios privilegios = new Medicos.frmPrivilegios();
             privilegios.MdiParent = this;
             privilegios.Show();
         }

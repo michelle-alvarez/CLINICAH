@@ -13,16 +13,15 @@ namespace Medicamentos_y_Suministros
 {
     public partial class frmMedicamentos : Form
     {
-        string cnx;
+        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=Salmos665;";
         DataSet ds;
         public int statusForm = 0; //0 = Consultando; 1=Agregando; 2=Editando
         string sqlMedicamentos = "SELECT * FROM administracion.medicamentos WHERE idmedicamentos LIKE @filtro OR nombre LIKE @filtro ORDER BY nombre";
         NpgsqlDataAdapter damedicamentos;
 
-        public frmMedicamentos(string cnx)
+        public frmMedicamentos()
         {
             InitializeComponent();
-            this.cnx = cnx;
             damedicamentos = new NpgsqlDataAdapter(sqlMedicamentos, cnx);
         }
 

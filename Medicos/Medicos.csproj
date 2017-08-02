@@ -90,7 +90,6 @@
     <Compile Include="frmReporteMedicos.Designer.cs">
       <DependentUpon>frmReporteMedicos.cs</DependentUpon>
     </Compile>
-    <Compile Include="global.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmMedicos.resx">
