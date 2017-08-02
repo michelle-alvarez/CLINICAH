@@ -32,6 +32,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtDonado = new System.Windows.Forms.TextBox();
             this.DGSuministros = new System.Windows.Forms.DataGridView();
+            this.idmedicamentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reordenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donadopor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.campus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaven = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dtpvencimiento = new System.Windows.Forms.DateTimePicker();
@@ -46,13 +53,6 @@
             this.btndelete = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
-            this.idmedicamentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reordenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donadopor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.campus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaven = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGSuministros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbreorden)).BeginInit();
             this.SuspendLayout();
@@ -60,10 +60,21 @@
             // cmbCampus
             // 
             this.cmbCampus.FormattingEnabled = true;
+            this.cmbCampus.Items.AddRange(new object[] {
+            "San Pedro y San Pablo",
+            "Sagrado Corazón de Jesús",
+            "Santiago Apóstol",
+            "San Pedro y San Pablo",
+            "Dios Espíritu Santo",
+            "Santa Rosa de Lima",
+            "Santa Clara",
+            "San Isidro",
+            "Jesús Sacramentado",
+            "San Jorge"});
             this.cmbCampus.Location = new System.Drawing.Point(55, 211);
             this.cmbCampus.Name = "cmbCampus";
             this.cmbCampus.Size = new System.Drawing.Size(231, 21);
-            this.cmbCampus.TabIndex = 44;
+            this.cmbCampus.TabIndex = 2;
             // 
             // label7
             // 
@@ -76,10 +87,10 @@
             // 
             // txtDonado
             // 
-            this.txtDonado.Location = new System.Drawing.Point(129, 237);
+            this.txtDonado.Location = new System.Drawing.Point(85, 237);
             this.txtDonado.Name = "txtDonado";
-            this.txtDonado.Size = new System.Drawing.Size(520, 20);
-            this.txtDonado.TabIndex = 42;
+            this.txtDonado.Size = new System.Drawing.Size(564, 20);
+            this.txtDonado.TabIndex = 5;
             // 
             // DGSuministros
             // 
@@ -100,151 +111,6 @@
             this.DGSuministros.ReadOnly = true;
             this.DGSuministros.Size = new System.Drawing.Size(637, 150);
             this.DGSuministros.TabIndex = 39;
-            // 
-            // txtbuscar
-            // 
-            this.txtbuscar.Location = new System.Drawing.Point(55, 5);
-            this.txtbuscar.Name = "txtbuscar";
-            this.txtbuscar.Size = new System.Drawing.Size(594, 20);
-            this.txtbuscar.TabIndex = 38;
-            this.txtbuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbuscar_KeyPress);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 8);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "Buscar";
-            // 
-            // dtpvencimiento
-            // 
-            this.dtpvencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpvencimiento.Location = new System.Drawing.Point(545, 210);
-            this.dtpvencimiento.Name = "dtpvencimiento";
-            this.dtpvencimiento.Size = new System.Drawing.Size(103, 20);
-            this.dtpvencimiento.TabIndex = 32;
-            // 
-            // cmbreorden
-            // 
-            this.cmbreorden.Location = new System.Drawing.Point(378, 212);
-            this.cmbreorden.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.cmbreorden.Name = "cmbreorden";
-            this.cmbreorden.Size = new System.Drawing.Size(54, 20);
-            this.cmbreorden.TabIndex = 31;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(441, 213);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 13);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "Fecha Vencimiento";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 213);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "Campus";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(292, 214);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 13);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Cantidad Minima";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 190);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 13);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Nombre Medicamento";
-            // 
-            // txtmedicamento
-            // 
-            this.txtmedicamento.Location = new System.Drawing.Point(129, 187);
-            this.txtmedicamento.Name = "txtmedicamento";
-            this.txtmedicamento.Size = new System.Drawing.Size(520, 20);
-            this.txtmedicamento.TabIndex = 30;
-            // 
-            // btnexit
-            // 
-            this.btnexit.Image = global::Medicamentos_y_Suministros.Properties.Resources.exit;
-            this.btnexit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnexit.Location = new System.Drawing.Point(574, 263);
-            this.btnexit.Name = "btnexit";
-            this.btnexit.Size = new System.Drawing.Size(75, 49);
-            this.btnexit.TabIndex = 49;
-            this.btnexit.Text = "Salir";
-            this.btnexit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnexit.UseVisualStyleBackColor = true;
-            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
-            // 
-            // btncancelar
-            // 
-            this.btncancelar.Image = global::Medicamentos_y_Suministros.Properties.Resources.if_meanicons_24_197210;
-            this.btncancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btncancelar.Location = new System.Drawing.Point(493, 263);
-            this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(75, 49);
-            this.btncancelar.TabIndex = 48;
-            this.btncancelar.Text = "Cancelar";
-            this.btncancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btncancelar.UseVisualStyleBackColor = true;
-            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
-            // 
-            // btndelete
-            // 
-            this.btndelete.Image = global::Medicamentos_y_Suministros.Properties.Resources.if_200_CircledMinus_183317;
-            this.btndelete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btndelete.Location = new System.Drawing.Point(174, 263);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(75, 49);
-            this.btndelete.TabIndex = 47;
-            this.btndelete.Text = "Eliminar";
-            this.btndelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btndelete.UseVisualStyleBackColor = true;
-            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
-            // 
-            // btneditar
-            // 
-            this.btneditar.Image = global::Medicamentos_y_Suministros.Properties.Resources.if_Compose_2190985;
-            this.btneditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btneditar.Location = new System.Drawing.Point(93, 263);
-            this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(75, 49);
-            this.btneditar.TabIndex = 46;
-            this.btneditar.Text = "Editar";
-            this.btneditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btneditar.UseVisualStyleBackColor = true;
-            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
-            // 
-            // btnagregar
-            // 
-            this.btnagregar.Image = global::Medicamentos_y_Suministros.Properties.Resources.if_199_CircledPlus_183316;
-            this.btnagregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnagregar.Location = new System.Drawing.Point(12, 263);
-            this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(75, 49);
-            this.btnagregar.TabIndex = 45;
-            this.btnagregar.Text = "Agregar";
-            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnagregar.UseVisualStyleBackColor = true;
-            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // idmedicamentos
             // 
@@ -288,6 +154,151 @@
             this.fechaven.HeaderText = "Fecha Vencimiento ";
             this.fechaven.Name = "fechaven";
             this.fechaven.ReadOnly = true;
+            // 
+            // txtbuscar
+            // 
+            this.txtbuscar.Location = new System.Drawing.Point(55, 5);
+            this.txtbuscar.Name = "txtbuscar";
+            this.txtbuscar.Size = new System.Drawing.Size(594, 20);
+            this.txtbuscar.TabIndex = 0;
+            this.txtbuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbuscar_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 8);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "Buscar";
+            // 
+            // dtpvencimiento
+            // 
+            this.dtpvencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpvencimiento.Location = new System.Drawing.Point(545, 210);
+            this.dtpvencimiento.Name = "dtpvencimiento";
+            this.dtpvencimiento.Size = new System.Drawing.Size(103, 20);
+            this.dtpvencimiento.TabIndex = 4;
+            // 
+            // cmbreorden
+            // 
+            this.cmbreorden.Location = new System.Drawing.Point(378, 212);
+            this.cmbreorden.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.cmbreorden.Name = "cmbreorden";
+            this.cmbreorden.Size = new System.Drawing.Size(54, 20);
+            this.cmbreorden.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(441, 213);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(98, 13);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "Fecha Vencimiento";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 213);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "Campus";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(292, 214);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 13);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Cantidad Minima";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 190);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 13);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Nombre Medicamento";
+            // 
+            // txtmedicamento
+            // 
+            this.txtmedicamento.Location = new System.Drawing.Point(129, 187);
+            this.txtmedicamento.Name = "txtmedicamento";
+            this.txtmedicamento.Size = new System.Drawing.Size(520, 20);
+            this.txtmedicamento.TabIndex = 1;
+            // 
+            // btnexit
+            // 
+            this.btnexit.Image = global::Medicamentos_y_Suministros.Properties.Resources.exit;
+            this.btnexit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnexit.Location = new System.Drawing.Point(574, 263);
+            this.btnexit.Name = "btnexit";
+            this.btnexit.Size = new System.Drawing.Size(75, 49);
+            this.btnexit.TabIndex = 10;
+            this.btnexit.Text = "Salir";
+            this.btnexit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnexit.UseVisualStyleBackColor = true;
+            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
+            // 
+            // btncancelar
+            // 
+            this.btncancelar.Image = global::Medicamentos_y_Suministros.Properties.Resources.if_meanicons_24_197210;
+            this.btncancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btncancelar.Location = new System.Drawing.Point(493, 263);
+            this.btncancelar.Name = "btncancelar";
+            this.btncancelar.Size = new System.Drawing.Size(75, 49);
+            this.btncancelar.TabIndex = 9;
+            this.btncancelar.Text = "Cancelar";
+            this.btncancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
+            // 
+            // btndelete
+            // 
+            this.btndelete.Image = global::Medicamentos_y_Suministros.Properties.Resources.if_200_CircledMinus_183317;
+            this.btndelete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btndelete.Location = new System.Drawing.Point(174, 263);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(75, 49);
+            this.btndelete.TabIndex = 8;
+            this.btndelete.Text = "Eliminar";
+            this.btndelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btndelete.UseVisualStyleBackColor = true;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
+            // 
+            // btneditar
+            // 
+            this.btneditar.Image = global::Medicamentos_y_Suministros.Properties.Resources.if_Compose_2190985;
+            this.btneditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btneditar.Location = new System.Drawing.Point(93, 263);
+            this.btneditar.Name = "btneditar";
+            this.btneditar.Size = new System.Drawing.Size(75, 49);
+            this.btneditar.TabIndex = 7;
+            this.btneditar.Text = "Editar";
+            this.btneditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btneditar.UseVisualStyleBackColor = true;
+            this.btneditar.Click += new System.EventHandler(this.btneditar_Click);
+            // 
+            // btnagregar
+            // 
+            this.btnagregar.Image = global::Medicamentos_y_Suministros.Properties.Resources.if_199_CircledPlus_183316;
+            this.btnagregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnagregar.Location = new System.Drawing.Point(12, 263);
+            this.btnagregar.Name = "btnagregar";
+            this.btnagregar.Size = new System.Drawing.Size(75, 49);
+            this.btnagregar.TabIndex = 6;
+            this.btnagregar.Text = "Agregar";
+            this.btnagregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnagregar.UseVisualStyleBackColor = true;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
             // frmSuministros
             // 

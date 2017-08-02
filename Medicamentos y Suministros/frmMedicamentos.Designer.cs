@@ -65,7 +65,7 @@
             this.txtmedicamento.Location = new System.Drawing.Point(132, 188);
             this.txtmedicamento.Name = "txtmedicamento";
             this.txtmedicamento.Size = new System.Drawing.Size(520, 20);
-            this.txtmedicamento.TabIndex = 0;
+            this.txtmedicamento.TabIndex = 1;
             // 
             // label1
             // 
@@ -113,7 +113,7 @@
             0});
             this.cmbreorden.Name = "cmbreorden";
             this.cmbreorden.Size = new System.Drawing.Size(54, 20);
-            this.cmbreorden.TabIndex = 1;
+            this.cmbreorden.TabIndex = 2;
             // 
             // dtpvencimiento
             // 
@@ -121,7 +121,7 @@
             this.dtpvencimiento.Location = new System.Drawing.Point(468, 239);
             this.dtpvencimiento.Name = "dtpvencimiento";
             this.dtpvencimiento.Size = new System.Drawing.Size(184, 20);
-            this.dtpvencimiento.TabIndex = 3;
+            this.dtpvencimiento.TabIndex = 5;
             // 
             // label5
             // 
@@ -137,7 +137,7 @@
             this.txtbuscar.Location = new System.Drawing.Point(58, 6);
             this.txtbuscar.Name = "txtbuscar";
             this.txtbuscar.Size = new System.Drawing.Size(594, 20);
-            this.txtbuscar.TabIndex = 18;
+            this.txtbuscar.TabIndex = 0;
             this.txtbuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbuscar_KeyPress);
             // 
             // DGMedicamentos
@@ -224,7 +224,7 @@
             this.txttipo.Location = new System.Drawing.Point(283, 213);
             this.txttipo.Name = "txttipo";
             this.txttipo.Size = new System.Drawing.Size(369, 20);
-            this.txttipo.TabIndex = 20;
+            this.txttipo.TabIndex = 3;
             // 
             // label7
             // 
@@ -237,10 +237,10 @@
             // 
             // txtDonado
             // 
-            this.txtDonado.Location = new System.Drawing.Point(132, 266);
+            this.txtDonado.Location = new System.Drawing.Point(88, 266);
             this.txtDonado.Name = "txtDonado";
-            this.txtDonado.Size = new System.Drawing.Size(520, 20);
-            this.txtDonado.TabIndex = 22;
+            this.txtDonado.Size = new System.Drawing.Size(564, 20);
+            this.txtDonado.TabIndex = 6;
             // 
             // button1
             // 
@@ -249,7 +249,7 @@
             this.button1.Location = new System.Drawing.Point(496, 292);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 49);
-            this.button1.TabIndex = 27;
+            this.button1.TabIndex = 10;
             this.button1.Text = "Cancelar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
@@ -262,7 +262,7 @@
             this.btnDelete.Location = new System.Drawing.Point(169, 292);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 49);
-            this.btnDelete.TabIndex = 26;
+            this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -275,7 +275,7 @@
             this.btnsalir.Location = new System.Drawing.Point(577, 292);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(75, 49);
-            this.btnsalir.TabIndex = 28;
+            this.btnsalir.TabIndex = 11;
             this.btnsalir.Text = "Salir";
             this.btnsalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnsalir.UseVisualStyleBackColor = true;
@@ -288,7 +288,7 @@
             this.btneditar.Location = new System.Drawing.Point(88, 292);
             this.btneditar.Name = "btneditar";
             this.btneditar.Size = new System.Drawing.Size(75, 49);
-            this.btneditar.TabIndex = 25;
+            this.btneditar.TabIndex = 8;
             this.btneditar.Text = "Editar";
             this.btneditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btneditar.UseVisualStyleBackColor = true;
@@ -301,7 +301,7 @@
             this.btnagregar.Location = new System.Drawing.Point(7, 292);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(75, 49);
-            this.btnagregar.TabIndex = 24;
+            this.btnagregar.TabIndex = 7;
             this.btnagregar.Text = "Agregar";
             this.btnagregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnagregar.UseVisualStyleBackColor = true;
@@ -313,7 +313,7 @@
             this.cmbCampus.Location = new System.Drawing.Point(66, 240);
             this.cmbCampus.Name = "cmbCampus";
             this.cmbCampus.Size = new System.Drawing.Size(288, 21);
-            this.cmbCampus.TabIndex = 29;
+            this.cmbCampus.TabIndex = 4;
             // 
             // frmMedicamentos
             // 
