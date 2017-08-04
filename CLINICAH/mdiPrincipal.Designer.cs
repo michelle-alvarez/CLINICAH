@@ -48,6 +48,7 @@
             this.MenuProcedimientos = new System.Windows.Forms.ToolStripButton();
             this.lb_nom = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.bt_logout = new System.Windows.Forms.Button();
             this.mst.SuspendLayout();
             this.tlsr.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +64,7 @@
             this.privilegiosToolStripMenuItem});
             this.mst.Location = new System.Drawing.Point(0, 0);
             this.mst.Name = "mst";
-            this.mst.Size = new System.Drawing.Size(1083, 24);
+            this.mst.Size = new System.Drawing.Size(1423, 24);
             this.mst.TabIndex = 1;
             this.mst.Text = "menuStrip1";
             // 
@@ -135,7 +136,7 @@
             // medicosToolStripMenuItem1
             // 
             this.medicosToolStripMenuItem1.Name = "medicosToolStripMenuItem1";
-            this.medicosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.medicosToolStripMenuItem1.Size = new System.Drawing.Size(119, 22);
             this.medicosToolStripMenuItem1.Text = "Medicos";
             this.medicosToolStripMenuItem1.Click += new System.EventHandler(this.medicosToolStripMenuItem1_Click);
             // 
@@ -164,7 +165,7 @@
             this.MenuProcedimientos});
             this.tlsr.Location = new System.Drawing.Point(0, 24);
             this.tlsr.Name = "tlsr";
-            this.tlsr.Size = new System.Drawing.Size(1083, 55);
+            this.tlsr.Size = new System.Drawing.Size(1423, 55);
             this.tlsr.TabIndex = 2;
             this.tlsr.Text = "tlst";
             // 
@@ -225,11 +226,22 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Conectado:";
             // 
+            // bt_logout
+            // 
+            this.bt_logout.Location = new System.Drawing.Point(1304, 20);
+            this.bt_logout.Name = "bt_logout";
+            this.bt_logout.Size = new System.Drawing.Size(88, 23);
+            this.bt_logout.TabIndex = 10;
+            this.bt_logout.Text = "Cerrar Sesión";
+            this.bt_logout.UseVisualStyleBackColor = true;
+            this.bt_logout.Click += new System.EventHandler(this.bt_logout_Click);
+            // 
             // mdiPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 400);
+            this.ClientSize = new System.Drawing.Size(1423, 400);
+            this.Controls.Add(this.bt_logout);
             this.Controls.Add(this.lb_nom);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tlsr);
@@ -273,5 +285,6 @@
         private System.Windows.Forms.ToolStripMenuItem medicosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem privilegiosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem medicosToolStripMenuItem2;
+        private System.Windows.Forms.Button bt_logout;
     }
 }
