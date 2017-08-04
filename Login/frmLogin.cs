@@ -14,7 +14,7 @@ namespace Login
 {
     public partial class frmLogin : Form
     {
-        string cnxclinica = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=Salmos665;";
+        string cnxclinica = "Server=localhost; Port= 5432; Database=clinicas; User Id=postgres; Password=malteada28;";
         public frmLogin()
         {
             InitializeComponent();
@@ -34,20 +34,24 @@ namespace Login
             }
         }
 
+
         private void Login_Load(object sender, EventArgs e)
         {
+            //cuando carga login y cuando hace logout lo vuelve a los valores iniciales 
+            Resources.Propiedades.nombre_ingreso = "";
+            Resources.Propiedades.categoria = 0;
+
             // frmLogin.ActiveForm.MaximizeBox = false;
             //  frmLogin.ActiveForm.MinimizeBox = false;
             if (txtIDmedico.Text == "")
             {
                 btn_Aceptar.Enabled = false;
             }
-
         }
 
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            System.Environment.Exit(1);
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
@@ -68,8 +72,6 @@ namespace Login
             {
                 evaluar();
             }
-
-
         }
 
         private void evaluar()
