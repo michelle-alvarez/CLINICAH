@@ -181,3 +181,6 @@ C:\Users\marley.hernandez\Source\Repos\CLINICAH2\CLINICAH\bin\Debug\System.Threa
 C:\Users\Michelle\Source\Repos2\CLINICAH\bin\Debug\CLINICAH.exe.config
 C:\Users\Michelle\Source\Repos2\CLINICAH\obj\Debug\CLINICAH.exe
 C:\Users\Michelle\Source\Repos2\CLINICAH\obj\Debug\CLINICAH.pdb
+C:\Users\Henry\Source\Repos\CLINICAH\CLINICAH\bin\Debug\CLINICAH.exe.config
+C:\Users\Henry\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.exe
+C:\Users\Henry\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.pdb
