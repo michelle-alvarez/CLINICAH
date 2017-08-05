@@ -63,3 +63,16 @@ C:\Users\Personal\Source\Repos\CLINICAH2\Procedimientos\obj\Debug\Procedimientos
 C:\Users\Personal\Source\Repos\CLINICAH2\Procedimientos\obj\Debug\Procedimientos.csproj.GenerateResource.Cache
 C:\Users\Personal\Source\Repos\CLINICAH2\Procedimientos\obj\Debug\Procedimientos.exe
 C:\Users\Personal\Source\Repos\CLINICAH2\Procedimientos\obj\Debug\Procedimientos.pdb
+C:\Users\Michelle\Source\Repos2\Procedimientos\bin\Debug\Procedimientos.exe.config
+C:\Users\Michelle\Source\Repos2\Procedimientos\bin\Debug\Procedimientos.exe
+C:\Users\Michelle\Source\Repos2\Procedimientos\bin\Debug\Procedimientos.pdb
+C:\Users\Michelle\Source\Repos2\Procedimientos\bin\Debug\Npgsql.dll
+C:\Users\Michelle\Source\Repos2\Procedimientos\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Michelle\Source\Repos2\Procedimientos\bin\Debug\Npgsql.xml
+C:\Users\Michelle\Source\Repos2\Procedimientos\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Michelle\Source\Repos2\Procedimientos\obj\Debug\Procedimientos.csprojResolveAssemblyReference.cache
+C:\Users\Michelle\Source\Repos2\Procedimientos\obj\Debug\Procedimientos.frmProcedimientos.resources
+C:\Users\Michelle\Source\Repos2\Procedimientos\obj\Debug\Procedimientos.Properties.Resources.resources
+C:\Users\Michelle\Source\Repos2\Procedimientos\obj\Debug\Procedimientos.csproj.GenerateResource.Cache
+C:\Users\Michelle\Source\Repos2\Procedimientos\obj\Debug\Procedimientos.exe
+C:\Users\Michelle\Source\Repos2\Procedimientos\obj\Debug\Procedimientos.pdb

@@ -56,8 +56,35 @@ namespace CLINICAH
 
         private void mdiPrincipal_Load(object sender, EventArgs e)
         {
+            //lo puse aqui para cuando haga logout
+            cargar();
+
+        }
+
+
+
+        private void bt_logout_Click(object sender, EventArgs e)
+        {
+            MenuMedicos.Enabled = true;
+            MenuPacientes.Enabled = true;
+            MenuProcedimientos.Enabled = true;
+            lb_nom.Text = "";
+            Resources.Propiedades.nombre_ingreso = "";
+            Resources.Propiedades.categoria = 0;
+            Resources.Propiedades.flag = false;
+            cargar();
+
+        }
+
+
+        private void cargar()
+        {
+            Login.frmLogin frmlogin = new Login.frmLogin();
+
             while (!Resources.Propiedades.flag)
+            {
                 frmlogin.ShowDialog();
+            }
 
             string nombre_medico = Resources.Propiedades.nombre_ingreso;
             int categoria_medico = Resources.Propiedades.categoria;
@@ -75,10 +102,10 @@ namespace CLINICAH
                     MenuConsulta.Enabled = false;
                     MenuMedicos.Enabled = false;
                     MenuPacientes.Enabled = false;
-                    MenuProcedimientos.Enabled = false;
                     mst.Enabled = false;
                     break;
                 case 3:
+                    
                     break;
                 case 4:
                     //super usuario inicial
@@ -88,8 +115,8 @@ namespace CLINICAH
                     break;
 
             }
-
         }
+
 
         private void suministrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -132,5 +159,7 @@ namespace CLINICAH
             privilegios.MdiParent = this;
             privilegios.Show();
         }
+
+     
     }
 }
