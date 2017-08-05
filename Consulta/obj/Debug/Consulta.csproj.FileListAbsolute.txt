@@ -108,3 +108,6 @@ C:\Users\ALUMNO\Source\Repos\CLINICAH\Consulta\obj\Debug\Consulta.Properties.Res
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Consulta\obj\Debug\Consulta.csproj.GenerateResource.Cache
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Consulta\obj\Debug\Consulta.exe
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Consulta\obj\Debug\Consulta.pdb
+C:\Users\ALUMNO\Source\Repos\CLINICAH\Consulta\obj\Debug\Consulta.frmSearch.resources
+C:\Users\ALUMNO\Source\Repos\CLINICAH\Consulta\bin\Debug\Resources.dll
+C:\Users\ALUMNO\Source\Repos\CLINICAH\Consulta\bin\Debug\Resources.pdb
