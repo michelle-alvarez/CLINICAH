@@ -56,12 +56,66 @@ namespace CLINICAH
 
         private void mdiPrincipal_Load(object sender, EventArgs e)
         {
-
             //lo puse aqui para cuando haga logout
             cargar();
 
         }
 
+
+
+        private void bt_logout_Click(object sender, EventArgs e)
+        {
+            MenuMedicos.Enabled = true;
+            MenuPacientes.Enabled = true;
+            MenuProcedimientos.Enabled = true;
+            lb_nom.Text = "";
+            Resources.Propiedades.nombre_ingreso = "";
+            Resources.Propiedades.categoria = 0;
+            Resources.Propiedades.flag = false;
+            cargar();
+
+        }
+
+
+        private void cargar()
+        {
+            Login.frmLogin frmlogin = new Login.frmLogin();
+
+            while (!Resources.Propiedades.flag)
+            {
+                frmlogin.ShowDialog();
+            }
+
+            string nombre_medico = Resources.Propiedades.nombre_ingreso;
+            int categoria_medico = Resources.Propiedades.categoria;
+
+            lb_nom.Text = nombre_medico;
+            switch (categoria_medico)
+            {
+                case 1:
+                    MenuMedicos.Enabled = false;
+                    MenuPacientes.Enabled = false;
+                    MenuProcedimientos.Enabled = false;
+                    mst.Enabled = false;
+                    break;
+                case 2:
+                    MenuConsulta.Enabled = false;
+                    MenuMedicos.Enabled = false;
+                    MenuPacientes.Enabled = false;
+                    mst.Enabled = false;
+                    break;
+                case 3:
+                    
+                    break;
+                case 4:
+                    //super usuario inicial
+                    break;
+                default:
+                    //Application.Exit();
+                    break;
+
+            }
+        }
 
 
         private void suministrosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -106,60 +160,6 @@ namespace CLINICAH
             privilegios.Show();
         }
 
-        private void lb_logout_Click(object sender, EventArgs e)
-        {
-           
-
-        }
-
-        private void btn_cerrarsesion_Click(object sender, EventArgs e)
-        {
-           
-            lb_nom.Text = "";
-            cargar();
-        }
-
-        private void cargar()
-        {
-            Login.frmLogin frmlogin = new Login.frmLogin();
-
-            while (!Resources.Propiedades.flag)
-            {
-                frmlogin.ShowDialog();
-            }
-
-
-            string nombre_medico = Resources.Propiedades.nombre_ingreso;
-            int categoria_medico = Resources.Propiedades.categoria;
-
-            lb_nom.Text = nombre_medico;
-            switch (categoria_medico)
-            {
-                case 1:
-                    MenuMedicos.Enabled = false;
-                    MenuPacientes.Enabled = false;
-                    MenuProcedimientos.Enabled = false;
-
-                    mst.Enabled = false;
-                    break;
-                case 2:
-                    MenuConsulta.Enabled = false;
-                    MenuMedicos.Enabled = false;
-                    MenuPacientes.Enabled = false;
-                    MenuProcedimientos.Enabled = false;
-                    mst.Enabled = false;
-                    break;
-                case 3:
-
-                    break;
-                case 4:
-                    //super usuario inicial
-                    break;
-                default:
-                    //Application.Exit();
-                    break;
-            }
-        }
+     
     }
- }
-
+}

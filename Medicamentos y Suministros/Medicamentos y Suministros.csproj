@@ -61,6 +61,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntregaMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntregaMantenimiento.Designer.cs">
+      <DependentUpon>EntregaMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntregaSuministros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EntregaSuministros.Designer.cs">
+      <DependentUpon>EntregaSuministros.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSuministros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +87,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EntregaMantenimiento.resx">
+      <DependentUpon>EntregaMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntregaSuministros.resx">
+      <DependentUpon>EntregaSuministros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSuministros.resx">
       <DependentUpon>frmSuministros.cs</DependentUpon>
     </EmbeddedResource>

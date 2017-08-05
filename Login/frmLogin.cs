@@ -14,10 +14,13 @@ namespace Login
 {
     public partial class frmLogin : Form
     {
-        string cnxclinica = "Server=localhost; Port= 5432; Database=clinicas; User Id=postgres; Password=malteada28;";
+        string cnxclinica = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=Salmos665;";
         public frmLogin()
         {
+
             InitializeComponent();
+
+
         }
         //0501197303294
 
@@ -33,6 +36,7 @@ namespace Login
                 return hashedInputStringBuilder.ToString();
             }
         }
+
 
 
         private void Login_Load(object sender, EventArgs e)
@@ -167,6 +171,12 @@ namespace Login
             }
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Login.frmContraseña frmcontra = new Login.frmContraseña();
+            frmcontra.Show();
         }
     }
 }

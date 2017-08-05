@@ -16,7 +16,7 @@ namespace Medicamentos_y_Suministros
         string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=Salmos665;";
         DataSet ds;
         public int statusForm = 0; //0 = Consultando; 1=Agregando; 2=Editando
-        string sqlsuministros = "SELECT * FROM administracion.suministros WHERE idsuministros LIKE @filtro OR nombre LIKE @filtro ORDER BY nombre";
+        string sqlsuministros = "SELECT * FROM administracion.suministros WHERE nombre LIKE @filtro ORDER BY nombre";
         NpgsqlDataAdapter dasuministros;
         public frmSuministros()
         {
@@ -97,7 +97,7 @@ namespace Medicamentos_y_Suministros
             {
                 if (statusForm == 1)
                 {
-                    strSQL = "INSERT INTO administracion.suministros(nombre, reorden, donadopor, tipo, campus, fechaven) VALUES(@idmedico, @nombrecompleto, @genero, @campus, @especialidad, @celular, @aniocarrera, @estadocivil, @trimestre, @fechanac, @email, @direccion, @pass); ";
+                    strSQL = "INSERT INTO administracion.suministros(nombre, reorden, donadopor, campus, fechaven) VALUES(@nombre, @reorden, @donadopor, @campus, @fechaven); ";
                     try
                     {
                         using (NpgsqlConnection conexion = new NpgsqlConnection(cnx))
