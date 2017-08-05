@@ -187,3 +187,27 @@ C:\Users\Henry\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.pdb
 C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\CLINICAH.exe.config
 C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.exe
 C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.pdb
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\CLINICAH.exe
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\CLINICAH.pdb
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\Consulta.exe
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\Login.exe
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\Medicamentos y Suministros.exe
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\Medicos.exe
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\Npgsql.dll
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\Pacientes.exe
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\Procedimientos.exe
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\Resources.dll
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\Consulta.pdb
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\Login.pdb
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\Medicamentos y Suministros.pdb
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\Medicos.pdb
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\Pacientes.pdb
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\Procedimientos.pdb
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\Resources.pdb
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\Npgsql.xml
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.csprojResolveAssemblyReference.cache
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.mdiPrincipal.resources
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.Properties.Resources.resources
+C:\Users\ALUMNO\Source\Repos\CLINICAH\CLINICAH\obj\Debug\CLINICAH.csproj.GenerateResource.Cache
