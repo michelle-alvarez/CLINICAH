@@ -24,9 +24,6 @@ namespace Consulta
         string sqlPadecimientos = "SELECT * FROM administracion.medicamentos WHERE idmedicamentos LIKE @filtro OR nombre LIKE @filtro ORDER BY nombre";
         string sqlProcedimientos = "SELECT * FROM administracion.medicamentos WHERE idmedicamentos LIKE @filtro OR nombre LIKE @filtro ORDER BY nombre";
 
-
-
-
         NpgsqlDataAdapter damedicamentos;
         public frmConsulta()
         {
@@ -36,6 +33,7 @@ namespace Consulta
 
         private void frmConsulta_Load(object sender, EventArgs e)
         {
+            ds = new DataSet();
 
         }
 

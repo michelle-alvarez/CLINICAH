@@ -300,7 +300,8 @@
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.lbxAlergias);
             this.Name = "frmHistorial";
-            this.Text = "frmHistorial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Historial del Paciente";
             this.Load += new System.EventHandler(this.frmHistorial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1DataGridView)).EndInit();
             this.ResumeLayout(false);

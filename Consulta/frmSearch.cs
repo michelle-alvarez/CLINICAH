@@ -24,9 +24,6 @@ namespace Consulta
         {
             InitializeComponent();
             daPaciente = new NpgsqlDataAdapter(sqlPaciente, cnx);
-            
-
-
         }
 
         private void frmSearch_Load(object sender, EventArgs e)
@@ -36,37 +33,42 @@ namespace Consulta
             //Asignamos las columnas del Grid
             
 
-            dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.Columns[0].DataPropertyName = "idpaciente";
-            dataGridView1.Columns[1].DataPropertyName = "paciente";
+            grdDetalle.AutoGenerateColumns = false;
+            grdDetalle.Columns[0].DataPropertyName = "idpaciente";
+            grdDetalle.Columns[1].DataPropertyName = "paciente";
 
             //Asignamos los parametros de busqueda en vacio para que cargue todos los usuarios
             daPaciente.SelectCommand.Parameters.AddWithValue("@filtro", "%%");
             //Llenamos el Dataset con los datos del Table Adapter
-            daPaciente.Fill(ds, "pacientes");
+            daPaciente.Fill(ds, "paciente");
 
             //Asignar la fuente de datos al DataGrid con la table adapter creada anteriormente
-            dataGridView1.DataSource = ds.Tables["pacientes"];
-            txtCuenta.DataBindings.Add("text",ds.Tables["pacientes"],"idpaciente");
-           
-            
-
+            grdDetalle.DataSource = ds.Tables["paciente"];
+            txtCuenta.DataBindings.Add("text",ds.Tables["paciente"],"idpaciente");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
             Resources.Propiedades.pacienteenconsulta = txtCuenta.Text;
-
-            this.Close();
-
+            Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
             Resources.Propiedades.pacienteenconsulta = "";
         }
 
-        
+        private void txtFiltro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                string filtro = "%" + txtFiltro.Text + "%";
+                daPaciente.SelectCommand.Parameters.Clear();
+                daPaciente.SelectCommand.Parameters.AddWithValue("@filtro", filtro);
+                ds.Tables["paciente"].Clear();
+                daPaciente.Fill(ds, "requisitos");
+            }
+        }
     }
 }

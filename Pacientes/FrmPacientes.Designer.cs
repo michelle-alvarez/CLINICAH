@@ -688,7 +688,6 @@
             // 
             this.bteliminar.BackColor = System.Drawing.Color.Transparent;
             this.bteliminar.FlatAppearance.BorderSize = 3;
-            this.bteliminar.Image = global::Pacientes.Properties.Resources.icon;
             this.bteliminar.Location = new System.Drawing.Point(12, 507);
             this.bteliminar.Name = "bteliminar";
             this.bteliminar.Size = new System.Drawing.Size(120, 64);
@@ -702,7 +701,6 @@
             // 
             this.btn_cambios.BackColor = System.Drawing.Color.Transparent;
             this.btn_cambios.FlatAppearance.BorderSize = 3;
-            this.btn_cambios.Image = global::Pacientes.Properties.Resources.add_button_inside_black_circle;
             this.btn_cambios.Location = new System.Drawing.Point(12, 437);
             this.btn_cambios.Name = "btn_cambios";
             this.btn_cambios.Size = new System.Drawing.Size(120, 64);
@@ -716,7 +714,6 @@
             // 
             this.btn_registrar.BackColor = System.Drawing.Color.Transparent;
             this.btn_registrar.FlatAppearance.BorderSize = 3;
-            this.btn_registrar.Image = global::Pacientes.Properties.Resources.add_button_inside_black_circle;
             this.btn_registrar.Location = new System.Drawing.Point(12, 437);
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Size = new System.Drawing.Size(120, 64);
@@ -730,7 +727,6 @@
             // 
             this.btn_cancelar2.BackColor = System.Drawing.Color.Transparent;
             this.btn_cancelar2.FlatAppearance.BorderSize = 3;
-            this.btn_cancelar2.Image = global::Pacientes.Properties.Resources.icon;
             this.btn_cancelar2.Location = new System.Drawing.Point(12, 577);
             this.btn_cancelar2.Name = "btn_cancelar2";
             this.btn_cancelar2.Size = new System.Drawing.Size(120, 64);
@@ -744,7 +740,6 @@
             // 
             this.btn_editar.BackColor = System.Drawing.Color.Transparent;
             this.btn_editar.FlatAppearance.BorderSize = 3;
-            this.btn_editar.Image = global::Pacientes.Properties.Resources.pencil;
             this.btn_editar.Location = new System.Drawing.Point(12, 507);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(120, 64);
@@ -758,7 +753,6 @@
             // 
             this.btn_nuevo.BackColor = System.Drawing.Color.Transparent;
             this.btn_nuevo.FlatAppearance.BorderSize = 3;
-            this.btn_nuevo.Image = global::Pacientes.Properties.Resources.add_button_inside_black_circle;
             this.btn_nuevo.Location = new System.Drawing.Point(12, 437);
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(120, 64);

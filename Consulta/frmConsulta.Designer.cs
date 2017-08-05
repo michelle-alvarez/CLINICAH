@@ -53,32 +53,32 @@
             this.dataTable1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMotivoVisita = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtpresion = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbxAlergias = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnQuitar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.grdDetalle = new System.Windows.Forms.DataGridView();
             this.medicina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbProce = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
             this.btnBusqueda = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.lbxPato = new System.Windows.Forms.ListBox();
             this.tltLeyendas = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDetalle)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPeso
@@ -249,13 +249,13 @@
             this.label1.TabIndex = 99;
             this.label1.Text = "Nombre:";
             // 
-            // textBox2
+            // txtMotivoVisita
             // 
-            this.textBox2.Location = new System.Drawing.Point(476, 45);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(316, 22);
-            this.textBox2.TabIndex = 112;
+            this.txtMotivoVisita.Location = new System.Drawing.Point(476, 45);
+            this.txtMotivoVisita.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMotivoVisita.Name = "txtMotivoVisita";
+            this.txtMotivoVisita.Size = new System.Drawing.Size(316, 22);
+            this.txtMotivoVisita.TabIndex = 112;
             // 
             // label4
             // 
@@ -267,13 +267,13 @@
             this.label4.TabIndex = 111;
             this.label4.Text = "Motivo de Visita:";
             // 
-            // textBox8
+            // txtpresion
             // 
-            this.textBox8.Location = new System.Drawing.Point(476, 15);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(128, 22);
-            this.textBox8.TabIndex = 102;
+            this.txtpresion.Location = new System.Drawing.Point(476, 15);
+            this.txtpresion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtpresion.Name = "txtpresion";
+            this.txtpresion.Size = new System.Drawing.Size(128, 22);
+            this.txtpresion.TabIndex = 102;
             // 
             // label9
             // 
@@ -285,14 +285,14 @@
             this.label9.TabIndex = 101;
             this.label9.Text = "Presion:";
             // 
-            // listBox1
+            // lbxAlergias
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(12, 208);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(128, 84);
-            this.listBox1.TabIndex = 113;
+            this.lbxAlergias.FormattingEnabled = true;
+            this.lbxAlergias.ItemHeight = 16;
+            this.lbxAlergias.Location = new System.Drawing.Point(12, 208);
+            this.lbxAlergias.Name = "lbxAlergias";
+            this.lbxAlergias.Size = new System.Drawing.Size(128, 84);
+            this.lbxAlergias.TabIndex = 113;
             // 
             // label13
             // 
@@ -306,10 +306,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnQuitar);
+            this.groupBox1.Controls.Add(this.btnAgregar);
             this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.grdDetalle);
             this.groupBox1.Location = new System.Drawing.Point(369, 164);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(429, 179);
@@ -317,23 +317,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Medicinas";
             // 
-            // button2
+            // btnQuitar
             // 
-            this.button2.Location = new System.Drawing.Point(102, 98);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 75);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Quitar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnQuitar.Location = new System.Drawing.Point(102, 98);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(75, 75);
+            this.btnQuitar.TabIndex = 3;
+            this.btnQuitar.Text = "Quitar";
+            this.btnQuitar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnAgregar
             // 
-            this.button1.Location = new System.Drawing.Point(8, 98);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 75);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAgregar.Location = new System.Drawing.Point(8, 98);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 75);
+            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
@@ -344,17 +344,17 @@
             this.comboBox1.Size = new System.Drawing.Size(169, 24);
             this.comboBox1.TabIndex = 1;
             // 
-            // dataGridView1
+            // grdDetalle
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.grdDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdDetalle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.medicina,
             this.cantidad});
-            this.dataGridView1.Location = new System.Drawing.Point(203, 21);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 12;
-            this.dataGridView1.Size = new System.Drawing.Size(220, 152);
-            this.dataGridView1.TabIndex = 0;
+            this.grdDetalle.Location = new System.Drawing.Point(203, 21);
+            this.grdDetalle.Name = "grdDetalle";
+            this.grdDetalle.RowHeadersWidth = 12;
+            this.grdDetalle.Size = new System.Drawing.Size(220, 152);
+            this.grdDetalle.TabIndex = 0;
             // 
             // medicina
             // 
@@ -385,23 +385,23 @@
             this.label5.TabIndex = 116;
             this.label5.Text = "Observaciones:";
             // 
-            // button3
+            // btnGuardar
             // 
-            this.button3.Location = new System.Drawing.Point(93, 295);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 75);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Guardar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnGuardar.Location = new System.Drawing.Point(93, 295);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 75);
+            this.btnGuardar.TabIndex = 4;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnCancelar
             // 
-            this.button4.Location = new System.Drawing.Point(12, 295);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 75);
-            this.button4.TabIndex = 118;
-            this.button4.Text = "Cancelar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnCancelar.Location = new System.Drawing.Point(12, 295);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 75);
+            this.btnCancelar.TabIndex = 118;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -452,16 +452,16 @@
             this.label7.TabIndex = 123;
             this.label7.Text = "Patologias conocidas:";
             // 
-            // listBox2
+            // lbxPato
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(150, 208);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(128, 84);
-            this.listBox2.TabIndex = 122;
+            this.lbxPato.FormattingEnabled = true;
+            this.lbxPato.ItemHeight = 16;
+            this.lbxPato.Location = new System.Drawing.Point(150, 208);
+            this.lbxPato.Name = "lbxPato";
+            this.lbxPato.Size = new System.Drawing.Size(128, 84);
+            this.lbxPato.TabIndex = 122;
             // 
-            // txtVisita
+            // frmConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -469,18 +469,18 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.cmbProce);
-            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.lbxPato);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtObservaciones);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.lbxAlergias);
+            this.Controls.Add(this.txtMotivoVisita);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtpresion);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
@@ -499,12 +499,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.Name = "txtVisita";
+            this.Name = "frmConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Pacientes";
             this.Load += new System.EventHandler(this.frmConsulta_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDetalle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -548,28 +548,28 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         internal System.Windows.Forms.TextBox txtNombre;
         internal System.Windows.Forms.Label label1;
-        internal System.Windows.Forms.TextBox textBox2;
+        internal System.Windows.Forms.TextBox txtMotivoVisita;
         internal System.Windows.Forms.Label label4;
-        internal System.Windows.Forms.TextBox textBox8;
+        internal System.Windows.Forms.TextBox txtpresion;
         internal System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbxAlergias;
         internal System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnQuitar;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView grdDetalle;
         internal System.Windows.Forms.TextBox txtObservaciones;
         internal System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnCancelar;
         internal System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbProce;
         internal System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridViewTextBoxColumn medicina;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         internal System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox lbxPato;
         private System.Windows.Forms.ToolTip tltLeyendas;
     }
 }
