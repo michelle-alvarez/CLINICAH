@@ -13,7 +13,7 @@ namespace Login
 {
     public partial class frmContraseña : Form
     {
-        string cnxclinica = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=Salmos665;";
+        string cnxclinica = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=unicah;";
         int flag = 1;
         string ID = "";
 

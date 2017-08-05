@@ -13,7 +13,7 @@ namespace Medicamentos_y_Suministros
 {
     public partial class frmSuministros : Form
     {
-        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=Salmos665;";
+        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=unicah;";
         DataSet ds;
         public int statusForm = 0; //0 = Consultando; 1=Agregando; 2=Editando
         string sqlsuministros = "SELECT * FROM administracion.suministros WHERE nombre LIKE @filtro ORDER BY nombre";
