@@ -178,5 +178,7 @@ namespace Login
             Login.frmContraseña frmcontra = new Login.frmContraseña();
             frmcontra.Show();
         }
+
+
     }
 }
