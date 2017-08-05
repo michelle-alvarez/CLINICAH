@@ -42,8 +42,6 @@
             this.reorden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnexit = new System.Windows.Forms.Button();
             this.btncancelar = new System.Windows.Forms.Button();
-            this.btndelete = new System.Windows.Forms.Button();
-            this.btneditar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbreorden)).BeginInit();
@@ -163,7 +161,7 @@
             // 
             this.btnexit.Image = global::Medicamentos_y_Suministros.Properties.Resources.exit;
             this.btnexit.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnexit.Location = new System.Drawing.Point(168, 307);
+            this.btnexit.Location = new System.Drawing.Point(228, 248);
             this.btnexit.Name = "btnexit";
             this.btnexit.Size = new System.Drawing.Size(75, 49);
             this.btnexit.TabIndex = 59;
@@ -175,7 +173,7 @@
             // 
             this.btncancelar.Image = global::Medicamentos_y_Suministros.Properties.Resources.if_meanicons_24_197210;
             this.btncancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btncancelar.Location = new System.Drawing.Point(87, 307);
+            this.btncancelar.Location = new System.Drawing.Point(120, 248);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(75, 49);
             this.btncancelar.TabIndex = 58;
@@ -183,35 +181,11 @@
             this.btncancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btncancelar.UseVisualStyleBackColor = true;
             // 
-            // btndelete
-            // 
-            this.btndelete.Image = global::Medicamentos_y_Suministros.Properties.Resources.if_200_CircledMinus_183317;
-            this.btndelete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btndelete.Location = new System.Drawing.Point(210, 252);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(75, 49);
-            this.btndelete.TabIndex = 57;
-            this.btndelete.Text = "Eliminar";
-            this.btndelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btndelete.UseVisualStyleBackColor = true;
-            // 
-            // btneditar
-            // 
-            this.btneditar.Image = global::Medicamentos_y_Suministros.Properties.Resources.if_Compose_2190985;
-            this.btneditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btneditar.Location = new System.Drawing.Point(129, 252);
-            this.btneditar.Name = "btneditar";
-            this.btneditar.Size = new System.Drawing.Size(75, 49);
-            this.btneditar.TabIndex = 56;
-            this.btneditar.Text = "Editar";
-            this.btneditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btneditar.UseVisualStyleBackColor = true;
-            // 
             // btnagregar
             // 
             this.btnagregar.Image = global::Medicamentos_y_Suministros.Properties.Resources.if_199_CircledPlus_183316;
             this.btnagregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnagregar.Location = new System.Drawing.Point(48, 252);
+            this.btnagregar.Location = new System.Drawing.Point(15, 248);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(75, 49);
             this.btnagregar.TabIndex = 55;
@@ -223,11 +197,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 370);
+            this.ClientSize = new System.Drawing.Size(318, 311);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.btncancelar);
-            this.Controls.Add(this.btndelete);
-            this.Controls.Add(this.btneditar);
             this.Controls.Add(this.btnagregar);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label4);
@@ -252,8 +224,6 @@
 
         private System.Windows.Forms.Button btnexit;
         private System.Windows.Forms.Button btncancelar;
-        private System.Windows.Forms.Button btndelete;
-        private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label4;
