@@ -14,7 +14,8 @@ namespace Login
 {
     public partial class frmLogin : Form
     {
-        string cnxclinica = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=Salmos665;";
+
+        string cnxclinica = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=unicah;";
         public frmLogin()
         {
 
@@ -178,5 +179,7 @@ namespace Login
             Login.frmContraseña frmcontra = new Login.frmContraseña();
             frmcontra.Show();
         }
+
+
     }
 }

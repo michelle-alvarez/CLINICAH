@@ -14,7 +14,7 @@ namespace Medicos
 {
     public partial class frmMedicos : Form
     {
-        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=Salmos665;";
+        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=unicah;";
         DataSet ds;
         public int statusForm = 0; //0 = Consultando; 1=Agregando; 2=Editando
         string sqlUsuarios = "SELECT * FROM administracion.medicos WHERE idmedico LIKE @filtro OR nombrecompleto LIKE @filtro ORDER BY idmedico";

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLINICAH", "CLINICAH\CLINICAH.csproj", "{C2AC3AB1-F4A8-4C19-B470-F8F136DE53E6}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Login\Login.csproj", "{F355B923-9BD2-4291-AFD5-B772B3C4E428}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "Resources\Resources.csproj", "{9E02D8B6-5BA3-443B-83B6-DD46594F06C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mantenimientos", "Mantenimientos\Mantenimientos.csproj", "{220C109E-0DD4-471A-99A8-D54B63AB0AE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{9E02D8B6-5BA3-443B-83B6-DD46594F06C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E02D8B6-5BA3-443B-83B6-DD46594F06C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E02D8B6-5BA3-443B-83B6-DD46594F06C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{220C109E-0DD4-471A-99A8-D54B63AB0AE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{220C109E-0DD4-471A-99A8-D54B63AB0AE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{220C109E-0DD4-471A-99A8-D54B63AB0AE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{220C109E-0DD4-471A-99A8-D54B63AB0AE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

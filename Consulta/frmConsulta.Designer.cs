@@ -29,28 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.lbxAlergias = new System.Windows.Forms.ListBox();
-            this.btnCampus = new System.Windows.Forms.Button();
-            this.TextBox7 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.txtFechaNac = new System.Windows.Forms.TextBox();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.Label12 = new System.Windows.Forms.Label();
             this.txtAltura = new System.Windows.Forms.TextBox();
             this.Label11 = new System.Windows.Forms.Label();
             this.txtFenotipo = new System.Windows.Forms.TextBox();
             this.Label10 = new System.Windows.Forms.Label();
-            this.txtCarrera = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.Label6 = new System.Windows.Forms.Label();
-            this.TextBox3 = new System.Windows.Forms.TextBox();
+            this.txtEdad = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
-            this.Label4 = new System.Windows.Forms.Label();
             this.txtCuenta = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
-            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -63,60 +51,39 @@
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.dataTable1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.btnNoRegistrado = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtMotivoVisita = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtpresion = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lbxAlergias = new System.Windows.Forms.ListBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnQuitar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.grdDetalle = new System.Windows.Forms.DataGridView();
+            this.medicina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtObservaciones = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbProce = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnBusqueda = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lbxPato = new System.Windows.Forms.ListBox();
+            this.tltLeyendas = new System.Windows.Forms.ToolTip(this.components);
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDetalle)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lbxAlergias
-            // 
-            this.lbxAlergias.FormattingEnabled = true;
-            this.lbxAlergias.ItemHeight = 16;
-            this.lbxAlergias.Location = new System.Drawing.Point(644, 539);
-            this.lbxAlergias.Margin = new System.Windows.Forms.Padding(4);
-            this.lbxAlergias.Name = "lbxAlergias";
-            this.lbxAlergias.Size = new System.Drawing.Size(220, 116);
-            this.lbxAlergias.TabIndex = 72;
-            // 
-            // btnCampus
-            // 
-            this.btnCampus.Location = new System.Drawing.Point(12, 516);
-            this.btnCampus.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCampus.Name = "btnCampus";
-            this.btnCampus.Size = new System.Drawing.Size(80, 74);
-            this.btnCampus.TabIndex = 61;
-            this.btnCampus.Text = "Campus";
-            this.btnCampus.UseVisualStyleBackColor = true;
-            // 
-            // TextBox7
-            // 
-            this.TextBox7.Location = new System.Drawing.Point(149, 539);
-            this.TextBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.TextBox7.Multiline = true;
-            this.TextBox7.Name = "TextBox7";
-            this.TextBox7.Size = new System.Drawing.Size(488, 116);
-            this.TextBox7.TabIndex = 57;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(645, 531);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(220, 116);
-            this.listBox1.TabIndex = 97;
-            // 
-            // txtFechaNac
-            // 
-            this.txtFechaNac.Location = new System.Drawing.Point(354, 435);
-            this.txtFechaNac.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFechaNac.Name = "txtFechaNac";
-            this.txtFechaNac.Size = new System.Drawing.Size(128, 22);
-            this.txtFechaNac.TabIndex = 96;
             // 
             // txtPeso
             // 
-            this.txtPeso.Location = new System.Drawing.Point(645, 493);
+            this.txtPeso.Location = new System.Drawing.Point(139, 161);
             this.txtPeso.Margin = new System.Windows.Forms.Padding(4);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(128, 22);
@@ -125,7 +92,7 @@
             // Label12
             // 
             this.Label12.AutoSize = true;
-            this.Label12.Location = new System.Drawing.Point(596, 495);
+            this.Label12.Location = new System.Drawing.Point(88, 162);
             this.Label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label12.Name = "Label12";
             this.Label12.Size = new System.Drawing.Size(43, 16);
@@ -134,7 +101,7 @@
             // 
             // txtAltura
             // 
-            this.txtAltura.Location = new System.Drawing.Point(354, 494);
+            this.txtAltura.Location = new System.Drawing.Point(139, 103);
             this.txtAltura.Margin = new System.Windows.Forms.Padding(4);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(128, 22);
@@ -143,7 +110,7 @@
             // Label11
             // 
             this.Label11.AutoSize = true;
-            this.Label11.Location = new System.Drawing.Point(302, 497);
+            this.Label11.Location = new System.Drawing.Point(86, 106);
             this.Label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label11.Name = "Label11";
             this.Label11.Size = new System.Drawing.Size(45, 16);
@@ -152,7 +119,7 @@
             // 
             // txtFenotipo
             // 
-            this.txtFenotipo.Location = new System.Drawing.Point(645, 464);
+            this.txtFenotipo.Location = new System.Drawing.Point(139, 133);
             this.txtFenotipo.Margin = new System.Windows.Forms.Padding(4);
             this.txtFenotipo.Name = "txtFenotipo";
             this.txtFenotipo.Size = new System.Drawing.Size(128, 22);
@@ -161,100 +128,43 @@
             // Label10
             // 
             this.Label10.AutoSize = true;
-            this.Label10.Location = new System.Drawing.Point(532, 466);
+            this.Label10.Location = new System.Drawing.Point(26, 133);
             this.Label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label10.Name = "Label10";
             this.Label10.Size = new System.Drawing.Size(105, 16);
             this.Label10.TabIndex = 90;
             this.Label10.Text = "Tipo de Sangre:";
             // 
-            // txtCarrera
+            // txtEdad
             // 
-            this.txtCarrera.Location = new System.Drawing.Point(645, 435);
-            this.txtCarrera.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCarrera.Name = "txtCarrera";
-            this.txtCarrera.Size = new System.Drawing.Size(242, 22);
-            this.txtCarrera.TabIndex = 89;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(150, 531);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(488, 116);
-            this.textBox1.TabIndex = 84;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(893, 435);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(197, 212);
-            this.listBox2.TabIndex = 83;
-            // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Location = new System.Drawing.Point(890, 415);
-            this.Label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(144, 16);
-            this.Label7.TabIndex = 82;
-            this.Label7.Text = "Patologias Conocidas:";
-            // 
-            // Label6
-            // 
-            this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(581, 438);
-            this.Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(56, 16);
-            this.Label6.TabIndex = 79;
-            this.Label6.Text = "Carrera:";
-            // 
-            // TextBox3
-            // 
-            this.TextBox3.Location = new System.Drawing.Point(354, 466);
-            this.TextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.TextBox3.Name = "TextBox3";
-            this.TextBox3.Size = new System.Drawing.Size(128, 22);
-            this.TextBox3.TabIndex = 78;
+            this.txtEdad.Location = new System.Drawing.Point(139, 75);
+            this.txtEdad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(128, 22);
+            this.txtEdad.TabIndex = 78;
             // 
             // Label3
             // 
             this.Label3.AutoSize = true;
-            this.Label3.Location = new System.Drawing.Point(302, 468);
+            this.Label3.Location = new System.Drawing.Point(86, 78);
             this.Label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(44, 16);
             this.Label3.TabIndex = 77;
             this.Label3.Text = "Edad:";
             // 
-            // Label4
-            // 
-            this.Label4.AutoSize = true;
-            this.Label4.Location = new System.Drawing.Point(206, 438);
-            this.Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(139, 16);
-            this.Label4.TabIndex = 76;
-            this.Label4.Text = "Fecha de Nacimiento:";
-            // 
             // txtCuenta
             // 
-            this.txtCuenta.Location = new System.Drawing.Point(215, 27);
+            this.txtCuenta.Location = new System.Drawing.Point(139, 15);
             this.txtCuenta.Margin = new System.Windows.Forms.Padding(4);
             this.txtCuenta.Name = "txtCuenta";
-            this.txtCuenta.Size = new System.Drawing.Size(256, 22);
+            this.txtCuenta.Size = new System.Drawing.Size(186, 22);
             this.txtCuenta.TabIndex = 75;
             // 
             // Label2
             // 
             this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(154, 30);
+            this.Label2.Location = new System.Drawing.Point(78, 18);
             this.Label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(53, 16);
@@ -321,51 +231,280 @@
             this.dataTable1BindingNavigatorSaveItem.Name = "dataTable1BindingNavigatorSaveItem";
             this.dataTable1BindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
             // 
-            // btnNoRegistrado
+            // txtNombre
             // 
-            this.btnNoRegistrado.Location = new System.Drawing.Point(492, 13);
-            this.btnNoRegistrado.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNoRegistrado.Name = "btnNoRegistrado";
-            this.btnNoRegistrado.Size = new System.Drawing.Size(146, 51);
-            this.btnNoRegistrado.TabIndex = 98;
-            this.btnNoRegistrado.Text = "Paciente No Registrado";
-            this.btnNoRegistrado.UseVisualStyleBackColor = true;
+            this.txtNombre.Location = new System.Drawing.Point(139, 45);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(128, 22);
+            this.txtNombre.TabIndex = 100;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(70, 48);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 16);
+            this.label1.TabIndex = 99;
+            this.label1.Text = "Nombre:";
+            // 
+            // txtMotivoVisita
+            // 
+            this.txtMotivoVisita.Location = new System.Drawing.Point(476, 45);
+            this.txtMotivoVisita.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMotivoVisita.Name = "txtMotivoVisita";
+            this.txtMotivoVisita.Size = new System.Drawing.Size(316, 22);
+            this.txtMotivoVisita.TabIndex = 112;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(366, 48);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(106, 16);
+            this.label4.TabIndex = 111;
+            this.label4.Text = "Motivo de Visita:";
+            // 
+            // txtpresion
+            // 
+            this.txtpresion.Location = new System.Drawing.Point(476, 15);
+            this.txtpresion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtpresion.Name = "txtpresion";
+            this.txtpresion.Size = new System.Drawing.Size(128, 22);
+            this.txtpresion.TabIndex = 102;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(415, 18);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 16);
+            this.label9.TabIndex = 101;
+            this.label9.Text = "Presion:";
+            // 
+            // lbxAlergias
+            // 
+            this.lbxAlergias.FormattingEnabled = true;
+            this.lbxAlergias.ItemHeight = 16;
+            this.lbxAlergias.Location = new System.Drawing.Point(12, 208);
+            this.lbxAlergias.Name = "lbxAlergias";
+            this.lbxAlergias.Size = new System.Drawing.Size(128, 84);
+            this.lbxAlergias.TabIndex = 113;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(9, 189);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(127, 16);
+            this.label13.TabIndex = 114;
+            this.label13.Text = "Alergias conocidas:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnQuitar);
+            this.groupBox1.Controls.Add(this.btnAgregar);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.grdDetalle);
+            this.groupBox1.Location = new System.Drawing.Point(369, 164);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(429, 179);
+            this.groupBox1.TabIndex = 115;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Medicinas";
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.Location = new System.Drawing.Point(102, 98);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(75, 75);
+            this.btnQuitar.TabIndex = 3;
+            this.btnQuitar.Text = "Quitar";
+            this.btnQuitar.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(8, 98);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 75);
+            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(8, 48);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(169, 24);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // grdDetalle
+            // 
+            this.grdDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdDetalle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.medicina,
+            this.cantidad});
+            this.grdDetalle.Location = new System.Drawing.Point(203, 21);
+            this.grdDetalle.Name = "grdDetalle";
+            this.grdDetalle.RowHeadersWidth = 12;
+            this.grdDetalle.Size = new System.Drawing.Size(220, 152);
+            this.grdDetalle.TabIndex = 0;
+            // 
+            // medicina
+            // 
+            this.medicina.HeaderText = "medicina";
+            this.medicina.Name = "medicina";
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "cantidad";
+            this.cantidad.Name = "cantidad";
+            // 
+            // txtObservaciones
+            // 
+            this.txtObservaciones.Location = new System.Drawing.Point(476, 105);
+            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.txtObservaciones.Multiline = true;
+            this.txtObservaciones.Name = "txtObservaciones";
+            this.txtObservaciones.Size = new System.Drawing.Size(316, 52);
+            this.txtObservaciones.TabIndex = 117;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(369, 108);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 16);
+            this.label5.TabIndex = 116;
+            this.label5.Text = "Observaciones:";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(93, 295);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 75);
+            this.btnGuardar.TabIndex = 4;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(12, 295);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 75);
+            this.btnCancelar.TabIndex = 118;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(374, 77);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(98, 16);
+            this.label6.TabIndex = 119;
+            this.label6.Text = "Procedimiento:";
+            // 
+            // cmbProce
+            // 
+            this.cmbProce.FormattingEnabled = true;
+            this.cmbProce.Location = new System.Drawing.Point(476, 74);
+            this.cmbProce.Name = "cmbProce";
+            this.cmbProce.Size = new System.Drawing.Size(284, 24);
+            this.cmbProce.TabIndex = 120;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(767, 74);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(25, 25);
+            this.button5.TabIndex = 121;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // btnBusqueda
+            // 
+            this.btnBusqueda.Image = global::Consulta.Properties.Resources.lupa;
+            this.btnBusqueda.Location = new System.Drawing.Point(275, 43);
+            this.btnBusqueda.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBusqueda.Name = "btnBusqueda";
+            this.btnBusqueda.Size = new System.Drawing.Size(50, 50);
+            this.btnBusqueda.TabIndex = 98;
+            this.tltLeyendas.SetToolTip(this.btnBusqueda, "Buscar");
+            this.btnBusqueda.UseVisualStyleBackColor = true;
+            this.btnBusqueda.Click += new System.EventHandler(this.btnBusqueda_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(147, 189);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(142, 16);
+            this.label7.TabIndex = 123;
+            this.label7.Text = "Patologias conocidas:";
+            // 
+            // lbxPato
+            // 
+            this.lbxPato.FormattingEnabled = true;
+            this.lbxPato.ItemHeight = 16;
+            this.lbxPato.Location = new System.Drawing.Point(150, 208);
+            this.lbxPato.Name = "lbxPato";
+            this.lbxPato.Size = new System.Drawing.Size(128, 84);
+            this.lbxPato.TabIndex = 122;
             // 
             // frmConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1120, 675);
-            this.Controls.Add(this.btnNoRegistrado);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.txtFechaNac);
+            this.ClientSize = new System.Drawing.Size(810, 376);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.cmbProce);
+            this.Controls.Add(this.lbxPato);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.txtObservaciones);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.lbxAlergias);
+            this.Controls.Add(this.txtMotivoVisita);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtpresion);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnBusqueda);
             this.Controls.Add(this.txtPeso);
             this.Controls.Add(this.Label12);
             this.Controls.Add(this.txtAltura);
             this.Controls.Add(this.Label11);
             this.Controls.Add(this.txtFenotipo);
             this.Controls.Add(this.Label10);
-            this.Controls.Add(this.txtCarrera);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.Label7);
-            this.Controls.Add(this.Label6);
-            this.Controls.Add(this.TextBox3);
+            this.Controls.Add(this.txtEdad);
             this.Controls.Add(this.Label3);
-            this.Controls.Add(this.Label4);
             this.Controls.Add(this.txtCuenta);
             this.Controls.Add(this.Label2);
-            this.Controls.Add(this.lbxAlergias);
-            this.Controls.Add(this.btnCampus);
-            this.Controls.Add(this.TextBox7);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "frmConsulta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Pacientes";
             this.Load += new System.EventHandler(this.frmConsulta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grdDetalle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,28 +512,17 @@
 
         #endregion
 
-        internal System.Windows.Forms.ListBox lbxAlergias;
-        internal System.Windows.Forms.Button btnCampus;
-        internal System.Windows.Forms.TextBox TextBox7;
-        internal System.Windows.Forms.ListBox listBox1;
-        internal System.Windows.Forms.TextBox txtFechaNac;
+        internal System.Windows.Forms.Button btnBusqueda;
         internal System.Windows.Forms.TextBox txtPeso;
         internal System.Windows.Forms.Label Label12;
         internal System.Windows.Forms.TextBox txtAltura;
         internal System.Windows.Forms.Label Label11;
         internal System.Windows.Forms.TextBox txtFenotipo;
         internal System.Windows.Forms.Label Label10;
-        internal System.Windows.Forms.TextBox txtCarrera;
-        internal System.Windows.Forms.TextBox textBox1;
-        internal System.Windows.Forms.ListBox listBox2;
-        internal System.Windows.Forms.Label Label7;
-        internal System.Windows.Forms.Label Label6;
-        internal System.Windows.Forms.TextBox TextBox3;
+        internal System.Windows.Forms.TextBox txtEdad;
         internal System.Windows.Forms.Label Label3;
-        internal System.Windows.Forms.Label Label4;
         internal System.Windows.Forms.TextBox txtCuenta;
         internal System.Windows.Forms.Label Label2;
-        private System.Windows.Forms.BindingSource dataTable1BindingSource;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -418,7 +546,31 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        internal System.Windows.Forms.Button btnNoRegistrado;
+        internal System.Windows.Forms.TextBox txtNombre;
+        internal System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.TextBox txtMotivoVisita;
+        internal System.Windows.Forms.Label label4;
+        internal System.Windows.Forms.TextBox txtpresion;
+        internal System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ListBox lbxAlergias;
+        internal System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnQuitar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView grdDetalle;
+        internal System.Windows.Forms.TextBox txtObservaciones;
+        internal System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnCancelar;
+        internal System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbProce;
+        internal System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn medicina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
+        internal System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ListBox lbxPato;
+        private System.Windows.Forms.ToolTip tltLeyendas;
     }
 }
 
