@@ -1,6 +1,6 @@
 ﻿namespace Consulta
 {
-    partial class txtVisita
+    partial class frmConsulta
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -374,7 +374,6 @@
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(316, 52);
             this.txtObservaciones.TabIndex = 117;
-            this.txtObservaciones.TextChanged += new System.EventHandler(this.txtObservaciones_TextChanged);
             // 
             // label5
             // 
