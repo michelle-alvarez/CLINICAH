@@ -111,3 +111,6 @@ C:\Users\ALUMNO\Source\Repos\CLINICAH\Consulta\obj\Debug\Consulta.pdb
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Consulta\obj\Debug\Consulta.frmSearch.resources
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Consulta\bin\Debug\Resources.dll
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Consulta\bin\Debug\Resources.pdb
+C:\Users\Michelle\Source\Repos2\Consulta\obj\Debug\Consulta.frmSearch.resources
+C:\Users\Michelle\Source\Repos2\Consulta\bin\Debug\Resources.dll
+C:\Users\Michelle\Source\Repos2\Consulta\bin\Debug\Resources.pdb

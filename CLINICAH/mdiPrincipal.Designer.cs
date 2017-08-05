@@ -64,7 +64,7 @@
             this.privilegiosToolStripMenuItem});
             this.mst.Location = new System.Drawing.Point(0, 0);
             this.mst.Name = "mst";
-            this.mst.Size = new System.Drawing.Size(1423, 24);
+            this.mst.Size = new System.Drawing.Size(1358, 24);
             this.mst.TabIndex = 1;
             this.mst.Text = "menuStrip1";
             // 
@@ -131,7 +131,7 @@
             this.medicosToolStripMenuItem1});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.reportesToolStripMenuItem.Text = "Reportes";
+            this.reportesToolStripMenuItem.Text = "&Reportes";
             // 
             // medicosToolStripMenuItem1
             // 
@@ -146,7 +146,7 @@
             this.medicosToolStripMenuItem2});
             this.privilegiosToolStripMenuItem.Name = "privilegiosToolStripMenuItem";
             this.privilegiosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.privilegiosToolStripMenuItem.Text = "Privilegios";
+            this.privilegiosToolStripMenuItem.Text = "Pri&vilegios";
             // 
             // medicosToolStripMenuItem2
             // 
@@ -165,7 +165,7 @@
             this.MenuProcedimientos});
             this.tlsr.Location = new System.Drawing.Point(0, 24);
             this.tlsr.Name = "tlsr";
-            this.tlsr.Size = new System.Drawing.Size(1423, 55);
+            this.tlsr.Size = new System.Drawing.Size(1358, 55);
             this.tlsr.TabIndex = 2;
             this.tlsr.Text = "tlst";
             // 
@@ -210,7 +210,7 @@
             // 
             this.lb_nom.AutoSize = true;
             this.lb_nom.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_nom.Location = new System.Drawing.Point(1077, 24);
+            this.lb_nom.Location = new System.Drawing.Point(1015, 24);
             this.lb_nom.Name = "lb_nom";
             this.lb_nom.Size = new System.Drawing.Size(17, 19);
             this.lb_nom.TabIndex = 7;
@@ -220,7 +220,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(992, 24);
+            this.label1.Location = new System.Drawing.Point(930, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 19);
             this.label1.TabIndex = 6;
@@ -228,7 +228,7 @@
             // 
             // bt_logout
             // 
-            this.bt_logout.Location = new System.Drawing.Point(1304, 20);
+            this.bt_logout.Location = new System.Drawing.Point(1258, 27);
             this.bt_logout.Name = "bt_logout";
             this.bt_logout.Size = new System.Drawing.Size(88, 23);
             this.bt_logout.TabIndex = 10;
@@ -240,7 +240,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1423, 400);
+            this.ClientSize = new System.Drawing.Size(1358, 400);
             this.Controls.Add(this.bt_logout);
             this.Controls.Add(this.lb_nom);
             this.Controls.Add(this.label1);

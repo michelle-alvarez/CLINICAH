@@ -1,6 +1,6 @@
 ﻿namespace Consulta
 {
-    partial class frmConsulta
+    partial class txtVisita
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.Label12 = new System.Windows.Forms.Label();
             this.txtAltura = new System.Windows.Forms.TextBox();
             this.Label11 = new System.Windows.Forms.Label();
             this.txtFenotipo = new System.Windows.Forms.TextBox();
             this.Label10 = new System.Windows.Forms.Label();
-            this.TextBox3 = new System.Windows.Forms.TextBox();
+            this.txtEdad = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
             this.txtCuenta = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
@@ -50,7 +51,7 @@
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.dataTable1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -63,18 +64,19 @@
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.medicina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtObservaciones = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbProce = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
             this.btnBusqueda = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
-            this.medicina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tltLeyendas = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -133,13 +135,13 @@
             this.Label10.TabIndex = 90;
             this.Label10.Text = "Tipo de Sangre:";
             // 
-            // TextBox3
+            // txtEdad
             // 
-            this.TextBox3.Location = new System.Drawing.Point(139, 75);
-            this.TextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.TextBox3.Name = "TextBox3";
-            this.TextBox3.Size = new System.Drawing.Size(128, 22);
-            this.TextBox3.TabIndex = 78;
+            this.txtEdad.Location = new System.Drawing.Point(139, 75);
+            this.txtEdad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(128, 22);
+            this.txtEdad.TabIndex = 78;
             // 
             // Label3
             // 
@@ -229,13 +231,13 @@
             this.dataTable1BindingNavigatorSaveItem.Name = "dataTable1BindingNavigatorSaveItem";
             this.dataTable1BindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(139, 45);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 22);
-            this.textBox1.TabIndex = 100;
+            this.txtNombre.Location = new System.Drawing.Point(139, 45);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(128, 22);
+            this.txtNombre.TabIndex = 100;
             // 
             // label1
             // 
@@ -354,15 +356,25 @@
             this.dataGridView1.Size = new System.Drawing.Size(220, 152);
             this.dataGridView1.TabIndex = 0;
             // 
-            // textBox4
+            // medicina
             // 
-            this.textBox4.Location = new System.Drawing.Point(476, 105);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(316, 52);
-            this.textBox4.TabIndex = 117;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.medicina.HeaderText = "medicina";
+            this.medicina.Name = "medicina";
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "cantidad";
+            this.cantidad.Name = "cantidad";
+            // 
+            // txtObservaciones
+            // 
+            this.txtObservaciones.Location = new System.Drawing.Point(476, 105);
+            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.txtObservaciones.Multiline = true;
+            this.txtObservaciones.Name = "txtObservaciones";
+            this.txtObservaciones.Size = new System.Drawing.Size(316, 52);
+            this.txtObservaciones.TabIndex = 117;
+            this.txtObservaciones.TextChanged += new System.EventHandler(this.txtObservaciones_TextChanged);
             // 
             // label5
             // 
@@ -402,13 +414,13 @@
             this.label6.TabIndex = 119;
             this.label6.Text = "Procedimiento:";
             // 
-            // comboBox2
+            // cmbProce
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(476, 74);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(284, 24);
-            this.comboBox2.TabIndex = 120;
+            this.cmbProce.FormattingEnabled = true;
+            this.cmbProce.Location = new System.Drawing.Point(476, 74);
+            this.cmbProce.Name = "cmbProce";
+            this.cmbProce.Size = new System.Drawing.Size(284, 24);
+            this.cmbProce.TabIndex = 120;
             // 
             // button5
             // 
@@ -418,15 +430,16 @@
             this.button5.Size = new System.Drawing.Size(25, 25);
             this.button5.TabIndex = 121;
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnBusqueda
             // 
+            this.btnBusqueda.Image = global::Consulta.Properties.Resources.lupa;
             this.btnBusqueda.Location = new System.Drawing.Point(275, 43);
             this.btnBusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.btnBusqueda.Name = "btnBusqueda";
             this.btnBusqueda.Size = new System.Drawing.Size(50, 50);
             this.btnBusqueda.TabIndex = 98;
+            this.tltLeyendas.SetToolTip(this.btnBusqueda, "Buscar");
             this.btnBusqueda.UseVisualStyleBackColor = true;
             this.btnBusqueda.Click += new System.EventHandler(this.btnBusqueda_Click);
             // 
@@ -449,29 +462,19 @@
             this.listBox2.Size = new System.Drawing.Size(128, 84);
             this.listBox2.TabIndex = 122;
             // 
-            // medicina
-            // 
-            this.medicina.HeaderText = "medicina";
-            this.medicina.Name = "medicina";
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "cantidad";
-            this.cantidad.Name = "cantidad";
-            // 
-            // frmConsulta
+            // txtVisita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 376);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbProce);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtObservaciones);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label13);
@@ -480,7 +483,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBusqueda);
             this.Controls.Add(this.txtPeso);
@@ -489,14 +492,15 @@
             this.Controls.Add(this.Label11);
             this.Controls.Add(this.txtFenotipo);
             this.Controls.Add(this.Label10);
-            this.Controls.Add(this.TextBox3);
+            this.Controls.Add(this.txtEdad);
             this.Controls.Add(this.Label3);
             this.Controls.Add(this.txtCuenta);
             this.Controls.Add(this.Label2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmConsulta";
+            this.MaximizeBox = false;
+            this.Name = "txtVisita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Pacientes";
             this.Load += new System.EventHandler(this.frmConsulta_Load);
@@ -516,7 +520,7 @@
         internal System.Windows.Forms.Label Label11;
         internal System.Windows.Forms.TextBox txtFenotipo;
         internal System.Windows.Forms.Label Label10;
-        internal System.Windows.Forms.TextBox TextBox3;
+        internal System.Windows.Forms.TextBox txtEdad;
         internal System.Windows.Forms.Label Label3;
         internal System.Windows.Forms.TextBox txtCuenta;
         internal System.Windows.Forms.Label Label2;
@@ -543,7 +547,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        internal System.Windows.Forms.TextBox textBox1;
+        internal System.Windows.Forms.TextBox txtNombre;
         internal System.Windows.Forms.Label label1;
         internal System.Windows.Forms.TextBox textBox2;
         internal System.Windows.Forms.Label label4;
@@ -556,17 +560,18 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        internal System.Windows.Forms.TextBox textBox4;
+        internal System.Windows.Forms.TextBox txtObservaciones;
         internal System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         internal System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbProce;
         internal System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridViewTextBoxColumn medicina;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         internal System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ToolTip tltLeyendas;
     }
 }
 

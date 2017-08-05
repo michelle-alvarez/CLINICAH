@@ -11,9 +11,9 @@ using Npgsql;
 
 namespace Consulta
 {
-    public partial class frmConsulta : Form
+    public partial class txtVisita : Form
     {
-        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=marathon1;";
+        string cnx = "Server=localhost; Port= 5432; Database=clinicas; User Id=postgres; Password=malteada28;";
         DataSet ds;
         public int statusForm = 0; //0 = Consultando; 1=Agregando; 2=Editando
         string sqlMedicamentosCombo = "SELECT idmedicamentos,nombre FROM administracion.medicamentos ORDER BY idmedicamentos ASC ";
@@ -24,24 +24,33 @@ namespace Consulta
         string sqlPadecimientos = "SELECT * FROM administracion.medicamentos WHERE idmedicamentos LIKE @filtro OR nombre LIKE @filtro ORDER BY nombre";
         string sqlProcedimientos = "SELECT * FROM administracion.medicamentos WHERE idmedicamentos LIKE @filtro OR nombre LIKE @filtro ORDER BY nombre";
 
-
-
-
         NpgsqlDataAdapter damedicamentos;
-        public frmConsulta()
+        public txtVisita()
         {
             InitializeComponent();
-           
         }
 
         private void frmConsulta_Load(object sender, EventArgs e)
         {
+            ds = new DataSet();
+
+            //Asignamos los parametros de busqueda en vacio para que cargue todos los usuarios
+
+            damedicamentos.SelectCommand.Parameters.AddWithValue("@filtro", "%%");
+            //Llenamos el Dataset con los datos del Table Adapter
+            damedicamentos.Fill(ds, "paciente");
+
+            txtCuenta.DataBindings.Add("text", ds.Tables["paciente"], "idpaciente");
+            txtNombre.DataBindings.Add("text", ds.Tables["paciente"], "paciente");
+            txtEdad.DataBindings.Add("text", ds.Tables["paciente"], "edad");
+            txtAltura.DataBindings.Add("text", ds.Tables["paciente"], "altura");
+            txtFenotipo.DataBindings.Add("text", ds.Tables["paciente"], "tiposangre");
+            txtPeso.DataBindings.Add("text", ds.Tables["paciente"], "peso");
 
         }
-
         private void btnBusqueda_Click(object sender, EventArgs e)
         {
-            Consulta.frmSearch serch = new Consulta.frmSearch();
+            frmSearch serch = new frmSearch();
 
             serch.ShowDialog();
             txtCuenta.Text = Resources.Propiedades.pacienteenconsulta;
@@ -49,8 +58,6 @@ namespace Consulta
             {
                 activar(true);
             }
-
-
         }
 
         private void activar(bool condicion)
@@ -63,18 +70,11 @@ namespace Consulta
             //dtpvencimiento.Enabled = condicion;
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void txtObservaciones_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        // Draw the new button. 
-       
     }
 }
 

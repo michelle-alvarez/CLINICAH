@@ -117,6 +117,7 @@
     <None Include="Resources\lupa.png" />
     <None Include="Resources\if_11_Search_106236.ico" />
     <None Include="Resources\if_info_383124.png" />
+    <None Include="Resources\lupa.ico" />
     <Content Include="Resources\user.ico" />
   </ItemGroup>
   <ItemGroup>
