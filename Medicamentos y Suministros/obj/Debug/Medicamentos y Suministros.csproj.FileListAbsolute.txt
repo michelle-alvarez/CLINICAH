@@ -129,3 +129,5 @@ C:\Users\ALUMNO\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medic
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.csproj.GenerateResource.Cache
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.exe
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Medicamentos y Suministros\obj\Debug\Medicamentos y Suministros.pdb
+C:\Users\Michelle\Source\Repos2\Medicamentos y Suministros\obj\Debug\Medicamentos_y_Suministros.EntregaMantenimiento.resources
+C:\Users\Michelle\Source\Repos2\Medicamentos y Suministros\obj\Debug\Medicamentos_y_Suministros.EntregaSuministros.resources
