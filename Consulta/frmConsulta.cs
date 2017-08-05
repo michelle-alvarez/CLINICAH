@@ -13,7 +13,7 @@ namespace Consulta
 {
     public partial class frmConsulta : Form
     {
-        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=marathon1;";
+        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=unicah;";
         DataSet ds;
         public int statusForm = 0; //0 = Consultando; 1=Agregando; 2=Editando
         string sqlMedicamentosCombo = "SELECT idmedicamentos,nombre FROM administracion.medicamentos ORDER BY idmedicamentos ASC ";
