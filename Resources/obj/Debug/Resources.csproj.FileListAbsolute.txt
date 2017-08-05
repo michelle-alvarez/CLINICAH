@@ -31,3 +31,8 @@ C:\Users\Michelle\Source\Repos2\Resources\bin\Debug\Resources.pdb
 C:\Users\Michelle\Source\Repos2\Resources\obj\Debug\Resources.csprojResolveAssemblyReference.cache
 C:\Users\Michelle\Source\Repos2\Resources\obj\Debug\Resources.dll
 C:\Users\Michelle\Source\Repos2\Resources\obj\Debug\Resources.pdb
+C:\Users\ALUMNO\Source\Repos\CLINICAH\Resources\bin\Debug\Resources.dll
+C:\Users\ALUMNO\Source\Repos\CLINICAH\Resources\bin\Debug\Resources.pdb
+C:\Users\ALUMNO\Source\Repos\CLINICAH\Resources\obj\Debug\Resources.csprojResolveAssemblyReference.cache
+C:\Users\ALUMNO\Source\Repos\CLINICAH\Resources\obj\Debug\Resources.dll
+C:\Users\ALUMNO\Source\Repos\CLINICAH\Resources\obj\Debug\Resources.pdb
