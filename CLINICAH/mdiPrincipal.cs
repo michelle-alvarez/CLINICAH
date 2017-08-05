@@ -44,7 +44,7 @@ namespace CLINICAH
 
         private void MenuProcedimientos_Click(object sender, EventArgs e)
         {
-            Procedimientos.frmProcedimientos procedimientos = new Procedimientos.frmProcedimientos();
+            Procedimientos.frmProcedimientos1 procedimientos = new Procedimientos.frmProcedimientos1();
             procedimientos.MdiParent = this;
             procedimientos.Show();
         }
