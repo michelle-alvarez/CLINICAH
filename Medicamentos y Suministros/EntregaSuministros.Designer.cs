@@ -31,21 +31,21 @@
             this.btnexit = new System.Windows.Forms.Button();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nmbcantidad = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.cmbreorden = new System.Windows.Forms.NumericUpDown();
+            this.nmbreorden = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtmedicamento = new System.Windows.Forms.TextBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGMedicamentos = new System.Windows.Forms.DataGridView();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reorden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbreorden)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmbcantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmbreorden)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGMedicamentos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnexit
@@ -59,6 +59,7 @@
             this.btnexit.Text = "Salir";
             this.btnexit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnexit.UseVisualStyleBackColor = true;
+            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
             // btncancelar
             // 
@@ -83,18 +84,19 @@
             this.btnagregar.Text = "Agregar";
             this.btnagregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnagregar.UseVisualStyleBackColor = true;
+            this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
-            // numericUpDown1
+            // nmbcantidad
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(66, 221);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.nmbcantidad.Location = new System.Drawing.Point(66, 221);
+            this.nmbcantidad.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(54, 20);
-            this.numericUpDown1.TabIndex = 67;
+            this.nmbcantidad.Name = "nmbcantidad";
+            this.nmbcantidad.Size = new System.Drawing.Size(54, 20);
+            this.nmbcantidad.TabIndex = 67;
             // 
             // label4
             // 
@@ -105,17 +107,17 @@
             this.label4.TabIndex = 68;
             this.label4.Text = "Cantidad";
             // 
-            // cmbreorden
+            // nmbreorden
             // 
-            this.cmbreorden.Location = new System.Drawing.Point(248, 222);
-            this.cmbreorden.Maximum = new decimal(new int[] {
+            this.nmbreorden.Location = new System.Drawing.Point(248, 222);
+            this.nmbreorden.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-            this.cmbreorden.Name = "cmbreorden";
-            this.cmbreorden.Size = new System.Drawing.Size(54, 20);
-            this.cmbreorden.TabIndex = 64;
+            this.nmbreorden.Name = "nmbreorden";
+            this.nmbreorden.Size = new System.Drawing.Size(54, 20);
+            this.nmbreorden.TabIndex = 64;
             // 
             // label2
             // 
@@ -148,6 +150,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(245, 20);
             this.txtBuscar.TabIndex = 62;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label1
             // 
@@ -158,22 +161,22 @@
             this.label1.TabIndex = 61;
             this.label1.Text = "Buscar";
             // 
-            // dataGridView1
+            // DGMedicamentos
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGMedicamentos.AllowUserToAddRows = false;
+            this.DGMedicamentos.AllowUserToDeleteRows = false;
+            this.DGMedicamentos.AllowUserToOrderColumns = true;
+            this.DGMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGMedicamentos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre,
             this.cantidad,
             this.reorden});
-            this.dataGridView1.Location = new System.Drawing.Point(11, 37);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 20;
-            this.dataGridView1.Size = new System.Drawing.Size(292, 150);
-            this.dataGridView1.TabIndex = 60;
+            this.DGMedicamentos.Location = new System.Drawing.Point(11, 37);
+            this.DGMedicamentos.Name = "DGMedicamentos";
+            this.DGMedicamentos.ReadOnly = true;
+            this.DGMedicamentos.RowHeadersWidth = 20;
+            this.DGMedicamentos.Size = new System.Drawing.Size(292, 150);
+            this.DGMedicamentos.TabIndex = 60;
             // 
             // nombre
             // 
@@ -201,20 +204,21 @@
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnagregar);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nmbcantidad);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cmbreorden);
+            this.Controls.Add(this.nmbreorden);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtmedicamento);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGMedicamentos);
             this.Name = "EntregaSuministros";
             this.Text = "Entrada de Suministros";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbreorden)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.EntregaSuministros_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nmbcantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmbreorden)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGMedicamentos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,15 +229,15 @@
         private System.Windows.Forms.Button btnexit;
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Button btnagregar;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nmbcantidad;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown cmbreorden;
+        private System.Windows.Forms.NumericUpDown nmbreorden;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtmedicamento;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGMedicamentos;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn reorden;

@@ -198,3 +198,4 @@ C:\Users\ALUMNO\Source\Repos\CLINICAH\Login\obj\Debug\Login.Properties.Resources
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Login\obj\Debug\Login.csproj.GenerateResource.Cache
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Login\obj\Debug\Login.exe
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Login\obj\Debug\Login.pdb
+C:\Users\Michelle\Source\Repos2\Login\obj\Debug\Login.frmContraseña.resources
