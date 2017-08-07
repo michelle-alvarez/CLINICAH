@@ -18,36 +18,15 @@ namespace Login
         string cnxclinica = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=unicah;";
         public frmLogin()
         {
-
             InitializeComponent();
-
-
-        }
-        //0501197303294
-
-        public static string SHA512(string input)
-        {
-            var bytes = System.Text.Encoding.UTF8.GetBytes(input);
-            using (var hash = System.Security.Cryptography.SHA512.Create())
-            {
-                var hashedInputBytes = hash.ComputeHash(bytes);
-                var hashedInputStringBuilder = new System.Text.StringBuilder(128);
-                foreach (var b in hashedInputBytes)
-                    hashedInputStringBuilder.Append(b.ToString("X2"));
-                return hashedInputStringBuilder.ToString();
-            }
-        }
-
-
-
+        }    
+              
         private void Login_Load(object sender, EventArgs e)
         {
             //cuando carga login y cuando hace logout lo vuelve a los valores iniciales 
             Resources.Propiedades.nombre_ingreso = "";
             Resources.Propiedades.categoria = 0;
-
-            // frmLogin.ActiveForm.MaximizeBox = false;
-            //  frmLogin.ActiveForm.MinimizeBox = false;
+       
             if (txtIDmedico.Text == "")
             {
                 btn_Aceptar.Enabled = false;
@@ -84,7 +63,7 @@ namespace Login
             string password = txtPassword.Text;
             string idmedi = txtIDmedico.Text;
             string strerror = "";
-            password = SHA512(password);
+            password = Resources.Propiedades.SHA512(password);
             if (txtIDmedico.Text != "" && txtPassword.Text != "")
             {
                 string strSQL = "SELECT pass, nombrecompleto FROM administracion.medicos WHERE idmedico = '" + idmedi + "'";
@@ -93,7 +72,6 @@ namespace Login
                     NpgsqlConnection conexion = new NpgsqlConnection(cnxclinica);
                     //definimos la variable de comando donde le asignamos el string que contiene el select y la conexion
                     NpgsqlCommand comando = new NpgsqlCommand(strSQL, conexion);
-                    //comando.Parameters.AddWithValue("@idusuario", usuario);
                     NpgsqlDataReader reader;
                     conexion.Open();
                     reader = comando.ExecuteReader();
@@ -102,7 +80,7 @@ namespace Login
                         reader.Read();
                         string dbpassw = reader.GetString(0);
                         string nombre = reader.GetString(1);
-                        dbpassw = SHA512(dbpassw);
+                        dbpassw = Resources.Propiedades.SHA512(dbpassw);
 
                         if (password == dbpassw)
                         {
@@ -180,6 +158,9 @@ namespace Login
             frmcontra.Show();
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
 
+        }
     }
 }
