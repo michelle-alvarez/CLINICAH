@@ -27,18 +27,16 @@ namespace Login
             txtcontraseña.Enabled = false;
             txtconfirmar.Enabled = false;
 
-        }
+        }    
+    
 
-        private void btn_recuperar_Click_1(object sender, EventArgs e)
+        private void btn_recuperar_Click(object sender, EventArgs e)
         {
-
-            if (flag == 1)
+           if (flag == 1)
             {
-                ID = txtid.Text;
-                string email = txtemail.Text;
-                string nom = txtnom.Text;
+                ID = txtid.Text;             
 
-                string strSQL = "SELECT nombrecompleto, idmedico, email, pass FROM administracion.medicos WHERE idmedico = '" + ID + "'";
+                string strSQL = "SELECT idmedico, pass FROM administracion.medicos WHERE idmedico = '" + ID + "'";
                 try
                 {
                     NpgsqlConnection conexion = new NpgsqlConnection(cnxclinica);
@@ -49,13 +47,11 @@ namespace Login
                     if (reader.HasRows)
                     {
                         reader.Read();
-                        if (nom == reader.GetString(0) && email == reader.GetString(2))
+                        if (ID == reader.GetString(0))
                         {
                             btn_recuperar.Text = "Guardar";
                             txtcontraseña.Enabled = true;
-                            txtconfirmar.Enabled = true;
-                            txtemail.Enabled = false;
-                            txtnom.Enabled = false;
+                            txtconfirmar.Enabled = true;                        
                             txtid.Enabled = false;
                             flag = 2;
                             txtcontraseña.Focus();
@@ -85,8 +81,9 @@ namespace Login
                         NpgsqlCommand comando = new NpgsqlCommand(strSQL, conexion);
 
                         conexion.Open();
-
-                        comando.Parameters.AddWithValue("@contra", txtcontraseña.Text);
+                        string pass = txtcontraseña.Text;
+                       // pass= Resources.Propiedades.SHA512(pass);
+                        comando.Parameters.AddWithValue("@contra", pass);
                         comando.Parameters.AddWithValue("@idmed", txtid.Text);
 
                         comando.ExecuteNonQuery();
@@ -105,17 +102,6 @@ namespace Login
                 }
 
             }
-        }
-
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
