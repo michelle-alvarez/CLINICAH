@@ -160,6 +160,18 @@ namespace CLINICAH
             privilegios.Show();
         }
 
-     
+        private void medicamentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Medicamentos_y_Suministros.EntregaMantenimiento entradaMed = new Medicamentos_y_Suministros.EntregaMantenimiento();
+            entradaMed.MdiParent = this;
+            entradaMed.Show();
+        }
+
+        private void suministrosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Medicamentos_y_Suministros.EntregaSuministros entradaSum = new Medicamentos_y_Suministros.EntregaSuministros();
+            entradaSum.MdiParent = this;
+            entradaSum.Show();
+        }
     }
 }

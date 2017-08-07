@@ -18,7 +18,7 @@ namespace Medicamentos_y_Suministros
         string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=Salmos665;";
         DataSet ds;
         public int statusForm = 0; //0 = Consultando; 1=Agregando; 2=Editando
-        string sqlMedicamentos = "SELECT nombre,cantidad,reorden FROM administracion.suministros WHERE nombre LIKE @filtro ORDER BY nombre";
+        string sqlMedicamentos = "SELECT nombre,cantidad,reorden FROM administracion.medicamentos WHERE nombre LIKE @filtro ORDER BY nombre";
         NpgsqlDataAdapter damedicamentos;
 
 
@@ -54,57 +54,40 @@ namespace Medicamentos_y_Suministros
 
         private void btnexit_Click(object sender, EventArgs e)
         {
-
-
             this.Close();
-
-
         }
 
-        private void btncancelar_Click(object sender, EventArgs e)
-        {
-
-
-
-
-
-
-
-        }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-
-
             dynamic filtro = "%" + txtBuscar.Text + "%";
             damedicamentos.SelectCommand.Parameters.Clear();
             damedicamentos.SelectCommand.Parameters.AddWithValue("@filtro", filtro);
-
         }
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
 
             string strSQL = "";
-
-
-            strSQL = "UPDATE administracion.medicos SET  cantidad=@cantidad ,  reorden = @reorden  WHERE nombre = @nombre";
+            strSQL = "UPDATE administracion.medicamentos SET  cantidad=@cantidad ,  reorden = @reorden  WHERE nombre = @nombre";
             try
             {
                 using (NpgsqlConnection conexion = new NpgsqlConnection(cnx))
                 {
                     NpgsqlCommand comando = new NpgsqlCommand(strSQL, conexion);
-                    
+
+                    comando.Parameters.AddWithValue("@nombre", txtmedicamento.Text);
                     comando.Parameters.AddWithValue("@reorden", Convert.ToDecimal(nmbreorden.Text));
                     comando.Parameters.AddWithValue("@cantidad", Convert.ToDecimal(nmbcantidad.Text));
-                    
+
                     conexion.Open();
                     comando.ExecuteNonQuery();
+                    dynamic filtro = "%" + txtBuscar.Text + "%";
+                    damedicamentos.SelectCommand.Parameters.Clear();
+                    damedicamentos.SelectCommand.Parameters.AddWithValue("@filtro", filtro);
+                    ds.Tables["suministros"].Clear();
+                    damedicamentos.Fill(ds, "suministros");
                     conexion.Close();
-
-
-                        
-              
                 }
 
             }

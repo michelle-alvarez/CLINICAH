@@ -17,7 +17,7 @@ namespace Medicamentos_y_Suministros
         string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=Salmos665;";
         DataSet ds;
         public int statusForm = 0; //0 = Consultando; 1=Agregando; 2=Editando
-        string sqlMedicamentos = "SELECT nombre,cantidad,reorden FROM administracion.medicamentos WHERE nombre LIKE @filtro ORDER BY nombre";
+        string sqlMedicamentos = "SELECT nombre,cantidad,reorden FROM administracion.suministros WHERE nombre LIKE @filtro ORDER BY nombre";
         NpgsqlDataAdapter damedicamentos;
 
 
@@ -29,9 +29,6 @@ namespace Medicamentos_y_Suministros
 
         private void EntregaSuministros_Load(object sender, EventArgs e)
         {
-
-
-
             ds = new DataSet();
 
             DGMedicamentos.AutoGenerateColumns = false;
@@ -42,23 +39,17 @@ namespace Medicamentos_y_Suministros
             damedicamentos.SelectCommand.Parameters.AddWithValue("@filtro", "%%");
             damedicamentos.Fill(ds, "medicamentos");
 
-
             DGMedicamentos.DataSource = ds.Tables["medicamentos"];
 
-            txtmedicamento.DataBindings.Add("text", ds.Tables["medicamentos"], "nombre");
-
+            txtsuministros.DataBindings.Add("text", ds.Tables["medicamentos"], "nombre");
 
             nmbcantidad.DataBindings.Add("text", ds.Tables["medicamentos"], "cantidad");
             nmbreorden.DataBindings.Add("text", ds.Tables["medicamentos"], "reorden");
-
-
-
         }
 
         private void btnexit_Click(object sender, EventArgs e)
         {
             this.Close();
-
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
@@ -70,43 +61,34 @@ namespace Medicamentos_y_Suministros
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-
-
             string strSQL = "";
 
-
-            strSQL = "UPDATE administracion.suministros SET  cantidad=@cantidad ,  reorden = @reorden  WHERE nombre = @nombre";
+            strSQL = "UPDATE administracion.suministros SET  cantidad=@cantidad,  reorden = @reorden  WHERE nombre = @nombre";
             try
             {
                 using (NpgsqlConnection conexion = new NpgsqlConnection(cnx))
                 {
                     NpgsqlCommand comando = new NpgsqlCommand(strSQL, conexion);
 
+                    comando.Parameters.AddWithValue("@nombre", txtsuministros.Text);
                     comando.Parameters.AddWithValue("@reorden", Convert.ToDecimal(nmbreorden.Text));
                     comando.Parameters.AddWithValue("@cantidad", Convert.ToDecimal(nmbcantidad.Text));
 
                     conexion.Open();
                     comando.ExecuteNonQuery();
+                    dynamic filtro = "%" + txtBuscar.Text + "%";
+                    damedicamentos.SelectCommand.Parameters.Clear();
+                    damedicamentos.SelectCommand.Parameters.AddWithValue("@filtro", filtro);
+                    ds.Tables["medicamentos"].Clear();
+                    damedicamentos.Fill(ds, "medicamentos");
                     conexion.Close();
-
-
-
-
                 }
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-
-
-
-
             }
-
-
-
-
         }
     }
 }

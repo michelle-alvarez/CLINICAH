@@ -101,3 +101,7 @@ C:\Users\ALUMNO\Source\Repos\CLINICAH\Pacientes\obj\Debug\Pacientes.Properties.R
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Pacientes\obj\Debug\Pacientes.csproj.GenerateResource.Cache
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Pacientes\obj\Debug\Pacientes.exe
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Pacientes\obj\Debug\Pacientes.pdb
+C:\Users\Michelle\Source\Repos2\Pacientes\bin\Debug\Devart.Data.dll
+C:\Users\Michelle\Source\Repos2\Pacientes\bin\Debug\Devart.Data.PostgreSql.dll
+C:\Users\Michelle\Source\Repos2\Pacientes\bin\Debug\Devart.Data.xml
+C:\Users\Michelle\Source\Repos2\Pacientes\bin\Debug\Devart.Data.PostgreSql.xml

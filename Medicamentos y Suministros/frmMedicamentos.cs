@@ -112,7 +112,7 @@ namespace Medicamentos_y_Suministros
                             comando.Parameters.AddWithValue("@reorden", Convert.ToDecimal(cmbreorden.Text));
                             comando.Parameters.AddWithValue("@campus", cmbCampus.Text);
                             comando.Parameters.AddWithValue("@tipo", txttipo.Text);
-                            comando.Parameters.AddWithValue("@fechaven", Convert.ToDecimal(cmbreorden.Text));
+                            comando.Parameters.AddWithValue("@fechaven", Convert.ToDateTime(dtpvencimiento.Text));
                             comando.Parameters.AddWithValue("@nombre", txtmedicamento.Text);
                             conexion.Open();
                             comando.ExecuteNonQuery();
@@ -140,7 +140,7 @@ namespace Medicamentos_y_Suministros
                 {
                     if (statusForm == 2)
                     {
-                        strSQL = "UPDATE administracion.medicos SET nombre = @nombre, donadopor = @donadopor, campus = @campus, tipo = @tipo, fechaven = @fechaven, reorden = @reorden  WHERE idmedicamentos = @idmedicamentos";
+                        strSQL = "UPDATE administracion.medicamentos SET nombre = @nombre, donadopor = @donadopor, campus = @campus, tipo = @tipo, fechaven = @fechaven, reorden = @reorden  WHERE idmedicamentos = @idmedicamentos";
                         try
                         {
                             using (NpgsqlConnection conexion = new NpgsqlConnection(cnx))
@@ -150,7 +150,7 @@ namespace Medicamentos_y_Suministros
                                 comando.Parameters.AddWithValue("@reorden", Convert.ToDecimal(cmbreorden.Text));
                                 comando.Parameters.AddWithValue("@campus", cmbCampus.Text);
                                 comando.Parameters.AddWithValue("@tipo", txttipo.Text);
-                                comando.Parameters.AddWithValue("@fechaven", Convert.ToDecimal(cmbreorden.Text));
+                                comando.Parameters.AddWithValue("@fechaven", Convert.ToDateTime(dtpvencimiento.Text));
                                 comando.Parameters.AddWithValue("@nombre", txtmedicamento.Text);
                                 conexion.Open();
                                 comando.ExecuteNonQuery();

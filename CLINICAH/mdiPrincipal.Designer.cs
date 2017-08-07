@@ -30,8 +30,6 @@
         {
             this.mst = new System.Windows.Forms.MenuStrip();
             this.parametrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clínicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pacientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.medicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +47,9 @@
             this.lb_nom = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bt_logout = new System.Windows.Forms.Button();
+            this.entregaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.medicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.suministrosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mst.SuspendLayout();
             this.tlsr.SuspendLayout();
             this.SuspendLayout();
@@ -57,14 +58,13 @@
             // 
             this.mst.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.parametrosToolStripMenuItem,
-            this.clínicaToolStripMenuItem,
-            this.pacientesToolStripMenuItem,
             this.mantenimientoToolStripMenuItem,
             this.reportesToolStripMenuItem,
-            this.privilegiosToolStripMenuItem});
+            this.privilegiosToolStripMenuItem,
+            this.entregaToolStripMenuItem});
             this.mst.Location = new System.Drawing.Point(0, 0);
             this.mst.Name = "mst";
-            this.mst.Size = new System.Drawing.Size(1358, 24);
+            this.mst.Size = new System.Drawing.Size(1350, 24);
             this.mst.TabIndex = 1;
             this.mst.Text = "menuStrip1";
             // 
@@ -73,18 +73,6 @@
             this.parametrosToolStripMenuItem.Name = "parametrosToolStripMenuItem";
             this.parametrosToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.parametrosToolStripMenuItem.Text = "&Parámetros";
-            // 
-            // clínicaToolStripMenuItem
-            // 
-            this.clínicaToolStripMenuItem.Name = "clínicaToolStripMenuItem";
-            this.clínicaToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.clínicaToolStripMenuItem.Text = "&Clínica";
-            // 
-            // pacientesToolStripMenuItem
-            // 
-            this.pacientesToolStripMenuItem.Name = "pacientesToolStripMenuItem";
-            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.pacientesToolStripMenuItem.Text = "P&acientes";
             // 
             // mantenimientoToolStripMenuItem
             // 
@@ -165,7 +153,7 @@
             this.MenuProcedimientos});
             this.tlsr.Location = new System.Drawing.Point(0, 24);
             this.tlsr.Name = "tlsr";
-            this.tlsr.Size = new System.Drawing.Size(1358, 55);
+            this.tlsr.Size = new System.Drawing.Size(1350, 55);
             this.tlsr.TabIndex = 2;
             this.tlsr.Text = "tlst";
             // 
@@ -236,11 +224,34 @@
             this.bt_logout.UseVisualStyleBackColor = true;
             this.bt_logout.Click += new System.EventHandler(this.bt_logout_Click);
             // 
+            // entregaToolStripMenuItem
+            // 
+            this.entregaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.medicamentosToolStripMenuItem,
+            this.suministrosToolStripMenuItem1});
+            this.entregaToolStripMenuItem.Name = "entregaToolStripMenuItem";
+            this.entregaToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.entregaToolStripMenuItem.Text = "Entrega";
+            // 
+            // medicamentosToolStripMenuItem
+            // 
+            this.medicamentosToolStripMenuItem.Name = "medicamentosToolStripMenuItem";
+            this.medicamentosToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.medicamentosToolStripMenuItem.Text = "Medicamentos";
+            this.medicamentosToolStripMenuItem.Click += new System.EventHandler(this.medicamentosToolStripMenuItem_Click);
+            // 
+            // suministrosToolStripMenuItem1
+            // 
+            this.suministrosToolStripMenuItem1.Name = "suministrosToolStripMenuItem1";
+            this.suministrosToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.suministrosToolStripMenuItem1.Text = "Suministros";
+            this.suministrosToolStripMenuItem1.Click += new System.EventHandler(this.suministrosToolStripMenuItem1_Click);
+            // 
             // mdiPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1358, 400);
+            this.ClientSize = new System.Drawing.Size(1350, 400);
             this.Controls.Add(this.bt_logout);
             this.Controls.Add(this.lb_nom);
             this.Controls.Add(this.label1);
@@ -267,8 +278,6 @@
 
         private System.Windows.Forms.MenuStrip mst;
         private System.Windows.Forms.ToolStripMenuItem parametrosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clínicaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pacientesToolStripMenuItem;
         private System.Windows.Forms.ToolStrip tlsr;
         private System.Windows.Forms.ToolStripButton MenuPacientes;
         private System.Windows.Forms.ToolStripButton MenuMedicos;
@@ -286,5 +295,8 @@
         private System.Windows.Forms.ToolStripMenuItem privilegiosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem medicosToolStripMenuItem2;
         private System.Windows.Forms.Button bt_logout;
+        private System.Windows.Forms.ToolStripMenuItem entregaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem medicamentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem suministrosToolStripMenuItem1;
     }
 }

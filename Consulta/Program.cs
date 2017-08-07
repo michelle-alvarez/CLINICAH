@@ -16,7 +16,7 @@ namespace Consulta
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new txtVisita());
+            Application.Run(new frmConsulta());
         }
     }
 }

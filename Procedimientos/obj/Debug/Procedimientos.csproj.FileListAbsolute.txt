@@ -89,3 +89,4 @@ C:\Users\ALUMNO\Source\Repos\CLINICAH\Procedimientos\obj\Debug\Procedimientos.Pr
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Procedimientos\obj\Debug\Procedimientos.csproj.GenerateResource.Cache
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Procedimientos\obj\Debug\Procedimientos.exe
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Procedimientos\obj\Debug\Procedimientos.pdb
+C:\Users\Michelle\Source\Repos2\Procedimientos\obj\Debug\Procedimientos.frmProcedimientos1.resources

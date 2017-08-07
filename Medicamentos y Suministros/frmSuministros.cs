@@ -35,8 +35,8 @@ namespace Medicamentos_y_Suministros
             DGSuministros.Columns[2].DataPropertyName = "cantidad";
             DGSuministros.Columns[3].DataPropertyName = "reorden";
             DGSuministros.Columns[4].DataPropertyName = "donadopor";
-            DGSuministros.Columns[6].DataPropertyName = "campus";
-            DGSuministros.Columns[7].DataPropertyName = "fechaven";
+            DGSuministros.Columns[5].DataPropertyName = "campus";
+            DGSuministros.Columns[6].DataPropertyName = "fechaven";
 
             //Asignamos los parametros de busqueda en vacio para que cargue todos los usuarios
             dasuministros.SelectCommand.Parameters.AddWithValue("@filtro", "%%");
@@ -106,7 +106,7 @@ namespace Medicamentos_y_Suministros
                             comando.Parameters.AddWithValue("@donadopor", txtDonado.Text);
                             comando.Parameters.AddWithValue("@reorden", Convert.ToDecimal(cmbreorden.Text));
                             comando.Parameters.AddWithValue("@campus", cmbCampus.Text);
-                            comando.Parameters.AddWithValue("@fechaven", Convert.ToDecimal(cmbreorden.Text));
+                            comando.Parameters.AddWithValue("@fechaven", Convert.ToDateTime(dtpvencimiento.Text));
                             comando.Parameters.AddWithValue("@nombre", txtmedicamento.Text);
                             conexion.Open();
                             comando.ExecuteNonQuery();
@@ -134,7 +134,7 @@ namespace Medicamentos_y_Suministros
                 {
                     if (statusForm == 2)
                     {
-                        strSQL = "UPDATE administracion.medicos SET nombre = @nombre, donadopor = @donadopor, campus = @campus, tipo = @tipo, fechaven = @fechaven, reorden = @reorden  WHERE idsuministros = @idsuministros";
+                        strSQL = "UPDATE administracion.suministros SET nombre = @nombre, donadopor = @donadopor, campus = @campus, tipo = @tipo, fechaven = @fechaven, reorden = @reorden  WHERE idsuministros = @idsuministros";
                         try
                         {
                             using (NpgsqlConnection conexion = new NpgsqlConnection(cnx))
@@ -143,7 +143,7 @@ namespace Medicamentos_y_Suministros
                                 comando.Parameters.AddWithValue("@donadopor", txtDonado.Text);
                                 comando.Parameters.AddWithValue("@reorden", Convert.ToDecimal(cmbreorden.Text));
                                 comando.Parameters.AddWithValue("@campus", cmbCampus.Text);
-                                comando.Parameters.AddWithValue("@fechaven", Convert.ToDecimal(cmbreorden.Text));
+                                comando.Parameters.AddWithValue("@fechaven", Convert.ToDateTime(dtpvencimiento.Text));
                                 comando.Parameters.AddWithValue("@nombre", txtmedicamento.Text);
                                 conexion.Open();
                                 comando.ExecuteNonQuery();

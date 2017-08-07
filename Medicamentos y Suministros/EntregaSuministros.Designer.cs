@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnexit = new System.Windows.Forms.Button();
-            this.btncancelar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
             this.nmbcantidad = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,18 +59,6 @@
             this.btnexit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnexit.UseVisualStyleBackColor = true;
             this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
-            // 
-            // btncancelar
-            // 
-            this.btncancelar.Image = global::Medicamentos_y_Suministros.Properties.Resources.if_meanicons_24_197210;
-            this.btncancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btncancelar.Location = new System.Drawing.Point(119, 248);
-            this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(75, 49);
-            this.btncancelar.TabIndex = 70;
-            this.btncancelar.Text = "Cancelar";
-            this.btncancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btncancelar.UseVisualStyleBackColor = true;
             // 
             // btnagregar
             // 
@@ -202,7 +189,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(315, 309);
             this.Controls.Add(this.btnexit);
-            this.Controls.Add(this.btncancelar);
             this.Controls.Add(this.btnagregar);
             this.Controls.Add(this.nmbcantidad);
             this.Controls.Add(this.label4);
@@ -227,7 +213,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnexit;
-        private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.NumericUpDown nmbcantidad;
         private System.Windows.Forms.Label label4;
