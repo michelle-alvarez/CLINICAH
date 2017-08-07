@@ -15,7 +15,7 @@ namespace Medicamentos_y_Suministros
     {
 
 
-        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=Salmos665;";
+        string cnx = "Server=localhost; Port= 5432; Database=clinicas; User Id=postgres; Password=unicah;";
         DataSet ds;
         public int statusForm = 0; //0 = Consultando; 1=Agregando; 2=Editando
         string sqlMedicamentos = "SELECT nombre,cantidad,reorden FROM administracion.medicamentos WHERE nombre LIKE @filtro ORDER BY nombre";

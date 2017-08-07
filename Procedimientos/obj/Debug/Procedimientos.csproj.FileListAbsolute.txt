@@ -90,3 +90,7 @@ C:\Users\ALUMNO\Source\Repos\CLINICAH\Procedimientos\obj\Debug\Procedimientos.cs
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Procedimientos\obj\Debug\Procedimientos.exe
 C:\Users\ALUMNO\Source\Repos\CLINICAH\Procedimientos\obj\Debug\Procedimientos.pdb
 C:\Users\Michelle\Source\Repos2\Procedimientos\obj\Debug\Procedimientos.frmProcedimientos1.resources
+C:\Users\Michelle\Source\Repos2\Procedimientos\bin\Debug\Devart.Data.dll
+C:\Users\Michelle\Source\Repos2\Procedimientos\bin\Debug\Devart.Data.PostgreSql.dll
+C:\Users\Michelle\Source\Repos2\Procedimientos\bin\Debug\Devart.Data.xml
+C:\Users\Michelle\Source\Repos2\Procedimientos\bin\Debug\Devart.Data.PostgreSql.xml

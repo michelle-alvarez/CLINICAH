@@ -14,7 +14,7 @@ namespace Medicos
 {
     public partial class frmMedicos : Form
     {
-        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=unicah;";
+        string cnx = "Server=localhost; Port= 5432; Database=clinicas; User Id=postgres; Password=unicah;";
         DataSet ds;
         public int statusForm = 0; //0 = Consultando; 1=Agregando; 2=Editando
         string sqlUsuarios = "SELECT * FROM administracion.medicos WHERE idmedico LIKE @filtro OR nombrecompleto LIKE @filtro ORDER BY idmedico";
@@ -156,6 +156,8 @@ namespace Medicos
                         strSQL = "INSERT INTO administracion.medicos(idmedico, nombrecompleto, genero, campus, especialidad, celular, aniocarrera, estadocivil, trimestre, fechanac, email, direccion, pass) VALUES(@idmedico, @nombrecompleto, @genero, @campus, @especialidad, @celular, @aniocarrera, @estadocivil, @trimestre, @fechanac, @email, @direccion, @pass); ";
                         try
                         {
+                            //encriptado de contraseña
+                            string password = Resources.Propiedades.SHA512(txtpassword.Text);
                             using (NpgsqlConnection conexion = new NpgsqlConnection(cnx))
                             {
                                 NpgsqlCommand comando = new NpgsqlCommand(strSQL, conexion);
@@ -171,7 +173,7 @@ namespace Medicos
                                 comando.Parameters.AddWithValue("@fechanac", dtpnacimiento.Value);
                                 comando.Parameters.AddWithValue("@email", txtemail.Text);
                                 comando.Parameters.AddWithValue("@direccion", txtdireccion.Text);
-                                comando.Parameters.AddWithValue("@pass", txtpassword.Text);
+                                comando.Parameters.AddWithValue("@pass", password);
                                 conexion.Open();
                                 comando.ExecuteNonQuery();
                                 activo(false);

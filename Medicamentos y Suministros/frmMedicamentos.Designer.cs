@@ -38,14 +38,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.DGMedicamentos = new System.Windows.Forms.DataGridView();
-            this.idmedicamentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reordenes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donadopor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.campus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaven = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.txttipo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,6 +48,14 @@
             this.btneditar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
             this.cmbCampus = new System.Windows.Forms.ComboBox();
+            this.idmedicamentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reorden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donadopor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.campus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaven = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cmbreorden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGMedicamentos)).BeginInit();
             this.SuspendLayout();
@@ -149,8 +149,8 @@
             this.DGMedicamentos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idmedicamentos,
             this.nombre,
-            this.cantidades,
-            this.reordenes,
+            this.cantidad,
+            this.reorden,
             this.donadopor,
             this.tipo,
             this.campus,
@@ -160,55 +160,6 @@
             this.DGMedicamentos.ReadOnly = true;
             this.DGMedicamentos.Size = new System.Drawing.Size(637, 150);
             this.DGMedicamentos.TabIndex = 19;
-            // 
-            // idmedicamentos
-            // 
-            this.idmedicamentos.HeaderText = "Id";
-            this.idmedicamentos.Name = "idmedicamentos";
-            this.idmedicamentos.ReadOnly = true;
-            this.idmedicamentos.Visible = false;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // cantidades
-            // 
-            this.cantidades.HeaderText = "Cantidad";
-            this.cantidades.Name = "cantidades";
-            this.cantidades.ReadOnly = true;
-            // 
-            // reordenes
-            // 
-            this.reordenes.HeaderText = "Cantidad Minima";
-            this.reordenes.Name = "reordenes";
-            this.reordenes.ReadOnly = true;
-            // 
-            // donadopor
-            // 
-            this.donadopor.HeaderText = "Donante";
-            this.donadopor.Name = "donadopor";
-            this.donadopor.ReadOnly = true;
-            // 
-            // tipo
-            // 
-            this.tipo.HeaderText = "Tipo de Medicamento";
-            this.tipo.Name = "tipo";
-            this.tipo.ReadOnly = true;
-            // 
-            // campus
-            // 
-            this.campus.HeaderText = "Campus";
-            this.campus.Name = "campus";
-            this.campus.ReadOnly = true;
-            // 
-            // fechaven
-            // 
-            this.fechaven.HeaderText = "Fecha Vencimiento ";
-            this.fechaven.Name = "fechaven";
-            this.fechaven.ReadOnly = true;
             // 
             // label6
             // 
@@ -310,10 +261,70 @@
             // cmbCampus
             // 
             this.cmbCampus.FormattingEnabled = true;
+            this.cmbCampus.Items.AddRange(new object[] {
+            "San Pedro y San Pablo",
+            "Sagrado Corazón de Jesús",
+            "Santiago Apóstol",
+            "San Pedro y San Pablo",
+            "Dios Espíritu Santo",
+            "Santa Rosa de Lima",
+            "Santa Clara",
+            "San Isidro",
+            "Jesús Sacramentado",
+            "San Jorge"});
             this.cmbCampus.Location = new System.Drawing.Point(66, 240);
             this.cmbCampus.Name = "cmbCampus";
             this.cmbCampus.Size = new System.Drawing.Size(288, 21);
             this.cmbCampus.TabIndex = 4;
+            // 
+            // idmedicamentos
+            // 
+            this.idmedicamentos.HeaderText = "Id";
+            this.idmedicamentos.Name = "idmedicamentos";
+            this.idmedicamentos.ReadOnly = true;
+            this.idmedicamentos.Visible = false;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            // 
+            // reorden
+            // 
+            this.reorden.HeaderText = "Cantidad Minima";
+            this.reorden.Name = "reorden";
+            this.reorden.ReadOnly = true;
+            // 
+            // donadopor
+            // 
+            this.donadopor.HeaderText = "Donante";
+            this.donadopor.Name = "donadopor";
+            this.donadopor.ReadOnly = true;
+            // 
+            // tipo
+            // 
+            this.tipo.HeaderText = "Tipo de Medicamento";
+            this.tipo.Name = "tipo";
+            this.tipo.ReadOnly = true;
+            // 
+            // campus
+            // 
+            this.campus.HeaderText = "Campus";
+            this.campus.Name = "campus";
+            this.campus.ReadOnly = true;
+            // 
+            // fechaven
+            // 
+            this.fechaven.HeaderText = "Fecha Vencimiento ";
+            this.fechaven.Name = "fechaven";
+            this.fechaven.ReadOnly = true;
             // 
             // frmMedicamentos
             // 
@@ -378,14 +389,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtbuscar;
         private System.Windows.Forms.DataGridView DGMedicamentos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idmedicamentos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidades;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reordenes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn donadopor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn campus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaven;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txttipo;
         private System.Windows.Forms.Label label7;
@@ -396,6 +399,14 @@
         private System.Windows.Forms.Button btneditar;
         private System.Windows.Forms.Button btnagregar;
         private System.Windows.Forms.ComboBox cmbCampus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idmedicamentos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reorden;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donadopor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn campus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaven;
     }
 }
 

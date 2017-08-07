@@ -15,7 +15,7 @@ namespace Procedimientos
     {
         int statusform = 0; // Define el estado del formulario, 0 = visual, 1 = agregando, 2 = editando
 
-        string parametros = "Server=localhost;Port=5432;User Id=postgres;Password=unicah;Database=clinica";
+        string parametros = "Server=localhost; Port= 5432; Database=clinicas; User Id=postgres; Password=unicah;";
         string sqlSumiUso = "SELECT administracion.suministros.idsuministros, administracion.suministros.nombre FROM administracion.suministros INNER JOIN atencion.procedimientossuministros ON administracion.suministros.idsuministros = atencion.procedimientossuministros.idsuministros";
         string sqlNoSumiUso = "Select administracion.suministros.idsuministros, administracion.suministros.nombre FROM administracion.suministros WHERE idsuministros NOT IN(SELECT administracion.suministros.idsuministros FROM administracion.suministros INNER JOIN atencion.procedimientossuministros ON administracion.suministros.idsuministros = atencion.procedimientossuministros.idsuministros)";
         string sqlcategorias = "SELECT categoriaid, nombrecat FROM atencion.categoriaprocedimiento";

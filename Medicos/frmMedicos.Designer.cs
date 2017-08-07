@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedicos));
             this.DGMedicos = new System.Windows.Forms.DataGridView();
             this.idmedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +44,7 @@
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medicosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.txtidentidad = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
@@ -73,17 +75,16 @@
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.cmbtrimestre = new System.Windows.Forms.ComboBox();
-            this.Eliminar = new System.Windows.Forms.ContextMenuStrip();
+            this.Eliminar = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btneditar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
-            this.medicosBindingSource = new System.Windows.Forms.BindingSource();
             ((System.ComponentModel.ISupportInitialize)(this.DGMedicos)).BeginInit();
-            this.Eliminar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).BeginInit();
+            this.Eliminar.SuspendLayout();
             this.SuspendLayout();
             // 
             // DGMedicos
@@ -194,6 +195,10 @@
             this.pass.Name = "pass";
             this.pass.ReadOnly = true;
             this.pass.Visible = false;
+            // 
+            // medicosBindingSource
+            // 
+            this.medicosBindingSource.DataMember = "medicos";
             // 
             // txtbuscar
             // 
@@ -422,8 +427,16 @@
             // 
             this.cmbCampus.FormattingEnabled = true;
             this.cmbCampus.Items.AddRange(new object[] {
-            "San Pedro San Pablo",
-            "Sagrado Corazon"});
+            "San Pedro y San Pablo",
+            "Sagrado Corazón de Jesús",
+            "Santiago Apóstol",
+            "San Pedro y San Pablo",
+            "Dios Espíritu Santo",
+            "Santa Rosa de Lima",
+            "Santa Clara",
+            "San Isidro",
+            "Jesús Sacramentado",
+            "San Jorge"});
             this.cmbCampus.Location = new System.Drawing.Point(125, 277);
             this.cmbCampus.Name = "cmbCampus";
             this.cmbCampus.Size = new System.Drawing.Size(140, 21);
@@ -548,10 +561,6 @@
             this.btnagregar.UseVisualStyleBackColor = true;
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
-            // medicosBindingSource
-            // 
-            this.medicosBindingSource.DataMember = "medicos";
-            // 
             // frmMedicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -599,8 +608,8 @@
             this.Text = "Médicos";
             this.Load += new System.EventHandler(this.frmMedicos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGMedicos)).EndInit();
-            this.Eliminar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.medicosBindingSource)).EndInit();
+            this.Eliminar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

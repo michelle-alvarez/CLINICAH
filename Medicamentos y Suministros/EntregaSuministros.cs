@@ -14,7 +14,7 @@ namespace Medicamentos_y_Suministros
     {
 
 
-        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=Salmos665;";
+        string cnx = "Server=localhost; Port= 5432; Database=clinicas; User Id=postgres; Password=unicah;";
         DataSet ds;
         public int statusForm = 0; //0 = Consultando; 1=Agregando; 2=Editando
         string sqlMedicamentos = "SELECT nombre,cantidad,reorden FROM administracion.suministros WHERE nombre LIKE @filtro ORDER BY nombre";
@@ -41,7 +41,7 @@ namespace Medicamentos_y_Suministros
 
             DGMedicamentos.DataSource = ds.Tables["medicamentos"];
 
-            txtsuministros.DataBindings.Add("text", ds.Tables["medicamentos"], "nombre");
+            //txtsuministros.DataBindings.Add("text", ds.Tables["medicamentos"], "nombre");
 
             nmbcantidad.DataBindings.Add("text", ds.Tables["medicamentos"], "cantidad");
             nmbreorden.DataBindings.Add("text", ds.Tables["medicamentos"], "reorden");
@@ -70,7 +70,7 @@ namespace Medicamentos_y_Suministros
                 {
                     NpgsqlCommand comando = new NpgsqlCommand(strSQL, conexion);
 
-                    comando.Parameters.AddWithValue("@nombre", txtsuministros.Text);
+                    //comando.Parameters.AddWithValue("@nombre", txtsuministros.Text);
                     comando.Parameters.AddWithValue("@reorden", Convert.ToDecimal(nmbreorden.Text));
                     comando.Parameters.AddWithValue("@cantidad", Convert.ToDecimal(nmbcantidad.Text));
 

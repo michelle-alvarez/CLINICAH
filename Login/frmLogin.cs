@@ -14,8 +14,8 @@ namespace Login
 {
     public partial class frmLogin : Form
     {
-
-        string cnxclinica = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=unicah;";
+    
+        string cnxclinica = "Server=localhost; Port= 5432; Database=clinicas; User Id=postgres; Password=unicah;";
         public frmLogin()
         {
             InitializeComponent();
@@ -80,7 +80,7 @@ namespace Login
                         reader.Read();
                         string dbpassw = reader.GetString(0);
                         string nombre = reader.GetString(1);
-                        dbpassw = Resources.Propiedades.SHA512(dbpassw);
+                       dbpassw = Resources.Propiedades.SHA512(dbpassw);
 
                         if (password == dbpassw)
                         {

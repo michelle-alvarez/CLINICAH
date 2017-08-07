@@ -13,7 +13,7 @@ namespace Medicos
 {
     public partial class frmReporteMedicos : Form
     {
-        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=unicah;";
+        string cnx = "Server=localhost; Port= 5432; Database=clinicas; User Id=postgres; Password=unicah;";
         public frmReporteMedicos()
         {
             InitializeComponent();

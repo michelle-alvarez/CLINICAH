@@ -34,7 +34,7 @@ namespace Pacientes
         }
 
         //Cadena de Conexion.
-        string parametros = "User Id=postgres;Password=hola;Host=localhost;Database=clinica";
+        string parametros = "Server=localhost; Port= 5432; Database=clinicas; User Id=postgres; Password=unicah;";
 
         private void busqueda()
         {
