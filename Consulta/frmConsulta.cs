@@ -13,7 +13,7 @@ namespace Consulta
 {
     public partial class frmConsulta : Form
     {
-        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=unicah;";
+        string cnx = "Server=localhost; Port= 5432; Database=clinicas; User Id=postgres; Password=unicah;";
         DataSet ds;
         public int statusForm = 0; //0 = Consultando; 1=Agregando; 2=Editando
         string sqlMedicamentosCombo = "SELECT idmedicamentos,nombre FROM administracion.medicamentos ORDER BY idmedicamentos ASC ";
@@ -39,7 +39,7 @@ namespace Consulta
 
         private void btnBusqueda_Click(object sender, EventArgs e)
         {
-            Consulta.frmSearch serch = new Consulta.frmSearch();
+            frmSearch serch = new frmSearch();
 
             serch.ShowDialog();
             txtCuenta.Text = Resources.Propiedades.pacienteenconsulta;

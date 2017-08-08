@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLINICAH", "CLINICAH\CLINICAH.csproj", "{C2AC3AB1-F4A8-4C19-B470-F8F136DE53E6}"
 EndProject
@@ -14,6 +14,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Procedimientos", "Procedimientos\Procedimientos.csproj", "{FD604E2E-53A4-406D-928D-B7C4B858696C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consulta", "Consulta\Consulta.csproj", "{FBA463D1-76D9-4729-9A26-1290CEAAB021}"
+	ProjectSection(ProjectDependencies) = postProject
+		{663195B8-5FE9-43B8-A681-E66641AE1DEF} = {663195B8-5FE9-43B8-A681-E66641AE1DEF}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Login\Login.csproj", "{F355B923-9BD2-4291-AFD5-B772B3C4E428}"
 EndProject

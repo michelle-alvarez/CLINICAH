@@ -60,9 +60,6 @@ namespace CLINICAH
             cargar();
 
         }
-
-
-
         private void bt_logout_Click(object sender, EventArgs e)
         {
             MenuMedicos.Enabled = true;
@@ -73,10 +70,7 @@ namespace CLINICAH
             Resources.Propiedades.categoria = 0;
             Resources.Propiedades.flag = false;
             cargar();
-
         }
-
-
         private void cargar()
         {
             Login.frmLogin frmlogin = new Login.frmLogin();

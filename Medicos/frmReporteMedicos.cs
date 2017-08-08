@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
 
+using Excel = Microsoft.Office.Interop.Excel;
+
 namespace Medicos
 {
     public partial class frmReporteMedicos : Form
@@ -20,11 +22,9 @@ namespace Medicos
 
         }
 
-
         string where = "";
         string nombrecompleto = "";
         string campus = "";
-        string fechanac = "";
         string trimestre = "";
         string especialidad = "";
         string strSQL = "";
@@ -35,6 +35,7 @@ namespace Medicos
 
         private void frmReporteMedicos_Load(object sender, EventArgs e)
         {
+            datagridResultados.DataSource = null;
 
             //NpgsqlConnection conexion = new NpgsqlConnection("User Id=postgres;Password=unicah;Host=10.4.5.32;Database=clinicas;Initial Schema=administracion");
 
@@ -49,7 +50,7 @@ namespace Medicos
 
 
             conexion.Open();
-            strSQL = "SELECT nombrecompleto AS [Nombre Completo], campus AS Campus, fechanac AS [Fecha de nacimiento], trimestre as Trimestre, especialidad AS Especialidad FROM administracion.medicos";
+            strSQL = "SELECT nombrecompleto AS [Nombre Completo], campus AS Campus, trimestre as Trimestre, especialidad AS Especialidad FROM administracion.medicos";
             //definimos la variable de comando donde le asignamos el string que contiene el select y la conexion
             string strSQLfillEspecialidad = "Select DISTINCT especialidad FROM administracion.medicos";
             string strSQLfillCampus = "Select DISTINCT campus FROM administracion.medicos";
@@ -127,17 +128,15 @@ namespace Medicos
             where = "";
             nombrecompleto = "";
             campus = "";
-            fechanac = "";
             trimestre = "";
             especialidad = "";
 
             debeRecortar = false;
-            strSQL = "SELECT nombrecompleto AS \"Nombre Completo\", campus AS Campus, fechanac AS \"Fecha de nacimiento\", trimestre as Trimestre, especialidad AS Especialidad FROM administracion.medicos";
+            strSQL = "SELECT nombrecompleto AS \"Nombre Completo\", campus AS Campus, trimestre as Trimestre, especialidad AS Especialidad FROM administracion.medicos";
 
             //Si algun campo de texto tiene texto adentro, agregar condiciones en consulta SQL.
             if (txtnombre.Text.Length > 0 ||
                  cmbcampus.Text.Length > 0 ||
-                 (dtpyear.Text.Length > 0 && dtpyear.Text != "31/12/9998") ||
                  cbmtrimestre.Text.Length > 0 ||
                  cmbcarrera.Text.Length > 0
                 )
@@ -158,11 +157,6 @@ namespace Medicos
                 campus = "campus LIKE '%" + cmbcampus.Text + "%' and ";
             }
 
-            if (dtpyear.Text.Length > 0 && dtpyear.Text != "31/12/9998")
-            {
-                fechanac = "fechanac = '" + dtpyear.Text + "' and ";
-            }
-
             if (cbmtrimestre.Text.Length > 0)
             {
                 trimestre = "trimestre = " + cbmtrimestre.Text + " and ";
@@ -174,7 +168,7 @@ namespace Medicos
             }
 
             //Concatenacion de subcadenas para formar el query.
-            strSQL = "SELECT nombrecompleto AS \"Nombre Completo\", campus AS Campus, fechanac AS \"Fecha de nacimiento\", trimestre as Trimestre, especialidad AS Especialidad FROM administracion.medicos" + where + nombrecompleto + campus + fechanac + trimestre + especialidad;
+            strSQL = "SELECT nombrecompleto AS \"Nombre Completo\", campus AS Campus, trimestre as Trimestre, especialidad AS Especialidad FROM administracion.medicos" + where + nombrecompleto + campus + trimestre + especialidad;
 
             //Si hay algun texto en alguno de los campos de texto remover la ultima subcadena "and " para evitar errores de sql
             if (debeRecortar)
@@ -207,9 +201,44 @@ namespace Medicos
         {
             txtnombre.Text = "";
             cmbcampus.Text = "";
-            dtpyear.Text = "31/12/9998";
             cbmtrimestre.Text = "";
             cmbcarrera.Text = "";
+            datagridResultados.DataSource = null;
+            datagridResultados.Rows.Clear();
+
+        }
+
+        private void copyAlltoClipboard()
+        {
+            datagridResultados.SelectAll();
+            DataObject dataObj = datagridResultados.GetClipboardContent();
+            if (dataObj != null)
+                Clipboard.SetDataObject(dataObj);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (datagridResultados.DataSource != null)
+            {
+                MessageBox.Show("Porfavor espere, el reporte se abrira en excel.");
+                copyAlltoClipboard();
+                Microsoft.Office.Interop.Excel.Application xlexcel;
+                Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
+                Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
+                object misValue = System.Reflection.Missing.Value;
+                xlexcel = new Excel.Application();
+                xlexcel.Visible = true;
+                xlWorkBook = xlexcel.Workbooks.Add(misValue);
+                xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+                Excel.Range CR = (Excel.Range)xlWorkSheet.Cells[1, 1];
+                CR.Select();
+                xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+            }
+            else
+            {
+                MessageBox.Show("Realice una busqueda antes de exportar reporte.");
+            }
+
         }
     }
 }

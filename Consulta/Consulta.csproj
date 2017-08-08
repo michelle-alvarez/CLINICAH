@@ -114,10 +114,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\lupa.png" />
-    <None Include="Resources\if_11_Search_106236.ico" />
-    <None Include="Resources\if_info_383124.png" />
     <None Include="Resources\lupa.ico" />
+    <None Include="Resources\addcons.ico" />
     <Content Include="Resources\user.ico" />
   </ItemGroup>
   <ItemGroup>
