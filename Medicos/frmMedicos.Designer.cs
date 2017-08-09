@@ -603,6 +603,8 @@
             this.Controls.Add(this.txtbuscar);
             this.Controls.Add(this.DGMedicos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmMedicos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Médicos";

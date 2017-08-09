@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdiPrincipal));
             this.mst = new System.Windows.Forms.MenuStrip();
             this.parametrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,6 +40,9 @@
             this.medicosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.privilegiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.medicosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.entregaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.medicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.suministrosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsr = new System.Windows.Forms.ToolStrip();
             this.MenuConsulta = new System.Windows.Forms.ToolStripButton();
             this.MenuPacientes = new System.Windows.Forms.ToolStripButton();
@@ -47,9 +51,6 @@
             this.lb_nom = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bt_logout = new System.Windows.Forms.Button();
-            this.entregaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.medicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.suministrosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mst.SuspendLayout();
             this.tlsr.SuspendLayout();
             this.SuspendLayout();
@@ -143,6 +144,29 @@
             this.medicosToolStripMenuItem2.Text = "Medicos";
             this.medicosToolStripMenuItem2.Click += new System.EventHandler(this.medicosToolStripMenuItem2_Click);
             // 
+            // entregaToolStripMenuItem
+            // 
+            this.entregaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.medicamentosToolStripMenuItem,
+            this.suministrosToolStripMenuItem1});
+            this.entregaToolStripMenuItem.Name = "entregaToolStripMenuItem";
+            this.entregaToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.entregaToolStripMenuItem.Text = "Entrega";
+            // 
+            // medicamentosToolStripMenuItem
+            // 
+            this.medicamentosToolStripMenuItem.Name = "medicamentosToolStripMenuItem";
+            this.medicamentosToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.medicamentosToolStripMenuItem.Text = "Medicamentos";
+            this.medicamentosToolStripMenuItem.Click += new System.EventHandler(this.medicamentosToolStripMenuItem_Click);
+            // 
+            // suministrosToolStripMenuItem1
+            // 
+            this.suministrosToolStripMenuItem1.Name = "suministrosToolStripMenuItem1";
+            this.suministrosToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
+            this.suministrosToolStripMenuItem1.Text = "Suministros";
+            this.suministrosToolStripMenuItem1.Click += new System.EventHandler(this.suministrosToolStripMenuItem1_Click);
+            // 
             // tlsr
             // 
             this.tlsr.ImageScalingSize = new System.Drawing.Size(48, 48);
@@ -224,29 +248,6 @@
             this.bt_logout.UseVisualStyleBackColor = true;
             this.bt_logout.Click += new System.EventHandler(this.bt_logout_Click);
             // 
-            // entregaToolStripMenuItem
-            // 
-            this.entregaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.medicamentosToolStripMenuItem,
-            this.suministrosToolStripMenuItem1});
-            this.entregaToolStripMenuItem.Name = "entregaToolStripMenuItem";
-            this.entregaToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.entregaToolStripMenuItem.Text = "Entrega";
-            // 
-            // medicamentosToolStripMenuItem
-            // 
-            this.medicamentosToolStripMenuItem.Name = "medicamentosToolStripMenuItem";
-            this.medicamentosToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.medicamentosToolStripMenuItem.Text = "Medicamentos";
-            this.medicamentosToolStripMenuItem.Click += new System.EventHandler(this.medicamentosToolStripMenuItem_Click);
-            // 
-            // suministrosToolStripMenuItem1
-            // 
-            this.suministrosToolStripMenuItem1.Name = "suministrosToolStripMenuItem1";
-            this.suministrosToolStripMenuItem1.Size = new System.Drawing.Size(153, 22);
-            this.suministrosToolStripMenuItem1.Text = "Suministros";
-            this.suministrosToolStripMenuItem1.Click += new System.EventHandler(this.suministrosToolStripMenuItem1_Click);
-            // 
             // mdiPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,6 +259,7 @@
             this.Controls.Add(this.tlsr);
             this.Controls.Add(this.mst);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mst;
             this.Name = "mdiPrincipal";

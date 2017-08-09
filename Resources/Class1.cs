@@ -13,6 +13,12 @@ namespace Resources
         public static string nombre_ingreso { get; set; }
         public static string pacienteenconsulta { get; set; }
 
+        public static string ID_ingreso { get; set; }
+
+
+
+
+
         public static string SHA512(string input)
         {
             var bytes = System.Text.Encoding.UTF8.GetBytes(input);

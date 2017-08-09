@@ -179,6 +179,8 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.datagridResultados);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmReporteMedicos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte Médicos";

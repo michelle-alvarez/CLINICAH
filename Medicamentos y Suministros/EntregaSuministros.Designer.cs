@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EntregaSuministros));
             this.btnexit = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
             this.nmbcantidad = new System.Windows.Forms.NumericUpDown();
@@ -199,7 +200,11 @@
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DGMedicamentos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "EntregaSuministros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Entrada de Suministros";
             this.Load += new System.EventHandler(this.EntregaSuministros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmbcantidad)).EndInit();

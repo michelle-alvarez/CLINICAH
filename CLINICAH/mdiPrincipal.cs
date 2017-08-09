@@ -17,14 +17,14 @@ namespace CLINICAH
         Medicos.frmMedicos frmMedico = new Medicos.frmMedicos();
         Procedimientos.frmProcedimientos frmProcedimientos = new Procedimientos.frmProcedimientos();
         Medicamentos_y_Suministros.frmMedicamentos frmSuministros = new Medicamentos_y_Suministros.frmMedicamentos();
-        Consulta.frmConsulta frmConsulta = new Consulta.frmConsulta();
+        Consulta.btnCancelar frmConsulta = new Consulta.btnCancelar();
         public mdiPrincipal()
         {
             InitializeComponent();
         }
         private void MenuConsulta_Click(object sender, EventArgs e)
         {
-            Consulta.frmConsulta consulta = new Consulta.frmConsulta();
+            Consulta.btnCancelar consulta = new Consulta.btnCancelar();
             consulta.MdiParent = this;
             consulta.Show();
         }

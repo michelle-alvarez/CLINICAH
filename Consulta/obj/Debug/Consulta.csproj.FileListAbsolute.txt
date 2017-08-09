@@ -86,7 +86,6 @@ C:\Users\Michelle\Source\Repos2\Consulta\bin\Debug\Devart.Data.PostgreSql.xml
 C:\Users\Michelle\Source\Repos2\Consulta\bin\Debug\Npgsql.xml
 C:\Users\Michelle\Source\Repos2\Consulta\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Michelle\Source\Repos2\Consulta\obj\Debug\Consulta.csprojResolveAssemblyReference.cache
-C:\Users\Michelle\Source\Repos2\Consulta\obj\Debug\Consulta.frmConsulta.resources
 C:\Users\Michelle\Source\Repos2\Consulta\obj\Debug\Consulta.frmHistorial.resources
 C:\Users\Michelle\Source\Repos2\Consulta\obj\Debug\Consulta.Properties.Resources.resources
 C:\Users\Michelle\Source\Repos2\Consulta\obj\Debug\Consulta.csproj.GenerateResource.Cache
@@ -112,3 +111,4 @@ C:\Users\ALUMNO\Source\Repos\CLINICAH\Consulta\bin\Debug\Resources.pdb
 C:\Users\Michelle\Source\Repos2\Consulta\obj\Debug\Consulta.frmSearch.resources
 C:\Users\Michelle\Source\Repos2\Consulta\bin\Debug\Resources.dll
 C:\Users\Michelle\Source\Repos2\Consulta\bin\Debug\Resources.pdb
+C:\Users\Michelle\Source\Repos2\Consulta\obj\Debug\Consulta.btnCancelar.resources

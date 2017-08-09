@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrivilegios));
             this.DGPrivilegios = new System.Windows.Forms.DataGridView();
             this.idtipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idmedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -199,7 +200,11 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DGPrivilegios);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPrivilegios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asignación de Privilegios";
             this.Load += new System.EventHandler(this.frmPrivilegios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGPrivilegios)).EndInit();

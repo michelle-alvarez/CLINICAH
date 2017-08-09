@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedicamentos));
             this.txtmedicamento = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,6 +39,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtbuscar = new System.Windows.Forms.TextBox();
             this.DGMedicamentos = new System.Windows.Forms.DataGridView();
+            this.idmedicamentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reorden = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donadopor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.campus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaven = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.txttipo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,14 +57,6 @@
             this.btneditar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
             this.cmbCampus = new System.Windows.Forms.ComboBox();
-            this.idmedicamentos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reorden = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donadopor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.campus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaven = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cmbreorden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGMedicamentos)).BeginInit();
             this.SuspendLayout();
@@ -160,6 +161,55 @@
             this.DGMedicamentos.ReadOnly = true;
             this.DGMedicamentos.Size = new System.Drawing.Size(637, 150);
             this.DGMedicamentos.TabIndex = 19;
+            // 
+            // idmedicamentos
+            // 
+            this.idmedicamentos.HeaderText = "Id";
+            this.idmedicamentos.Name = "idmedicamentos";
+            this.idmedicamentos.ReadOnly = true;
+            this.idmedicamentos.Visible = false;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            // 
+            // reorden
+            // 
+            this.reorden.HeaderText = "Cantidad Minima";
+            this.reorden.Name = "reorden";
+            this.reorden.ReadOnly = true;
+            // 
+            // donadopor
+            // 
+            this.donadopor.HeaderText = "Donante";
+            this.donadopor.Name = "donadopor";
+            this.donadopor.ReadOnly = true;
+            // 
+            // tipo
+            // 
+            this.tipo.HeaderText = "Tipo de Medicamento";
+            this.tipo.Name = "tipo";
+            this.tipo.ReadOnly = true;
+            // 
+            // campus
+            // 
+            this.campus.HeaderText = "Campus";
+            this.campus.Name = "campus";
+            this.campus.ReadOnly = true;
+            // 
+            // fechaven
+            // 
+            this.fechaven.HeaderText = "Fecha Vencimiento ";
+            this.fechaven.Name = "fechaven";
+            this.fechaven.ReadOnly = true;
             // 
             // label6
             // 
@@ -277,55 +327,6 @@
             this.cmbCampus.Size = new System.Drawing.Size(288, 21);
             this.cmbCampus.TabIndex = 4;
             // 
-            // idmedicamentos
-            // 
-            this.idmedicamentos.HeaderText = "Id";
-            this.idmedicamentos.Name = "idmedicamentos";
-            this.idmedicamentos.ReadOnly = true;
-            this.idmedicamentos.Visible = false;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            // 
-            // reorden
-            // 
-            this.reorden.HeaderText = "Cantidad Minima";
-            this.reorden.Name = "reorden";
-            this.reorden.ReadOnly = true;
-            // 
-            // donadopor
-            // 
-            this.donadopor.HeaderText = "Donante";
-            this.donadopor.Name = "donadopor";
-            this.donadopor.ReadOnly = true;
-            // 
-            // tipo
-            // 
-            this.tipo.HeaderText = "Tipo de Medicamento";
-            this.tipo.Name = "tipo";
-            this.tipo.ReadOnly = true;
-            // 
-            // campus
-            // 
-            this.campus.HeaderText = "Campus";
-            this.campus.Name = "campus";
-            this.campus.ReadOnly = true;
-            // 
-            // fechaven
-            // 
-            this.fechaven.HeaderText = "Fecha Vencimiento ";
-            this.fechaven.Name = "fechaven";
-            this.fechaven.ReadOnly = true;
-            // 
             // frmMedicamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,7 +353,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtmedicamento);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmMedicamentos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Medicamentos";
             this.Load += new System.EventHandler(this.frmMedicamentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cmbreorden)).EndInit();

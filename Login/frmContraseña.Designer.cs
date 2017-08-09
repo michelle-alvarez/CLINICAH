@@ -130,6 +130,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmContraseña";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cambio de Contraseña";
             this.Load += new System.EventHandler(this.frmContraseña_Load);
             this.groupBox1.ResumeLayout(false);

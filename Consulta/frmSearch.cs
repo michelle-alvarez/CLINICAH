@@ -11,22 +11,22 @@ using Npgsql;
 
 namespace Consulta
 {
-    
     public partial class frmSearch : Form
     {
-        //Pacientes.FrmPacientes frmPacientes = new Pacientes.FrmPacientes();
-        
-        string cnx = "Server=localhost; Port= 5432; Database=clinica; User Id=postgres; Password=unicah;";
+        string cnx = "Server=localhost; Port= 5432; Database=clinicas; User Id=postgres; Password=unicah;";
         DataSet ds;
         public int statusForm = 0; //0 = Consultando; 1=Agregando; 2=Editando
         //string sqlPaciente = "SELECT idpaciente,paciente FROM pacientes.paciente WHERE idpaciente LIKE @filtro";
-        string sqlPaciente = "SELECT idpaciente,cast(paciente as text) FROM pacientes.paciente";
+        string sqlPaciente = "SELECT idpaciente,nombre  FROM pacientes.paciente";
         NpgsqlDataAdapter daPaciente;
 
         public frmSearch()
         {
             InitializeComponent();
             daPaciente = new NpgsqlDataAdapter(sqlPaciente, cnx);
+            
+
+
         }
 
         private void frmSearch_Load(object sender, EventArgs e)
@@ -36,47 +36,41 @@ namespace Consulta
             //Asignamos las columnas del Grid
             
 
-            grdDetalle.AutoGenerateColumns = false;
-            grdDetalle.Columns[0].DataPropertyName = "idpaciente";
-            grdDetalle.Columns[1].DataPropertyName = "paciente";
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.Columns[0].DataPropertyName = "idpaciente";
+            dataGridView1.Columns[1].DataPropertyName = "nombre";
 
             //Asignamos los parametros de busqueda en vacio para que cargue todos los usuarios
             daPaciente.SelectCommand.Parameters.AddWithValue("@filtro", "%%");
             //Llenamos el Dataset con los datos del Table Adapter
-            daPaciente.Fill(ds, "paciente");
+            daPaciente.Fill(ds, "pacientes");
 
             //Asignar la fuente de datos al DataGrid con la table adapter creada anteriormente
-            grdDetalle.DataSource = ds.Tables["paciente"];
-            txtCuenta.DataBindings.Add("text",ds.Tables["paciente"],"idpaciente");
+            dataGridView1.DataSource = ds.Tables["pacientes"];
+            txtCuenta.DataBindings.Add("text",ds.Tables["pacientes"],"idpaciente");
+            txtnombre.DataBindings.Add("text", ds.Tables["pacientes"], "nombre");
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             Resources.Propiedades.pacienteenconsulta = txtCuenta.Text;
-            Close();
+
+            this.Close();
+
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
             Resources.Propiedades.pacienteenconsulta = "";
         }
 
-        private void txtFiltro_KeyPress(object sender, KeyPressEventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Return)
-            {
-                string filtro = "%" + txtFiltro.Text + "%";
-                daPaciente.SelectCommand.Parameters.Clear();
-                daPaciente.SelectCommand.Parameters.AddWithValue("@filtro", filtro);
-                ds.Tables["paciente"].Clear();
-                daPaciente.Fill(ds, "requisitos");
-            }
+            Resources.Propiedades.pacienteenconsulta = txtCuenta.Text;
+            frmHistorial histo = new frmHistorial();
+            histo.Show();
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

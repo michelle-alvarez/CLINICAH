@@ -157,7 +157,8 @@ namespace Medicos
                         try
                         {
                             //encriptado de contraseña
-                            string password = Resources.Propiedades.SHA512(txtpassword.Text);
+                            string password = txtpassword.Text;
+                            //password = Resources.Propiedades.SHA512(txtpassword.Text);
                             using (NpgsqlConnection conexion = new NpgsqlConnection(cnx))
                             {
                                 NpgsqlCommand comando = new NpgsqlCommand(strSQL, conexion);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EntregaMantenimiento));
             this.nmbcantidad = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.nmbreorden = new System.Windows.Forms.NumericUpDown();
@@ -199,7 +200,11 @@
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DGMedicamentos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "EntregaMantenimiento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Entrada de Medicamentos";
             this.Load += new System.EventHandler(this.EntregaMantenimiento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmbcantidad)).EndInit();

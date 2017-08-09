@@ -17,6 +17,8 @@ namespace Pacientes
 {
     public partial class FrmPacientes : Form
     {
+        //Cadena de Conexion.
+        string parametros = "User Id=postgres;Password=unicah;Host=localhost;Database=clinicas";
         public FrmPacientes()
         {
             InitializeComponent();
@@ -28,13 +30,12 @@ namespace Pacientes
             botones_iniciales();
         }
 
+        string paciente_reg = "";
+        string paciente_edit = "";
         public void txtbusqueda_TextChanged(object sender, EventArgs e)
         {
             busqueda();
         }
-
-        //Cadena de Conexion.
-        string parametros = "Server=localhost; Port= 5432; Database=clinicas; User Id=postgres; Password=unicah;";
 
         private void busqueda()
         {
@@ -45,7 +46,7 @@ namespace Pacientes
                 Cnx.Open();
                 //MessageBox.Show("-BIENVENIDO-");
                 string x;
-                if(txtbusqueda.Text == "")
+                if (txtbusqueda.Text == "")
                 {
                     x = "XXXXXXXXXX";
                 }
@@ -53,7 +54,7 @@ namespace Pacientes
                 {
                     x = txtbusqueda.Text.ToString();
                 }
-                string strSQL = "SELECT nombre,idpaciente FROM pacientes.paciente WHERE nombre LIKE '" + x + "%' OR nombre LIKE '% " + x + "%' OR idpaciente = '"+x+"' ";
+                string strSQL = "SELECT nombre,idpaciente FROM pacientes.paciente WHERE nombre LIKE '" + x + "%' OR nombre LIKE '% " + x + "%' OR idpaciente = '" + x + "' ";
                 NpgsqlCommand Comando = new NpgsqlCommand(strSQL, Cnx);
                 NpgsqlDataReader Reg;
                 Reg = Comando.ExecuteReader();
@@ -63,7 +64,7 @@ namespace Pacientes
                 {
                     string nombre2 = Reg.GetString(0);
                     string identidad = Reg["idpaciente"].ToString();
-                    datagridx.Rows.Add(identidad,nombre2);
+                    datagridx.Rows.Add(identidad, nombre2);
                 }
                 //MessageBox.Show(strSQL);
                 Cnx.Close();
@@ -90,9 +91,9 @@ namespace Pacientes
             {
                 Cnx.Open();
                 //MessageBox.Show("-BIENVENIDO-");
-               // DataGridViewRow row = this.datagridx.Rows[e.RowIndex];
+                // DataGridViewRow row = this.datagridx.Rows[e.RowIndex];
                 string persona = datagridx.SelectedCells[0].Value.ToString();
-                string strSQL = "SELECT idpaciente, carreras.nombre as carrera, tiposangre, telefono, email, peso, altura, etnia, genero, paciente.nombre as persona, fechanac, categorias.nombre as tipo,telefonoemer,observacion FROM pacientes.paciente INNER JOIN administracion.carreras ON paciente.idcarrera = carreras.idcarrera INNER JOIN administracion.categorias ON paciente.idtipo = categorias.idtipo WHERE paciente.nombre ='" + datagridx.SelectedCells[0].Value.ToString() +"' OR idpaciente = '"+ datagridx.SelectedCells[0].Value.ToString() + "'";
+                string strSQL = "SELECT idpaciente, carreras.nombre as carrera, tiposangre, telefono, email, peso, altura, etnia, genero, paciente.nombre as persona, fechanac, categorias.nombre as tipo,telefonoemer,observacion FROM pacientes.paciente INNER JOIN administracion.carreras ON paciente.idcarrera = carreras.idcarrera INNER JOIN administracion.categorias ON paciente.idtipo = categorias.idtipo WHERE paciente.nombre ='" + datagridx.SelectedCells[0].Value.ToString() + "' OR idpaciente = '" + datagridx.SelectedCells[0].Value.ToString() + "'";
                 NpgsqlCommand Comando = new NpgsqlCommand(strSQL, Cnx);
                 NpgsqlDataReader Reg;
                 //MessageBox.Show(strSQL);
@@ -100,7 +101,7 @@ namespace Pacientes
                 datagridp.Rows.Clear();
                 Reg = Comando.ExecuteReader();
                 while (Reg.Read())
-                {   
+                {
                     codigo = Reg["idpaciente"].ToString();
                     txtcodigo.Text = Reg["idpaciente"].ToString();
                     txtnombre.Text = Reg["persona"].ToString();
@@ -115,8 +116,8 @@ namespace Pacientes
                     combotipo.Text = Reg["tipo"].ToString();
                     txtemergencia.Text = Reg["telefonoemer"].ToString();
                     rtxtobservacion.Text = Reg["observacion"].ToString();
-                    
-                    if(Reg["genero"].ToString() == "M")
+
+                    if (Reg["genero"].ToString() == "M")
                     {
                         rdbmasculino.Checked = true;
                     }
@@ -232,7 +233,7 @@ namespace Pacientes
             {
                 MessageBox.Show(Ex.Message);
             }
-    }
+        }
 
         private void cargarcarreras()
         {
@@ -282,14 +283,24 @@ namespace Pacientes
 
         private void btnregistrar_Click(object sender, EventArgs e)
         {
-            DialogResult RS = MessageBox.Show("¿Esta seguro que desea registrar al nuevo paciente?", "Registro" , MessageBoxButtons.YesNo);
-            if(RS == DialogResult.Yes)
+            DialogResult RS = MessageBox.Show("¿Esta seguro que desea registrar al nuevo paciente?", "Registro", MessageBoxButtons.YesNo);
+            if (RS == DialogResult.Yes)
             {
-                registro_nuevo();
-                modo_cancelar();
-                botones_iniciales();
+                if (txtpeso.Text != "" && txtaltura.Text != "" && txttelefono.Text != "" && txtemergencia.Text != "" && txtemail.Text != "")
+                {
+                    registro_nuevo();
+                    modo_cancelar();
+                    botones_iniciales();
+                    txtbusqueda.Text = paciente_reg;
+                    mostrar_nuevo();
+                }
+                else
+                {
+                    MessageBox.Show("Hay campos vacios dentro del formulario, llene la informacion faltante.", "ERROR");
+                }
+
             }
-           
+
         }
 
         private void registro_nuevo()
@@ -299,8 +310,8 @@ namespace Pacientes
             try
             {
                 Cnx.Open();
-                string SELECT = "VALUES('" + txtcodigo.Text.ToString() + "','" + idcarrera() + "','" + combosangre.Text + "'," + txttelefono.Text + ",'" + txtemail.Text + "', "+txtpeso.Text+"  ," + txtaltura.Text + ",'" + comboetnia.Text + "','" + genero + "','" + txtnombre.Text + "','" + dtfechanac.Text + "','" + idtipo() + "', "+txtemergencia.Text+",'"+rtxtobservacion.Text+"')";
-                string strSQL = "INSERT INTO pacientes.paciente(idpaciente, idcarrera, tiposangre, telefono, email, peso, altura, etnia, genero, nombre, fechanac, idtipo, telefonoemer, observacion) "+ SELECT +"";
+                string SELECT = "VALUES('" + txtcodigo.Text.ToString() + "','" + idcarrera() + "','" + combosangre.Text + "'," + txttelefono.Text + ",'" + txtemail.Text + "', " + txtpeso.Text + "  ," + txtaltura.Text + ",'" + comboetnia.Text + "','" + genero + "','" + txtnombre.Text + "','" + dtfechanac.Value.ToString("yyyy-MM-dd") + "','" + idtipo() + "', " + txtemergencia.Text + ",'" + rtxtobservacion.Text + "')";
+                string strSQL = "INSERT INTO pacientes.paciente(idpaciente, idcarrera, tiposangre, telefono, email, peso, altura, etnia, genero, nombre, fechanac, idtipo, telefonoemer, observacion) " + SELECT + "";
                 NpgsqlCommand cmdregistro = new NpgsqlCommand(strSQL, Cnx);
                 cmdregistro.ExecuteNonQuery();
                 for (int x = 0; x < datagrida.Rows.Count; x++)
@@ -310,13 +321,15 @@ namespace Pacientes
                     NpgsqlCommand cmdpad2 = new NpgsqlCommand(insert2, Cnx);
                     cmdpad2.ExecuteNonQuery();
                 }
-                for (int x = 0;x<datagridp.Rows.Count;x++)
+                for (int x = 0; x < datagridp.Rows.Count; x++)
                 {
-                    string sel = "SELECT '" + txtcodigo.Text + "' , idpadecimiento FROM administracion.lista_padecimientos WHERE nombre = '" + datagridp.Rows[x].Cells[0].Value.ToString()+"'";
-                    string insert = "INSERT INTO pacientes.padecimientos(idpaciente, idpadecimiento)  " + sel+" ";
+                    string sel = "SELECT '" + txtcodigo.Text + "' , idpadecimiento FROM administracion.lista_padecimientos WHERE nombre = '" + datagridp.Rows[x].Cells[0].Value.ToString() + "'";
+                    string insert = "INSERT INTO pacientes.padecimientos(idpaciente, idpadecimiento)  " + sel + " ";
                     NpgsqlCommand cmdpad3 = new NpgsqlCommand(insert, Cnx);
                     cmdpad3.ExecuteNonQuery();
                 }
+                MessageBox.Show("Registro Exitoso", "Pacientes");
+                paciente_reg = txtcodigo.Text;
                 Cnx.Close();
             }
             catch (Exception Ex)
@@ -333,8 +346,8 @@ namespace Pacientes
             try
             {
                 Cnx.Open();
-                
-                string items = "SELECT idcarrera FROM administracion.carreras WHERE nombre = '" + combocarrera.Text+"'";
+
+                string items = "SELECT idcarrera FROM administracion.carreras WHERE nombre = '" + combocarrera.Text + "'";
                 NpgsqlCommand cmditems = new NpgsqlCommand(items, Cnx);
                 NpgsqlDataReader Reg;
                 Reg = cmditems.ExecuteReader();
@@ -394,7 +407,7 @@ namespace Pacientes
         string nombre_edit = "";
         private void button2_Click(object sender, EventArgs e)
         {
-            if(txtnombre.ReadOnly == true && txtnombre.Text != "")
+            if (txtnombre.ReadOnly == true && txtnombre.Text != "")
             {
                 //txtbusqueda.Text = "";
                 edicion();
@@ -440,7 +453,7 @@ namespace Pacientes
             rbpadecimiento.Enabled = true;
             txtbusqueda.ReadOnly = true;
             rbalergia.Checked = true;
-            txtcodigo.ReadOnly = true; 
+            txtcodigo.ReadOnly = true;
         }
 
         private void modo_cancelar()
@@ -497,9 +510,9 @@ namespace Pacientes
 
         private void btnagregar_Click(object sender, EventArgs e)
         {
-            if(comboap.Text != "")
+            if (comboap.Text != "")
             {
-                if(rbalergia.Checked == true)
+                if (rbalergia.Checked == true)
                 {
                     bool flag = false;
                     for (int x = 0; x < datagrida.Rows.Count; x++)
@@ -516,7 +529,7 @@ namespace Pacientes
                 }
                 else
                 {
-                    if(rbpadecimiento.Checked == true)
+                    if (rbpadecimiento.Checked == true)
                     {
                         bool flag = false;
                         for (int x = 0; x < datagridp.Rows.Count; x++)
@@ -537,12 +550,12 @@ namespace Pacientes
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            if(x == 1)
+            if (x == 1)
             {
-                if(datagrida.Rows.Count > 0)
+                if (datagrida.Rows.Count > 0)
                 {
                     //int f = 0;
-                    for(int z = 0;z<datagrida.Rows.Count;z++)
+                    for (int z = 0; z < datagrida.Rows.Count; z++)
                     {
                         if (datagrida.Rows[z].Cells[0].Value.ToString() == ale_pad)
                         {
@@ -555,7 +568,7 @@ namespace Pacientes
             }
             else
             {
-                if(x == 2)
+                if (x == 2)
                 {
                     if (datagridp.Rows.Count > 0)
                     {
@@ -669,12 +682,12 @@ namespace Pacientes
             try
             {
                 Cnx.Open();
-                set = "SET idpaciente='"+txtcodigo.Text+"', idcarrera='"+idcarrera()+"', tiposangre='"+combosangre.Text+"', telefono="+txttelefono.Text+", email='"+txtemail.Text+"', peso="+txtpeso.Text+", altura="+txtaltura.Text+", etnia='"+comboetnia.Text+"', genero='"+genero+"', nombre='"+txtnombre.Text+"', fechanac='"+dtfechanac.Text+"', idtipo='"+idtipo()+"', observacion = '"+rtxtobservacion.Text+"', telefonoemer = "+txtemergencia.Text+" WHERE nombre = '"+nombre_edit+"'; ";
-                string strSQL = "UPDATE pacientes.paciente "+set+"";
+                set = "SET idpaciente='" + txtcodigo.Text + "', idcarrera='" + idcarrera() + "', tiposangre='" + combosangre.Text + "', telefono=" + txttelefono.Text + ", email='" + txtemail.Text + "', peso=" + txtpeso.Text + ", altura=" + txtaltura.Text + ", etnia='" + comboetnia.Text + "', genero='" + genero + "', nombre='" + txtnombre.Text + "', fechanac='" + dtfechanac.Value.ToString("yyyy-MM-dd") + "', idtipo='" + idtipo() + "', observacion = '" + rtxtobservacion.Text + "', telefonoemer = " + txtemergencia.Text + " WHERE idpaciente = '" + txtcodigo.Text + "'; ";
+                string strSQL = "UPDATE pacientes.paciente " + set + "";
                 //MessageBox.Show(strSQL);
                 NpgsqlCommand cmditems = new NpgsqlCommand(strSQL, Cnx);
                 cmditems.ExecuteNonQuery();
-                
+                paciente_edit = txtcodigo.Text;
                 actualizar_alergias_padecimientos();
                 Cnx.Close();
             }
@@ -690,9 +703,16 @@ namespace Pacientes
             DialogResult RS = MessageBox.Show("¿Esta seguro que desea confirmar los cambios?", "Editar", MessageBoxButtons.YesNo);
             if (RS == DialogResult.Yes)
             {
-                guardar_cambios();
-                modo_cancelar();
-                botones_iniciales();
+                if (txtpeso.Text != "" && txtaltura.Text != "" && txttelefono.Text != "" && txtemergencia.Text != "" && txtemail.Text != "")
+                {
+                    guardar_cambios();
+                    MessageBox.Show("Edicion Existosa", "Pacientes");
+                    modo_cancelar();
+                    botones_iniciales();
+                    txtbusqueda.Text = paciente_edit;
+                    mostrar_editado();
+                }
+
             }
         }
 
@@ -723,9 +743,10 @@ namespace Pacientes
                     NpgsqlCommand cmdpad3 = new NpgsqlCommand(insert, Cnx);
                     cmdpad3.ExecuteNonQuery();
                 }
+                Cnx.Close();
 
             }
-            catch(Exception Ex)
+            catch (Exception Ex)
             {
                 MessageBox.Show(Ex.Message);
             }
@@ -733,31 +754,41 @@ namespace Pacientes
 
         private void bteliminar_Click(object sender, EventArgs e)
         {
-            NpgsqlConnection Cnx = new NpgsqlConnection();
-            Cnx.ConnectionString = parametros;
-            try
+            DialogResult RS = MessageBox.Show("¿Esta seguro que desea eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo);
+            if (RS == DialogResult.Yes)
             {
-                Cnx.Open();
-                //Alergias
-                string strSQL2 = "DELETE FROM pacientes.alergias WHERE idpaciente = '" + txtcodigo.Text + "'";
-                NpgsqlCommand cmditems2 = new NpgsqlCommand(strSQL2, Cnx);
-                cmditems2.ExecuteNonQuery();
-                //Padecimientos
-                string strSQL3 = "DELETE FROM pacientes.padecimientos WHERE idpaciente = '" + txtcodigo.Text + "'";
-                NpgsqlCommand cmditems3 = new NpgsqlCommand(strSQL3, Cnx);
-                cmditems3.ExecuteNonQuery();
-                //Pacientes
-                string strSQL = "DELETE FROM pacientes.paciente WHERE idpaciente = '" + txtcodigo.Text + "'";
-                NpgsqlCommand cmditems = new NpgsqlCommand(strSQL, Cnx);
-                cmditems.ExecuteNonQuery();
-                Cnx.Close();
+
+
+                NpgsqlConnection Cnx = new NpgsqlConnection();
+                Cnx.ConnectionString = parametros;
+                try
+                {
+                    Cnx.Open();
+                    //Alergias
+                    string strSQL2 = "DELETE FROM pacientes.alergias WHERE idpaciente = '" + txtcodigo.Text + "'";
+                    NpgsqlCommand cmditems2 = new NpgsqlCommand(strSQL2, Cnx);
+                    cmditems2.ExecuteNonQuery();
+                    //Padecimientos
+                    string strSQL3 = "DELETE FROM pacientes.padecimientos WHERE idpaciente = '" + txtcodigo.Text + "'";
+                    NpgsqlCommand cmditems3 = new NpgsqlCommand(strSQL3, Cnx);
+                    cmditems3.ExecuteNonQuery();
+                    //Pacientes
+                    string strSQL = "DELETE FROM pacientes.paciente WHERE idpaciente = '" + txtcodigo.Text + "'";
+                    NpgsqlCommand cmditems = new NpgsqlCommand(strSQL, Cnx);
+                    cmditems.ExecuteNonQuery();
+                    Cnx.Close();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+                modo_cancelar();
+                botones_iniciales();
             }
-            catch (Exception Ex)
+            else
             {
-                MessageBox.Show(Ex.Message);
+
             }
-            modo_cancelar();
-            botones_iniciales();
         }
 
         private void botones_iniciales()
@@ -769,6 +800,7 @@ namespace Pacientes
             bteliminar.Visible = false;
             btn_editar.Visible = false;
             btn_cambios.Visible = false;
+            modo_cancelar();
         }
 
         private void nuevo()
@@ -807,16 +839,16 @@ namespace Pacientes
         private void combotipo_Leave(object sender, EventArgs e)
         {
             bool correcto = false;
-            for(int x=0;x<combotipo.Items.Count;x++)
+            for (int x = 0; x < combotipo.Items.Count; x++)
             {
-                if(combotipo.Text == combotipo.Items[x].ToString())
+                if (combotipo.Text == combotipo.Items[x].ToString())
                 {
                     correcto = true;
                 }
             }
-            if(correcto == false)
+            if (correcto == false)
             {
-                MessageBox.Show("La opcion elegida no es valida, seleccione una de las disponibles en la lista","Error");
+                MessageBox.Show("La opcion elegida no es valida, seleccione una de las disponibles en la lista", "Error");
                 combotipo.Select();
             }
         }
@@ -833,7 +865,7 @@ namespace Pacientes
             }
             if (correcto == false)
             {
-                MessageBox.Show("La opcion elegida no es valida, seleccione una de las disponibles en la lista","Error");
+                MessageBox.Show("La opcion elegida no es valida, seleccione una de las disponibles en la lista", "Error");
                 combosangre.Select();
             }
         }
@@ -936,5 +968,120 @@ namespace Pacientes
             }
         }
 
+        private void combocarrera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mostrar_nuevo()
+        {
+            busqueda_botones();
+            string codigo = "";
+            NpgsqlConnection Cnx = new NpgsqlConnection();
+            Cnx.ConnectionString = parametros;
+            try
+            {
+                Cnx.Open();
+                //MessageBox.Show("-BIENVENIDO-");
+                // DataGridViewRow row = this.datagridx.Rows[e.RowIndex];
+                string persona = datagridx.SelectedCells[0].Value.ToString();
+                string strSQL = "SELECT idpaciente, carreras.nombre as carrera, tiposangre, telefono, email, peso, altura, etnia, genero, paciente.nombre as persona, fechanac, categorias.nombre as tipo,telefonoemer,observacion FROM pacientes.paciente INNER JOIN administracion.carreras ON paciente.idcarrera = carreras.idcarrera INNER JOIN administracion.categorias ON paciente.idtipo = categorias.idtipo WHERE idpaciente = '" + paciente_reg + "'";
+                NpgsqlCommand Comando = new NpgsqlCommand(strSQL, Cnx);
+                NpgsqlDataReader Reg;
+                //MessageBox.Show(strSQL);
+                datagrida.Rows.Clear();
+                datagridp.Rows.Clear();
+                Reg = Comando.ExecuteReader();
+                while (Reg.Read())
+                {
+                    codigo = Reg["idpaciente"].ToString();
+                    txtcodigo.Text = Reg["idpaciente"].ToString();
+                    txtnombre.Text = Reg["persona"].ToString();
+                    combocarrera.Text = Reg["carrera"].ToString();
+                    dtfechanac.Text = Reg["fechanac"].ToString();
+                    combosangre.Text = Reg["tiposangre"].ToString();
+                    txtpeso.Text = Reg["peso"].ToString();
+                    txtaltura.Text = Reg["altura"].ToString();
+                    txttelefono.Text = Reg["telefono"].ToString();
+                    txtemail.Text = Reg["email"].ToString();
+                    comboetnia.Text = Reg["etnia"].ToString();
+                    combotipo.Text = Reg["tipo"].ToString();
+                    txtemergencia.Text = Reg["telefonoemer"].ToString();
+                    rtxtobservacion.Text = Reg["observacion"].ToString();
+
+                    if (Reg["genero"].ToString() == "M")
+                    {
+                        rdbmasculino.Checked = true;
+                    }
+                    else
+                    {
+                        rdbfemenino.Checked = true;
+                    }
+                }
+                Cnx.Close();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+            combocarrera.Enabled = false;
+            alergias(paciente_reg);
+            padecimientos(paciente_reg);
+        }
+
+        private void mostrar_editado()
+        {
+            busqueda_botones();
+            string codigo = "";
+            NpgsqlConnection Cnx = new NpgsqlConnection();
+            Cnx.ConnectionString = parametros;
+            try
+            {
+                Cnx.Open();
+                //MessageBox.Show("-BIENVENIDO-");
+                // DataGridViewRow row = this.datagridx.Rows[e.RowIndex];
+                string strSQL = "SELECT idpaciente, carreras.nombre as carrera, tiposangre, telefono, email, peso, altura, etnia, genero, paciente.nombre as persona, fechanac, categorias.nombre as tipo,telefonoemer,observacion FROM pacientes.paciente INNER JOIN administracion.carreras ON paciente.idcarrera = carreras.idcarrera INNER JOIN administracion.categorias ON paciente.idtipo = categorias.idtipo WHERE idpaciente = '" + paciente_edit + "'";
+                NpgsqlCommand Comando = new NpgsqlCommand(strSQL, Cnx);
+                NpgsqlDataReader Reg;
+                //MessageBox.Show(strSQL);
+                datagrida.Rows.Clear();
+                datagridp.Rows.Clear();
+                Reg = Comando.ExecuteReader();
+                while (Reg.Read())
+                {
+                    codigo = Reg["idpaciente"].ToString();
+                    txtcodigo.Text = Reg["idpaciente"].ToString();
+                    txtnombre.Text = Reg["persona"].ToString();
+                    combocarrera.Text = Reg["carrera"].ToString();
+                    dtfechanac.Text = Reg["fechanac"].ToString();
+                    combosangre.Text = Reg["tiposangre"].ToString();
+                    txtpeso.Text = Reg["peso"].ToString();
+                    txtaltura.Text = Reg["altura"].ToString();
+                    txttelefono.Text = Reg["telefono"].ToString();
+                    txtemail.Text = Reg["email"].ToString();
+                    comboetnia.Text = Reg["etnia"].ToString();
+                    combotipo.Text = Reg["tipo"].ToString();
+                    txtemergencia.Text = Reg["telefonoemer"].ToString();
+                    rtxtobservacion.Text = Reg["observacion"].ToString();
+
+                    if (Reg["genero"].ToString() == "M")
+                    {
+                        rdbmasculino.Checked = true;
+                    }
+                    else
+                    {
+                        rdbfemenino.Checked = true;
+                    }
+                }
+                Cnx.Close();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+            combocarrera.Enabled = false;
+            alergias(paciente_edit);
+            padecimientos(paciente_edit);
+        }
     }
 }

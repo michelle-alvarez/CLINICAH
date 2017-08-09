@@ -45,6 +45,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
@@ -114,8 +115,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\lupa.ico" />
-    <None Include="Resources\addcons.ico" />
+    <None Include="Resources\lupa.png" />
+    <None Include="Resources\if_11_Search_106236.ico" />
+    <None Include="Resources\if_info_383124.png" />
     <Content Include="Resources\user.ico" />
   </ItemGroup>
   <ItemGroup>

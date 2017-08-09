@@ -89,6 +89,9 @@ namespace Login
                             categoria(idmedi);
                             this.Close();
                             Resources.Propiedades.flag = true;
+                            Resources.Propiedades.ID_ingreso = idmedi;
+                      
+
 
                         }
                         else
@@ -152,15 +155,14 @@ namespace Login
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Login.frmContraseña frmcontra = new Login.frmContraseña();
-            frmcontra.Show();
-        }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            Login.frmContraseña frmcontra = new Login.frmContraseña();
+            frmcontra.Show();
+        }     
 
-        }
+
+        
     }
 }
